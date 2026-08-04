@@ -1,0 +1,2355 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Chapters are enclosed with <chapter> tags. Use xml:id to -->
+<!-- uniquely identify the chapter.  The @xmlns:xi attribute  -->
+<!-- is needed if you use xi:include in this file             -->
+<chapter xml:id="ch-fnnotation" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+<!-- Change title when you have one: -->
+  <title>Function Notation</title>
+  <!-- If the chapter has sections, there may be an introduction -->
+  <!-- before those sections. Note the <p> tags around content.  -->
+  <introduction>
+    <p>This is the introduction to the chapter</p>
+  </introduction>
+
+<section xml:id="sec-evaluateformula">
+  <title>Evaluating Functions from a Formula</title>
+
+  <introduction><p>Think of a function as a machine that turns inputs into outputs. We write <m>f(x)</m>, which is read "f of x". The <m>f</m> out front is the name of the function, which helps us know which one we're talking about. The <m>x</m> in the parentheses is a placeholder for the input. Think of it like an empty box, and you might even find it helpful to actually write it as an empty box that you can fill in your input later.</p></introduction>
+
+  <p>When we put something else into the parentheses, that's our input. So, we would replace all of the <m>x</m> with that thing.</p>
+
+  <example>
+    <p>Suppose <m>f(x)=4x+3</m>.
+      <ol>
+        <li>Let's find <m>f(2)</m>. Since the <m>2</m> is inside the parentheses, that tells us that our input is supposed to be <m>2</m>. In our original formula, we replace all of the <m>x</m>'s with a <m>2</m>. Since <m>f({\color{red}{x}})=4{\color{red}{x}}+3</m>, we get:
+          <me>f({\color{red}{2}})=4({\color{red}{2}})+3 = 8+3 = 11</me>
+        Therefore, the answer is <m>11</m>.</li> 
+        <li>Let's find <m>f(-1)</m>. Since the <m>-1</m> is inside the parentheses, that tells us that our input is supposed to be <m>-1</m>. In our original formula, we replace all of the <m>x</m>'s with a <m>-1</m>. Since <m>f({\color{red}{x}})=4{\color{red}{x}}+3</m>, we get:
+          <me>f({\color{red}{-1}})=4({\color{red}{-1}})+3 = -4+3 = -1</me>
+        Therefore, the answer is <m>-1</m>.</li> 
+      </ol>
+    </p>
+  </example>
+
+  <example>
+    <p>Suppose <m>g(x)=x^2+2x-1</m>.
+      <ol>
+        <li>Let's find <m>g(0)</m>. Since the <m>0</m> is inside the parentheses, that tells us that our input is supposed to be <m>0</m>. In our original formula, we replace all of the <m>x</m>'s with a <m>0</m>. Since <m>g({\color{red}{x}})={\color{red}{x}}^2+2{\color{red}{x}}-1</m>, we get:
+          <me>g({\color{red}{0}})=({\color{red}{0}})^2+2({\color{red}{0}})-1=-1</me>
+        Therefore, the answer is <m>-1</m>.</li> 
+        <li>Let's find <m>g(-1)</m>. Since the <m>-1</m> is inside the parentheses, that tells us that our input is supposed to be <m>-1</m>. In our original formula, we replace all of the <m>x</m>'s with a <m>-1</m>. Since <m>g({\color{red}{x}})={\color{red}{x}}^2+2{\color{red}{x}}-1</m>, we get:
+          <me>g({\color{red}{-1}})=({\color{red}{-1}})^2+2({\color{red}{-1}})-1=1-2-1=-2</me>
+        Therefore, the answer is <m>-2</m>.</li> 
+      </ol>
+    </p>
+  </example>
+
+  <exercise>
+    <statement><p>Suppose <m>h(x)=2x^2-5</m>.
+      <ol>
+        <li>Find <m>h(3)</m>.</li>
+        <li>Find <m>h(-1)</m>.</li>
+      </ol></p>
+    </statement>
+    <answer><p>
+      <ol>
+        <li><m>h(3)=13</m></li>
+        <li><m>h(-1)=-3</m></li>
+      </ol></p>
+    </answer>
+    <solution>
+      <p><ol>
+        <li>In this question, we want to find <m>h(3)</m>. Since the <m>3</m> is inside the parentheses, that tells us that our input is supposed to be <m>3</m>. In our original formula, we replace all of the <m>x</m>'s with a <m>3</m>. Since <m>h({\color{red}{x}})=2{\color{red}{x}}^2-5</m>, we get:
+          <me>h({\color{red}{3}})=2({\color{red}{3}})^2-5=2(9)-5=18-5=13</me>
+        Therefore, the answer is <m>13</m>.</li> 
+        <li>In this question, we want to find <m>h(-1)</m>. Since the <m>-1</m> is inside the parentheses, that tells us that our input is supposed to be <m>-1</m>. In our original formula, we replace all of the <m>x</m>'s with a <m>-1</m>. Since <m>h({\color{red}{x}})=2{\color{red}{x}}^2-5</m>, we get:
+          <me>h({\color{red}{-1}})=2({\color{red}{-1}})^2-5=2(1)-5=2-5=-3</me>
+        Therefore, the answer is <m>-3</m>.</li> 
+      </ol>
+      </p>
+    </solution>
+  </exercise>
+
+  <p>So far, we have only seen examples where the inputs were numbers, but the inputs could be anything we want. Whatever we put in the parentheses next to the function name, we replace all of the <m>x</m> with that.</p>
+
+  <example xml:id="ex-AlgebraInsideFunction">
+    <p>Suppose <m>t(x)=7x-1</m>.
+      <ol>
+        <li>Let's find <m>t(a)</m>.Since the <m>a</m> is inside the parentheses, that tells us that our input is supposed to be <m>a</m>. In our original formula, we replace all of the <m>x</m>'s with a <m>a</m>. Since <m>t({\color{red}{x}})=7{\color{red}{x}}-1</m>, we get:
+          <me>t({\color{red}{a}})=7({\color{red}{a}})-1=7a-1</me>
+        Therefore, the answer is <m>7a-1</m>.</li>
+        <li>Let's find <m>t(2b)</m>.Since the <m>2b</m> is inside the parentheses, that tells us that our input is supposed to be <m>2b</m>. In our original formula, we replace all of the <m>x</m>'s with a <m>2b</m>. Since <m>t({\color{red}{x}})=7{\color{red}{x}}-1</m>, we get:
+          <me>t({\color{red}{2b}})=7({\color{red}{2b}})-1=14b-1</me>
+        Therefore, the answer is <m>14b-1</m>.</li>
+        <li>Let's find <m>t(ah+4)</m>.Since the <m>ah+4</m> is inside the parentheses, that tells us that our input is supposed to be <m>ah+4</m>. In our original formula, we replace all of the <m>x</m>'s with a <m>ah+4</m>. Since <m>t({\color{red}{x}})=7{\color{red}{x}}-1</m>, we get:
+          <me>t({\color{red}{ah+4}})=7({\color{red}{ah+4}})-1=7ah+28-1=7ah+27</me>
+        Therefore, the answer is <m>7ah+27</m>.</li>
+      </ol>
+    </p>
+  </example>
+
+  <p>The last example shows how important it is to put parentheses around the input. Although sometimes you might not need them, it is a good idea to always start with parentheses around your input. This lowers your risk of forgetting something when you simplify your answer.</p>
+
+  <p>Sometimes, students who are first learning this notation have trouble with removing <m>x</m> and inserting the new input all in the same step. If that is giving you difficulty, try adding a step in the middle: replace all of the <m>x</m> with an empty line. After that, fill in the new input onto the empty line. With this technique, the last example would look like this:
+    <md>
+    <mrow>t({\color{red}{x}})\amp=7{\color{red}{x}}-1</mrow>
+    <mrow>t({\color{red}{\underline{\hspace{0.5in}}}})\amp=7({\color{red}{\underline{\hspace{0.5in}}}})-1</mrow>
+    <mrow>t({\color{red}{\underline{ah+4}}})\amp=7({\color{red}{\underline{ah+4}}})-1</mrow>
+    </md>
+
+    We can then simplify the last line to get the final answer of <m>t(ah+4)=7ah+27</m>.
+  </p>
+
+  <exercise>
+    <statement>
+      <p>Suppose <m>f(x)=x^2-x+1</m>.
+        <ol>
+          <li>Evaluate <m>f(b+1)</m>.</li>
+          <li>Evaluate <m>f(a+h)</m>.</li>
+          <li>Evaluate <m>f(\sqrt{7})</m>.</li>
+        </ol>
+      </p>
+    </statement>
+    <answer>
+      <p><ol>
+          <li><m>f(b+1)=b^2+b+1</m></li>
+          <li><m>f(a+h)=a^2+2ah+h^2-a-h+1</m></li>
+          <li><m>f(\sqrt{7})=8-\sqrt{7}</m></li>
+        </ol></p>
+    </answer>
+    <solution>
+      <p><ol>
+          <li>To find <m>f(b+1)=</m>:
+            <md>
+              <mrow>f({\color{red}{b+1}})\amp=({\color{red}{b+1}})^2-({\color{red}{b+1}})+1</mrow>
+              <mrow>\amp=(b+1)(b+1)-(b+1)+1</mrow>
+              <mrow>\amp=(b^2+2b+1)-(b+1)+1</mrow>
+              <mrow>\amp=b^2+2b+1-b-1+1</mrow>
+              <mrow>\amp=b^2+b+1</mrow>
+            </md>
+          </li>
+          <li>To find <m>f(a+h)=</m>:
+            <md>
+              <mrow>f({\color{red}{a+h}})\amp=({\color{red}{a+h}})^2-({\color{red}{a+h}})+1</mrow>
+              <mrow>\amp=(a+h)(a+h)-(a+h)+1</mrow>
+              <mrow>\amp=(a^2+2ah+h^2)-(a+h)+1</mrow>
+              <mrow>\amp=a^2+2ah+h^2-a-h+1</mrow>
+            </md>
+          </li>
+          <li>To find <m>f(\sqrt{7})=</m>:
+            <md>
+              <mrow>f({\color{red}{\sqrt{7}}})\amp=({\color{red}{\sqrt{7}}})^2-({\color{red}{\sqrt{7}}})+1</mrow>
+              <mrow>\amp=7-\sqrt{7}+1</mrow>
+              <mrow>\amp=8-\sqrt{7}</mrow>
+            </md>
+          </li>
+        </ol></p>
+    </solution>
+  </exercise>
+
+  <p>There is one more special case we need to look at before this section is over.</p>
+
+  <example>
+    <title>Constant Functions</title>
+    <p>Suppose <m>g(x)=42</m>. Notice how this one is different from the other examples we've looked at: there is no <m>x</m> in the formula! Normally, when we want to evaluate a function, we replace all of the <m>x</m> in the formula with the input. Since there is no <m>x</m> in the formula, the input doesn't matter. The answer is always just <m>42</m>.
+      <ol>
+        <li>Let's find <m>g(2)</m>. Normally, we would replace all of the <m>x</m> in the formula with the new input of <m>2</m>. However, since there is no <m>x</m> in the formula, the answer is just <m>42</m>.</li>
+        <li>Let's find <m>g(a+2)</m>. Normally, we would replace all of the <m>x</m> in the formula with the new input of <m>a+2</m>. However, since there is no <m>x</m> in the formula, the answer is just <m>42</m>.</li>
+      </ol>
+    </p>
+  </example>
+
+  <definition>
+  <statement>A function like the one above is called a <term>constant function</term>, since it's output never changes.</statement>
+  </definition>
+
+  <exercise>
+    <statement><p>Suppose <m>c(x)=\pi</m>.
+      <ol>
+        <li>Evaluate <m>c(0)</m>.</li>
+        <li>Evaluate <m>c(a+h)</m>.</li>
+      </ol>
+    </p></statement>
+    <answer><p>
+      <ol>
+        <li><m>c(0)=\pi</m></li>
+        <li><m>c(a+h)=\pi</m></li>
+      </ol>
+    </p></answer>
+    <solution><p>
+      <ol>
+        <li>To find <m>c(0)=\pi</m>, normally, we would replace all of the <m>x</m> in the formula with the new input of <m>0</m>. However, since there is no <m>x</m> in the formula, the answer is just <m>\pi</m>.</li>
+        <li>To find <m>c(a+h)=\pi</m>, normally, we would replace all of the <m>x</m> in the formula with the new input of <m>a+h</m>. However, since there is no <m>x</m> in the formula, the answer is just <m>\pi</m>.</li>
+      </ol>
+    </p>
+    </solution>
+  </exercise>
+
+
+</section>
+
+<section xml:id="sec-piecewisefn">
+  <title>Piecewise Functions</title>
+
+  <introduction>Sometimes, we want to use different formulas for our function, depending on what the input is. In this section, we will look at how those kinds of functions are written and practice working with them.</introduction>
+
+  <definition> A <term>piecewise function</term> is a function that uses different formulas for different inputs. It is a function made of pieces of other functions.</definition>
+
+  <p>Since our function has multiple formulas and requirements for when we use which formula, the notation is a bit longer. Here is an example of a piecewise function:
+    <me>f(x) = \begin{cases}2x+3 \amp x \gt 4 \\ x^2+7 \amp -1 \lt x \le 4 \\ \sqrt{3-x} \amp x \le -1 \end{cases} </me>
+
+    To evaluate the function, we actually start on the right. The column on the right that has <m>x \gt 4</m>, <m>-1 \lt x \le 4</m>, and <m>x \ge -1</m> is the part that tells us when to use which formula. Once we know which formula to use, that's when we move to the left to actually use the formula.
+  </p>
+
+  <example xml:id="ex-PiecewiseFormula">
+    <p>Suppose
+    <me>f(x) = \begin{cases}2x+3 \amp x \gt 4 \\ x^2+7 \amp -1 \lt x \le 4 \\ \sqrt{3-x} \amp x \le -1 \end{cases} </me>
+    We want to evaluate each of the following:
+    <ol>
+      <li><m>f(0)</m></li>
+      <li><m>f(-2)</m></li>
+      <li><m>f(10)</m></li>
+      <li><m>f(4)</m></li>
+    </ol>
+    </p>
+
+    <p>Let's go through them one-by-one:
+      <ol>
+        <li>To find <m>f(0)</m>, we know that our input is <m>0</m>. So, we look on the right side and see that <m>0</m> fits into the middle inequality, since <m>0</m> is between <m>-1</m> and <m>4</m>. That tells us that we want to plug <m>0</m> into the middle equation. Therfore, <m>f(0) = (0)^2+7 = 7</m>.</li>
+        <li>To find <m>f(-2)</m>, we know that our input is <m>-2</m>. So, we look on the right side and see that <m>-2</m> fits into the last inequality, since <m>-2</m> is less than <m>-1</m>. That tells us that we want to plug <m>-2</m> into the last equation. Therfore, <m>f(-2) = \sqrt{3-(-2)} = \sqrt{3+2}=\sqrt{5}</m>.</li>
+        <li>To find <m>f(10)</m>, we know that our input is <m>10</m>. So, we look on the right side and see that <m>10</m> fits into the first inequality, since <m>10</m> is greater than <m>4</m>. That tells us that we want to plug <m>10</m> into the first equation. Therfore, <m>f(10) = 2(10)+3 = 23</m>.</li>
+        <li>To find <m>f(4)</m>, we know that our input is <m>4</m>. So, we look on the right side to see which inequality <m>4</m> fits into. Notice that the first inequality is only the numbers greater than <m>4</m>, which doesn't include <m>4</m> itself. However, the middle equation has <m>x \le 4</m>, which does include <m>4</m>. That tells us that we want to plug <m>4</m> into the middle equation. Therfore, <m>f(4) = (4)^2+7 = 16+7=23</m>.</li>
+      </ol>
+    </p>
+  </example>
+
+  <exercise>
+    <statement>
+      <p>Suppose
+        <me>p(x)=\begin{cases}3-x \amp x \gt 2 \\ 42 \amp x=2 \\ x^2 \amp x \lt 2\end{cases}</me>
+        Evaluate each of the following:
+        <ol>
+          <li><m>f(1)</m></li>
+          <li><m>f(-3)</m></li>
+          <li><m>f(2)</m></li>
+          <li><m>f(4)</m></li>
+        </ol>
+      </p>
+    </statement>
+    <solution>
+      <p>Suppose
+        <me>p(x)=\begin{cases}3-x \amp x \gt 2 \\ 42 \amp x=2 \\ x^2 \amp x \lt 2\end{cases}</me>
+        Evaluate each of the following:
+        <ol>
+          <li>To find <m>f(1)</m>, we know that our input is <m>1</m>. So, we look on the right side and see that <m>1</m> fits into the last inequality, since <m>1</m> is less than <m>2</m>. That tells us that we want to plug <m>1</m> into the last equation. Therfore, <m>f(1) = (1)^2=1</m>.</li>
+          <li>To find <m>f(-3)</m>, we know that our input is <m>-3</m>. So, we look on the right side and see that <m>-3</m> fits into the last inequality, since <m>-3</m> is less than <m>2</m>. That tells us that we want to plug <m>-3</m> into the last equation. Therfore, <m>f(-3) = (-3)^2=9</m>.</li>
+          <li>To find <m>f(2)</m>, we know that our input is <m>2</m>. So, we look on the right side and see that <m>2</m> fits into the middle, that one is just <m>x=2</m>. That tells us that we want to plug <m>-2</m> into the middle equation, which is a constant function. Therfore, <m>f(2) = 42</m>.</li>
+          <li>To find <m>f(4)</m>, we know that our input is <m>4</m>. So, we look on the right side and see that <m>4</m> fits into the first inequality, since <m>4</m> is greater than <m>2</m>. That tells us that we want to plug <m>4</m> into the first equation. Therfore, <m>f(4) = 3-(4)=-1</m>.</li>
+        </ol>
+      </p>
+    </solution>
+    <answer>
+      <p>
+        <ol>
+          <li><m>f(1)</m>=1</li>
+          <li><m>f(-3)=9</m></li>
+          <li><m>f(2)=42</m></li>
+          <li><m>f(4)=-1</m></li>
+        </ol>
+      </p>
+    </answer>
+  </exercise>
+    
+</section>
+
+<section xml:id="sec-fngraphstables">
+  <title>Functions as Graphs and Tables</title>
+
+  <introduction>Sometimes, we don't have a formula for the function we are working with, but we might have some other information about it. In this section, we'll look at two other ways we might look at a function: as a graph and as a table.</introduction>
+
+  <subsection>
+    <title>Functions as Graphs</title>
+
+    <p>A graph is a visual way of representing a function. The <m>x</m>-values represent the inputs and the <m>y</m>-values represent the outputs. So, for example, if the point <m>(2,7)</m> is somewhere on the graph, that means that <m>f(2)=7</m>. This gives us our strategy for evaluating functions given as graphs, which is demonstrated in the example below:</p>
+
+    <example>
+      <p>Suppose <m>g(x)</m> is given in the graph below:</p>
+
+      <image source="Functions/EvaluateGraphsExample1.png"/>
+
+      <p>Now, suppose we want to find <m>g(-1)</m>. We know that <m>-1</m> is our input, which is represented by the <m>x</m>-values on the graph. So, we move along the <m>x</m>-axis to where <m>x=-1</m>. Then, we look up and down at that <m>x</m>-value to see where the graph crosses it. Moving up, we see that the point <m>(-1,5)</m> is on the graph. Since the <m>y</m>-values represent the outputs, that tells us that <m>g(-1)=5</m>.</p>
+    </example>
+
+    <exercise>
+      <statement>
+        <p>Suppose <m>g(x)</m> is given in the graph below:</p>
+        <image source="Functions/EvaluateGraphsExample1.png"/>
+        <p>Evaluate each of the following:
+          <ol>
+            <li><m>g(0)</m></li>
+            <li><m>g(3)</m></li>
+            <li><m>g(-4)</m></li>
+            <li><m>g(-8)</m></li>
+          </ol>
+        </p>
+      </statement>
+      <solution>
+        <p>Suppose <m>g(x)</m> is given in the graph below:</p>
+        <image source="Functions/EvaluateGraphsExample1.png"/>
+        <p>Evaluate each of the following:
+          <ol>
+            <li><p>To find <m>g(0)</m>, we know that <m>0</m> is our input, which is represented by the <m>x</m>-values on the graph. So, we move along the <m>x</m>-axis to where <m>x=0</m>. Then, we look up and down at that <m>x</m>-value to see where the graph crosses it. Moving up, we see that the point <m>(0,4)</m> is on the graph. Since the <m>y</m>-values represent the outputs, that tells us that <m>g(0)=4</m>.</p></li>
+            <li><p>To find <m>g(3)</m>, we know that <m>3</m> is our input, which is represented by the <m>x</m>-values on the graph. So, we move along the <m>x</m>-axis to where <m>x=3</m>. Then, we look up and down at that <m>x</m>-value to see where the graph crosses it. Moving up, we see that the point <m>(3,1)</m> is on the graph. Since the <m>y</m>-values represent the outputs, that tells us that <m>g(3)=1</m>.</p></li>
+            <li><p>To find <m>g(-4)</m>, we know that <m>-4</m> is our input, which is represented by the <m>x</m>-values on the graph. So, we move along the <m>x</m>-axis to where <m>x=-4</m>. Then, we look up and down at that <m>x</m>-value to see where the graph crosses it. Moving down, we see that the point <m>(-4,-4)</m> is on the graph. Since the <m>y</m>-values represent the outputs, that tells us that <m>g(-4)=-4</m>.</p></li>
+            <li><p>To find <m>g(-8)</m>, we know that <m>-8</m> is our input, which is represented by the <m>x</m>-values on the graph. So, we move along the <m>x</m>-axis to where <m>x=-8</m>. Then, we look up and down at that <m>x</m>-value to see where the graph crosses it. In this case, we actually don't need to move at all to see that the point <m>(-8,0)</m> is on the graph. Since the <m>y</m>-values represent the outputs, that tells us that <m>g(-8)=0</m>.</p></li>
+          </ol>
+        </p>
+      </solution>
+      <answer>
+        <p>
+          <ol>
+            <li><m>g(0)=4</m></li>
+            <li><m>g(3)=1</m></li>
+            <li><m>g(-4)=-4</m></li>
+            <li><m>g(-8)=0</m></li>
+          </ol>
+        </p>
+      </answer>
+    </exercise>
+
+    <p>In the last section, we looked at piecewise functions as formulas. We can also have graphs of piecewise functions. We follow the same steps as we do for reading any other graph, but we have to be extra careful at the part of the graph where it breaks. The graph has to tell you whether it is including the endpoint itself or if it is not including the endpoint, just everything up to it.
+      <ul>
+        <li>A closed dot is a filled in dot, and it indicates that that point is included on the graph</li>
+        <li>An open dot is not filled in, and it indicates that that point is not included on the graph</li>
+      </ul>
+    </p>
+
+    <example>
+      <p>Suppose <m>f(x)</m> is given in the graph below:</p>
+
+      <image source="Functions/EvaluateGraphsExample2.png"/>
+
+      <p>Now, suppose we want to find <m>f(-1)</m>. We know that <m>-1</m> is our input, which is represented by the <m>x</m>-values on the graph. So, we move along the <m>x</m>-axis to where <m>x=-1</m>. Then, we look up and down at that <m>x</m>-value to see where the graph crosses it. Moving up, we actually see two points: <m>(-1,5)</m> and <m>(-1,2)</m>. However, the point at <m>(-1,2)</m> is not filled in, so it isn't included in the graph, and we can ignore it. Since the point at <m>(-1,5)</m> is filled in, it is included in our graph. So, that point gives us our answer of <m>f(-1)=5</m>.</p>
+    </example>
+
+    <exercise>
+      <statement><p>Suppose <m>f(x)</m> is given in the graph below:</p>
+        <image source="Functions/EvaluateGraphsExample2.png"/>
+        <p>Evaluate each of the following:
+          <ol>
+            <li><m>f(-6)</m></li>
+            <li><m>f(-3)</m></li>
+          </ol>
+        </p>
+      </statement>
+      <solution><p>Suppose <m>f(x)</m> is given in the graph below:</p>
+        <image source="Functions/EvaluateGraphsExample2.png"/>
+        <p>Evaluate each of the following:
+          <ol>
+            <li>To find <m>f(-6)</m>, we know that <m>-6</m> is our input, which is represented by the <m>x</m>-values on the graph. So, we move along the <m>x</m>-axis to where <m>x=-6</m>. Then, we look up and down at that <m>x</m>-value to see where the graph crosses it. Moving up, we actually see two points: <m>(-6,0)</m> and <m>(-6,4)</m>. However, the point at <m>(-6,0)</m> is an open circle, so it isn't included in the graph, and we can ignore it. Since the point at <m>(-6,4)</m> is closed, it is included in our graph. So, that point gives us our answer of <m>f(-6)=4</m>.</li>
+            <li>To find <m>f(-3)</m>, we know that <m>-3</m> is our input, which is represented by the <m>x</m>-values on the graph. So, we move along the <m>x</m>-axis to where <m>x=-3</m>. Then, we look up and down at that <m>x</m>-value to see where the graph crosses it. This one only has one point, like the ones we looked at before. Since <m>(-3,-3)</m> is the only point there, that gives us our answer of <m>f(-3)=-3</m>.</li>
+          </ol>
+        </p>
+      </solution>
+      <answer>
+        <p>
+          <ol>
+            <li><m>f(-6)=4</m></li>
+            <li><m>f(-3)=-3</m></li>
+          </ol>
+        </p>
+      </answer>
+    </exercise>
+  </subsection>
+
+  <subsection>
+    <title>Functions as Tables</title>
+
+    <p>Sometimes, we don't have a nice formula or graph that tells us about all of the values of a function. Instead, we might only know a few values. In that case, writing it as a table is a good option. In this case, the table will have a column for the inputs, labeled with an <m>x</m>, and a column for the outputs, labeled with the name of the function like <m>f(x)</m>.</p>
+
+    <example>
+      <p>Suppose <m>f(x)</m> is given in the table below:</p>
+      <table>
+        <tabular top="medium">
+          <row bottom="medium" left="medium">
+            <cell right="medium">
+              <m>x</m>
+            </cell>
+            <cell right="medium">
+              <m>f(x)</m>
+            </cell>
+          </row>
+          <row bottom="medium" left="medium">
+            <cell right="medium">
+              <m>-3</m>
+            </cell>
+            <cell right="medium">
+              <m>0</m>
+            </cell>
+          </row>
+          <row bottom="medium" left="medium">
+            <cell right="medium">
+              <m>2</m>
+            </cell>
+            <cell right="medium">
+              <m>2</m>
+            </cell>
+          </row>
+          <row bottom="medium" left="medium">
+            <cell right="medium">
+              <m>1.5</m>
+            </cell>
+            <cell right="medium">
+              <m>-5</m>
+            </cell>
+          </row>
+          <row bottom="medium" left="medium">
+            <cell right="medium">
+              <m>\pi</m>
+            </cell>
+            <cell right="medium">
+              <m>3.14</m>
+            </cell>
+          </row>
+          <row bottom="medium" left="medium">
+            <cell right="medium">
+              <m>\frac{17}{3}</m>
+            </cell>
+            <cell right="medium">
+              <m>1.7</m>
+            </cell>
+          </row>
+        </tabular>
+      </table>
+
+      <p>Now, suppose we want to evaluate <m>f(1.5)</m>. Since <m>1.5</m> is our input, we look for <m>1.5</m> in the input column, which we know is the first column because that's the one labeled with the <m>x</m>. We see that <m>1.5</m> in the third row of numbers. So, we look in the output column (the second column, lableled with the <m>f(x)</m>) in the third row of numbers to get our answer: <m>f(1.5)=-5</m>.</p>
+    </example>
+
+    <p>Sometimes, there will be more than one function in the same table. In that case, there will still be one input column labled with an <m>x</m>, but then to find the output, you look at the column labeled with the name of the function you want to evaluate.</p>
+
+    <example>
+      <p>Suppose <m>f(x)</m>, <m>g(x)</m>, and <m>h(x)</m> are represented in the table below:</p>
+
+      <table>
+        <tabular top="medium">
+          <row left="medium" bottom="medium">
+            <cell right="medium">
+              <m>x</m>
+            </cell>
+            <cell right="medium">
+              <m>f(x)</m>
+            </cell>
+            <cell right="medium">
+              <m>g(x)</m>
+            </cell>
+            <cell right="medium">
+              <m>h(x)</m>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell right="medium">
+              <m>-1</m>
+            </cell>
+            <cell right="medium">
+              <m>5</m>
+            </cell>
+            <cell right="medium">
+              <m>1</m>
+            </cell>
+            <cell right="medium">
+              <m>6</m>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell right="medium">
+              <m>0</m>
+            </cell>
+            <cell right="medium">
+              <m>5</m>
+            </cell>
+            <cell right="medium">
+              <m>-7</m>
+            </cell>
+            <cell right="medium">
+              <m>6</m>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell right="medium">
+              <m>2</m>
+            </cell>
+            <cell right="medium">
+              <m>-5</m>
+            </cell>
+            <cell right="medium">
+              <m>4</m>
+            </cell>
+            <cell right="medium">
+              <m>9</m>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell right="medium">
+              <m>5</m>
+            </cell>
+            <cell right="medium">
+              <m>3</m>
+            </cell>
+            <cell right="medium">
+              <m>5</m>
+            </cell>
+            <cell right="medium">
+              <m>3</m>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell right="medium">
+              <m>7</m>
+            </cell>
+            <cell right="medium">
+              <m>1</m>
+            </cell>
+            <cell right="medium">
+              <m>-7</m>
+            </cell>
+            <cell right="medium">
+              <m>0</m>
+            </cell>
+          </row>
+        </tabular>
+      </table>
+
+      <p>We want to evaluate <m>g(0)</m>. Since <m>0</m> is our input, we look for <m>0</m> in the input column, which we know is the first column because that's the one labeled with the <m>x</m>. We see that <m>0</m> in the second row of numbers. So, we look in the output column for <m>g(x)</m> (the third column, lableled with the <m>g(x)</m>) in the second row of numbers to get our answer: <m>g(0)=-7</m>.</p>
+    </example>
+
+    <exercise>
+      <statement><p>Suppose <m>f(x)</m>, <m>g(x)</m>, and <m>h(x)</m> are represented in the table below:</p>
+
+      <table>
+        <tabular top="medium">
+          <row left="medium" bottom="medium">
+            <cell right="medium">
+              <m>x</m>
+            </cell>
+            <cell right="medium">
+              <m>f(x)</m>
+            </cell>
+            <cell right="medium">
+              <m>g(x)</m>
+            </cell>
+            <cell right="medium">
+              <m>h(x)</m>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell right="medium">
+              <m>-1</m>
+            </cell>
+            <cell right="medium">
+              <m>5</m>
+            </cell>
+            <cell right="medium">
+              <m>1</m>
+            </cell>
+            <cell right="medium">
+              <m>6</m>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell right="medium">
+              <m>0</m>
+            </cell>
+            <cell right="medium">
+              <m>5</m>
+            </cell>
+            <cell right="medium">
+              <m>-7</m>
+            </cell>
+            <cell right="medium">
+              <m>6</m>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell right="medium">
+              <m>2</m>
+            </cell>
+            <cell right="medium">
+              <m>-5</m>
+            </cell>
+            <cell right="medium">
+              <m>4</m>
+            </cell>
+            <cell right="medium">
+              <m>9</m>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell right="medium">
+              <m>5</m>
+            </cell>
+            <cell right="medium">
+              <m>3</m>
+            </cell>
+            <cell right="medium">
+              <m>5</m>
+            </cell>
+            <cell right="medium">
+              <m>3</m>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell right="medium">
+              <m>7</m>
+            </cell>
+            <cell right="medium">
+              <m>1</m>
+            </cell>
+            <cell right="medium">
+              <m>-7</m>
+            </cell>
+            <cell right="medium">
+              <m>0</m>
+            </cell>
+          </row>
+        </tabular>
+      </table>
+
+      <p>Evaluate each of the following:
+        <ol>
+          <li><m>f(-1)</m></li>
+          <li><m>g(7)</m></li>
+          <li><m>h(2)</m></li>
+        </ol>      
+      </p></statement>
+      <solution><p>Evaluate each of the following:
+        <ol>
+          <li>To find <m>f(-1)</m>, we know that <m>-1</m> is our input, so  we look for <m>-1</m> in the input column, which we know is the first column because that's the one labeled with the <m>x</m>. We see that <m>-1</m> in the first row of numbers. So, we look in the output column for <m>f(x)</m> (the second column, lableled with the <m>f(x)</m>) in the first row of numbers to get our answer: <m>f(-1) = 5</m>.</li>
+          <li>To find <m>g(7)</m>, we know that <m>7</m> is our input, so  we look for <m>7</m> in the input column, which we know is the first column because that's the one labeled with the <m>x</m>. We see that <m>7</m> in the last row of numbers. So, we look in the output column for <m>g(x)</m> (the third column, lableled with the <m>g(x)</m>) in the last row of numbers to get our answer: <m>g(7) = -7</m>.</li>
+          <li>To find <m>h(2)</m>, we know that <m>2</m> is our input, so  we look for <m>2</m> in the input column, which we know is the first column because that's the one labeled with the <m>x</m>. We see that <m>2</m> in the third row of numbers. So, we look in the output column for <m>h(x)</m> (the fourth column, lableled with the <m>h(x)</m>) in the third row of numbers to get our answer: <m>h(2) = 9</m>.</li>
+        </ol>      
+      </p></solution> 
+      <answer><p>Evaluate each of the following:
+        <ol>
+          <li><m>f(-1) = 5</m></li>
+          <li><m>g(7) = -7</m></li>
+          <li><m>h(2) = 9</m></li>
+        </ol>      
+      </p></answer>      
+    </exercise>
+
+    <example>
+      <title>Horizontal Tables</title>
+      <p>Sometimes, we have tables laid out in rows rather than in columns. You can tell based on where the labels are. If it's a table in rows, you'll have an input row and an output row, rather than an input column and an output column. For example, suppose <m>p(x)</m> is given in the table below:</p>
+      <table>
+        <tabular top="medium">
+          <row left="medium" bottom="medium">
+            <cell right="medium">
+              <m>x</m>
+            </cell>
+            <cell right="medium">
+              <m>-5</m>
+            </cell>
+            <cell right="medium">
+              <m>-2</m>
+            </cell>
+            <cell right="medium">
+              <m>1</m>
+            </cell>
+            <cell right="medium">
+              <m>2</m>
+            </cell>
+            <cell right="medium">
+              <m>3</m>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell right="medium">
+              <m>p(x)</m>
+            </cell>
+            <cell right="medium">
+              <m>2</m>
+            </cell>
+            <cell right="medium">
+              <m>3</m>
+            </cell>
+            <cell right="medium">
+              <m>4</m>
+            </cell>
+            <cell right="medium">
+              <m>1</m>
+            </cell>
+            <cell right="medium">
+              <m>1</m>
+            </cell>
+          </row>
+        </tabular>
+      </table>
+      <p>Suppose we want to find <m>p(3)</m>. Since <m>3</m> is our input, we look for <m>3</m> in the input row, which we know is the first row because that's the one labeled with the <m>x</m>. We see that <m>3</m> in the last column of numbers. So, we look in the output row for <m>p(x)</m> (the second row, lableled with the <m>p(x)</m>) in the last column of numbers to get our answer: <m>p(3) = 1</m>.</p>
+    </example>
+  </subsection>
+
+</section>
+
+<section xml:id="sec-algwithfn">
+  <title>Algebra with Functions</title>
+
+  <introduction>Functions are just a kind of group, like a fancy version of parentheses. So, if functions show up in more complicated expressions, you evaluate them first.</introduction>
+
+  <example>
+  <p>Suppose <m>f(x)=x^2-7x</m> and we want to evaluate <m>3f(2)-4</m>. Since we start with functions, we first need to find <m>f(2)=(2)^2-7(2) = 4-14=-10</m>. We can then plug that into our original expression and simplify: <m>3(2)-4 = 3(-10)-4 = -34</m>.</p>
+  </example>
+
+  <exercise xml:id="ex-AlgebraOutsideFunction">
+    <statement><p>Suppose <m>f(x)= 3x-5</m> and <m>g(x)</m> is given in the graph below:</p>
+      <image source="Functions/EvaluateGraphsExample2.png"/>
+      <p>Evaluate <m>7f(2)-(g(-2))^2+1</m>.</p>
+    </statement>
+    <solution><p>We start by evaluating the functions, but it doesn't matter which function we start with. Let's just go left-to-right:</p>
+      <me>f(2)=3(2)-5 = 1</me>
+      <p>From the graph, we can see that <m>g(-2)=0</m>. So, we can plug those values into the original expression:</p>
+      <me>7f(2)-(g(-2))^2+1 = 7(1)-(0)^2+1=8</me>
+    </solution>
+    <answer><p><m>7f(2)-(g(-2))^2+1=8</m></p></answer>
+  </exercise>
+
+  <p>Sometimes you'll have some arithmetic to do inside your function before evaluating it. The key is to work from the inside out.</p>
+
+  <example>
+    <p>Suppose <m>f(x)=x^2-8</m> and we want to evaluate <m>-f(2+3)+1</m>. In that case, we start inside the function by simplifying <m>2+3=5</m>. Then, we can evaluate <m>f(5)=(5)^2-8=17</m>. Finally, we can plug that into our original expression to get the final answer:</p>
+    <me>-f(2+3)+1 = -f(5)+1=-(17)+1=-16</me>
+  </example>
+
+
+
+</section>
+
+<section xml:id="sec-solvefn">
+  <title>Solving with Functions</title>
+
+  <introduction>So far in this chapter, we've talked about how to evaluate a function when given an input. However, in this section we will learn how to go backwards: when given the output, how do you figure out what the input(s) would have been?</introduction>
+
+  <p>The output to a function is what it is equal to. So, when we are given the function as a formula, our strategy will be to set the formula equal to the output and solve for <m>x</m>.</p>
+
+  <example>
+    <p>Suppose <m>f(x)=3x-7</m> and we want to solve <m>f(x)=5</m>. If we had been asked to find <m>f(5)</m>, then <m>5</m> would be our input and we would plug it in for <m>x</m>, but instead, the question set <m>f(x)</m> equal to <m>5</m>, which makes <m>5</m> our output. So, we are going to set our formula equal to the output and solve:</p>
+    <md>
+      <mrow>3x-7 \amp = 5</mrow>
+      <mrow>3x \amp = 12</mrow>
+      <mrow> x \amp =4 </mrow>
+    </md>
+  </example>
+
+  <exercise>
+    <statement><p>Suppose <m>f(x)=\dfrac{x+3}{x-7}</m>.
+      <ol>
+        <li>Solve <m>f(x)=2</m>.</li>
+        <li>Evaluate <m>f(2)</m>.</li>
+      </ol>
+    </p></statement>
+    <solution><p>Suppose <m>f(x)=\dfrac{x+3}{x-7}</m>.
+      <ol>
+        <li>To solve <m>f(x)=2</m>, we see that <m>2</m> is our output. So, we set the formula equal to the output and solve for <m>x</m>:
+          <md>
+            <mrow>\dfrac{x+3}{x-7} \amp =2</mrow>
+            <mrow>x+3 \amp =2(x-7)</mrow>
+            <mrow>x+3 \amp =2x-14</mrow>
+            <mrow>-x+3 \amp =-14</mrow>
+            <mrow>-x \amp = -17</mrow>
+            <mrow> x \amp = 17</mrow>
+          </md>        
+        </li>
+        <li>To evaluate <m>f(2)</m>, we see that <m>2</m> is our input, since it is inside the parentheses. So, we replace <m>x</m> in the formula with <m>2</m>:
+          <me>f(2) = \dfrac{(2)+3}{(2)-7} = \dfrac{5}{-5} = -1</me>
+        </li>
+      </ol>
+    </p></solution>
+    <answer><p>
+      <ol>
+        <li><m>x=17</m></li>
+        <li><m>f(2)=-1</m>.</li>
+      </ol>
+    </p></answer>
+  </exercise>
+
+  <p>When we are given the function as a graph, we remember that the inputs are represented by the <m>x</m>-values, and the outputs are represented by the <m>y</m>-values. So, when we are given the output, that means we are given the <m>y</m>-value, and we need to find the <m>x</m>-value(s) that correspond to it. Note that there could be more than one!</p>
+
+  <example><p>Let <m>g(x)</m> be given in the graph below:</p>
+    <image source="Functions/SolveExample1.png"/>
+    <p>Suppose we want to solve <m>g(x)=3</m>. Since <m>3</m> is our output, that means it's our <m>y</m>-value. So, we move up the <m>y</m>-axis to where <m>y=3</m> and look left and right to see where it crosses the graph. We find three points that have <m>y=3</m>: <m>(-5,3)</m>, <m>(-3,3)</m>, and <m>(7,3)</m>. However, because <m>(-5,3)</m> is an open circle, it is not included in the graph, so we can ignore it. In this case, we are looking for the inputs, which are the <m>x</m>-values, so we have two answers: <m>x=-3,7</m>.</p>
+  </example>
+
+  <exercise>
+    <statement><p>Let <m>g(x)</m> be given in the graph below:</p>
+      <image source="Functions/SolveExample1.png"/>
+      <p>Solve each of the following:
+        <ol>
+          <li><m>g(x)=0</m></li>
+          <li><m>g(x)=5</m></li>
+          <li><m>g(x)=-7</m></li>
+        </ol>
+      </p>
+    </statement>
+    <solution>
+      <p>Solve each of the following:
+        <ol>
+          <li>To solve <m>g(x)=0</m>, we see that <m>0</m> is our output, so we look for where <m>y=0</m>. Looking left and right, we find two points: <m>(-2,0)</m> and <m>(4,0)</m>. Therefore, we have two answers: <m>x=-2,4</m>.</li>
+          <li>To solve <m>g(x)=5</m>, we see that <m>5</m> is our output, so we look where <m>y=5</m>. Looking left and right, we only find one point: <m>(9,5)</m>, so we have one answer: <m>x=9</m></li>
+          <li>To solve <m>g(x)=-7</m>, we see that <m>-7</m> is our output, so we look for where <m>y=-7</m>. Looking left and right, we find no points on the graph! Therefore, our answer is just "none".</li>
+        </ol>
+      </p>
+    </solution>
+    <answer>
+      <p>
+        <ol>
+          <li><m>x=-2,4</m></li>
+          <li><m>x=</m></li>
+          <li>none</li>
+        </ol>
+      </p>
+    </answer>
+  </exercise>
+
+  <p>When we are given the function as a table, we just remember which column is the output column and which is the input column. If we are given the output, we just look for that number in the output column, rather than in the input column.</p>
+
+  <example>
+    <p>Suppose <m>T(x)</m> is given in the table below:</p>
+    <table>
+      <tabular top="medium">
+        <row left="medium" bottom="medium">
+          <cell right="medium">
+            <m>x</m>
+          </cell>
+          <cell right="medium">
+            <m>T(x)</m>
+          </cell>
+        </row>
+        <row left="medium" bottom="medium">
+          <cell right="medium">
+            <m>-1</m>
+          </cell>
+          <cell right="medium">
+            <m>7</m>
+          </cell>
+        </row>
+        <row left="medium" bottom="medium">
+          <cell right="medium">
+            <m>0</m>
+          </cell>
+          <cell right="medium">
+            <m>0</m>
+          </cell>
+        </row>
+        <row left="medium" bottom="medium">
+          <cell right="medium">
+            <m>2</m>
+          </cell>
+          <cell right="medium">
+            <m>0</m>
+          </cell>
+        </row>
+        <row left="medium" bottom="medium">
+          <cell right="medium">
+            <m>3</m>
+          </cell>
+          <cell right="medium">
+            <m>2</m>
+          </cell>
+        </row>
+        <row left="medium" bottom="medium">
+          <cell right="medium">
+            <m>7</m>
+          </cell>
+          <cell right="medium">
+            <m>0</m>
+          </cell>
+        </row>
+      </tabular>
+    </table>
+    <p>We want to solve <m>T(x)=7</m>. Since <m>7</m> is our output, we look for <m>7</m> in the output column, which is the second column (labeled with the <m>T(x)</m>). We find the <m>7</m> in the first row of numbers. So, to find our answer, we look in the input column (the first column, labeled with a <m>x</m>) in the first row of numbers. Therefore, our answer is <m>x=-1</m>.</p>
+  </example>
+
+  <exercise>
+    <statement>
+      <p>Suppose <m>T(x)</m> is given in the table below:</p>
+      <table>
+        <tabular top="medium">
+          <row left="medium" bottom="medium">
+            <cell right="medium">
+              <m>x</m>
+            </cell>
+            <cell right="medium">
+              <m>T(x)</m>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell right="medium">
+              <m>-1</m>
+            </cell>
+            <cell right="medium">
+              <m>7</m>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell right="medium">
+              <m>0</m>
+            </cell>
+            <cell right="medium">
+              <m>0</m>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell right="medium">
+              <m>2</m>
+            </cell>
+            <cell right="medium">
+              <m>0</m>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell right="medium">
+              <m>3</m>
+            </cell>
+            <cell right="medium">
+              <m>2</m>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell right="medium">
+              <m>7</m>
+            </cell>
+            <cell right="medium">
+              <m>0</m>
+            </cell>
+          </row>
+        </tabular>
+      </table>
+      <p>Solve each of the following:
+        <ol>
+          <li><m>T(x)=2</m></li>
+          <li><m>T(x)=3</m></li>
+          <li><m>T(x)=0</m></li>
+        </ol>
+      </p>
+    </statement>
+    <solution>
+      <p>Solve each of the following:
+        <ol>
+          <li>To solve <m>T(x)=2</m>, we see that <m>2</m> is our output. So, we look for <m>2</m> in the output column, which is the second column (labeled with the <m>T(x)</m>). We find the <m>2</m> in the fourth row of numbers. So, to find our answer, we look in the input column (the first column, labeled with a <m>x</m>) in the fourth row of numbers. Therefore, our answer is <m>x=3</m>.</li>
+          <li>To solve <m>T(x)=3</m>, we see that <m>3</m> is our output. So, we look for <m>3</m> in the output column, which is the second column (labeled with the <m>T(x)</m>). We find that there is no <m>3</m> in the output column. Therefore, there is no input that leads to <m>3</m> as the output, so our answer is "none".</li>
+          <li>To solve <m>T(x)=0</m>, we see that <m>0</m> is our output. So, we look for <m>0</m> in the output column, which is the second column (labeled with the <m>T(x)</m>). We find the <m>0</m> in the second, third, and last rows of numbers. So, to find our answer, we look in the input column (the first column, labeled with a <m>x</m>) in the second, third, and last rows of numbers. Therefore, our answer is <m>x=0, 2, 7</m>.</li>
+        </ol>
+      </p>
+    </solution>
+    <answer>
+      <p>
+        <ol>
+          <li><m>x=3</m></li>
+          <li>none</li>
+          <li><m>x=0,2,7</m></li>
+        </ol>
+      </p>
+    </answer>
+  </exercise>
+
+
+</section>
+
+<exercises><title>Practice Problems</title> <!--Indicates start of the exercises for the chapter and its title-->
+    <exercisegroup><!--Start of a group of problems with common instructions (title optional)-->
+      <introduction><!--Start of the instructions for this group of problems-->
+        <p>For each of the following functions, evaluate at the given input.
+          <ul>
+           <li><m>f(3)</m></li>
+           <li><m>f(4)</m></li>
+           <li><m>f(-1)</m></li>
+           <li><m>f\left(\frac{3}{4}\right)</m></li>
+          </ul>
+        </p>
+      </introduction><!--End of instructions for this group of problems-->
+      <exercise><!--Start of an exercise-->
+        <statement><p> <m>f(x)=3-8x</m> </p></statement><!--Statement of the problem-->
+        <answer>
+        <p>
+          <ul>
+           <li><m>f(3)=-21</m></li>
+           <li><m>f(4)=-29</m></li>
+           <li><m>f(-1)=11</m></li>
+           <li><m>f\left(\frac{3}{4}\right)=-3</m></li>
+          </ul>
+        </p>
+        </answer><!--Statement of the answer (don't worry about location in the rendered version)-->
+      </exercise><!--End of that exercise-->
+
+      <exercise><!--Start of an exercise-->
+         <statement><p> <m>f(x)=6x-4</m> </p></statement><!--Statement of the problem-->
+         <answer>
+         <p>
+           <ul>
+            <li><m>f(3)=14</m></li>
+            <li><m>f(4)=20</m></li>
+            <li><m>f(-1)=-10</m></li>
+            <li><m>f\left(\frac{3}{4}\right)=\left(\frac{1}{2}\right)</m></li>
+           </ul>
+         </p>
+         </answer><!--Statement of the answer (don't worry about location in the rendered version)-->
+       </exercise><!--End of that exercise-->
+
+      <exercise><!--Start of an exercise-->
+        <statement><p> <m>f(x)=26</m> </p></statement><!--Statement of the problem-->
+        <answer>
+        <p>
+          <ul>
+           <li><m>f(3)=26</m></li>
+           <li><m>f(4)=26</m></li>
+           <li><m>f(-1)=26</m></li>
+           <li><m>f\left(\frac{3}{4}\right)=26</m></li>
+          </ul>
+        </p>
+        </answer><!--Statement of the answer (don't worry about location in the rendered version)-->
+      </exercise><!--End of that exercise-->       
+
+      <exercise><!--Start of an exercise-->
+        <statement><p> <m>f(x)=-x+6</m> </p></statement><!--Statement of the problem-->
+        <answer>
+        <p>
+          <ul>
+           <li><m>f(3)=3</m></li>
+           <li><m>f(4)=2</m></li>
+           <li><m>f(-1)=7</m></li>
+           <li><m>f\left(\frac{3}{4}\right)=5 \frac{1}{4} </m></li>
+          </ul>
+        </p>
+        </answer><!--Statement of the answer (don't worry about location in the rendered version)-->
+      </exercise><!--End of that exercise-->
+
+      <exercise><!--Start of an exercise-->
+        <statement><p> <m>f(x)=2x</m> </p></statement><!--Statement of the problem-->
+        <answer>
+        <p>
+          <ul>
+           <li><m>f(3)=6</m></li>
+           <li><m>f(4)=8</m></li>
+           <li><m>f(-1)=-2</m></li>
+           <li><m>f\left(\frac{3}{4}\right)= \frac{3}{2}</m></li>
+          </ul>
+        </p>
+        </answer><!--Statement of the answer (don't worry about location in the rendered version)-->
+      </exercise><!--End of that exercise--> 
+      
+      <exercise><!--Start of an exercise-->
+        <statement><p> <m>f(x)=-\left(\frac{2}{3}\right)x + 1</m> </p></statement><!--Statement of the problem-->
+        <answer>
+        <p>
+          <ul>
+           <li><m>f(3)=-1</m></li>
+           <li><m>f(4)=-\frac{5}{3}</m></li>
+           <li><m>f(-1)=\frac{5}{3}</m></li>
+           <li><m>f\left(\frac{3}{4}\right)=\frac{1}{2} </m></li>
+          </ul>
+        </p>
+        </answer><!--Statement of the answer (don't worry about location in the rendered version)-->
+      </exercise><!--End of that exercise-->       
+    </exercisegroup><!--End of that exercise group-->
+
+
+
+
+       <exercisegroup><!--Start of a group of problems with common instructions (title optional)-->
+      <introduction><!--Start of the instructions for this group of problems-->
+        <p>For each of the following functions, evaluate at the given input.
+          <ul>
+           <li><m>g(c)</m></li>
+           <li><m>g(2e)</m></li>
+           <li><m>g(-k)</m></li>
+           <li><m>g\left(\frac{1}{2}h\right)</m></li>
+          </ul>
+        </p>
+      </introduction><!--End of instructions for this group of problems-->
+      <exercise><!--Start of an exercise-->
+        <statement><p> <m>g(x)=2-4x</m> </p></statement><!--Statement of the problem-->
+        <answer>
+        <p>
+          <ul>
+           <li><m>g(c)=2-4c</m></li>
+           <li><m>g(2e)=2-8e</m></li>
+           <li><m>g(-k)=2+4k</m></li>
+           <li><m>g\left(\frac{1}{2}h\right)=2-2h</m></li>
+          </ul>
+        </p>
+        </answer><!--Statement of the answer (don't worry about location in the rendered version)-->
+      </exercise><!--End of that exercise-->
+
+      <exercise><!--Start of an exercise-->
+         <statement><p> <m>f(x)=3x-3</m> </p></statement><!--Statement of the problem-->
+         <answer>
+         <p>
+           <ul>
+           <li><m>g(c)=3c-3</m></li>
+           <li><m>g(2e)=6e-3</m></li>
+           <li><m>g(-k)=-3k-3</m></li>
+           <li><m>g\left(\frac{1}{2}h\right)=\frac{3}{2}h-3</m></li>
+          </ul>
+         </p>
+         </answer><!--Statement of the answer (don't worry about location in the rendered version)-->
+       </exercise><!--End of that exercise-->
+
+      <exercise><!--Start of an exercise-->
+        <statement><p> <m>g(x)=12</m> </p></statement><!--Statement of the problem-->
+        <answer>
+        <p>
+          <ul>
+           <li><m>g(c)=12</m></li>
+           <li><m>g(2e)=12</m></li>
+           <li><m>g(-k)=12</m></li>
+           <li><m>g\left(\frac{1}{2}h\right)=12</m></li>
+          </ul>
+        </p>
+        </answer><!--Statement of the answer (don't worry about location in the rendered version)-->
+      </exercise><!--End of that exercise-->       
+
+      <exercise><!--Start of an exercise-->
+        <statement><p> <m>g(x)=x-1</m> </p></statement><!--Statement of the problem-->
+        <answer>
+        <p>
+          <ul>
+           <li><m>g(c)=c-1</m></li>
+           <li><m>g(2e)=2e-1</m></li>
+           <li><m>g(-k)=-k-1</m></li>
+           <li><m>g\left(\frac{1}{2}h\right)=\frac{1}{2}h-1</m></li>
+          </ul>
+        </p>
+        </answer><!--Statement of the answer (don't worry about location in the rendered version)-->
+      </exercise><!--End of that exercise-->
+
+      <exercise><!--Start of an exercise-->
+        <statement><p> <m>g(x)=x</m> </p></statement><!--Statement of the problem-->
+        <answer>
+        <p>
+          <ul>
+           <li><m>g(c)=c</m></li>
+           <li><m>g(2e)=2e</m></li>
+           <li><m>g(-k)=-k</m></li>
+           <li><m>g\left(\frac{1}{2}h\right)=\frac{1}{2}h</m></li>
+          </ul>
+        </p>
+        </answer><!--Statement of the answer (don't worry about location in the rendered version)-->
+      </exercise><!--End of that exercise--> 
+      
+      <exercise><!--Start of an exercise-->
+        <statement><p> <m>g(x)=-\frac{1}{4}x + 2</m> </p></statement><!--Statement of the problem-->
+        <answer>
+        <p>
+          <ul>
+           <li><m>g(c)=-\frac{1}{4}c+2</m></li>
+           <li><m>g(2e)=-\frac{1}{2}e+2</m></li>
+           <li><m>g(-k)=\frac{1}{4}k+2</m></li>
+           <li><m>g\left(\frac{1}{2}h\right)=\frac{1}{8}h+2</m></li>
+          </ul>
+        </p>
+        </answer><!--Statement of the answer (don't worry about location in the rendered version)-->
+      </exercise><!--End of that exercise-->       
+    </exercisegroup><!--End of that exercise group-->
+
+
+
+
+
+
+
+           <exercisegroup><!--Start of a group of problems with common instructions (title optional)-->
+      <introduction><!--Start of the instructions for this group of problems-->
+        <p>For each of the following functions, evaluate the given input.
+          <ul>
+           <li><m>f(x) = 2x+3</m></li>
+           <li><m>g(x) = 10x</m></li>
+           <li><m>h(x) = 0</m></li>
+           <li><m>y(x) = \frac{1}{5}x</m></li>
+          </ul>
+        </p>
+      </introduction><!--End of instructions for this group of problems-->
+      <exercise><!--Start of an exercise-->
+        <statement><p> Evaluate all four of the above functions given <m> x=1 </m>. </p></statement><!--Statement of the problem-->
+        <answer>
+        <p>
+          <ul>
+           <li><m>f(1)=5</m></li>
+           <li><m>g(1)=10</m></li>
+           <li><m>h(1)=0</m></li>
+           <li><m>y(1)=\frac{1}{5}</m></li>
+          </ul>
+        </p>
+        </answer><!--Statement of the answer (don't worry about location in the rendered version)-->
+      </exercise><!--End of that exercise-->
+
+      <exercise><!--Start of an exercise-->
+         <statement><p> Evaluate all four of the above functions given <m> x=a </m>. </p></statement><!--Statement of the problem-->
+         <answer>
+         <p>
+           <ul>
+           <li><m>f(a)=2a+3</m></li>
+           <li><m>g(a)=10a</m></li>
+           <li><m>h(a)=0</m></li>
+           <li><m>y(a)=\frac{1}{5}a</m></li>
+          </ul>
+         </p>
+         </answer><!--Statement of the answer (don't worry about location in the rendered version)-->
+       </exercise><!--End of that exercise-->
+
+      <exercise><!--Start of an exercise-->
+        <statement><p> Evaluate all four of the above functions given <m> x=0 </m>. </p></statement><!--Statement of the problem-->
+        <answer>
+        <p>
+          <ul>
+           <li><m>f(0)=3</m></li>
+           <li><m>g(0)=0</m></li>
+           <li><m>h(0)=0</m></li>
+           <li><m>y(0)=0</m></li>
+          </ul>
+        </p>
+        </answer><!--Statement of the answer (don't worry about location in the rendered version)-->
+      </exercise><!--End of that exercise-->       
+
+      <exercise><!--Start of an exercise-->
+        <statement><p> Evaluate all four of the above functions given <m> x=2z </m>. </p></statement><!--Statement of the problem-->
+        <answer>
+        <p>
+          <ul>
+           <li><m>f(2z)=4z+3</m></li>
+           <li><m>g(2z)=20z</m></li>
+           <li><m>h(2z)=0</m></li>
+           <li><m>y(2z)=\frac{2}{5}z</m></li>
+          </ul>
+        </p>
+        </answer><!--Statement of the answer (don't worry about location in the rendered version)-->
+      </exercise><!--End of that exercise-->
+
+      <exercise><!--Start of an exercise-->
+        <statement><p> Evaluate all four of the above functions given <m> x=\frac{1}{2} </m>. </p></statement><!--Statement of the problem-->
+        <answer>
+        <p>
+          <ul>
+           <li><m>f\left(\frac{1}{2}\right)=4</m></li>
+           <li><m>g\left(\frac{1}{2}\right)=5</m></li>
+           <li><m>h\left(\frac{1}{2}\right)=0</m></li>
+           <li><m>y\left(\frac{1}{2}\right)=\frac{1}{10}</m></li>
+          </ul>
+        </p>
+        </answer><!--Statement of the answer (don't worry about location in the rendered version)-->
+      </exercise><!--End of that exercise--> 
+      
+      <exercise><!--Start of an exercise-->
+        <statement><p> Evaluate all four of the above functions given <m> x=b+5 </m>. </p></statement><!--Statement of the problem-->
+        <answer>
+        <p>
+          <ul>
+           <li><m>f(b+5)=2b+13</m></li>
+           <li><m>g(b+5)=10b + 50</m></li>
+           <li><m>h(b+5)=0</m></li>
+           <li><m>y(b+5)=\frac{1}{5}b + 1</m></li>
+          </ul>
+        </p>
+        </answer><!--Statement of the answer (don't worry about location in the rendered version)-->
+      </exercise><!--End of that exercise-->       
+    </exercisegroup><!--End of that exercise group-->
+
+
+
+
+
+  <exercise>
+      <statement><p>Suppose <m>a(t)= \frac{1}{19}</m>.
+        <ol>
+          <li>Evaluate <m>a(1)</m>.</li>
+          <li>Evaluate <m>a(b+c)</m>.</li>
+          <li>Evaluate <m>a(9)</m>.</li>
+          <li>Evaluate <m>a(\frac{1}{19})</m>.</li>
+        </ol>
+      </p></statement>
+      <answer><p>
+        <ol>
+          <li><m>a(1) = \frac{1}{19}</m></li>
+          <li><m>a(b+c)) = \frac{1}{19}</m></li>
+          <li><m>a(9) = \frac{1}{19}</m></li>
+          <li><m>a\left(\frac{1}{19}\right) = \frac{1}{19}</m></li>
+        </ol>
+      </p></answer>
+  </exercise>
+
+
+
+  <exercise>
+      <statement><p>Suppose <m>d(t)=\pi t</m>.
+        <ol>
+          <li>Evaluate <m>d(0)</m>.</li>
+          <li>Evaluate <m>d(a+h)</m>.</li>
+          <li>Evaluate <m>d(x)</m>.</li>
+          <li>Evaluate <m>d(\sqrt{x+3})</m>.</li>
+        </ol>
+      </p></statement>
+      <answer><p>
+        <ol>
+          <li><m>d(0) = 0</m></li>
+          <li><m>d(a+h) = \pi a + \pi h</m></li>
+          <li><m>d(x) = \pi x</m></li>
+          <li><m>d(\sqrt{x+3}) = \left( \pi \right) \left( \sqrt{x+3} \right)</m></li>
+        </ol>
+      </p></answer>
+  </exercise>
+
+  <exercise>
+    <statement>
+        <p>Suppose
+      <me>g(x) = \begin{cases}\sqrt{x} \amp x \gt 2 \\ x^2 \amp -3 \lt x \le 2 \\ x+3 \amp x \le -3 \end{cases} </me>
+      We want to evaluate each of the following:
+      <ol>
+        <li><m>g(0)</m></li>
+        <li><m>g(-5)</m></li>
+        <li><m>g(10)</m></li>
+        <li><m>g(2)</m></li>
+      </ol>
+        </p>
+    </statement>
+      <answer>
+          <p>
+      <ol>
+        <li><m>g(0)=0</m></li>
+        <li><m>g(-5)= -2</m></li>
+        <li><m>g(10)= \sqrt{10}</m></li>
+        <li><m>g(2) = 4</m></li>
+      </ol>
+          </p>
+          </answer><!--Statement of the answer (don't worry about location in the rendered version)-->
+    </exercise><!--End of that exercise-->
+
+      <exercise>
+    <statement>
+        <p>Suppose
+      <me>h(t) = \begin{cases}\frac{1}{2}t \amp t \ge 3 \\ t^3 \amp 0 \lt t \lt 3 \\ t+3 \amp t \le 0 \end{cases} </me>
+      We want to evaluate each of the following:
+      <ol>
+        <li><m>h(1)</m></li>
+        <li><m>h(3)</m></li>
+        <li><m>h(0)</m></li>
+        <li><m>h(-3)</m></li>
+      </ol>
+        </p>
+    </statement>
+      <answer>
+          <p>
+      <ol>
+        <li><m>h(1) = 1</m></li>
+        <li><m>h(3) = \frac{3}{2}</m></li>
+        <li><m>h(0) = 3</m></li>
+        <li><m>h(-3) = 0</m></li>
+      </ol>
+          </p>
+          </answer><!--Statement of the answer (don't worry about location in the rendered version)-->
+    </exercise><!--End of that exercise-->
+
+    <exercise>
+    <statement>
+        <p>Suppose
+      <me>f(t) = \begin{cases}\frac{1}{3}t \amp t \ge 5 \\ \sqrt{t} \amp 1 \lt t \lt 5 \\ t \amp t \le 1 \end{cases} </me>
+      We want to evaluate each of the following:
+      <ol>
+        <li><m>f(1)</m></li>
+        <li><m>f(5)</m></li>
+        <li><m>f(0)</m></li>
+        <li><m>f\left(\frac{3}{2}\right)</m></li>
+      </ol>
+        </p>
+    </statement>
+      <answer>
+          <p>
+      <ol>
+        <li><m>f(1) = 1</m></li>
+        <li><m>f(5) = \frac{5}{3}</m></li>
+        <li><m>f(0) = 0</m></li>
+        <li><m>f\left(\frac{3}{2}\right) = \sqrt{\frac{3}{2}}</m></li>
+      </ol>
+          </p>
+          </answer><!--Statement of the answer (don't worry about location in the rendered version)-->
+    </exercise><!--End of that exercise-->
+
+    
+      <exercise>
+    <statement>
+        <p>Suppose
+      <me>f(x) = \begin{cases}\frac{1}{x} \amp x \gt 0 \\ x \amp  x=0 \\ -\frac{1}{x} \amp x \lt 0 \end{cases} </me>
+      We want to evaluate each of the following:
+      <ol>
+        <li><m>f(-1)</m></li>
+        <li><m>f(0)</m></li>
+        <li><m>f(2)</m></li>
+        <li><m>f\left(\frac{1}{2}\right)</m></li>
+      </ol>
+        </p>
+    </statement>
+      <answer>
+          <p>
+      <ol>
+        <li><m>f(-1) = 1</m></li>
+        <li><m>f(0) = 0</m></li>
+        <li><m>f(2) = \frac{1}{2}</m></li>
+        <li><m>f\left(\frac{1}{2}\right) = 2</m></li>
+      </ol>
+          </p>
+          </answer><!--Statement of the answer (don't worry about location in the rendered version)-->
+    </exercise><!--End of that exercise-->
+
+      <exercise>
+    <statement>
+        <p>Suppose
+      <me>f(x) = \begin{cases}\frac{1}{2} \amp x \gt 10 \\ 2x \amp  x=10 \\ -1 \amp x \lt 10 \end{cases} </me>
+      We want to evaluate each of the following:
+      <ol>
+        <li><m>f(-10)</m></li>
+        <li><m>f(0)</m></li>
+        <li><m>f(10)</m></li>
+        <li><m>f(20)</m></li>
+      </ol>
+        </p>
+    </statement>
+      <answer>
+          <p>
+      <ol>
+        <li><m>f(-10)=-1</m></li>
+        <li><m>f(0)=-1</m></li>
+        <li><m>f(10)=20</m></li>
+        <li><m>f(20)=\frac{1}{2}</m></li>
+      </ol>
+          </p>
+          </answer><!--Statement of the answer (don't worry about location in the rendered version)-->
+    </exercise><!--End of that exercise-->
+
+    <exercise>
+    <statement>
+    <p>Suppose <m>g(x)</m> is given in the graph below:</p>
+          <image source="Functions/EndExercise1.png"/>
+          <p>Evaluate each of the following:
+            <ol>
+              <li><m>g(-2)</m></li>
+              <li><m>g(4)</m></li>
+              <li><m>g(6)</m></li>
+              <li><m>g(8)</m></li>
+              <li><m>g(9)</m></li>
+            </ol>
+          </p>
+    </statement>
+      <answer>
+          <p>
+      <ol>
+        <li><m>g(-2)=-1</m></li>
+        <li><m>g(4)=3</m></li>
+        <li><m>g(6)=5</m></li>
+        <li><m>g(8)=11</m></li>
+        <li><m>g(9)=12</m></li>
+      </ol>
+          </p>
+          </answer><!--Statement of the answer (don't worry about location in the rendered version)-->
+    </exercise><!--End of that exercise-->
+
+    <exercise>
+    <statement>
+    <p>Suppose <m>f(x)</m> is given in the graph below:</p>
+          <image source="Functions/EndExercise2.png"/>
+          <p>Evaluate each of the following:
+            <ol>
+              <li><m>f(-3)</m></li>
+              <li><m>f(0)</m></li>
+              <li><m>f(3)</m></li>
+              <li><m>f(5)</m></li>
+              <li><m>f(7)</m></li>
+            </ol>
+          </p>
+    </statement>
+      <answer>
+          <p>
+      <ol>
+        <li><m>f(-3)=9</m></li>
+        <li><m>f(0)=0</m></li>
+        <li><m>f(3)=9</m></li>
+        <li><m>f(5)=13</m></li>
+        <li><m>f(7)=17</m></li>
+      </ol>
+          </p>
+          </answer><!--Statement of the answer (don't worry about location in the rendered version)-->
+    </exercise><!--End of that exercise-->
+
+    <exercise>
+    <statement>
+    <p>Suppose <m>f(x)</m> is given in the table below:</p>
+          <table>
+          <tabular top="medium">
+            <row bottom="medium" left="medium">
+              <cell right="medium">
+                <m>x</m>
+              </cell>
+              <cell right="medium">
+                <m>f(x)</m>
+              </cell>
+            </row>
+            <row bottom="medium" left="medium">
+              <cell right="medium">
+                <m>-3</m>
+              </cell>
+              <cell right="medium">
+                <m>1</m>
+              </cell>
+            </row>
+            <row bottom="medium" left="medium">
+              <cell right="medium">
+                <m>0</m>
+              </cell>
+              <cell right="medium">
+                <m>2</m>
+              </cell>
+            </row>
+            <row bottom="medium" left="medium">
+              <cell right="medium">
+                <m>3</m>
+              </cell>
+              <cell right="medium">
+                <m>-7</m>
+              </cell>
+            </row>
+            <row bottom="medium" left="medium">
+              <cell right="medium">
+                <m>6</m>
+              </cell>
+              <cell right="medium">
+                <m>/pi</m>
+              </cell>
+            </row>
+            <row bottom="medium" left="medium">
+              <cell right="medium">
+                <m>\frac{1}{3}</m>
+              </cell>
+              <cell right="medium">
+                <m>4.31</m>
+              </cell>
+            </row>
+          </tabular>
+        </table>
+          <p>Evaluate each of the following:
+            <ol>
+              <li><m>f(-3)</m></li>
+              <li><m>f(0)</m></li>
+              <li><m>f(3)</m></li>
+              <li><m>f(6)</m></li>
+              <li><m>f(\frac{1}{3})</m></li>
+            </ol>
+          </p>
+    </statement>
+      <answer>
+          <p>
+      <ol>
+        <li><m>f(-3)=1</m></li>
+        <li><m>f(0)=2</m></li>
+        <li><m>f(3)=-7</m></li>
+        <li><m>f(6)=\pi</m></li>
+        <li><m>f(\frac{1}{3})=4.31</m></li>
+      </ol>
+          </p>
+          </answer><!--Statement of the answer (don't worry about location in the rendered version)-->
+    </exercise><!--End of that exercise-->
+
+      <exercise>
+    <statement>
+    <p>Suppose <m>f(t)</m> is given in the table below:</p>
+          <table>
+          <tabular top="medium">
+            <row bottom="medium" left="medium">
+              <cell right="medium">
+                <m>t</m>
+              </cell>
+              <cell right="medium">
+                <m>f(t)</m>
+              </cell>
+            </row>
+            <row bottom="medium" left="medium">
+              <cell right="medium">
+                <m>0</m>
+              </cell>
+              <cell right="medium">
+                <m>1</m>
+              </cell>
+            </row>
+            <row bottom="medium" left="medium">
+              <cell right="medium">
+                <m>1</m>
+              </cell>
+              <cell right="medium">
+                <m>2</m>
+              </cell>
+            </row>
+            <row bottom="medium" left="medium">
+              <cell right="medium">
+                <m>2</m>
+              </cell>
+              <cell right="medium">
+                <m>3</m>
+              </cell>
+            </row>
+            <row bottom="medium" left="medium">
+              <cell right="medium">
+                <m>3</m>
+              </cell>
+              <cell right="medium">
+                <m>4</m>
+              </cell>
+            </row>
+            <row bottom="medium" left="medium">
+              <cell right="medium">
+                <m>4</m>
+              </cell>
+              <cell right="medium">
+                <m>5</m>
+              </cell>
+            </row>
+          </tabular>
+        </table>
+          <p>Evaluate each of the following:
+            <ol>
+              <li><m>f(0)</m></li>
+              <li><m>f(1)</m></li>
+              <li><m>f(2)</m></li>
+              <li><m>f(3)</m></li>
+              <li><m>f(4)</m></li>
+            </ol>
+          </p>
+    </statement>
+      <answer>
+          <p>
+      <ol>
+        <li><m>f(0)=1</m></li>
+        <li><m>f(1)=2</m></li>
+        <li><m>f(2)=3</m></li>
+        <li><m>f(3)=4</m></li>
+        <li><m>f(4)=5</m></li>
+      </ol>
+          </p>
+          </answer><!--Statement of the answer (don't worry about location in the rendered version)-->
+    </exercise><!--End of that exercise-->
+
+        <exercise>
+    <statement>
+    <p>Suppose <m>f(x)</m>, <m>g(x)</m>, and <m>h(x)</m> are given in the table below:</p>
+  <table>
+    <tabular top="medium">
+      <row bottom="medium" left="medium">
+        <cell  right="medium">
+          x
+        </cell>
+        <cell right="medium">
+          f(x)
+        </cell>
+        <cell right="medium">
+          g(x)
+        </cell>
+        <cell right="medium">
+          h(x)
+        </cell>
+      </row>
+      <row bottom="medium"  left="medium">
+        <cell right="medium">
+          0
+        </cell>
+        <cell right="medium">
+          9
+        </cell>
+        <cell right="medium">
+          4
+        </cell>
+        <cell right="medium">
+          1
+        </cell>
+      </row>
+      <row bottom="medium" left="medium">
+        <cell  right="medium">
+          1
+        </cell>
+        <cell right="medium">
+          -2
+        </cell>
+        <cell right="medium">
+          5.5
+        </cell>
+        <cell right="medium">
+          -3
+        </cell>
+      </row>
+      <row bottom="medium"  left="medium">
+        <cell right="medium">
+          2
+        </cell>
+        <cell right="medium">
+          6
+        </cell>
+        <cell right="medium">
+          6
+        </cell>
+        <cell right="medium">
+          6
+        </cell>
+      </row>
+      <row bottom="medium"  left="medium">
+        <cell right="medium">
+          3
+        </cell>
+        <cell right="medium">
+          7
+        </cell>
+        <cell right="medium">
+          0
+        </cell>
+        <cell right="medium">
+          8
+        </cell>
+      </row>
+      <row bottom="medium"  left="medium">
+        <cell right="medium">
+          4
+        </cell>
+        <cell right="medium">
+          -1
+        </cell>
+        <cell right="medium">
+          8
+        </cell>
+        <cell right="medium">
+          -4
+        </cell>
+      </row>
+    </tabular>
+  </table>
+
+          <p>Evaluate each of the following:
+            <ol>
+              <li><m>h(0)</m></li>
+              <li><m>f(1)</m></li>
+              <li><m>g(2)</m></li>
+              <li><m>f(3)</m></li>
+              <li><m>h(4)</m></li>
+            </ol>
+          </p>
+    </statement>
+      <answer>
+          <p>
+      <ol>
+        <li><m>h(0)=1</m></li>
+        <li><m>f(1)=-2</m></li>
+        <li><m>g(2)=6</m></li>
+        <li><m>f(3)=7</m></li>
+        <li><m>h(4)=-4</m></li>
+      </ol>
+          </p>
+          </answer><!--Statement of the answer (don't worry about location in the rendered version)-->
+    </exercise><!--End of that exercise-->
+
+        <exercise>
+    <statement>
+    <p>Suppose <m>m(x)</m> is given in the table below:</p>
+          <table>
+    <tabular top="medium">
+      <row bottom="medium"  left="medium">
+        <cell right="medium">
+          x
+        </cell>
+        <cell right="medium">
+          1
+        </cell>
+        <cell right="medium">
+          3
+        </cell>
+        <cell right="medium">
+          5
+        </cell>
+        <cell right="medium">
+          7
+        </cell>
+        <cell right="medium">
+          9
+        </cell>
+      </row>
+      <row bottom="medium"  left="medium">
+        <cell right="medium">
+          m(x)
+        </cell>
+        <cell right="medium">
+          6
+        </cell>
+        <cell right="medium">
+          2
+        </cell>
+        <cell right="medium">
+          -1
+        </cell>
+        <cell right="medium">
+          -5
+        </cell>
+        <cell right="medium">
+          -8
+        </cell>
+      </row>
+    </tabular>
+  </table>
+          <p>Evaluate each of the following:
+            <ol>
+              <li><m>m(5)</m></li>
+              <li><m>m(1)</m></li>
+              <li><m>m(9)</m></li>
+              <li><m>m(3)</m></li>
+              <li><m>m(7)</m></li>
+            </ol>
+          </p>
+    </statement>
+      <answer>
+          <p>
+      <ol>
+        <li><m>m(5)=-1</m></li>
+        <li><m>m(1)=6</m></li>
+        <li><m>m(9)=-8</m></li>
+        <li><m>m(3)=2</m></li>
+        <li><m>m(7)=-5</m></li>
+      </ol>
+          </p>
+          </answer><!--Statement of the answer (don't worry about location in the rendered version)-->
+    </exercise><!--End of that exercise-->
+
+    <exercisegroup><!--Start of a group of problems with common instructions (title optional)-->
+        <introduction><!--Start of the instructions for this group of problems-->
+          <p> Suppose <m>f(x)= 3x-3</m> and <m>g(x)</m> is given in the graph below:</p>
+        <image source="Functions/EndExercise3.png"/>
+        </introduction><!--End of instructions for this group of problems-->
+
+    <exercise>
+      <statement> <p>Evaluate <m>2f(2)-g(0)+1</m>.</p>
+      </statement>
+      <answer><p><m>2f(2)-g(0)+1=7</m></p></answer>
+    </exercise>
+
+      <exercise>
+      <statement> <p>Evaluate <m>g(2)-(g(-2))^2</m>.</p>
+      </statement>
+      <answer><p><m>g(2)-(g(-2))^2=-12</m></p></answer>
+    </exercise>
+
+    <exercise>
+      <statement> <p>Evaluate <m>5g(-1)+4f(3)</m>.</p>
+      </statement>
+      <answer><p><m>5g(-1)+4f(3)=-29</m></p></answer>
+    </exercise>
+
+    <exercise>
+      <statement> <p>Evaluate <m>\frac{1}{2}f(5)-2f(0)</m>.</p>
+      </statement>
+      <answer><p><m>\frac{1}{2}f(5)-2f(0)=0</m></p></answer>
+    </exercise>
+
+    <exercise>
+      <statement> <p>Evaluate <m>(f(-2))^2-f(0)-(g(2))^3</m>.</p>
+      </statement>
+      <answer><p><m>(f(-2))^2-f(0)-(g(2))^3=20</m></p></answer>
+    </exercise>
+
+  </exercisegroup> 
+
+
+    <exercisegroup><!--Start of a group of problems with common instructions (title optional)-->
+        <introduction><!--Start of the instructions for this group of problems-->
+          <p> Suppose <m>f(x)= x</m> and <m>g(x)</m> is given in the table below:</p>
+                <table>
+    <tabular top="medium">
+      <row bottom="medium"  left="medium">
+        <cell right="medium">
+          x
+        </cell>
+        <cell right="medium">
+          1
+        </cell>
+        <cell right="medium">
+          2
+        </cell>
+        <cell right="medium">
+          3
+        </cell>
+        <cell right="medium">
+          4
+        </cell>
+        <cell right="medium">
+          5
+        </cell>
+      </row>
+      <row bottom="medium"  left="medium">
+        <cell right="medium">
+          g(x)
+        </cell>
+        <cell right="medium">
+          6
+        </cell>
+        <cell right="medium">
+          4
+        </cell>
+        <cell right="medium">
+          -1
+        </cell>
+        <cell right="medium">
+          7
+        </cell>
+        <cell right="medium">
+          0
+        </cell>
+      </row>
+    </tabular>
+  </table>
+        </introduction><!--End of instructions for this group of problems-->
+
+    <exercise>
+      <statement> <p>Evaluate <m>2f(2)-g(1)+1</m>.</p>
+      </statement>
+      <answer><p><m>2f(2)-g(1)+1=-1</m></p></answer>
+    </exercise>
+
+      <exercise>
+      <statement> <p>Evaluate <m>g(4)-(g(3))^3</m>.</p>
+      </statement>
+      <answer><p><m>g(4)-(g(3))^3=5</m></p></answer>
+    </exercise>
+
+    <exercise>
+      <statement> <p>Evaluate <m>2g(1)-3f(5)</m>.</p>
+      </statement>
+      <answer><p><m>2g(1)-3f(5)=-3</m></p></answer>
+    </exercise>
+
+    <exercise>
+      <statement> <p>Evaluate <m>\frac{1}{2}f(10)-3f(1)</m>.</p>
+      </statement>
+      <answer><p><m>\frac{1}{2}f(5)-3f(1)=2</m></p></answer>
+    </exercise>
+
+    <exercise>
+      <statement> <p>Evaluate <m>(f(-2))^2-g(2)-\frac{1}{3}g(5)</m>.</p>
+      </statement>
+      <answer><p><m>(f(-2))^2-g(2)-\frac{1}{3}g(5)=0</m></p></answer>
+    </exercise>
+
+  </exercisegroup> 
+
+  <exercisegroup><!--Start of a group of problems with common instructions (title optional)-->
+        <introduction><!--Start of the instructions for this group of problems-->
+          <p> Suppose <m>g(x)</m> is given in the graph below and <m>h(x)</m> is given in the table below:</p>
+          <image source="Functions/EndExercise4.png"/>
+  <table>
+    <tabular top="medium">
+      <row bottom="medium"  left="medium">
+        <cell right="medium">
+          x
+        </cell>
+        <cell right="medium">
+          0
+        </cell>
+        <cell right="medium">
+          2
+        </cell>
+        <cell right="medium">
+          4
+        </cell>
+        <cell right="medium">
+          6
+        </cell>
+        <cell right="medium">
+          8
+        </cell>
+      </row>
+      <row bottom="medium"  left="medium">
+        <cell right="medium">
+          h(x)
+        </cell>
+        <cell right="medium">
+          2
+        </cell>
+        <cell right="medium">
+          3
+        </cell>
+        <cell right="medium">
+          9
+        </cell>
+        <cell right="medium">
+          1
+        </cell>
+        <cell right="medium">
+          4
+        </cell>
+      </row>
+    </tabular>
+  </table>
+        </introduction><!--End of instructions for this group of problems-->
+
+    <exercise>
+      <statement> <p>Evaluate <m>4h(2)-g(0)+3</m>.</p>
+      </statement>
+      <answer><p><m>4h(2)-g(0)+3=5</m></p></answer>
+    </exercise>
+
+      <exercise>
+      <statement> <p>Evaluate <m>g(4)-\frac{1}{2}(h(6))^3</m>.</p>
+      </statement>
+      <answer><p><m>g(4)-\frac{1}{2}(h(6))^3=5.5</m></p></answer>
+    </exercise>
+
+    <exercise>
+      <statement> <p>Evaluate <m>2g(1)+4h(8)</m>.</p>
+      </statement>
+      <answer><p><m>2g(1)+4h(8)=34</m></p></answer>
+    </exercise>
+
+    <exercise>
+      <statement> <p>Evaluate <m>\frac{1}{2}g(10)-3h(0)</m>.</p>
+      </statement>
+      <answer><p><m>\frac{1}{2}g(10)-3h(0)=-2</m></p></answer>
+    </exercise>
+
+    <exercise>
+      <statement> <p>Evaluate <m>(h(4))^2-6g(2)-\frac{1}{3}g(1)</m>.</p>
+      </statement>
+      <answer><p><m>(h(4))^2-6g(2)-\frac{1}{3}g(1)=30</m></p></answer>
+    </exercise>
+
+  </exercisegroup> 
+
+  <exercisegroup><!--Start of a group of problems with common instructions (title optional)-->
+        <introduction><!--Start of the instructions for this group of problems-->
+          <p> Suppose <m>f(x)</m> is given in the table below and <m>g(x)=\frac{1}{2}x+2</m>:</p>
+      <table>
+          <tabular top="medium">
+            <row bottom="medium" left="medium">
+              <cell right="medium">
+                <m>x</m>
+              </cell>
+              <cell right="medium">
+                <m>f(x)</m>
+              </cell>
+            </row>
+            <row bottom="medium" left="medium">
+              <cell right="medium">
+                <m>0</m>
+              </cell>
+              <cell right="medium">
+                <m>2</m>
+              </cell>
+            </row>
+            <row bottom="medium" left="medium">
+              <cell right="medium">
+                <m>1</m>
+              </cell>
+              <cell right="medium">
+                <m>4</m>
+              </cell>
+            </row>
+            <row bottom="medium" left="medium">
+              <cell right="medium">
+                <m>2</m>
+              </cell>
+              <cell right="medium">
+                <m>6</m>
+              </cell>
+            </row>
+            <row bottom="medium" left="medium">
+              <cell right="medium">
+                <m>3</m>
+              </cell>
+              <cell right="medium">
+                <m>8</m>
+              </cell>
+            </row>
+            <row bottom="medium" left="medium">
+              <cell right="medium">
+                <m>4</m>
+              </cell>
+              <cell right="medium">
+                <m>10</m>
+              </cell>
+            </row>
+          </tabular>
+        </table>
+        </introduction><!--End of instructions for this group of problems-->
+
+    <exercise>
+      <statement> <p>Evaluate <m>3f(2)-g(2)+3</m>.</p>
+      </statement>
+      <answer><p><m>3f(2)-g(2)+3=18</m></p></answer>
+    </exercise>
+
+      <exercise>
+      <statement> <p>Evaluate <m>g(10)-\frac{1}{4}(f(3))^2</m>.</p>
+      </statement>
+      <answer><p><m>g(10)-\frac{1}{4}(f(3))^2=-9</m></p></answer>
+    </exercise>
+
+    <exercise>
+      <statement> <p>Evaluate <m>3g(1)+4f(4)</m>.</p>
+      </statement>
+      <answer><p><m>3g(1)+4f(4)=47.5</m></p></answer>
+    </exercise>
+
+    <exercise>
+      <statement> <p>Evaluate <m>\frac{1}{5}g(6)-3f(0)</m>.</p>
+      </statement>
+      <answer><p><m>\frac{1}{5}g(6)-3f(0)=-5</m></p></answer>
+    </exercise>
+
+    <exercise>
+      <statement> <p>Evaluate <m>(f(1))^2-2g(2)-\frac{1}{3}g(-4)</m>.</p>
+      </statement>
+      <answer><p><m>(f(1))^2-2g(2)-\frac{1}{3}g(-4)=10</m></p></answer>
+    </exercise>
+
+  </exercisegroup> 
+
+  <exercisegroup><!--Start of a group of problems with common instructions (title optional)-->
+        <introduction><!--Start of the instructions for this group of problems-->
+          <p> Suppose <m>f(x)= 4x-8</m>. </p>
+        </introduction><!--End of instructions for this group of problems-->
+
+    <exercise>
+      <statement> <p>Solve <m>f(x)=0</m>.</p>
+      </statement>
+      <answer><p><m>x=2</m></p></answer>
+    </exercise>
+
+      <exercise>
+      <statement> <p>Evaluate <m>f(0)</m>.</p>
+      </statement>
+      <answer><p><m>f(0)=-8</m></p></answer>
+    </exercise>
+
+    <exercise>
+      <statement> <p>Evaluate <m>f(2)</m>.</p>
+      </statement>
+      <answer><p><m>f(2)=0</m></p></answer>
+    </exercise>
+
+    <exercise>
+      <statement> <p>Solve <m>f(x)=\frac{1}{2}</m>.</p>
+      </statement>
+      <answer><p><m>x=2.125</m></p></answer>
+    </exercise>
+
+    <exercise>
+      <statement> <p>Solve <m>f(x)=10</m>.</p>
+      </statement>
+      <answer><p><m>x=4.5</m></p></answer>
+    </exercise>
+
+  </exercisegroup> 
+
+  <exercisegroup><!--Start of a group of problems with common instructions (title optional)-->
+        <introduction><!--Start of the instructions for this group of problems-->
+          <p> Suppose <m>g(x)</m> is given in the graph below. </p>
+          <image source="Functions/EndExercise5.png"/>
+        </introduction><!--End of instructions for this group of problems-->
+
+    <exercise>
+      <statement> <p>Solve <m>g(x)=0</m>.</p>
+      </statement>
+      <answer><p><m>x=-3</m></p></answer>
+    </exercise>
+
+      <exercise>
+      <statement> <p>Evaluate <m>g(0)</m>.</p>
+      </statement>
+      <answer><p><m>g(0)=6</m></p></answer>
+    </exercise>
+
+    <exercise>
+      <statement> <p>Evaluate <m>g(1)</m>.</p>
+      </statement>
+      <answer><p><m>g(1)=8</m></p></answer>
+    </exercise>
+
+    <exercise>
+      <statement> <p>Solve <m>g(x)=-2</m>.</p>
+      </statement>
+      <answer><p><m>x=-4</m></p></answer>
+    </exercise>
+
+    <exercise>
+      <statement> <p>Solve <m>g(x)=4</m>.</p>
+      </statement>
+      <answer><p><m>x=-1</m></p></answer>
+    </exercise>
+
+  </exercisegroup> 
+
+    <exercisegroup><!--Start of a group of problems with common instructions (title optional)-->
+        <introduction><!--Start of the instructions for this group of problems-->
+          <p> Suppose <m>f(x)</m> is given in the table below. </p>
+              <table>
+          <tabular top="medium">
+            <row bottom="medium" left="medium">
+              <cell right="medium">
+                <m>x</m>
+              </cell>
+              <cell right="medium">
+                <m>f(x)</m>
+              </cell>
+            </row>
+            <row bottom="medium" left="medium">
+              <cell right="medium">
+                <m>1</m>
+              </cell>
+              <cell right="medium">
+                <m>3</m>
+              </cell>
+            </row>
+            <row bottom="medium" left="medium">
+              <cell right="medium">
+                <m>2</m>
+              </cell>
+              <cell right="medium">
+                <m>6</m>
+              </cell>
+            </row>
+            <row bottom="medium" left="medium">
+              <cell right="medium">
+                <m>3</m>
+              </cell>
+              <cell right="medium">
+                <m>9</m>
+              </cell>
+            </row>
+            <row bottom="medium" left="medium">
+              <cell right="medium">
+                <m>4</m>
+              </cell>
+              <cell right="medium">
+                <m>12</m>
+              </cell>
+            </row>
+            <row bottom="medium" left="medium">
+              <cell right="medium">
+                <m>5</m>
+              </cell>
+              <cell right="medium">
+                <m>15</m>
+              </cell>
+            </row>
+          </tabular>
+        </table>
+        </introduction><!--End of instructions for this group of problems-->
+
+    <exercise>
+      <statement> <p>Solve <m>f(x)=12</m>.</p>
+      </statement>
+      <answer><p><m>x=4</m></p></answer>
+    </exercise>
+
+      <exercise>
+      <statement> <p>Evaluate <m>f(1)</m>.</p>
+      </statement>
+      <answer><p><m>f(1)=3</m></p></answer>
+    </exercise>
+
+    <exercise>
+      <statement> <p>Evaluate <m>f(3)</m>.</p>
+      </statement>
+      <answer><p><m>f(3)=9</m></p></answer>
+    </exercise>
+
+    <exercise>
+      <statement> <p>Solve <m>f(x)=6</m>.</p>
+      </statement>
+      <answer><p><m>x=2</m></p></answer>
+    </exercise>
+
+    <exercise>
+      <statement> <p>Solve <m>f(x)=9</m>.</p>
+      </statement>
+      <answer><p><m>x=3</m></p></answer>
+    </exercise>
+
+  </exercisegroup> 
+
+  <exercisegroup><!--Start of a group of problems with common instructions (title optional)-->
+        <introduction><!--Start of the instructions for this group of problems-->
+          <p> Suppose <m>g(x)</m> is given in the graph below. </p>
+          <image source="Functions/EndExercise6.png"/>
+        </introduction><!--End of instructions for this group of problems--> I HAVE A PROBLEM.
+
+    <exercise>
+      <statement> <p>Solve <m>g(x)=1</m>.</p>
+      </statement>
+      <answer><p><m>x=0,2</m></p></answer>
+    </exercise>
+
+      <exercise>
+      <statement> <p>Evaluate <m>g(-1)</m>.</p>
+      </statement>
+      <answer><p><m>g(-1)=4</m></p></answer>
+    </exercise>
+
+    <exercise>
+      <statement> <p>Evaluate <m>g(1)</m>.</p>
+      </statement>
+      <answer><p><m>g(1)=0</m></p></answer>
+    </exercise>
+
+    <exercise>
+      <statement> <p>Solve <m>g(x)=6</m>.</p>
+      </statement>
+      <answer><p><m>x=6</m></p></answer>
+    </exercise>
+
+    <exercise>
+      <statement> <p>Solve <m>g(x)=5</m>.</p>
+      </statement>
+      <answer><p><m>x=5</m></p></answer>
+    </exercise>
+
+  </exercisegroup> 
+
+  <exercisegroup><!--Start of a group of problems with common instructions (title optional)-->
+        <introduction><!--Start of the instructions for this group of problems-->
+          <p> Suppose <m>g(x)=(x-1)^2</m> . </p>
+          <image source="Functions/SolveExample1.png"/>
+        </introduction><!--End of instructions for this group of problems-->
+
+    <exercise>
+      <statement> <p>Solve <m>g(x)=9</m>.</p>
+      </statement>
+      <answer><p><m>x=-2,4</m></p></answer>
+    </exercise>
+
+      <exercise>
+      <statement> <p>Evaluate <m>g(1)</m>.</p>
+      </statement>
+      <answer><p><m>g(0)=1</m></p></answer>
+    </exercise>
+
+    <exercise>
+      <statement> <p>Evaluate <m>g(2)</m>.</p>
+      </statement>
+      <answer><p><m>g(2)=1</m></p></answer>
+    </exercise>
+
+    <exercise>
+      <statement> <p>Solve <m>g(x)=16</m>.</p>
+      </statement>
+      <answer><p><m>x=-3,5</m></p></answer>
+    </exercise>
+
+    <exercise>
+      <statement> <p>Solve <m>g(x)=0</m>.</p>
+      </statement>
+      <answer><p><m>x=1</m></p></answer>
+    </exercise>
+
+  </exercisegroup> 
+
+</exercises>
+
+
+</chapter>

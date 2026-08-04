@@ -1,0 +1,771 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Chapters are enclosed with <chapter> tags. Use xml:id to -->
+<!-- uniquely identify the chapter.  The @xmlns:xi attribute  -->
+<!-- is needed if you use xi:include in this file             -->
+<chapter xml:id="ch-systems" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+<!-- Change title when you have one: -->
+  <title>Systems of Linear Equations</title>
+  <!-- If the chapter has sections, there may be an introduction -->
+  <!-- before those sections. Note the <p> tags around content.  -->
+  <introduction>
+    <p>This is the introduction to the chapter</p>
+  </introduction>
+
+<section xml:id="sec-solutionssystems">
+  <title>Solutions to a System of Equations</title>
+
+  <introduction> This chapter involves some new vocabulary, so this first seciton is all about getting comfortable with those new terms.</introduction>
+
+  <definition>A <term>solution</term> to an equation is a point <m>(x,y)</m> that gives us a true statement when we plug in those values to the equation.</definition>
+
+  <example><p>Let's see if <m>(3,5)</m> is a solution to the equation <m>y=2x-1</m>. In order to check, we will plug in <m>x=3</m> and <m>y=5</m> and see if we get something that's true:</p>
+    <md>
+      <mrow>y \amp= 2x-1</mrow>
+      <mrow>5 \amp= 2(3)-1</mrow>
+      <mrow> 5\amp = 5</mrow>
+    </md>
+    <p>Indeed, <m>5=5</m> is a true statement, so <m>(3,5)</m> is a solution to the equation.</p>
+  </example>
+
+  <exercise>
+    <statement><p>Determine if each of the following is a solution to the equation <m>2x+y=2</m>:
+      <ol>
+        <li><m>(2,-1)</m></li>
+        <li><m>(-2,6)</m></li>
+        <li><m>4</m></li>
+      </ol>
+    </p></statement>
+    <solution><p>Determine if each of the following is a solution to the equation <m>2x+y=2</m>:
+      <ol>
+        <li><p><m>(2,-1)</m>: In order to determine if this is a solution, we plug in <m>x=2</m> and <m>y=-1</m>:
+          <md>
+            <mrow> 2x + y \amp= 2</mrow>
+            <mrow> 2(2) + (-1) \amp = 2</mrow>
+            <mrow> 3 \amp = 2</mrow>
+          </md>
+          Of course, <m>3 \neq 2</m>, so we ended up with something that is not true. Therefore, <m>(2,-1)</m> is not a solution to this equation.</p>
+        </li>
+        <li><p><m>(-2,6)</m>: In order to determine if this is a solution, we plug in <m>x=-2</m> and <m>y=6</m>:
+          <md>
+            <mrow> 2x + y \amp= 2</mrow>
+            <mrow> 2(-2) + (6) \amp = 2</mrow>
+            <mrow> 2 \amp = 2</mrow>
+          </md>
+          Of course, <m>2 = 2</m>, so we ended up with something that is true. Therefore, <m>(-2,6)</m> is a solution to this equation.</p>
+        </li>
+        <li><p><m>4</m>: Remember that a solution is a point, which includes two numbers. This is just a single number, so it cannot be a solution to the equation.</p></li>
+      </ol>
+    </p></solution>
+    <answer><p>
+      <ol>
+        <li><m>(2,-1)</m> is not a solution</li>
+        <li><m>(-2,6)</m> is a solution</li>
+        <li><m>4</m> is not a solution</li>
+      </ol>
+    </p></answer>
+  </exercise>
+
+  <definition>A <term>system of equations</term> is a set of more than one equation that we want to look at all at the same time.</definition>
+
+  <p>In this class, we will only look at systems of equations that have two equations and two variables. However, in later classes, you might look at more complicated systems that have more than two equations or more than two variables. In that case, you'll learn more advanced techniques that can handle the more complicated situations.</p>
+
+  <definition>A <term>solution to a system of equations</term> is a point that is a solution to all of the equations in the system at the same time.</definition>
+
+  <example><p>Let's determine if <m>(4,1)</m> is a solution to the following system of equations:</p>
+    <me>\begin{cases}y \amp = x-3 \\ x - 4y \amp= 6\end{cases}</me>
+    <p>Just as we did before, we will plug in <m>x=4</m> and <m>y=1</m>. However, this time, we need to plug it into both equations and check that it works for both. Let's start with the first one:</p>
+      <md>
+        <mrow>y \amp = x-3 </mrow>
+        <mrow> (1) \amp = (4)-3</mrow>
+        <mrow>1 \amp = 1</mrow>
+      </md>
+    <p>Now, let's check the second one:</p>
+      <md>
+        <mrow>x-4y \amp = 6 </mrow>
+        <mrow> (4)-4(1) \amp = 6</mrow>
+        <mrow>0 \amp = 6</mrow>
+      </md>
+    <p>Since the point only worked for the first equation, but not the second, it is <em>not</em> a solution to this system of equations.</p>
+  </example>
+
+  <exercise>
+    <statement>
+      <p>Suppose we have the system of equations:</p>
+      <me>
+        \begin{cases}
+        3 \amp= 4x+y\\
+        -11 \amp= 2x+3y
+        \end{cases}
+      </me>
+      <p>Check if each of the following is a solution to the system:
+        <ol>
+          <li><m>(1,-1)</m></li>
+          <li><m>(2,-5)</m></li>
+          <li><m>(-3,7)</m></li>
+        </ol>
+      </p>
+    </statement>
+    <solution>
+      <ol>
+        <li><p>To check if <m>(1,-1)</m> is a solution, we plug it into both equations. Let's start with the first equation:</p>
+          <md>
+            <mrow>3 \amp= 4x+y</mrow>
+            <mrow>3 \amp= 4(1)+(-1)</mrow>
+            <mrow>3 \amp= 4-1</mrow>
+            <mrow>3 \amp= 3</mrow>
+          </md>
+          <p>That worked! Now, let's check the second equation:</p>
+          <md>
+            <mrow>-11 \amp= 2x+3y</mrow>
+            <mrow>-11 \amp= 2(1)+3(-1)</mrow>
+            <mrow>-11 \amp= 2-3</mrow>
+            <mrow>-11 \amp= -1</mrow>
+          </md>
+          <p>That one did not work. Since the point has to work for both equations in order to be a solution to the system, the point <m>(1,-1)</m> is not a solution to this system.</p>
+        </li>
+        <li><p>To check if <m>(2,-5)</m> is a solution, we plug it into both equations. Let's start with the first equation:</p>
+          <md>
+            <mrow>3 \amp= 4x+y</mrow>
+            <mrow>3 \amp= 4(2)+(-5)</mrow>
+            <mrow>3 \amp= 8-5</mrow>
+            <mrow>3 \amp= 3</mrow>
+          </md>
+          <p>That worked! Now, let's check the second equation:</p>
+          <md>
+            <mrow>-11 \amp= 2x+3y</mrow>
+            <mrow>-11 \amp= 2(2)+3(-5)</mrow>
+            <mrow>-11 \amp= 4-15</mrow>
+            <mrow>-11 \amp= -11</mrow>
+          </md>
+          <p>That one also worked! Since it worked for both equations, the point <m>(2,-5)</m> is a solution to this system.</p>
+        </li>
+        <li><p>To check if <m>(-3,7)</m> is a solution, we plug it into both equations. Let's start with the first equation:</p>
+          <md>
+            <mrow>3 \amp= 4x+y</mrow>
+            <mrow>3 \amp= 4(-3)+(7)</mrow>
+            <mrow>3 \amp= -12+7</mrow>
+            <mrow>3 \amp= -5</mrow>
+          </md>
+          <p>That did not work. At this point, we could plug it into the second equation, but that would end up just being a waste of time. It doesn't matter if it works for the second one if we already know it doesn't work for the first one. It has to work for <em>both</em> in order to be a solution, so the point <m>(-3,7)</m> is not a solution to this system.</p>
+        </li>
+      </ol>
+    </solution>
+    <answer>
+      <p><ol>
+        <li><p>The point <m>(1,-1)</m> is not a solution</p></li>
+        <li><p>The point <m>(2,-5)</m> is a solution</p></li>
+        <li><p>The point <m>(-3,7)</m> is not a solution</p></li>
+      </ol></p>
+    </answer>
+  </exercise>
+
+</section>
+
+<section xml:id="sec-solvesystemsub">
+  <title>Solving a System of Equations: Substitution</title>
+
+  <introduction>In this section, we will learn one technique for finding a solution to a system of equations.</introduction>
+
+  <p>When we look at a system of equations, remember that we are looking for <em>one</em> <m>x</m> and one <m>y</m> that work for both equations. That means that the <m>y</m> in the first equation is going to be the same <m>y</m> that's in the second equation. Same thing for the <m>x</m>'s. So, we can substitute from one equation to the next.</p>
+
+  <example>
+    <p>Let's say we want to solve the following system of equations using substitution:</p>
+    <me>\begin{cases}y \amp = 2x-1\\ 3 \amp= y+x\end{cases}</me>
+    <p>From the first equation, we can see that <m>y</m> is equal to (so it's the same as) <m>2x-1</m>. Since that's the same as the <m>y</m> that's in the second equation, we can plug in <m>2x-1</m> in for that <m>y</m> and then solve the equation we have left:</p>
+    <md>
+      <mrow>3 \amp= y+x</mrow>
+      <mrow>3 \amp = (2x-1) + x</mrow>
+      <mrow>3 \amp=3x-1</mrow>
+      <mrow>4 \amp= 3x</mrow>
+      <mrow>\frac{4}{3} \amp= x</mrow>
+    </md>
+    <p>Now that we figured out what <m>x</m> is, don't forget that <em>a solution is a point</em>, so we still need to figure out what <m>y</m> is. To do that, we plug our <m>x=\frac{4}{3}</m> into either of the starting equations and solve for <m>y</m>:</p>
+    <me>y = 2x-1 = 2\left(\frac{4}{3}\right)-1 = \frac{8}{3} - 1 = \frac{8}{3} - \frac{3}{3} = \frac{5}{3}</me>
+  </example>
+
+  <p>Now, in the example above, we chose the first equation to plug <m>x</m> into in order to find <m>y</m>. However, you should be able to plug into either equation and you'll get the same value. In fact, that's a great way to check your work: plug the <m>x</m> you got into both equations and make sure you get the same <m>y</m>. If you don't, then you've probably made an algebra mistake somewhere, and you should go back and check your work.</p>
+
+  <p>Another way to check your work is to use what you know about solutions to a system: plug in the point to both equations and make sure it works for both.</p>
+
+  <exercise>
+    <statement><p>Solve the following system of equations using substitution:</p>
+      <me>\begin{cases}1 \amp= x-y \\ 5 \amp= 2x+y\end{cases}</me>
+    </statement>
+    <solution>
+      <p>We need to start by solving one of the equations for one of the variables. It doesn't matter which equation we pick, and it doesn't matter which variable we pick. Since we solved for <m>y</m> in the example above, let's solve for <m>x</m> in this case. The first equation does not have a number multiplied by <m>x</m>, so let's use that one:</p>
+      <md>
+        <mrow>1 \amp = x-y </mrow>
+        <mrow>1+y \amp= x</mrow>
+      </md>
+      <p>So, we are going to plug <m>1+y</m> in for <m>x</m> in the second equation:</p>
+      <md>
+        <mrow>5 \amp = 2x+y </mrow>
+        <mrow>5 \amp= 2(1+y)+y</mrow>
+      </md>
+      <p>And now we can solve for <m>y</m>:</p>
+      <md>
+        <mrow>5 \amp= 2(1+y)+y</mrow>
+        <mrow>5 \amp= 2+2y+y</mrow>
+        <mrow>5 \amp= 2+3y</mrow>
+        <mrow>3 \amp= 3y</mrow>
+        <mrow>1 \amp= y</mrow>
+      </md>
+      <p>Now that we've figured out that <m>y=1</m>, we need to plug back into an equation to find <m>x</m>. We could use either of the starting equations, but in this case, it will be easiest to use the equation we already solved for <m>x</m>:</p>
+      <me>x = 1+y = 1+1 = 2</me>
+      <p>Therefore, our answer is <m>(2,1)</m>.</p>
+      <p>Let's check our work using the strategies in the paragraph above. First, let's try plugging <m>y=1</m> into the other starting equation, and make sure we get the same value for <m>x</m>:</p>
+      <md>
+        <mrow>5 \amp= 2x+y</mrow>
+        <mrow>5 \amp= 2x+1</mrow>
+        <mrow>4 \amp= 2x</mrow>
+        <mrow>2 \amp= x</mrow>
+      </md>
+      <p> That worked! So, we can be pretty confident that we have the right answer. If we want to be really sure, let's plug our point into both starting equations and make sure they both work:</p>
+      <md>
+        <mrow>5 \amp= 2x+y</mrow>
+        <mrow>5 \amp= 2(2)+1</mrow>
+        <mrow>5 \amp 5</mrow>
+      </md>
+      <md>
+        <mrow>1 \amp=x-y</mrow>
+        <mrow>1 \amp=2-1</mrow>
+        <mrow>1 \amp= 1</mrow>
+      </md>
+      <p>It works for both equations! Therefore, we can be very, very confident that we did indeed compute the right answer.</p>
+    </solution>
+    <answer><p><m>(2,1)</m></p></answer>
+  </exercise>
+
+</section>
+
+<section xml:id="sec-solvesystemelim">
+  <title>Solving a System of Equations: Elimination</title>
+
+  <introduction>In this section, we will discuss another method for solving systems of equations called elimination. It relies on the fact that we can always add the same thing to both sides of an equation, even if it looks different. For example, if I add <m>5</m> to one side and add <m>2+3</m> to the other side, that's mathematically valid because they are the same thing (because <m>5=2+3</m>), they just look different.</introduction>
+
+  <example>
+    <p>Let's say we want to solve the following system of equations:</p>
+    <me>
+      \begin{cases}
+        3 \amp =x+y \\
+        5 \amp = 3x-y
+      \end{cases}
+    </me>
+    <p>Remember that the symbol <m>=</m> means that whatever is on each side is exactly the same thing, even if it is written differently. As mentioned in the introduction, we can add the same thing to both sides, even if it looks different. So, let's add 5 to both sides of the first equation, but we will write it as <m>3x-y</m> on the right hand side. The equation <m>5=3x-y</m> tells us that's okay, because it means that <m>5</m> and <m>3x-y</m> are the same thing:</p>
+    <md>
+      <mrow>3 + (5) \amp= x+y +(3x-y)</mrow>
+      <mrow>8 \amp= 4x + y - y</mrow>
+      <mrow>8 \amp= 4x</mrow>
+    </md>
+    <p>Notice what happened: the <m>y</m>'s canceled. So now, we can divide both sides by 4 to get <m>x=2</m>. Just like with substitution, we need to plug back into either of our starting equations to get <m>y</m>:</p>
+    <md>
+      <mrow>3 \amp= x+y</mrow>
+      <mrow>3 \amp= 2+y</mrow>
+      <mrow>1 \amp= y</mrow>
+    </md>
+    <p>Now we have our answer of <m>(2,1)</m></p>
+  </example>
+
+  <exercise>
+    <statement><p>Solve the following system of equations using elimination:</p>
+      <me>
+        \begin{cases}
+          7 \amp= 2x + 3y\\
+          -11 \amp= -2x+y
+        \end{cases}
+      </me>
+    </statement>
+    <solution>
+      <p>We want to start by adding the equations together. In other words, we are going to add <m>7</m> and <m>-11</m> on one side and then add <m>2x+3y</m> and <m>-2x+y</m> on the other side. We know we can do this, because we are starting with things that are equal, so we are still adding the same thing to both sides, just written differently.</p>
+      <md>
+        <mrow>7+(-11) \amp= 2x+3y + (-2x+y)</mrow>
+        <mrow>-4 \amp= 2x - 2x + 4y</mrow>
+        <mrow>-4 \amp= 4y</mrow>
+        <mrow>-1 \amp= y</mrow>
+      </md>
+      <p>Now that we have our answer for <m>y</m>, we just need to plug into one of the original equations to get <m>x</m>:</p>
+      <md>
+        <mrow>7 \amp= 2x+3y</mrow>
+        <mrow>7 \amp= 2x+3(-1)</mrow>
+        <mrow>7 \amp= 2x-3</mrow>
+        <mrow>10 \amp= 2x</mrow>
+        <mrow>5 \amp= x</mrow>
+      </md>
+      <p>So we have our final answer: <m>(5,-1)</m>.</p>
+    </solution>
+    <answer><p><m>(5,-1)</m></p></answer>
+  </exercise>
+
+  <p>Remember that when we talked about substitution, we saw two ways we could check our work:
+    <ul>
+      <li>After you find the value for one variable, plug it into both starting equations and make sure they give you the same value for the second variable</li>
+      <li>After you have your final answer, plug the point into both starting equations and make sure it works for both</li>
+    </ul>
+  You can still use both of these strategies to check your work with elimination.</p>
+
+  <p>Now, notice why this strategy worked for the two problems above: when we added the equations together, one of the variables canceled out. It was <em>eliminated</em>. That only worked because that variable had the same number multiplied out front, but was negative in one equation and positive in the other. If the equation doesn't have that situation to begin with, we might need to adjust one of the equations to make it work.</p>
+
+  <example>
+    <p>Suppose we want to solve the following system of equations:</p>
+    <me>
+      \begin{cases}
+        -6 \amp= 3x+4y\\
+        -2 \amp= x-2y
+      \end{cases}
+    </me>
+    <p>We have a couple of choices here:
+      <ul>
+        <li>If we multiply both sides of the second equation by <m>-3</m>, then we would be able to cancel the <m>x</m>'s</li>
+        <li>If we multiply the second equation by <m>2</m>, then we would be able to cancel the <m>y</m>'s.</li>
+      </ul>
+    It doesn't matter which one we choose, so let's go with the first option for this example. When we multiply the second equation by <m>-3</m>, we get</p>
+    <me> 6 = -3x+6y</me>
+    <p>Now, we add that to the first equation:</p>
+    <md>
+      <mrow>-6 + (6) \amp= 3x+4y + (-3x+6y)</mrow>
+      <mrow>0 \amp= 3x - 3x + 10y</mrow>
+      <mrow>0 \amp= 10y</mrow>
+      <mrow>0 \amp= y</mrow>
+    </md>
+    <p>Now we will plug <m>y=0</m> into one of the starting equations to get <m>x</m>:</p>
+    <md>
+      <mrow>-2 \amp= x-2y</mrow>
+      <mrow>-2 \amp= x - 2(0)</mrow>
+      <mrow>-2 \amp= x + 0</mrow>
+      <mrow>-2 \amp= x</mrow>
+    </md>
+    <p>Therefore, we have our answer: <m>(-2,0)</m>.</p>
+  </example>
+
+  <exercise>
+    <statement><p>Solve the following system using elimination.</p>
+      <me>
+        \begin{cases}
+        4 \amp= x-3y\\
+        -6 \amp= -5x+y\\
+        \end{cases}
+      </me>
+    </statement>
+    <solution>
+      <p>We have a couple of choices here:
+        <ul>
+          <li>If we multiply both sides of the first equation by <m>-5</m>, then we would be able to cancel the <m>x</m>'s</li>
+          <li>If we multiply the second equation by <m>3</m>, then we would be able to cancel the <m>y</m>'s.</li>
+        </ul>
+      It doesn't matter which one we choose, so let's go with the second option for this exercise. When we multiply the second equation by <m>3</m>, we get</p>
+      <me> -18 = -15x+3y</me>
+      <p>Now, we add that to the first equation:</p>
+      <md>
+        <mrow>4 + (-18) \amp= x-3y + (-15x+3y)</mrow>
+        <mrow>-14 \amp= -14x - 3y+3y</mrow>
+        <mrow>-14 \amp= -14x</mrow>
+        <mrow>1 \amp= x</mrow>
+      </md>
+      <p>Now we will plug <m>x=1</m> into one of the starting equations to get <m>y</m>:</p>
+      <md>
+        <mrow>4 \amp= x-3y</mrow>
+        <mrow>4 \amp= 1 - 3y</mrow>
+        <mrow>3 \amp= -3y</mrow>
+        <mrow>-1 \amp= y</mrow>
+      </md>
+      <p>Therefore, we have our answer: <m>(1-1)</m>.</p>
+    </solution>
+    <answer><p><m>(1,-1)</m></p></answer>
+  </exercise>
+</section>
+
+<section xml:id="sec-systemspecial">
+  <title>Special Cases of Systems of Equations</title>
+
+  <introduction>In the last sections, we used two different strategies to combine the equations to get rid of one of the variables so we could solve for the other. In this section, we will look at what happens when both variables cancel out during that process.</introduction>
+
+  <p>In this section, we will use substitution in the examples because that is the author's preferred strategy. However, these two special cases will also happen when you use elimination, and the way you identify them is exactly the same.</p>
+
+  <example>
+    <p>Let's try to solve the system of equations</p>
+    <me>
+      \begin{cases}
+      y \amp= 3x-1\\
+      5 \amp= -3x+y\\
+      \end{cases}
+    </me>
+    <p>Since we already have <m>y</m> by itself in the first equation, we will plug that into the second equation:</p>
+    <md>
+      <mrow>5 \amp= -3x+y</mrow>
+      <mrow>5 \amp= -3x+(3x-1)</mrow>
+      <mrow>5 \amp= -3x + 3x - 1</mrow>
+      <mrow>5 \amp= -1</mrow>
+    </md>
+    <p>When we tried to simplify this equation, both of the <m>x</m>'s canceled out, and we are left with a nonsense statement. Since <m>5</m> is never equal to <m>-1</m>, there is no way to make both equations true at the same time. Thefore, this system has <em>no solution</em>.</p>
+  </example>
+
+  <example>
+    <p>Let's try to solve the system of equations</p>
+    <me>
+      \begin{cases}
+        x \amp= 3-y\\
+        -2x \amp= 2y-6
+      \end{cases}
+    </me>
+    <p>Since we already have <m>x</m> by itself in the first equation, we will plug that into the second equation:</p>
+    <md>
+      <mrow>-2x \amp= 2y-6</mrow>
+      <mrow>-2(3-y)\amp=2y-6</mrow>
+      <mrow>-6 + 2y\amp=2y-6</mrow>
+      <mrow>-6 \amp=-6</mrow>
+    </md>
+    <p>When we tried to simplify this equation, both of the <m>y</m>'s canceled out, and we are left with a true statement. Therefore, there are lots of ways to make both equations work at the same time. In fact, this system has <em>infinitely many solutions</em>.</p>
+  </example>
+
+  <fact>
+    <p>When you are solving a system of equations and both variables cancel out, there are two possibilities:
+      <ul>
+        <li>If you are left with a nonsense statement, then there is <em>no solution</em>.</li>
+        <li>If you are left with a true statement, then there are <em>infinitely many solutions</em>.</li>
+      </ul>
+    </p>
+  </fact>
+
+  <exercise>
+    <statement><p>Solve the following system of equations.</p>
+      <me>
+        \begin{cases}
+        5 \amp= 2x-y\\
+        -10 \amp= 2y-4x
+        \end{cases}
+      </me>
+    </statement>
+    <solution>
+      <p>Let's start by solving the first equation for <m>y</m>:</p>
+      <md>
+        <mrow>5 \amp= 2x-y</mrow>
+        <mrow>5 - 2x\amp= -y</mrow>
+        <mrow>2x-5 \amp= y</mrow>
+      </md>
+      <p>Now, let's plug that into the second equation:</p>
+      <md>
+        <mrow>-10 \amp= 2y - 4x</mrow>
+        <mrow>-10 \amp= 2(2x-5) - 4x</mrow>
+        <mrow>-10 \amp= 4x - 10 - 4x</mrow>
+        <mrow>-10 \amp= -10</mrow>
+      </md>
+      <p>All of our variables canceled out, and we are left with a true statement. Therefore, this system has <em>infinitely many solutions</em>.</p>
+    </solution>
+    <answer><p>Infinitely many solutions</p></answer>
+  </exercise>
+
+  <exercise>
+    <statement><p>Solve the following system of equations:</p>
+      <me>
+        \begin{cases}
+        x \amp= 5y-4\\
+        9 \amp= 5y - x
+        \end{cases}
+      </me>
+    </statement>
+    <solution>
+      <p>Since the first equation already has <m>x</m> by itself, let's plug that into the second equation:</p>
+      <md>
+        <mrow>9 \amp= 5y-x</mrow>
+        <mrow>9 \amp= 5y-(5y-4)</mrow>
+        <mrow>9 \amp= 5y - 5y + 4</mrow>
+        <mrow>9 \amp=4</mrow>
+      </md>
+      <p>All of our variables canceled out, and we are left with a nonsense statement. Therefore, this system has <em>no solution</em>.</p>
+    </solution>
+    <answer><p>No solution</p></answer>
+  </exercise>
+
+</section>
+
+<exercises><title>Practice Problems</title> <!--Indicates start of the exercises for the chapter and its title-->
+  <exercise>
+  <statement><p>Determine if each of the following is a solution to the equation <m>4x+3y=12</m>:
+      <ol>
+        <li><m>(4,-1)</m></li>
+        <li><m>(0,4)</m></li>
+        <li><m>3</m></li>
+      </ol>
+    </p></statement>
+      <answer><p>
+      <ol>
+        <li><m>(4,-1)</m> is not a solution</li>
+        <li><m>(0,4)</m> is a solution</li>
+        <li><m>3</m> is not a solution</li>
+      </ol>
+    </p></answer><!--Statement of the answer (don't worry about location in the rendered version)-->
+  </exercise><!--End of that exercise-->
+
+    <exercise>
+  <statement><p>Determine if each of the following is a solution to the equation <m>x-5y=-2</m>:
+      <ol>
+        <li><m>(3,1)</m></li>
+        <li><m>(0,0)</m></li>
+        <li><m>\left(\frac{5}{2}, \frac{1}{2}\right)</m></li>
+      </ol>
+    </p></statement>
+      <answer><p>
+      <ol>
+        <li><m>(3,1)</m> is a solution</li>
+        <li><m>(0,0)</m> is not a solution</li>
+        <li><m>\left(\frac{5}{2}, \frac{1}{2}\right)</m> is not a solution</li>
+      </ol>
+    </p></answer><!--Statement of the answer (don't worry about location in the rendered version)-->
+  </exercise><!--End of that exercise-->
+
+    <exercise>
+  <statement>
+      <p>Suppose we have the system of equations:</p>
+      <me>
+        \begin{cases}
+        4 \amp= 5x+y\\
+        -6 \amp= -2x+4y
+        \end{cases}
+      </me>
+      <p>Check if each of the following is a solution to the system:
+        <ol>
+          <li><m>(1,-1)</m></li>
+          <li><m>(2,5)</m></li>
+          <li><m>(-1,9)</m></li>
+        </ol>
+      </p>
+    </statement>
+    <answer><p>
+      <ol>
+        <li><m>(1,-1)</m> is a solution</li>
+          <li><m>(2,5)</m> is not a solution</li>
+          <li><m>(-1,9)</m> is not a solution</li>
+      </ol>
+    </p></answer><!--Statement of the answer (don't worry about location in the rendered version)-->
+  </exercise><!--End of that exercise-->
+
+      <exercise>
+  <statement>
+      <p>Suppose we have the system of equations:</p>
+      <me>
+        \begin{cases}
+        2 \amp= 3x-2y\\
+        4 \amp= -2x+4y
+        \end{cases}
+      </me>
+      <p>Check if each of the following is a solution to the system:
+        <ol>
+          <li><m>(1,-2)</m></li>
+          <li><m>(2,2)</m></li>
+          <li><m>(0,0)</m></li>
+        </ol>
+      </p>
+    </statement>
+    <answer><p>
+      <ol>
+        <li><m>(1,-2)</m> is not a solution</li>
+          <li><m>(2,2)</m> is a solution</li>
+          <li><m>(0,0)</m> is not a solution</li>
+      </ol>
+    </p></answer><!--Statement of the answer (don't worry about location in the rendered version)-->
+  </exercise><!--End of that exercise-->
+
+       <exercise>
+  <statement>
+      <p>Suppose we have the system of equations:</p>
+      <me>
+        \begin{cases}
+        0 \amp= \frac{1}{2}x-2y\\
+        12 \amp= 4x-4y
+        \end{cases}
+      </me>
+      <p>Check if each of the following is a solution to the system:
+        <ol>
+          <li><m>(1,-4)</m></li>
+          <li><m>(2,3)</m></li>
+          <li><m>(4,1)</m></li>
+        </ol>
+      </p>
+    </statement>
+    <answer><p>
+      <ol>
+        <li><m>(1,-4)</m> is not a solution</li>
+          <li><m>(2,3)</m> is not a solution</li>
+          <li><m>(4,1)</m> is a solution</li>
+      </ol>
+    </p></answer><!--Statement of the answer (don't worry about location in the rendered version)-->
+  </exercise><!--End of that exercise-->
+
+         <exercise>
+  <statement>
+      <p>Suppose we have the system of equations:</p>
+      <me>
+        \begin{cases}
+        -3 \amp= 3x-2y\\
+        0 \amp= 6x-2y
+        \end{cases}
+      </me>
+      <p>Check if each of the following is a solution to the system:
+        <ol>
+          <li><m>(1,3)</m></li>
+          <li><m>(0,3)</m></li>
+          <li><m>(-2,2)</m></li>
+        </ol>
+      </p>
+    </statement>
+    <answer><p>
+      <ol>
+        <li><m>(1,3)</m> is a solution</li>
+          <li><m>(0,3)</m> is not a solution</li>
+          <li><m>(-2,2)</m> is not a solution</li>
+      </ol>
+    </p></answer><!--Statement of the answer (don't worry about location in the rendered version)-->
+  </exercise><!--End of that exercise-->
+
+  <exercise>
+  <statement><p>Solve the following system of equations using substitution:</p>
+      <me>\begin{cases}4 \amp= 4x-2y \\ 3 \amp= 5x-3y\end{cases}</me>
+    </statement>
+    <answer><p><m>(3,4)</m></p></answer>
+  </exercise>
+
+   <exercise>
+  <statement><p>Solve the following system of equations using substitution:</p>
+      <me>\begin{cases}-4 \amp= 2x-y \\ -2 \amp= 4x-3y\end{cases}</me>
+    </statement>
+    <answer><p><m>(-5,-6)</m></p></answer>
+  </exercise>
+
+     <exercise>
+  <statement><p>Solve the following system of equations using substitution:</p>
+      <me>\begin{cases}0 \amp= x-\frac{1}{2}y \\ -1 \amp= 3x-3y\end{cases}</me>
+    </statement>
+    <answer><p><m>(\frac{1}{3},\frac{2}{3})</m></p></answer>
+  </exercise>
+
+     <exercise>
+  <statement><p>Solve the following system of equations using substitution:</p>
+      <me>\begin{cases}10 \amp= 5x-2y \\ 2 \amp= x-4y\end{cases}</me>
+    </statement>
+    <answer><p><m>(2,0)</m></p></answer>
+  </exercise>
+
+     <exercise>
+  <statement><p>Solve the following system of equations using substitution:</p>
+      <me>\begin{cases}1 \amp= -3x+2y \\ 5 \amp= x-y\end{cases}</me>
+    </statement>
+    <answer><p><m>(-11,-16)</m></p></answer>
+  </exercise>
+
+     <exercise>
+  <statement><p>Solve the following system of equations using substitution:</p>
+      <me>\begin{cases}2 \amp= 4x-2y \\ 5 \amp= 2x+3y\end{cases}</me>
+    </statement>
+    <answer><p><m>(1,1)</m></p></answer>
+  </exercise>
+
+     <exercise>
+  <statement><p>Solve the following system of equations using substitution:</p>
+      <me>\begin{cases}-2 \amp= 4x-2y \\ 5 \amp= 2x+3y\end{cases}</me>
+    </statement>
+    <answer><p><m>(\frac{1}{4},\frac{3}{2})</m></p></answer>
+  </exercise>
+
+  <exercise>
+  <statement><p>Solve the following system of equations using elimination:</p>
+      <me>\begin{cases}4 \amp= 4x-2y \\ 3 \amp= 5x-3y\end{cases}</me>
+    </statement>
+    <answer><p><m>(3,4)</m></p></answer>
+  </exercise>
+
+   <exercise>
+  <statement><p>Solve the following system of equations using elimination:</p>
+      <me>\begin{cases}-4 \amp= 2x-y \\ -2 \amp= 4x-3y\end{cases}</me>
+    </statement>
+    <answer><p><m>(-5,-6)</m></p></answer>
+  </exercise>
+
+     <exercise>
+  <statement><p>Solve the following system of equations using elimination:</p>
+      <me>\begin{cases}0 \amp= x-\frac{1}{2}y \\ -1 \amp= 3x-3y\end{cases}</me>
+    </statement>
+    <answer><p><m>(\frac{1}{3},\frac{2}{3})</m></p></answer>
+  </exercise>
+
+     <exercise>
+  <statement><p>Solve the following system of equations using elimination:</p>
+      <me>\begin{cases}10 \amp= 5x-2y \\ 2 \amp= x-4y\end{cases}</me>
+    </statement>
+    <answer><p><m>(2,0)</m></p></answer>
+  </exercise>
+
+     <exercise>
+  <statement><p>Solve the following system of equations using elimination:</p>
+      <me>\begin{cases}1 \amp= -3x+2y \\ 5 \amp= x-y\end{cases}</me>
+    </statement>
+    <answer><p><m>(-11,-16)</m></p></answer>
+  </exercise>
+
+     <exercise>
+  <statement><p>Solve the following system of equations using elimination:</p>
+      <me>\begin{cases}2 \amp= 4x-2y \\ 5 \amp= 2x+3y\end{cases}</me>
+    </statement>
+    <answer><p><m>(1,1)</m></p></answer>
+  </exercise>
+
+     <exercise>
+  <statement><p>Solve the following system of equations using elimination:</p>
+      <me>\begin{cases}-2 \amp= 4x-2y \\ 5 \amp= 2x+3y\end{cases}</me>
+    </statement>
+    <answer><p><m>(\frac{1}{4},\frac{3}{2})</m></p></answer>
+  </exercise>
+
+  <exercise>
+  <statement><p>Solve the following system of equations:</p>
+      <me>\begin{cases}-2 \amp= 4x-2y \\ -1 \amp= 2x-y\end{cases}</me>
+    </statement>
+    <answer><p>Infinitely many solutions</p></answer>
+  </exercise>
+
+   <exercise>
+  <statement><p>Solve the following system of equations:</p>
+      <me>\begin{cases}5 \amp= 3x-2y \\ -1 \amp= 4y-6x\end{cases}</me>
+    </statement>
+    <answer><p>No solution</p></answer>
+  </exercise>
+
+     <exercise>
+  <statement><p>Solve the following system of equations:</p>
+      <me>\begin{cases}10 \amp= x-\frac{1}{2}y \\ -24 \amp= 2y-4x\end{cases}</me>
+    </statement>
+    <answer><p>No solution</p></answer>
+  </exercise>
+
+     <exercise>
+  <statement><p>Solve the following system of equations:</p>
+      <me>\begin{cases}6 \amp= 2x-y \\ -12 \amp= 4x-2y\end{cases}</me>
+    </statement>
+    <answer><p>No solution</p></answer>
+  </exercise>
+
+     <exercise>
+  <statement><p>Solve the following system of equations:</p>
+      <me>\begin{cases}6 \amp= 2x-y \\ 12 \amp= 4x-2y\end{cases}</me>
+    </statement>
+    <answer><p>Infinitely many solutions</p></answer>
+  </exercise>
+
+     <exercise>
+  <statement><p>Solve the following system of equations:</p>
+      <me>\begin{cases}16 \amp= 4x-y \\ 8 \amp= 2x-\frac{1}{2}y\end{cases}</me>
+    </statement>
+    <answer><p>Infinitely many solutions</p></answer>
+  </exercise>
+
+     <exercise>
+  <statement><p>Solve the following system of equations: </p>
+      <me>\begin{cases}21 \amp= -3x+7y \\ 7 \amp= -6x+14y\end{cases}</me>
+    </statement>
+    <answer><p>No solution</p></answer>
+  </exercise>
+
+</exercises>
+
+
+</chapter>

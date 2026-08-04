@@ -1,0 +1,215 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Chapters are enclosed with <chapter> tags. Use xml:id to -->
+<!-- uniquely identify the chapter.  The @xmlns:xi attribute  -->
+<!-- is needed if you use xi:include in this file             -->
+<chapter xml:id="ch-logprops" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+<!-- Change title when you have one: -->
+  <title>Logarithm Properties</title>
+  <!-- If the chapter has sections, there may be an introduction -->
+  <!-- before those sections. Note the <p> tags around content.  -->
+  <introduction>
+    <p>This is the introduction to the chapter</p>
+  </introduction>
+
+<section xml:id="sec-combinelogs">
+  <title>Combining Logarithms</title>
+
+  <introduction>You might remember that we have exponent rules that tell us how we can combine things with exponents. Now, we know what logarithms are, which are just the inverse of exponentials. So, we will have similar rules for logs, but with the insides/outsides flipped.</introduction>
+
+  <table>
+    <title>Log and Exponent Properties</title>
+    <tabular top="medium">
+      <row left="medium" bottom="medium">
+        <cell right="medium">
+          <em>Exponent Rule</em>
+        </cell>
+        <cell right="medium">
+          <em>Logarithm Rule</em>
+        </cell>
+      </row>
+      <row left="medium">
+        <cell left="medium" right="medium">
+          <m>b^xb^y=b^{x+y}</m>
+        </cell>
+        <cell right="medium">
+          <m>\log_b(x)+\log_b(y)=\log_b(xy)</m>
+        </cell>
+      </row>
+      <row left="medium" bottom="medium">
+        <cell left="medium" right="medium">
+          Multiply outside, add inside
+        </cell>
+        <cell right="medium">
+          Add outside, multiply inside
+        </cell>
+      </row>
+      <row left="medium">
+        <cell left="medium" right="medium">
+          <m>\dfrac{b^x}{b^y}=b^{x-y}</m>
+        </cell>
+        <cell right="medium">
+          <m>\log_b(x)-\log_b(y)=\log_b\left(\dfrac{x}{y}\right)</m>
+        </cell>
+      </row>
+      <row left="medium" bottom="medium">
+        <cell left="medium" right="medium">
+          Divide outside, subtract inside
+        </cell>
+        <cell right="medium">
+          Subtract outside, divide inside
+        </cell>
+      </row>
+      <row left="medium">
+        <cell left="medium" right="medium">
+          <m>\left(b^x\right)^y=b^{xy}</m>
+        </cell>
+        <cell right="medium">
+          <m>y\log_b(x)=\log_b(x^y)</m>
+        </cell>
+      </row>
+      <row left="medium" bottom="medium">
+        <cell left="medium" right="medium">
+          Exponent outside, multiply inside
+        </cell>
+        <cell right="medium">
+          Multiply outside, exponent inside
+        </cell>
+      </row>
+    </tabular>
+  </table>
+
+  <example>
+    <p>Suppose we want to combine the following expression into one logarithm:</p>
+    <me>5\log_2(x)-3\log_2(y)+\frac{1}{2}\log_2(x+1)</me>
+    <p>We will need to use the first two rules in the table to combine the logs, but those rules don't work if there are numbers out front. So, we need to use the third rule in the table to deal with those first. We can bring the numbers inside the logs, but they have to go in the exponent.</p>
+    <me>\log_2\left(x^5\right)-\log_2\left(y^3\right)+\log_2\left((x+1)^{\frac{1}{2}}\right)</me>
+    <p>Notice that in the last one we had to put parentheses around the <m>x+1</m>. The reason is that when we bring the exponent inside, it has to be an exponent on the <em>entire</em> inside. Without the parentheses, the <m>\frac{1}{2}</m> power would only be on the 1, completely missing the <m>x</m>.</p>
+    <p>Now we are ready to combine the logs into one. Since the log with <m>y^3</m> is being subtracted, our second rule tells us that the <m>y^3</m> will go in the denominator of our fraction.</p>
+    <me>\log_2\left(\dfrac{x^5(x+1)^{\frac{1}{2}}}{y^3}\right)</me>
+  </example>
+
+  <p>Notice that when we brought the exponents inside, the log with the <m>y</m> only brought the 3 inside, but left the negative. If you prefer, you can bring the negative inside, too. You'll just have some negative exponents to deal with, but because those move things to the denominator, you'll end up with the same answer.</p>
+  <md>
+    <mrow>5\log_2(x)-3\log_2(y)+\frac{1}{2}\log_2(x+1)</mrow>
+    <mrow>\log_2\left(x^5\right)+\log_2\left(y^{-3}\right)+\log_2\left((x+1)^{\frac{1}{2}}\right)</mrow>
+    <mrow>\log_2\left(x^5y^{-3}(x+1)^{\frac{1}{2}}\right)</mrow>
+    <mrow>\log_2\left(\dfrac{x^5(x+1)^{\frac{1}{2}}}{y^3}\right)</mrow>
+  </md>
+
+  <exercise>
+    <statement><p>Combine the following into one logarithm</p>
+      <me>3\ln(x-2)-\frac{3}{2}\ln(y)-7\ln(z)</me>
+    </statement>
+    <solution> 
+      <p>We will need to use the first two rules in the table to combine the logs, but those rules don't work if there are numbers out front. So, we need to use the third rule in the table to deal with those first. We can bring the numbers inside the logs, but they have to go in the exponent.</p>
+      <me>\ln\left((x-2)^3\right)-\ln\left(y^{\frac{3}{2}}\right)-\ln\left(z^7\right)</me>
+      <p>Now we are ready to combine the logs into one. Since the log with <m>y^{\frac{3}{2}}</m> and the <m>z^7</m> are being subtracted, our second rule tells us that those will go in the denominator of our fraction.</p>
+      <me>\log_2\left(\dfrac{(x-2)^3}{y^{\frac{3}{2}}z^7}\right)</me>
+    </solution>
+    <answer>
+      <me>\log_2\left(\dfrac{(x-2)^3}{y^{\frac{3}{2}}z^7}\right)</me>
+    </answer>
+  </exercise>
+</section>
+
+<section xml:id="sec-expandlogs">
+  <title>Expanding Logarithms</title>
+
+  <introduction>In this section, we will do the same thing we did in <xref ref="sec-combinelogs"/>, but backwards: we will start with a bunch of stuff in one log, and we want to separate it into multiple logarithms.</introduction>
+
+  <p>Let's copy the table we had from <xref ref="sec-combinelogs"/>, but since we are working the other way around, let's write the equations the other way around as well</p>
+
+  <table>
+    <title>Log and Exponent Properties</title>
+    <tabular top="medium">
+      <row left="medium" bottom="medium">
+        <cell right="medium">
+          <em>Exponent Rule</em>
+        </cell>
+        <cell right="medium">
+          <em>Logarithm Rule</em>
+        </cell>
+      </row>
+      <row left="medium">
+        <cell left="medium" right="medium">
+          <m>b^{x+y}=b^xb^y</m>
+        </cell>
+        <cell right="medium">
+          <m>\log_b(xy)=\log_b(x)+\log_b(y)</m>
+        </cell>
+      </row>
+      <row left="medium" bottom="medium">
+        <cell left="medium" right="medium">
+          Add inside, multiply outside 
+        </cell>
+        <cell right="medium">
+          Multiply inside, add outside
+        </cell>
+      </row>
+      <row left="medium">
+        <cell left="medium" right="medium">
+          <m>b^{x-y}=\dfrac{b^x}{b^y}</m>
+        </cell>
+        <cell right="medium">
+          <m>\log_b\left(\dfrac{x}{y}\right)=\log_b(x)-\log_b(y)</m>
+        </cell>
+      </row>
+      <row left="medium" bottom="medium">
+        <cell left="medium" right="medium">
+          Subtract inside, divide outside
+        </cell>
+        <cell right="medium">
+          Divide inside, subtract outside
+        </cell>
+      </row>
+      <row left="medium">
+        <cell left="medium" right="medium">
+          <m>b^{xy}=\left(b^x\right)^y</m>
+        </cell>
+        <cell right="medium">
+          <m>\log_b(x^y)=y\log_b(x)</m>
+        </cell>
+      </row>
+      <row left="medium" bottom="medium">
+        <cell left="medium" right="medium">
+          Multiply inside, exponent outside
+        </cell>
+        <cell right="medium">
+          Exponent inside, multiply outside
+        </cell>
+      </row>
+    </tabular>
+  </table>
+
+  <example>
+    <p>Suppose we want to expand the following log as much as possible:</p>
+    <me>\log_7\left(\dfrac{x^5\sqrt{y}}{z^4}\right)</me>
+    <p>It may be tempting to bring some of the exponents out, but we can only do that when the exponent is on the <em>entire</em> inside. So, for example, we cannot yet bring down the 5 because right now it's only the exponent on part of the inside (just the <m>x</m>). But, if we separate this into multiple logs, then we will have each exponent on its own piece. So, let's start by using the first two rules to separate the logs.</p>
+    <me>\log_7\left(x^5\right)+\log_7\left(\sqrt{y}\right)-\log_7\left(z^4\right)</me>
+    <p>Now, we will want to bring our exponents outside. However, the middle term has a square root instead of an exponent. So, we need to convert <m>\sqrt{y}</m> into <m>y</m> to a power. Remember that the square root is the same thing as the <m>1/2</m> power</p>
+    <me>\log_7\left(x^5\right)+\log_7\left(y^{1/2}\right)-\log_7\left(z^4\right)</me>
+    <p>Now we are finally ready to get our answer by bringing down the exponents.</p>
+    <me>5\log_7\left(x\right)+\frac{1}{2}\log_7\left(y\right)-4\log_7\left(z\right)</me>
+  </example>
+
+  <exercise>
+    <statement>
+      <p>Separate the following as much as possible</p>
+      <me>\ln\left(\dfrac{x^{13}}{z^7\sqrt[6]{x+1}}\right)</me>
+    </statement>
+    <solution>
+      <p>First, we need to use the first two rules to separate this into multiple logs.</p>
+      <me>\ln\left(x^{13}\right)-\ln\left(z^7\right)-\ln\left(\sqrt[6]{x+1}\right)</me>
+      <p>We will want to bring down our exponents, but first we have to rewrite the 6th root as a <m>1/6</m> power.</p>
+      <me>\ln\left(x^{13}\right)-\ln\left(z^7\right)-\ln\left((x+1)^{1/6}\right)</me>
+      <p>Now we can get our final answer by bringing down all the exponents.</p>
+      <me>13\ln\left(x\right)-7\ln\left(z\right)-\frac{1}{6}\ln\left(x+1\right)</me>
+    </solution>
+    <answer>
+      <me>13\ln\left(x\right)-7\ln\left(z\right)-\frac{1}{6}\ln\left(x+1\right)</me>
+    </answer>
+  </exercise>
+
+</section>
+</chapter>

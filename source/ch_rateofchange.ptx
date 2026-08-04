@@ -1,0 +1,337 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Chapters are enclosed with <chapter> tags. Use xml:id to -->
+<!-- uniquely identify the chapter.  The @xmlns:xi attribute  -->
+<!-- is needed if you use xi:include in this file             -->
+<chapter xml:id="ch-rateofchange" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+<!-- Change title when you have one: -->
+  <title>Rate of Change</title>
+  <!-- If the chapter has sections, there may be an introduction -->
+  <!-- before those sections. Note the <p> tags around content.  -->
+  <introduction>
+    <p>This is the introduction to the chapter</p>
+  </introduction>
+
+<section xml:id="sec-computerateofchange">
+  <title>Computing Average Rate of Change</title>
+
+  <introduction>Lines are the only functions that actually have slope, but slope is such a useful measurement. Average rate of change gives us a way of computing something like slope but for non-lines.</introduction>
+
+  <definition>
+    <p>The <term>average rate of change</term> of a function <m>f(x)</m> on <m>[a,b]</m> (sometimes also written "from <m>x=a</m> to <m>x=b</m>") is the slope of the line between the points <m>(a,f(a))</m> and <m>(b,f(b))</m></p>
+  </definition>
+
+  <example>
+    <p>Suppose <m>f(x)=x^2+2x-1</m> and we want to compute the average rate of change of <m>f(x)</m> on <m>[-1,0]</m>. Both of these numbers are our <m>x</m>-values, so we need to plug them both into the function to get the <m>y</m>-values:</p>
+    <me>f(-1)=(-1)^2+2(-1)-1=-2</me>
+    <me>f(0)=(0)^2+2(0)-1=-1</me>
+    <p>Now, that means we just need to compute the slope between the points <m>(-1,f(-1))</m> and <m>(0,f(0))</m>, which we now know is <m>(-1,-2)</m> and <m>(0,-1)</m>:</p>
+    <me>\frac{-1-(-2)}{0-(-1)}=\frac{-1+2}{0+1}=\frac{1}{1}=1</me>
+    <p>Therefore, our answer is that the average rate of change of <m>f(x)</m> on <m>[-1,0]</m> is <m>1</m>.</p>
+  </example>
+
+  <exercise>
+    <statement>Suppose <m>f(x)=x^2+3</m>. Compute the average rate of change of <m>f(x)</m> from <m>x=-1</m> to <m>x=3</m>.</statement>
+    <solution>
+      <p>Both of the numbers given are our <m>x</m>-values, so we need to plug them both into the function to get the <m>y</m>-values:</p>
+      <me>f(-1)=(-1)^2+3=4</me>
+      <me>f(3)=(3)^2+3=12</me>
+      <p>Now, that means we just need to compute the slope between the points <m>(-1,f(-1))</m> and <m>(3,f(3))</m>, which we now know is <m>(-1,4)</m> and <m>(3,12)</m>:</p>
+      <me>\frac{4-12}{-1-3}=\frac{-8}{-4}=2</me>
+      <p>Therefore, our answer is that the average rate of change of <m>f(x)</m> on <m>[-1,3]</m> is <m>2</m>.</p>
+    </solution>
+    <answer><m>2</m></answer>
+  </exercise>
+
+   
+</section>
+
+<section xml:id="sec-diffq">
+  <title>Difference Quotient</title>
+
+  <introduction>Sometimes, we want to compute average rate of change, but we don't know exactly which <m>x</m>-values we want to compute it between. In that case, we will use what we know about function notation from <xref ref="sec-evaluateformula"/> to compute the average rate of change with variables</introduction>
+
+  <example>
+    <p>Suppose <m>f(x)=x^2-7</m> and we want to compute the average rate of change from <m>x=1</m> to <m>x=1+h</m>. We still follow the same procedure we always use for average rate of change. Both <m>1</m> and <m>1+h</m> are <m>x</m>-values, so we need to plug them into our function to get the <m>y</m>-values:</p>
+    <me>f(1)=(1)^2-7=-6</me>
+    <me>f(1+h)=(1+h)^2-7=(1+h)(1+h)-7=(1^2+1h+1h+h^2)-7=(1+2h+h^2)-7=2h+h^2-6</me>
+    <p>In the last calculation, we mulitplied out the square and combined like terms. The reason is that we will now be cominbing it with other expressions, so simplifying now makes our next step a little bit easier. Now that we know the <m>y</m>-values, we just need to compute the slope between the points <m>(1,f(1))</m> and <m>(1+h,f(1+h))</m>, which we now know is <m>(1,-6)</m> and <m>(1+h,2h+h^2-6)</m>. Parentheses are going to be very important for this step! Remember that with slope we can subtract in either order, as long as we are consistent on top and bottom. In this case, we recommend starting with the one that has the h's to make the simplifying a little bit easier:</p>
+    <me>\frac{(2h+h^2-6)-(-6)}{(1+h)-1}=\frac{2h+h^2-6+6}{1+h-1}=\frac{2h+h^2}{h}=\frac{h(2+h)}{h}=2+h</me>
+    <p>Therefore, our answer is that the average rate of change of <m>f(x)</m> on <m>[1,1+h]</m> is <m>2+h</m>.</p>
+  </example>
+
+  <exercise>
+    <statement>Suppose <m>f(x)=3x-2</m>. Compute the average rate of change of <m>f(x)</m> on <m>[5,5+h]</m>.</statement>
+    <solution>
+      <p>We still follow the same procedure we always use for average rate of change. Both <m>1</m> and <m>1+h</m> are <m>x</m>-values, so we need to plug them into our function to get the <m>y</m>-values:</p>
+      <me>f(5)=3(5)-2=13</me>
+      <me>f(5+h)=3(5+h)-2=15+3h-2=13+3h</me>
+      <p>Now that we know the <m>y</m>-values, we just need to compute the slope between the points <m>(5,f(5))</m> and <m>(5+h,f(5+h))</m>, which we now know is <m>(5,13)</m> and <m>(5+h,13+3h)</m>. Parentheses are going to be very important for this step! Remember that with slope we can subtract in either order, as long as we are consistent on top and bottom. In this case, we recommend starting with the one that has the h's to make the simplifying a little bit easier:</p>
+      <me>\frac{(13+3h)-(13)}{(5+h)-5}=\frac{13+3h-13}{5+h-5}=\frac{3h}{h}=3</me>
+      <p>Therefore, our answer is that the average rate of change of <m>f(x)</m> on <m>[5,5+h]</m> is <m>3</m>.</p>
+    </solution>
+    <answer><m>3</m></answer>
+  </exercise>
+
+  <example>
+    <p>Suppose <m>f(x)=2x^2-1</m> and we want to compute the average rate of change of <m>f(x)</m> on <m>[a,a+h]</m>. We still follow the same procedure we always use for average rate of change. Both <m>a</m> and <m>a+h</m> are <m>x</m>-values, so we need to plug them into our function to get the <m>y</m>-values:</p>
+    <me>f(a)=2(a)^2-1=2a^2-1</me>
+    <me>f(a+h)=2(a+h)^2-1=2(a+h)(a+h)-1=2(a^2+ah+ah+h^2)-1=2(a^2+2ah+h^2)-1=2a^2+4ah+2h^2-1</me>
+    <p>In the last calculation, we mulitplied out the square and combined like terms. The reason is that we will now be cominbing it with other expressions, so simplifying now makes our next step a little bit easier. Now that we know the <m>y</m>-values, we just need to compute the slope between the points <m>(a,f(a))</m> and <m>(a+h,f(a+h))</m>, which we now know is <m>(a,2a^2-1)</m> and <m>(a+h,2a^2+4ah+2h^2-1)</m>. Parentheses are going to be very important for this step! Remember that with slope we can subtract in either order, as long as we are consistent on top and bottom. In this case, we recommend starting with the one that has the h's to make the simplifying a little bit easier:</p>
+    <me>\frac{(2a^2+4ah+2h^2-1)-(2a^2-1)}{(a+h)-a}=\frac{2a^2+4ah+2h^2-1-2a^2+1}{a+h-a}=\frac{4ah+2h^2}{h}=\frac{h(4a+2h)}{h}=4a+2h</me>
+    <p>Therefore, our answer is that the average rate of change of <m>f(x)</m> on <m>[a,a+h]</m> is <m>4a+2h</m>.</p>
+  </example>
+
+  <exercise>
+    <statement><p>Suppose <m>f(x)=x^2+5</m>. Compute the average rate of change of <m>f(x)</m> on <m>[a,a+h]</m>.</p></statement>
+    <solution>
+      <p>We still follow the same procedure we always use for average rate of change. Both <m>a</m> and <m>a+h</m> are <m>x</m>-values, so we need to plug them into our function to get the <m>y</m>-values:</p>
+      <me>f(a)=(a)^2+5</me>
+      <me>f(a+h)=(a+h)^2+5=(a+h)(a+h)+5=(a^2+ah+ah+h^2)+5=a^2+2ah+h^2+5</me>
+      <p>In the last calculation, we mulitplied out the square and combined like terms. The reason is that we will now be cominbing it with other expressions, so simplifying now makes our next step a little bit easier. Now that we know the <m>y</m>-values, we just need to compute the slope between the points <m>(a,f(a))</m> and <m>(a+h,f(a+h))</m>, which we now know is <m>(a,a^2+5)</m> and <m>(a+h,a^2+2ah+h^2+5)</m>. Parentheses are going to be very important for this step! Remember that with slope we can subtract in either order, as long as we are consistent on top and bottom. In this case, we recommend starting with the one that has the h's to make the simplifying a little bit easier:</p>
+      <me>\frac{(a^2+2ah+h^2+5)-(a^2+5)}{(a+h)-a}=\frac{a^2+2ah+h^2+5-a^2-5}{a+h-a}=\frac{2ah+h^2}{h}=\frac{h(2a+h)}{h}=2a+h</me>
+      <p>Therefore, our answer is that the average rate of change of <m>f(x)</m> on <m>[a,a+h]</m> is <m>2a+h</m>.</p>
+    </solution>
+    <answer><m>2a+h</m></answer>
+  </exercise>
+
+</section>
+
+<exercises><title>Practice Problems</title> <!--Indicates start of the exercises for the chapter and its title-->
+
+  <exercise>
+  <statement><p>Suppose <m>f(x)=x^2-2</m>. Compute the average rate of change of <m>f(x)</m> from <m>x=1</m> to <m>x=5</m>. </p></statement>
+    <answer><m>6</m></answer>
+  </exercise>
+
+<exercise>
+  <statement><p>Suppose <m>f(x)</m> is given in the graph below. Compute the average rate of change of <m>f(x)</m> from <m>x=-5</m> to <m>x=2</m>.</p>
+      <image source="Functions/PracExercise3.png"/>
+      </statement>
+    <answer><m>1</m></answer>
+  </exercise>
+
+   <exercise>
+  <statement><p>Suppose <m>f(x)=x^2 +2x +3</m>. Compute the average rate of change of <m>f(x)</m> from <m>x=-1</m> to <m>x=1</m>. </p></statement>
+    <answer><m>2</m></answer>
+  </exercise>
+
+   <exercise>
+  <statement><p>Suppose <m>g(x)</m> is given in the table below. Compute the average rate of change of <m>g(x)</m> from <m>x=1</m> to <m>x=5</m>. </p>
+     <table>
+        <tabular top="medium">
+          <row left="medium" bottom="medium">
+            <cell right="medium">
+              <m>x</m>
+            </cell>
+            <cell right="medium">
+              <m>1</m>
+            </cell>
+            <cell right="medium">
+              <m>2</m>
+            </cell>
+            <cell right="medium">
+              <m>3</m>
+            </cell>
+            <cell right="medium">
+              <m>4</m>
+            </cell>
+            <cell right="medium">
+              <m>5</m>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell right="medium">
+              <m>g(x)</m>
+            </cell>
+            <cell right="medium">
+              <m>0</m>
+            </cell>
+            <cell right="medium">
+              <m>2</m>
+            </cell>
+            <cell right="medium">
+              <m>4</m>
+            </cell>
+            <cell right="medium">
+              <m>1</m>
+            </cell>
+            <cell right="medium">
+              <m>0</m>
+            </cell>
+          </row>
+        </tabular>
+      </table>
+      </statement>
+    <answer><m>0</m></answer>
+  </exercise>
+
+   <exercise>
+  <statement><p>Suppose <m>f(x)=\frac{x+3}{x-2}</m>. Compute the average rate of change of <m>f(x)</m> from <m>x=0</m> to <m>x=4</m>.</p></statement>
+    <answer><m>\frac{5}{4}</m></answer>
+  </exercise>
+
+   <exercise>
+  <statement><p>Suppose <m>f(x)=x^3 + 5x</m>. Compute the average rate of change of <m>f(x)</m> from <m>x=-2</m> to <m>x=2</m>.</p></statement>
+    <answer><m>9</m></answer>
+  </exercise>
+
+     <exercise>
+  <statement><p>Suppose <m>f(x)</m> is given in the table below. Compute the average rate of change of <m>f(x)</m> from <m>x=2</m> to <m>x=5</m>. </p>
+     <table>
+        <tabular top="medium">
+          <row left="medium" bottom="medium">
+            <cell right="medium">
+              <m>x</m>
+            </cell>
+            <cell right="medium">
+              <m>2</m>
+            </cell>
+            <cell right="medium">
+              <m>4</m>
+            </cell>
+            <cell right="medium">
+              <m>5</m>
+            </cell>
+            <cell right="medium">
+              <m>7</m>
+            </cell>
+            <cell right="medium">
+              <m>9</m>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell right="medium">
+              <m>f(x)</m>
+            </cell>
+            <cell right="medium">
+              <m>1</m>
+            </cell>
+            <cell right="medium">
+              <m>-2</m>
+            </cell>
+            <cell right="medium">
+              <m>4</m>
+            </cell>
+            <cell right="medium">
+              <m>10</m>
+            </cell>
+            <cell right="medium">
+              <m>0</m>
+            </cell>
+          </row>
+        </tabular>
+      </table>
+      </statement>
+    <answer><m>1</m></answer>
+  </exercise>
+
+   <exercise>
+  <statement><p>Suppose <m>f(x)=x^2+16</m>. Compute the average rate of change of <m>f(x)</m> from <m>x=1</m> to <m>x=10</m>.</p></statement>
+    <answer><m>11</m></answer>
+  </exercise>
+
+     <exercise>
+  <statement><p>Suppose <m>g(x)</m> is given in the table below. Compute the average rate of change of <m>g(x)</m> from <m>x=1</m> to <m>x=7</m>. </p>
+     <table>
+        <tabular top="medium">
+          <row left="medium" bottom="medium">
+            <cell right="medium">
+              <m>x</m>
+            </cell>
+            <cell right="medium">
+              <m>1</m>
+            </cell>
+            <cell right="medium">
+              <m>3</m>
+            </cell>
+            <cell right="medium">
+              <m>5</m>
+            </cell>
+            <cell right="medium">
+              <m>7</m>
+            </cell>
+            <cell right="medium">
+              <m>15</m>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell right="medium">
+              <m>g(x)</m>
+            </cell>
+            <cell right="medium">
+              <m>10</m>
+            </cell>
+            <cell right="medium">
+              <m>2</m>
+            </cell>
+            <cell right="medium">
+              <m>14</m>
+            </cell>
+            <cell right="medium">
+              <m>21</m>
+            </cell>
+            <cell right="medium">
+              <m>0</m>
+            </cell>
+          </row>
+        </tabular>
+      </table>
+      </statement>
+    <answer><m>\frac{11}{6}</m></answer>
+  </exercise>
+
+ <exercise>
+  <statement><p>Suppose <m>f(x)=3x-7</m>. Compute the average rate of change of <m>f(x)</m> from <m>x=-5</m> to <m>x=-2</m>.</p></statement>
+    <answer><m>3</m></answer>
+  </exercise>
+
+<exercise>
+  <statement><p>Suppose <m>f(x)</m> is given in the graph below. Compute the average rate of change of <m>f(x)</m> from <m>x=0</m> to <m>x=4</m>.</p>
+      <image source="Functions/PracExercise1.png"/>
+      </statement>
+    <answer><m>1</m></answer>
+  </exercise>
+
+   <exercise>
+  <statement><p>Suppose <m>f(x)=x^2-21</m>. Compute the average rate of change of <m>f(x)</m> from <m>x=3</m> to <m>x=5</m>.</p></statement>
+    <answer><m>8</m></answer>
+  </exercise>
+
+  <exercise>
+  <statement><p>Suppose <m>f(x)=x^2-2</m>. Compute the average rate of change of <m>f(x)</m> from <m>x=1</m> to <m>x=1+h</m>.</p></statement>
+    <answer><m>2+h</m></answer>
+  </exercise>
+
+   <exercise>
+  <statement><p>Suppose <m>f(x)=3x^2 +2x</m>. Compute the average rate of change of <m>f(x)</m> from <m>x=2</m> to <m>x=2+h</m>.</p></statement>
+    <answer><m>3h+10</m></answer>
+  </exercise>
+
+   <exercise>
+  <statement><p>Suppose <m>f(x)=10x+2</m>. Compute the average rate of change of <m>f(x)</m> from <m>x=a</m> to <m>x=a+h</m>.</p></statement>
+    <answer><m>10</m></answer>
+  </exercise>
+
+   <exercise>
+  <statement><p>Suppose <m>f(x)=x^2 +4x +4</m>. Compute the average rate of change of <m>f(x)</m> from <m>x=a</m> to <m>x=a+h</m>.</p></statement>
+    <answer><m>h+2a+4</m></answer>
+  </exercise>
+
+   <exercise>
+  <statement><p>Suppose <m>f(x)=x^2+25</m>. Compute the average rate of change of <m>f(x)</m> from <m>x=5</m> to <m>x=5+h</m>.</p></statement>
+    <answer><m>10+h</m></answer>
+  </exercise>
+
+ <exercise>
+  <statement><p>Suppose <m>f(x)=-x^2-3x+1</m>. Compute the average rate of change of <m>f(x)</m> from <m>x=a</m> to <m>x=a+h</m>.</p></statement>
+    <answer><m>-2a-h+3</m></answer>
+  </exercise>
+
+   <exercise>
+  <statement><p>Suppose <m>f(x)=2x^2+10x</m>. Compute the average rate of change of <m>f(x)</m> from <m>x=3</m> to <m>x=3+h</m>.</p></statement>
+    <answer><m>2h+22</m></answer>
+  </exercise>
+
+</exercises> 
+</chapter>

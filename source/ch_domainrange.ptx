@@ -1,0 +1,854 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Chapters are enclosed with <chapter> tags. Use xml:id to -->
+<!-- uniquely identify the chapter.  The @xmlns:xi attribute  -->
+<!-- is needed if you use xi:include in this file             -->
+<chapter xml:id="ch-domainrange">
+
+<!-- Change title when you have one: -->
+  <title>Domain and Range</title>
+  <!-- If the chapter has sections, there may be an introduction -->
+  <!-- before those sections. Note the <p> tags around content.  -->
+  <introduction>
+    <p>This is the introduction to the chapter</p>
+  </introduction>
+
+<section xml:id="sec-intervalnotation">
+  <title>Interval Notation</title>
+
+  <introduction>Suppose that, in the middle of working on a problem, we need to work with all of the numbers between 2 and 7, including 2, but not including 7. That is a lot to write out. So, in this section, we will look at some useful notation that quickly communicates this set of numbers.</introduction>
+
+  <subsection>
+    <title>Endpoints</title>
+
+    <definition> When we talk about an interval, we are talking about everything in between two numbers. Those two numbers are called the <term>endpoints</term> of the interval.</definition>
+
+    <p>Writing an interval in interval notation looks a lot like writing an ordered pair for a point on a graph. It will be two numbers, separated by a comma, with some sort of parentheses surrounding it. In an interval, we always write the smaller endpoint first, and we use either round parentheses () or square brackets [] to indicate whether the endpoint is included or not.</p>
+
+    <table>
+      <title>Notation to indicate whether an endpoint is included or not.</title>
+      <tabular top="medium">
+        <row left="medium" bottom="medium">
+          <cell right="medium">
+            Not Included
+          </cell>
+          <cell right="medium">
+            <m>\lt </m> or <m>\gt </m>
+          </cell>
+          <cell right="medium">
+            ( or )
+          </cell>
+        </row>
+        <row left="medium" bottom="medium">
+          <cell right="medium">
+            Included
+          </cell>
+          <cell right="medium">
+            <m>\le</m> or <m>\ge</m>
+          </cell>
+          <cell right="medium">
+            [ or ]
+          </cell>
+        </row>
+      </tabular>
+    </table>
+
+    <example>
+    <p>Let's look at the example we started this section with: all of the numbers between 2 and 7, including 2 but not including 7. Since we want the numbers between 2 and 7, those are our enpoints. Since we are including 2, it's going to have a square bracket [. Since we are not incluidng 7, it is going to have a round parentheses ). We always write the smaller endpoint first, so in interval notation, we would have <m>[2,7)</m>.</p>
+    </example>
+
+    <exercise>
+      <statement><p>Write each of the following using interval notation:
+        <ol>
+          <li>All numbers between <m>-1</m> and <m>3</m>, including both endpoints.</li>
+          <li><m>0\le x \lt 9</m></li>
+          <li><m>-10 \lt x \lt 10</m></li>
+        </ol>
+      </p></statement>
+      <solution><p>Write each of the following using interval notation:
+        <ol>
+          <li>All numbers between <m>-1</m> and <m>3</m>, including both endpoints. Since we want the numbers between <m>-1</m> and <m>3</m>, those are our enpoints. Since we are including both endpoints, they are going to have square brackets []. We always write the smaller endpoint first, so in interval notation, we would have <m>[-1,3]</m>.</li>
+          <li><m>0\le x \lt 9</m>. Since we want the numbers between 0 and 9, those are our enpoints. Since we are including 0, it's going to have a square bracket [. Since we are not incluidng 9, it is going to have a round parentheses ). We always write the smaller endpoint first, so in interval notation, we would have <m>[0,9)</m>.</li>
+          <li><m>-10 \lt x \lt 10</m>. Since we want the numbers between <m>-10</m> and <m>10</m>, those are our enpoints. Since we are not including either endpoint, they are going to have round parentheses ()). We always write the smaller endpoint first, so in interval notation, we would have <m>(-10,10)</m>.</li>
+        </ol></p>
+      </solution>
+      <answer><p><ol>
+          <li><m>[-1,3]</m></li>
+          <li><m>[0,9)</m></li>
+          <li><m>(-10,10)</m></li>
+        </ol></p>
+      </answer>
+    </exercise>
+    
+  </subsection>
+
+  <subsection>
+    <title>Unbounded Intervals</title>
+
+    <p>Sometimes, our interval might go on forever in one direction. Even though there isn't an endpoint, we can't leave that side blank. So, we use <m>\infty</m> or <m>-\infty</m> as the placeholder. You might find it helpful to think of <m>-\infty</m> and <m>\infty</m> as the endpoints of the whole number line. However, since they aren't actual numbers, they are never included. Therefore they always get round parentheses () in our interval notation.</p>
+
+    <example>
+      <p>Suppose we want to write <m>x\gt 2</m> in interval notation. We know that 2 is one of our endpoints, but the other side goes on forever. You might find it helpful to draw a number line to determine which side of 2 we want to include. In our case, this is what that would look like:</p>
+
+      <image source="DomainRange/Interval1.png"/>
+
+      <p>Since the interval goes on forever in the positive direction, we can think of <m>\infty</m> as the other endpoint. However, since <m>\infty</m> isn't an actual number, it will always get a round parentheses ). Since the endpoint 2 is not included, it will also get a round parentheses (. So, in interval notation, our answer would be <m>(2,\infty)</m>.</p>
+    </example>
+
+    <exercise>
+      <statement><p>Write each of the following in interval notation:
+        <ol>
+          <li><p>All numbers less than 7</p></li>
+          <li><m>x\le -3.7</m></li>
+          <li><p>All positive numbers</p></li>
+        </ol>
+      </p>
+      </statement>
+      <solution><p>Write each of the following in interval notation:
+        <ol>
+          <li><p>All numbers less than 7. Here is what that would look like on a number line:</p>
+            <image source="DomainRange/IntervalPractice1.png"/>
+
+            <p>Since the interval goes on forever in the negative direction, we can think of <m>-\infty</m> as the other endpoint. However, since <m>-\infty</m> isn't an actual number, it will always get a round parentheses (. Since the endpoint 7 is not included, it will also get a round parentheses ). So, in interval notation, our answer would be <m>(-\infty,7)</m>.</p>
+          </li>
+          <li><p><m>x\le -3.7</m>, here is what that would look like on a number line:</p>
+            <image source="DomainRange/IntervalPractice2.png"/>
+
+            <p>Since the interval goes on forever in the negative direction, we can think of <m>-\infty</m> as the other endpoint. However, since <m>-\infty</m> isn't an actual number, it will always get a round parentheses (. Since the endpoint <m>-3.7</m> is included, it will get a square bracket ]. So, in interval notation, our answer would be <m>(-\infty, -3.7])</m>.</p>
+          </li>
+          <li><p>All positive numbers means all numbers greater than 0, so here is what that would look like on a number line:</p>
+            <image source="DomainRange/IntervalPractice3.png"/>
+
+            <p>Since the interval goes on forever in the positive direction, we can think of <m>\infty</m> as the other endpoint. However, since <m>\infty</m> isn't an actual number, it will always get a round parentheses ). Since the endpoint 0 is not included, it will also get a round parentheses (. So, in interval notation, our answer would be <m>(0,\infty)</m>.</p>
+          </li>
+        </ol>
+      </p>
+      </solution>
+      <answer><p>
+        <ol>
+          <li><m>(-\infty, 7)</m></li>
+          <li><m>(-\infty, -3.7]</m></li>
+          <li><m>(0,\infty)</m></li>
+        </ol>
+      </p>
+
+      </answer>
+    </exercise>
+  </subsection>
+
+  <subsection>
+    <title>Combining Intervals</title>
+
+    <p>When we want to put together more than one interval, we combine them with a union. When we are writing or typing, we just write a <m>\cup</m> between them.</p>
+
+    <example>
+      <p>Suppose we are working on a problem, and our answer has to include both the interval <m>3 \lt x \le 8</m> and the interval <m>x \gt 10</m>. First, we write each interval using interval notation, then we will combine them with a union. Using what we learned above, we know that <m>3 \lt x \le 8</m> is written as <m>(3,8]</m>, and <m>x \gt 10</m> is written as <m>(10,\infty)</m>. Since we want our answer to include both, our final answer is <m>(3,8]\cup(10,\infty)</m>.</p>
+    </example>
+
+    <example>
+      <title>Special Case: Everything Except a Number</title>
+      <p>Suppose we wanted our answer to be everything except 3. That means we want to include all the numbers less than 3 and all the numbers greater than 3. That's two intervals that we'll combine with a union. All the numbers less than 3 is written as <m>(-\infty, 3)</m>, and all the numbers greater than 3 is written as <m>(3,\infty)</m>. Therefore, our final answer is <m>(-\infty, 3)\cup(3,\infty)</m>.</p>
+    </example>
+
+    <exercise>
+      <statement>
+        <p>Write each of the following in interval notation:
+          <ol>
+            <li><m>x \lt -1</m> or <m>x \ge 4</m></li>
+            <li><m> x \neq 42</m></li>
+            <li><p>Everything except <m>\pm 2</m> (Hint: You will probably find it helpful to draw a number line for this one).</p></li>
+          </ol>
+        </p>
+      </statement>
+      <solution>
+        <p>Write each of the following in interval notation:
+          <ol>
+            <li><p><m>x \lt -1</m> or <m>x \ge 4</m>: First, we know that <m>x \lt -1</m> is written as <m>(-\infty, -1)</m>, and that <m>x \ge 4</m> is written as <m>[4,\infty)</m>. Since our answer needs to include both possibilities, we combine them with a union to get our final answer of <m>(-\infty,-1)\cup[4,\infty)</m>.</p></li>
+            <li><p><m> x \neq 42</m>: That means we want to include all the numbers less than 42 and all the numbers greater than 42, just not 42 itself. That's two intervals that we'll combine with a union. All the numbers less than 42 is written as <m>(-\infty, 42)</m>, and all the numbers greater than 42 is written as <m>(42,\infty)</m>. Therefore, our final answer is <m>(-\infty, 42)\cup(42,\infty)</m>.</p></li>
+            <li><p>Everything except <m>\pm 2</m>. Since this one is everything except two numbers (<m>-2</m> and <m>2</m>), it is easiest to start by drawing a number line:</p>
+              <image source="DomainRange/IntervalPractice4.png"/>
+              <p>From the picture, we see that there are three intervals we need to work with: everything less than <m>-2</m>, everything between <m>-2</m> and <m>2</m>, and everything greater than <m>2</m>. In interval notation, those would each be <m>(-\infty, -2)</m>, <m>(-2,2)</m>, and <m>(2,\infty)</m>, respectively. Therefore, our final answer to this question is <m>(-\infty, -2)\cup(-2,2)\cup(2,\infty)</m>.</p>
+            </li>
+          </ol>
+        </p>
+      </solution>
+      <answer>
+      <p>
+          <ol>
+            <li><m>(-\infty,-1)\cup[4,\infty)</m></li>
+            <li><m>(-\infty,42)\cup(42,\infty)</m></li>
+            <li><m>(-\infty,-2)\cup(-2,2)\cup(2,\infty)</m></li>
+          </ol>
+        </p>
+      </answer>
+    </exercise>
+  </subsection>
+
+</section>
+
+<section xml:id="sec-domaingraph">
+  <title>Domain from a Graph</title>
+
+  <introduction> <p>In the last chapter, we learned how to evaluate functions when given a graph. In this section, we want to know what all of the possible inputs could be, which we call the domain.</p></introduction>
+
+  <p>Let's start with a warm-up question. Suppose <m>f(x)</m> is given in the graph below.</p>
+
+  <image source="DomainRange/DomainWarmUp.png"/>
+
+  <p>Now, let's say we want to find the following values:
+    <ol>
+      <li><m>f(-2)</m></li>
+      <li><m>f(3)</m></li>
+      <li><m>f(-1)</m></li>
+    </ol>
+
+  For each of these questions, the number given is the input, so it's the <m>x</m>-value, and we use the graph to find the ouput, or <m>y</m>-value. For example, to find <m>f(-2)</m>, we go to where <m>x=-2</m> and we see that the corresponding point on the graph is at <m>(-2,-3)</m>. So, <m>f(-2)=-3</m>. We can do the same thing for the second one to see that <m>f(3)=3</m>, since we only include the filled-in circles. The point at <m>(3,4)</m> is an open circle, so it's not actually included as part of the graph. When we try to find <m>f(-1)</m>, we find just two open circles, so there is no point on the graph at <m>x=-1</m>. That means that <m>f(-1)</m> is undefined.</p>
+
+  <!-- Here is the video for this example-->
+
+  <p>In the warm-up example above, the first two inputs were included in the graph, but the third input wasn't included. In this section, we want to figure out what are all the possible inputs to a function as a graph.</p>
+
+  <definition>
+    <p> The <term>domain</term> of a function is the set of all possible inputs.</p>
+  </definition>
+
+  <p> 
+  Remember that when we are looking at a graph of a function, the inputs are the <m>x</m>-values. So, when we are finding the domain of a graph, we are looking for all of the <m>x</m>-values that get overed on the graph. There are two metaphors you might find helpful.
+  <ul>
+    <li>Imagine rain going from the graph to the <m>x</m>-axis.</li>
+    <li>Imagine putting your hands above and below the graph and squishing it onto the <m>x</m>-axis.</li>
+  </ul>
+  In either case, the endpoints fall to the <m>x</m>-axis with the same type (open stays open and closed stays closed). Don't forget to write your final answer in interval notation. See the two examples below for an animation of each metaphor and decide which one makes more sense to you.
+  </p>
+
+  <example>
+    <p>Click on "Rain" or "Squish" in the graph below to watch the animation for finding the domain. From the animation, you'll see that the domain of this function is <m>(-6,5]</m>. If you want to see the animation in a larger window, <url href = "https://www.desmos.com/calculator/m6ywviusnh" visual = "https://www.desmos.com/calculator/m6ywviusnh">click here</url>.</p>
+    <interactive desmos="m6ywviusnh" width="100%" />
+  </example>
+
+  <exercise>
+    <statement>
+      Find the domain of the function in the graph below:
+
+      <image source="DomainRange/DomainPractice1.png"/>
+    </statement>
+    <solution> <p>First, we look for all of the <m>x</m>-values that get covered by the graph. We see that the first part starts at <m>x=-7</m> and ends at <m>x=-1</m>, so that will be our first interval. Since the dot at <m>(-7,1)</m> is a closed dot, it is included in the graph, so we need a square bracket <m>[</m> at the <m>x=-7</m> endpoint of our interval notation. Since the dot at <m>(-1,4)</m> is an open dot, it is not included in the graph, so we need a round parentheses <m>)</m> at the <m>x=-1</m> end of our interval, giving us <m>[-7,-1)</m> for our first piece. </p>
+      <p>For the next piece, we see that the graph goes from <m>x=0</m> to <m>x=4</m>. Since both endpoints are closed, they both get square brackets, giving us <m>[0,4]</m> for our other interval. </p>  
+      <p>To put the two intervals together, we use a union. So, our final answer is <m>[-7,-1)\cup[0,4]</m></p>
+    </solution>
+    <answer> <p><m>[-7,-1)\cup[0,4]</m></p></answer>
+  </exercise>
+
+  <example>
+    <p>Click on "Rain" or "Squish" in the graph below to watch the animation for finding the domain. Notice that the graph always goes towards the <m>x</m>-axis. So, the parts of the graph below the axis actually go up towards the axis. From the animation, you'll see that the domain of this function is <m>(-6,-1]\cup[3,7]</m>. If you want to see the animation in a larger window, <url href = "https://www.desmos.com/calculator/dlslxyzlzx" visual = "https://www.desmos.com/calculator/dlslxyzlzx">click here</url>.</p>
+    <interactive desmos="dlslxyzlzx" width="100%" />
+  </example>
+
+  <exercise>
+    <statement>
+      Find the domain of the function in the graph below:
+
+      <image source="DomainRange/DomainPractice2.png"/>
+    </statement>
+    <solution> <p>First, we look for all of the <m>x</m>-values that get covered by the graph. We see that the first part starts at <m>x=-6</m> and ends at <m>x=0</m>, so that will be our first interval. Since both endpoints of the first part are open, they are not included. So, we need round parentheses for both ends, giving us <m>(-6,0)</m> for  our first piece. </p>
+      <p>For the next piece, we see that the graph goes from <m>x=1</m> to <m>x=5</m>. Since the first endpoint is closed, it is included so it needs a square bracket <m>[</m>.  Since the second endpoint is open, it is not included so it needs a round parentheses <m>)</m>. This gives us <m>[1,5)</m> for our other interval. </p>  
+      <p>To put the two intervals together, we use a union. So, our final answer is <m>(-6,0)\cup[1,5)</m></p>
+    </solution>
+    <answer> <p><m>(-6,0)\cup[1,5)</m></p></answer>
+  </exercise>
+
+
+  <p>One thing we have to be careful about when there are multiple pieces: if the endpoints overlap, a closed dot can override an open dot, so that <m>x</m>-value would be included in our domain. This is like how we found <m>f(3)</m> in the warm-up example at the start of this section. See the example below.</p>
+
+  <example>
+    <p>Click on "Rain" or "Squish" in the graph below to watch the animation for finding the domain. From the animation, you'll see that the domain of this function is <m>(-6,7]</m>. If you want to see the animation in a larger window, <url href = "https://www.desmos.com/calculator/rtp0cbcywn" visual = "https://www.desmos.com/calculator/rtp0cbcywn">click here</url>.</p>
+    <interactive desmos="rtp0cbcywn" width="100%" />
+  </example>
+
+  <p>However, if there are two open dots, they don't cancel out. That point just isn't included in our domain.  This is like how we found that <m>f(-1)</m> was undefined in the warm-up example at the start of this section. See the example below.</p>
+
+  <example>
+    <p>Click on "Rain" or "Squish" in the graph below to watch the animation for finding the domain. From the animation, you'll see that the domain of this function is <m>(-6,-1)\cup(-1,7]</m>. If you want to see the animation in a larger window, <url href = "https://www.desmos.com/calculator/8hbksmha4c" visual = "https://www.desmos.com/calculator/8hbksmha4c">click here</url>.</p>
+    <interactive desmos="8hbksmha4c" width="100%" />
+  </example>
+</section>
+
+<section xml:id="sec-rangegraph">
+  <title>Range from a Graph</title>
+
+  <introduction> In the last chapter, we learned how to solve when a function is equal to a number, when given a graph. In this section, we want to know what all of the possible outputs could be, which we call the range.</introduction>
+
+  <p>Let's start with a warm-up question. Suppose <m>f(x)</m> is given in the graph below.</p>
+
+  <image source="DomainRange/DomainWarmUp.png"/>
+
+  <p>Now, let's say we want to solve the following equations:
+    <ol>
+      <li><m>f(x)=5</m></li>
+      <li><m>f(x)=1</m></li>
+      <li><m>f(x)=6</m></li>
+    </ol>
+
+  For each of these questions, the number given is the output, which is the <m>y</m>-value. We then use the graph to find all of the <m>x</m>-values that correspond to it. So, to solve <m>f(x)=5</m>, we go to where <m>y=5</m> and we see that the corresponding point on the graph is at <m>(4,5)</m>. That means that <m>f(4)=5</m>, so the solution to the first equation is <m>x=4</m>. For the second one, we find two points on the graph where <m>y=1</m>: <m>(1,1)</m> and <m>(6,1)</m>. That means that <m>f(1)=1</m> and <m>f(6)=1</m>. So, there are two solutions to the second question: <m>x=1,6</m>. However, for the third question, we can see that the graph does not cross <m>y=6</m>. So, there is no solution to <m>f(x)=6</m>, since <m>6</m> is not an output to this function.</p>
+
+  <!-- Here is the video for this example-->
+
+  <p>In the warm-up example above, the first two outputs were included in the graph, but the third input wasn't included. In this section, we want to figure out what are all the possible outputs to a function as a graph.</p>
+
+  <definition>
+    <p> The <term>range</term> of a function is the set of all possible outputs.</p>
+  </definition>
+
+  <p> Remember that when we are looking at a graph of a function, the outputs are the <m>y</m>-values. So, when we are finding the range of a graph, we are looking for all of the <m>y</m>-values that get overed on the graph. There are two metaphors you might find helpful.
+  <ul>
+    <li>Imagine rain going sideways from the graph to the <m>y</m>-axis.</li>
+    <li>Imagine putting your hands on the sides of the graph and squishing it onto the <m>y</m>-axis.</li>
+  </ul>
+  In either case, the endpoints slide to the <m>y</m>-axis with the same type (open stays open and closed stays closed). Don't forget to write your final answer in interval notation. See the two examples below for an animation of each metaphor and decide which one makes more sense to you.
+  </p>
+
+  <example>
+    <p>Click on "Rain" or "Squish" in the graph below to watch the animation for finding the range. From the animation, you'll see that the range of this function is <m>[-5,4)</m>. If you want to see the animation in a larger window, <url href = "https://www.desmos.com/calculator/ivjipw4mw8" visual = "https://www.desmos.com/calculator/ivjipw4mw8">click here</url>.</p>
+    <interactive desmos="ivjipw4mw8" width="100%" />
+  </example>
+
+  <exercise>
+    <statement>
+      Find the range of the function in the graph below:
+
+      <image source="DomainRange/RangePractice1.png"/>
+    </statement>
+    <solution> <p>First, we look for all of the <m>y</m>-values that get covered by the graph. We see that the part on the left starts at <m>y=1</m> and ends at <m>y=6</m>, so that will be our first interval. Since the dot at <m>(-6,1)</m> is an open dot, it is not included in the graph, so we need a round parentheses <m>(</m> at the <m>y=1</m> endpoint of our interval notation. Since the dot at <m>(-1,6)</m> is a closed dot, it is included in the graph, so we need a square bracket <m>]</m> at the <m>y=6</m> end of our interval, giving us <m>(1,6]</m> for our first piece. </p>
+      <p>For the piece on the right, we see that the graph goes from <m>y=-4</m> to <m>y=-2</m>. Since the endpoint at <m>(2,-4)</m> is closed, it gets a square bracket ]. The endpoint at <m>(6,-2)</m> is open, so it gets a round parentheses ). This gives us <m>[-4,-2)</m> for our other interval. </p>  
+      <p>To put the two intervals together, we use a union. So, our final answer is <m>[-4,-2)\cup(1,6]</m></p>
+    </solution>
+    <answer> <p><m>[-4,-2)\cup(1,6]</m></p></answer>
+  </exercise>
+
+  <p>Just like with domains, we need to be careful when there is more than one piece, in case there is any overlap. However, with the range, there can be more overlap, so it can be more difficult. The key is that we don't care how often a <m>y</m>-value is covered by the graph. If it covered somewhere, then it is in the range, period.</p>
+
+  <example>
+    <p>Click on "Rain" or "Squish" in the graph below to watch the animation for finding the range. From the animation, you'll see that the range of this function is <m>(-3,4)</m>. If you want to see the animation in a larger window, <url href = "https://www.desmos.com/calculator/gq88tq7jay" visual = "https://www.desmos.com/calculator/gq88tq7jay">click here</url>.</p>
+    <interactive desmos="gq88tq7jay" width="100%" />
+  </example>
+
+  <example>
+    <p>Click on "Rain" or "Squish" in the graph below to watch the animation for finding the range. From the animation, you'll see that the range of this function is <m>(-3,4)</m>. If you want to see the animation in a larger window, <url href = "https://www.desmos.com/calculator/a9769qd2cr" visual = "https://www.desmos.com/calculator/a9769qd2cr">click here</url>.</p>
+    <interactive desmos="a9769qd2cr" width="100%" />
+  </example>
+
+  <exercise>
+    <statement>
+      <p>Find the range of the function in the graph below:</p>
+      <image source="DomainRange/RangePractice2.png"/>
+    </statement>
+    <solution> <p>First, we look for all of the <m>y</m>-values that get covered by the graph. We see that the part on the left starts at <m>y=-4</m> and ends at <m>y=5</m>, including both endpoints. So, we have <m>[-4,5]</m> for our first piece. </p>
+      <p>For the piece on the right, we see that the graph goes from <m>y=-6</m> to <m>y=-4</m>, only including the first endpoint. This gives us <m>[-6,-4)</m> for our other interval. </p>  
+      <p>To put the two intervals together, we use a union. However, when we look carefully at the graph and at our intervals, they overlap at <m>y=-4</m>. Since that is included in the first part of the graph, it is included in the range. So, our final answer is just one long interval: <m>[-6,5]</m></p>
+    </solution>
+    <answer> <p><m>[-6,5]</m></p></answer>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>Find the range of the function in the graph below:</p>
+      <image source="DomainRange/RangePractice3.png"/>
+    </statement>
+    <solution> <p>Remember: we want to look for all of the <m>y</m>-values that get covered by the graph. This one has a lot of overlap, so it is probably easiest to solve by shading in the picture.</p>
+      <image source="DomainRange/RangePractice3Sltn.png"/>
+      <p>Because of the overlap of the two pieces, we end up with one interval for our range: <m>[-6,5)</m></p>
+      <p>It is very tempting to think that <m>y=-4</m> is not included in the range because of the open circle at <m>(-4,-4)</m>. While it is true that it is not included at that point, it is included on the graph at <m>(3,-4)</m>. The range is everything that is included somewhere on the graph. So, the fact that the point <m>(-4,-4)</m> is not included ends up not mattering because the point <m>(3,-4)</m> is included, so <m>y=-4</m> is included somewhere, and therefore is included in the range.</p>     
+    </solution>
+    <answer> <p><m>[-6,5)</m></p></answer>
+  </exercise>
+
+  <p>One other weird thing you can run into with the range is in the example below. Sometimes, the graph will turn, and your endpoint of your range will be in the middle of the curve, rather than at an endpoint. Although there is not an extra point there, every part of the curve of the graph is included. Therefore, the default is that it will be included, unless there is an open circle specifically placed there. See the example below for an animation of this situation.</p>
+
+  <example>
+    <p>Click on "Rain" or "Squish" in the graph below to watch the animation for finding the range. From the animation, you'll see that the range of this function is <m>[-3,5]</m>. If you want to see the animation in a larger window, <url href = "https://www.desmos.com/calculator/xw5fsqwdd6" visual = "https://www.desmos.com/calculator/xw5fsqwdd6">click here</url>.</p>
+    <interactive desmos="xw5fsqwdd6" width="100%" />
+  </example>
+
+  <exercise>
+    <statement>
+      <p>Find the range of the function in the graph below:</p>
+      <image source="DomainRange/RangePractice4.png"/>
+    </statement>
+    <solution> <p>Remember: we want to look for all of the <m>y</m>-values that get covered by the graph. This one has a lot of overlap, so it is probably easiest to solve by shading in the picture.</p>
+      <image source="DomainRange/RangePractice4Sltn.png"/>
+      <p>Because of the overlap of the two pieces, we end up with one interval for our range: <m>[-4,5)</m></p>
+      <p>It is very tempting to think that <m>y=-4</m> is not included in the range because there is no closed circle there. However, the point <m>(-4,-4)</m> is on the curve of the graph, so it is included by default. That is why we have a square bracket for <m>y=-4</m>. We would only not include <m>y=-4</m> in the range if there was an extra open circle at <m>(-4,-4)</m></p>     
+    </solution>
+    <answer> <p><m>[-4,5)</m></p></answer>
+  </exercise>
+</section>
+
+<section xml:id="sec-domainformula">
+  <title>Domain from a Formula</title>
+
+  <introduction>For certain functions, we can't plug in certain numbers. So, we can find the domain of the function even when we don't have a graph. That's what we'll look at in this section.</introduction>
+
+  <p>The theme that you'll see repeated in this section is that <em>the domain of a function is everything except where there are problems</em>. We're going to look at two different potential problems in this section: square roots of variables and variables in the denominator of a fraction.</p>
+
+  <subsection xml:id="subsec-domainsqrt">
+    <title>Square Roots of Variables</title>
+
+    <p>Let's do a warm-up problem. Suppose <m>f(x)=2\sqrt{x+3}+1</m>. We want to find the following values:
+      <ol>
+        <li><m>f(0)</m></li>
+        <li><m>f(-1)</m></li>
+        <li><m>f(-3)</m></li>
+        <li><m>f(-5)</m></li>
+      </ol>
+
+      Remember that for each one, the number given is the input, so we replace the <m>x</m> in the formula with that number. Let's do each of them one by one:
+
+      <ol>
+        <li><m>f(0) = 2\sqrt{0+3}+1=2\sqrt{3}+1</m></li>
+        <li><m>f(-1) = 2\sqrt{-1+3}+1=2\sqrt{2}+1</m></li>
+        <li><m>f(-3) = 2\sqrt{-3+3}+1=2\sqrt{0}+1=1</m></li>
+        <li><m>f(-5) = 2\sqrt{-5+3}+1 = 2\sqrt{-2}+1</m>, which is undefined in our class.</li>
+      </ol>
+
+      Notice that in the last question, we discovered that <m>f(-5)</m> is undefined because it results in trying to take the square root of a negative number. Remember from <xref ref="sec-domaingraph"/> that the domain is all of the possible inputs. Since <m>-5</m> is not a possible input to this function, that means that <m>-5</m> is not in the domain of <m>f(x)</m>.
+    </p>
+
+    <fact>
+      <title>Domain of a Square Root</title>
+
+      <statement>The domain of a square root function is all of the <m>x</m>-values that make the inside of the square root non-negative (in other words, greater than or equal to 0).</statement>
+    </fact>
+
+    <example>
+      <p>Let's look at the example from the warm-up. Since the only part that can cause problems is the part under the square root, we can ignore the 1 and the 2. We just need to figure out where <m>x+3</m> is non-negative. In other words, we set </p>
+
+      <me>x+3 \ge 0</me>
+
+      <p>Subtracting 3 from both sides, we end up with </p>
+
+      <me>x \ge -3 </me>
+
+      <p>Now, all that we have to do is turn it into interval notation. You might find it helpful to draw a number line. Our final answer is <m>[-3,\infty)</m>.</p>
+    </example>
+
+    <exercise>
+      <statement> Find the domain of <m>f(x)=4\sqrt{5-2x}+7</m>.</statement>
+
+      <answer><m>\left(-\infty,\frac{2}{5}\right]</m></answer>
+
+      <solution><p>Since the only part that causes a problem is the part inside the square root, we can ignore the 4 and the 7. All we need to do is set <m>5-2x\ge0</m> and solve for x. There are two ways you could solve it, depending on what your first step is. We'll show you both.</p>
+
+        <p>If you start by subrtracting 5 from both sides, you'll need to remember that when you eventually divide by <m>-2</m>, you'll need to flip the direction of the inequality. Here is what that version looks like:</p>
+
+        <md>
+          <mrow>5-2x \amp \ge 0</mrow>
+          <mrow>-2x \amp \ge -5 </mrow>
+          <mrow> x \amp \le \frac{-5}{-2}</mrow>
+          <mrow> x \amp \le \frac{5}{2}</mrow>
+        </md>
+
+        <p>If you start by adding <m>2x</m> to both sides, you won't end up dividing by a negative number, but your variable will be on the other side of the equal sign. Here is what that version looks like:</p>
+
+        <md>
+          <mrow>5-2x \amp \ge 0</mrow>
+          <mrow>5 \amp \ge 2x </mrow>
+          <mrow> \frac{5}{2}  \amp \ge x</mrow>
+        </md>
+
+        <p> In either case, our answer is all of the numbers that are less than or equal to <m>\frac{5}{2}</m>. In interval notation, our final answer is <m>\left(-\infty,\frac{5}{2}\right]</m>.</p>
+      </solution>
+    </exercise>
+  </subsection>
+
+  <subsection xml:id="subsec-domainreciprocal">
+    <title>Variables in the Denominator</title>
+
+    <p>Let's do a warm-up problem. Suppose <m>f(x)=\dfrac{x+3}{x-1}</m>. We want to find the following values:
+      <ol>
+        <li><m>f(0)</m></li>
+        <li><m>f(-1)</m></li>
+        <li><m>f(1)</m></li>
+        <li><m>f(2)</m></li>
+      </ol>
+
+      Remember that for each one, the number given is the input, so we replace the <m>x</m> in the formula with that number. Let's do each of them one by one:
+
+      <ol>
+        <li><m>f(0)=\dfrac{0+3}{0-1} = \dfrac{3}{-1} = -3</m></li>
+        <li><m>f(-1)=\dfrac{-1+3}{-1-1} = \dfrac{2}{-2} = -1</m></li>
+        <li><m>f(1)=\dfrac{1+3}{1-1} = \dfrac{4}{0}</m>, which is always undefined.</li>
+        <li><m>f(2)=\dfrac{2+3}{2-1} = \dfrac{5}{1} = 5</m></li>
+      </ol>
+
+      Notice that in the third question, we discovered that <m>f(1)</m> is undefined because it results in trying to divide by 0. Remember from <xref ref="sec-domaingraph"/> that the domain is all of the possible inputs. Since <m>1</m> is not a possible input to this function, that means that <m>1</m> is not in the domain of <m>f(x)</m>. However, the numbers we tried that are bigger than 1 and less than 1 were all fine. It was only 1 that caused a problem, because that <m>x</m>-value made the denominator equal to 0.
+    </p>
+
+    <fact>
+      <title>Domain of a Function with Variables in the Denominator</title>
+
+      <statement>The domain of a function that has variable in the denominator of a fraction is everything except the <m>x</m>-values that make the denominator 0.</statement>
+    </fact>
+
+    <example>
+      <p>Let's look at the example from the warm-up. Since the only part that can cause problems is the denominator, we can ignore the <m>x+3</m> in the numerator. We just need to figure out where <m>x-1</m> is 0, and then our domain will be everything except that number. In other words, we set </p>
+
+      <me>x-1 = 0</me>
+
+      <p>Adding 1 to both sides, we end up with </p>
+
+      <me>x = 1 </me>
+
+      <p>Now, remember that we figured out where the denominator is equal to 0, which is where the problem is. However, the domain is everything that isn't a problem, so our domain will be everything except 1. That means we need to include all the numbers that are bigger than 1 and all the numbers that are less than 1, but just not 1 itself. You might find it helpful to draw a number line. Our final answer in interval notation will be <m>(-\infty, 1)\cup(1,\infty)</m>.</p>
+    </example>
+
+    <exercise>
+      <statement> Find the domain of <m>f(x)=\dfrac{3x+1}{2x-7}</m>.</statement>
+
+      <answer><m>\left(-\infty,\frac{7}{2}\right)\cup\left(\frac{7}{2},\infty\right)</m></answer>
+
+      <solution><p>Since the only part that can cause problems is the denominator, we can ignore the <m>3x+1</m> in the numerator. We just need to figure out where <m>2x-7</m> is 0, and then our domain will be everything except that number. In other words, we set <m>2x-7=0</m> and solve: </p>
+
+      <md>
+        <mrow>2x-7 \amp =  0</mrow>
+        <mrow>2x \amp = 7</mrow>
+        <mrow>x\amp = \frac{7}{2}</mrow>
+      </md>
+
+      <p>Now, remember that we figured out where the denominator is equal to 0, which is where the problem is. However, the domain is everything that isn't a problem, so our domain will be everything except <m>\frac{7}{2}</m>. That means we need to include all the numbers that are bigger than <m>\frac{7}{2}</m> and all the numbers that are less than <m>\frac{7}{2}</m>, but just not <m>\frac{7}{2}</m> itself. You might find it helpful to draw a number line. Our final answer in interval notation will be <m>(-\infty, \frac{7}{2})\cup(\frac{7}{2},\infty)</m>.</p>
+      </solution>
+    </exercise>
+
+  </subsection>
+
+  <subsection xml:id="subsec-domainbothneither">
+    <title>Both or Neither</title>
+
+    <p>So far, we have learned how to find the domain of a function with a square root of a variable and a function with variables in the denominator. Now, we want to know how to combine them to find the domain of a function that doesn't have either problem, or a function that has both problems!</p>
+
+    <fact>
+      <title>Domain of Square Root in the Denominator</title>
+
+      <statement>The domain of a function with a square root of a variable in the denominator of a fraction is where the inside of the square root is strictly greater than 0.</statement>
+    </fact>
+
+    <p>The fact above makes sense because it's a combination of how we dealt with the two problems before. When we just had a square root, we needed the inside to be greater than or equal to 0, because <m>\sqrt{0}=0</m>, which isn't a problem by itself. However, if that square root were in the denominator of a fraction, we would now be trying to divide by 0, which is a problem. That's why we have to set the inside strictly bigger than 0 in this case.</p>
+
+    <example>
+      <p>Let's say we want to find the domain of <m>f(x)=\dfrac{x+7}{\sqrt{3-x}}</m>. Well, the things that cause a problem here are the square root and the fact that it's in the denominator. Since the <m>x+7</m> is not inside the square root and it's not in the denominator, we can ignore that part. We need to set <m>3-x \gt 0</m> and solve. There are two ways you could solve it: either by adding <m>x</m> to both sides, or by subtracting 3 from both sides and then dividing by <m>-1</m> and flipping the inequality. In either case, we get that our domain is all numbers less than 3. In iterval notation, that means our final answer is <m>(-\infty,3)</m>.</p>
+    </example>
+
+    <exercise>
+      <statement>
+        Find the domain of <m>f(x)=\dfrac{2-x}{\sqrt{2+3x}}</m>
+      </statement>
+
+      <answer><m>\left(-\frac{2}{3},\infty\right)</m></answer>
+      <solution><p> The things that cause a problem here are the square root and the fact that it's in the denominator. Since the <m>2-x</m> is not inside the square root and it's not in the denominator, we can ignore that part. We need to set <m>2+3x \gt 0</m> and solve:</p>
+
+        <md>
+          <mrow>2+3x \amp\gt 0</mrow>
+          <mrow>3x \amp\gt -2</mrow>
+          <mrow>x \amp\gt -\frac{2}{3}</mrow>
+        </md>
+
+      <p>When we turn our answer into interval notation, we get <m>\left(-\frac{2}{3},\infty\right)</m></p></solution>
+
+    </exercise>
+
+    <p>Now that you've seen how to handle functions that have both problems, let's talk about how to handle functions that don't have either problem.</p>
+
+    <fact>
+      <title>Domain without Problems</title>
+
+      <statement>The domain of a function that doesn't have a square root of a variable or a variable in the denominator is everything: <m>(-\infty, \infty)</m>.</statement>
+    </fact>
+
+    <p>Remember: the domain is everything that doesn't cause a problem. Right now, the only problems we are concerned about are square roots of variables and variables in the denominator of a fraction. If neither of those are there, there is nothing to cause problems, so the domain is just everything!</p>
+
+    <example>
+      <p>Suppose we want to find the domain of <m>f(x)=\frac{5}{3}x-\sqrt{7}</m>. Even though we do have a fraction and a square root, they don't cause problems in this case, because they don't have any variables. The denominator of the fraction is 3, which is just always 3 and is never 0, so that's not a problem. Similarly, the inside of our square root is 7, which is always just 7 and is never negative. So, that's not a problem either. Since this function doesn't have any problems, the domain is everything: <m>(-\infty, \infty)</m>.</p>
+    </example>
+
+    <exercise>
+      <statement>Find the domain of <m>f(x)=3x-\frac{7x}{2}+\sqrt{8}</m>.</statement>
+
+      <answer><m>(-\infty, \infty)</m></answer>
+
+      <solution><p> Even though we do have a fraction and a square root, they don't cause problems in this case, because they don't have any variables. The denominator of the fraction is 2, which is just always 2 and is never 0, so that's not a problem. Similarly, the inside of our square root is 8, which is always just 8 and is never negative. So, that's not a problem either. Since this function doesn't have any problems, the domain is everything: <m>(-\infty, \infty)</m>.</p></solution>
+    </exercise>
+
+    <remark>
+      <p>It is worth noting that you could build more complicated functions that have other problems with the domain. We just aren't worried about most of them in this class. The only other problem we're going to deal with is logarithms, but we won't worry about that until later in the semester.</p>
+    </remark>
+
+  </subsection>
+
+  <subsection xml:id="subsec-domainformulasummary">
+
+    <p>There are four cases we talked about in this section:
+
+      <ul>
+        <li>Square root of a variable: Set the inside of the square root greater than or equal to 0 and solve.</li>
+        <li>Variable in the denominator of a fraction: Set the denominator equal to 0 and solve. The domain is everything except that number.</li>
+        <li>Square root of a variable in the denominator of a fraction: Set the inside of the square root strictly greater than 0 and solve.</li>
+        <li>No square roots of variables or variables in the denominator of a fraction: No problems, so the domain is everything.</li>
+      </ul>
+    </p>
+
+    <p>You might find it helpful or organize the information here as a Venn diagram, like the one below:</p>
+
+    <image source="DomainRange/DomainVenn.png"/>
+
+  </subsection>
+
+</section>
+
+<exercises><title>Practice Problems</title> <!--Indicates start of the exercises for the chapter and its title-->
+
+  <exercise>
+  <statement>
+        <p>Write each of the following in interval notation (Note: you may find it helpful to draw a number line):
+          <ol>
+            <li><m> x \ge -5</m></li>
+            <li><m>x \le -3</m> or <m>x \gt 6</m></li>
+            <li><m> x \neq 88</m></li>
+            <li><m>x \ge -2</m> and <m>x \lt 6</m></li>
+            <li>Everything except <m>\pm 6</m></li>
+            <li><m> x \lt 18</m></li>
+            <li>Everything except <m>0</m></li>
+            <li><m> x \lt -5</m> or <m>x \gt -5</m></li>
+          </ol>
+        </p>
+      </statement>
+    <answer>
+      <p>
+          <ol>
+            <li><m>[-5, \infty)</m></li>
+            <li><m>(-\infty,-3]\cup(6,\infty)</m></li>
+            <li><m>(-\infty,88)\cup(88,\infty)</m></li>
+            <li><m>[-2, 6)</m></li>
+            <li><m>(-\infty,-6)\cup(-6,6)\cup(6,\infty)</m></li>
+            <li><m>(-\infty,18)</m></li>
+            <li><m>(-\infty,0)\cup(0,\infty)</m></li>
+            <li><m>(-\infty, -5)\cup(-5, \infty)</m></li>
+          </ol>
+        </p>
+      </answer>
+  </exercise>
+
+  <exercise>
+  <statement>
+        Find the domain of the function in the graph below:
+
+      <image source="DomainRange/DomPrac1.png"/>
+      </statement>
+   <answer> <p><m>[1,3)</m></p></answer>
+  </exercise>
+
+   <exercise>
+  <statement>
+        Find the domain of the function in the graph below:
+
+      <image source="DomainRange/DomPrac2.png"/>
+      </statement>
+   <answer> <p><m>[1,4)\cup(4,6]</m></p></answer>
+  </exercise>
+
+     <exercise>
+  <statement>
+        Find the domain of the function in the graph below:
+
+      <image source="DomainRange/DomPrac3.png"/>
+      </statement>
+   <answer> <p><m>[1,9)</m></p></answer>
+  </exercise>
+
+     <exercise>
+  <statement>
+        Find the domain of the function in the graph below:
+
+      <image source="DomainRange/DomPrac4.png"/>
+      </statement>
+   <answer> <p><m>[-3,1)\cup[2,4]</m></p></answer>
+  </exercise>
+
+       <exercise>
+  <statement>
+        Find the domain of the function in the graph below:
+
+      <image source="DomainRange/DomPrac5.png"/>
+      </statement>
+   <answer> <p><m>[-1,6]</m></p></answer>
+  </exercise>
+
+        <exercise>
+  <statement>
+        Find the domain of the function in the graph below:
+
+      <image source="DomainRange/DomPrac6.png"/>
+      </statement>
+   <answer> <p><m>[-2,0]\cup(1,3)\cup[5,7]</m></p></answer>
+  </exercise>
+
+        <exercise>
+  <statement>
+        Find the domain of the function in the graph below:
+
+      <image source="DomainRange/DomPrac7.png"/>
+      </statement>
+   <answer> <p><m>[-2,0]\cup(2,5)</m></p></answer>
+  </exercise>
+
+         <exercise>
+  <statement>
+        Find the domain of the function in the graph below:
+
+      <image source="DomainRange/DomPrac8.png"/>
+      </statement>
+   <answer> <p><m>[-1,2)\cup(2,5]</m></p></answer>
+  </exercise>
+
+  <exercise>
+  <statement>
+        Find the range of the function in the graph below:
+
+      <image source="DomainRange/DomPrac1.png"/>
+      </statement>
+   <answer> <p><m>[0,4)</m></p></answer>
+  </exercise>
+
+   <exercise>
+  <statement>
+        Find the range of the function in the graph below:
+
+      <image source="DomainRange/DomPrac2.png"/>
+      </statement>
+   <answer> <p><m>[0,9)</m></p></answer>
+  </exercise>
+
+     <exercise>
+  <statement>
+        Find the range of the function in the graph below:
+
+      <image source="DomainRange/DomPrac3.png"/>
+      </statement>
+   <answer> <p><m>[-1,7)</m></p></answer>
+  </exercise>
+
+     <exercise>
+  <statement>
+        Find the range of the function in the graph below:
+
+      <image source="DomainRange/DomPrac4.png"/>
+      </statement>
+   <answer> <p><m>[0,9]</m></p></answer>
+  </exercise>
+
+       <exercise>
+  <statement>
+        Find the range of the function in the graph below:
+
+      <image source="DomainRange/DomPrac5.png"/>
+      </statement>
+   <answer> <p><m>[0,1]\cup(2,7]</m></p></answer>
+  </exercise>
+
+        <exercise>
+  <statement>
+        Find the range of the function in the graph below:
+
+      <image source="DomainRange/DomPrac6.png"/>
+      </statement>
+   <answer> <p><m>[-2,0]\cup(1,3)\cup[5,7]</m></p></answer>
+  </exercise>
+
+        <exercise>
+  <statement>
+        Find the range of the function in the graph below:
+
+      <image source="DomainRange/DomPrac7.png"/>
+      </statement>
+   <answer> <p><m>[4,14)</m></p></answer>
+  </exercise>
+
+         <exercise>
+  <statement>
+        Find the range of the function in the graph below:
+
+      <image source="DomainRange/DomPrac8.png"/>
+      </statement>
+   <answer> <p><m>[-4,2)\cup(2,8]</m></p></answer>
+  </exercise>
+
+  <exercise>
+  <statement>
+        Find the domain of <m>f(x)=5x^2-\frac{7x}{2}+\sqrt{29}</m>.
+      </statement>
+   <answer> <p><m>(-\infty, \infty)</m></p></answer>
+  </exercise>
+
+    <exercise>
+  <statement>
+        Find the domain of <m>f(x)=\frac{3x^2}{2x-1}</m>.
+      </statement>
+   <answer> <p><m>(-\infty, \frac{1}{2})\cup(\frac{1}{2},\infty)</m></p></answer>
+  </exercise>
+
+    <exercise>
+  <statement>
+        Find the domain of <m>f(x)=\sqrt{4x-3}</m>.
+      </statement>
+   <answer> <p><m>[\frac{3}{4}, \infty)</m></p></answer>
+  </exercise>
+
+    <exercise>
+  <statement>
+        Find the domain of <m>f(x)=\frac{4x^3}{\sqrt{3x}}</m>.
+      </statement>
+   <answer> <p><m>(0, \infty)</m></p></answer>
+  </exercise>
+
+    <exercise>
+  <statement>
+        Find the domain of <m>g(x)=7x^2-\frac{7x}{\sqrt{7}}+\sqrt{31}</m>.
+      </statement>
+   <answer> <p><m>(-\infty, \infty)</m></p></answer>
+  </exercise>
+
+    <exercise>
+  <statement>
+        Find the domain of <m>h(x)=15x^6-\frac{19x}{x^2-1}</m>.
+      </statement>
+   <answer> <p><m>(-\infty,-1)\cup(-1,1)\cup(1,\infty)</m></p></answer>
+  </exercise>
+
+    <exercise>
+  <statement>
+        Find the domain of <m>f(x)=\frac{\sqrt{2x+3}}{4}</m>.
+      </statement>
+   <answer> <p><m>[-\frac{3}{2}, \infty)</m></p></answer>
+  </exercise>
+
+    <exercise>
+  <statement>
+        Find the domain of <m>g(x)=\frac{1}{\sqrt{6x+4}}</m>.
+      </statement>
+   <answer> <p><m>(-\frac{2}{3}, \infty)</m></p></answer>
+  </exercise>
+
+    <exercise>
+  <statement>
+        Find the domain of <m>f(x)=13x^{12}-\frac{\pi x}{11}+\sqrt{10}</m>.
+      </statement>
+   <answer> <p><m>(-\infty, \infty)</m></p></answer>
+  </exercise>
+
+  <exercise>
+  <statement>
+        Find the domain of <m>f(x)=\frac{x-3}{12x+18}</m>.
+      </statement>
+   <answer> <p><m>(-\infty, -\frac{3}{2})\cup(-\frac{3}{2}, \infty)</m></p></answer>
+  </exercise>
+
+</exercises> 
+
+</chapter>

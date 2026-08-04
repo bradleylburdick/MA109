@@ -1,0 +1,654 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Chapters are enclosed with <chapter> tags. Use xml:id to -->
+<!-- uniquely identify the chapter.  The @xmlns:xi attribute  -->
+<!-- is needed if you use xi:include in this file             -->
+<chapter xml:id="ch-transformations" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+<!-- Change title when you have one: -->
+  <title>Transformations</title>
+  <!-- If the chapter has sections, there may be an introduction -->
+  <!-- before those sections. Note the <p> tags around content.  -->
+  <introduction>
+    <p>This is the introduction to the chapter</p>
+  </introduction>
+
+<section xml:id="sec-identifytransforms">
+  <title>Identifying Transformations</title>
+
+  <introduction>Each transformation on its own isn't too bad, but the hard part about this topic for most students is keeping track of all the different ones. We'll discuss that in this section.</introduction>
+
+  <p>Each of the transformations we'll discussed in this chapter have two properties:
+    <ul>
+      <li><em>The Direction of Transformation</em>: Is it vertial or horizontal?</li>
+      <li><em>The Kind of Transformation</em>: Is it a shift, scale, or reflection?</li>
+    </ul>
+    When we are working with multiple transformations at once, those are the two key questions we need to ask. Here is a summary of how these two questions relate to the function notation:
+  </p>
+
+  <fact>
+    <title>Vertical or Horizontal</title>
+
+    <p>
+      <ul>
+        <li>Vertical transformations change the <m>y</m>-values of the graph, and the formula changes on the <em>outside</em> of the function.</li>
+        <li>Horizontal transformations change the <m>x</m>-values of the graph, and the formula changes on the <em>inside</em> of the function.</li>
+      </ul>
+    </p>
+  </fact>
+
+  <fact>
+    <title>Shift, Scale, or Reflection</title>
+
+    <p>
+      <ul>
+        <li>Shift transformations involve <em>adding or subtracting</em> a number in the formula.</li>
+        <li>Scale transformations involve <em>multiplying or dividing</em> by a positive number in the formula.</li>
+        <li>Reflection transformations involve <em>multiplying by <m>-1</m></em> in the formula.</li>
+      </ul>
+    </p>
+  </fact>
+
+  <fact>
+    <title>Warning! Horizontal Transformations</title>
+    <p>
+      Vertical transformations do exactly what we expect: adding 3 outside moves the graph up 3, while subtracting would move it down. However, <em>horizontal transformations are backwards from what we expect</em>:
+      <ul>
+        <li> To shift left (the negative <m>x</m>-direction), you have to add inside the function.</li>
+        <li> To shift right (the positive <m>x</m>-direction), you have to subtract inside the function.</li>
+        <li> To stretch horizontally (make it bigger in the <m>x</m>-direction), you have to divide inside the function.</li>
+        <li> To squish horizontally (make it smaller in the <m>x</m>-direction), you have to multiply inside the function.</li>
+      </ul>
+
+    Luckily, reflections are just reflections, so they don't have this complication.
+    </p>
+  </fact>
+
+  <table xml:id="table-transforms">
+    <title>Summary of Transformations</title>
+    <tabular top="medium">
+      <row bottom="medium" left="medium">
+        <cell right="medium">
+        </cell>
+        <cell right="medium">
+          Vertical (outside)
+        </cell>
+        <cell right="medium">
+          Horizontal (inside)
+        </cell>
+      </row>
+      <row bottom="medium" left="medium">
+        <cell right="medium">
+          Add
+        </cell>
+        <cell right="medium">
+          Shift up by <m>a</m>:<nbsp /><m>f(x)+a</m>
+        </cell>
+        <cell right="medium">
+          Shift left by <m>a</m>:<nbsp /><m>f(x+a)</m>
+        </cell>
+      </row>
+      <row bottom="medium" left="medium">
+        <cell right="medium">
+          Subtract
+        </cell>
+        <cell right="medium">
+          Shift down by <m>a</m>:<nbsp /><m>f(x)-a</m>
+        </cell>
+        <cell right="medium">
+          Shift right by by <m>a</m>:<nbsp /><m>f(x-a)</m>
+        </cell>
+      </row>
+      <row bottom="medium" left="medium">
+        <cell right="medium">
+          Multiply (<m>b\gt 1</m>)
+        </cell>
+        <cell right="medium">
+          Vertical stretch by <m>b</m>:<nbsp /><m>bf(x)</m>
+        </cell>
+        <cell right="medium">
+          Horizontal squish by <m>b</m>: <nbsp /><m>f(bx)</m>
+        </cell>
+      </row>
+      <row bottom="medium" left="medium">
+        <cell right="medium">
+          Divide by<nbsp /><m>b\gt 1</m>
+        </cell>
+        <cell right="medium">
+          Vertical squish by <m>b</m>:<nbsp /><m>\frac{1}{b}f(x)</m> or <m>\frac{f(x)}{b}</m>
+        </cell>
+        <cell right="medium">
+          Horizontal stretch by <m>b</m>:<nbsp /><m>f\left(\frac{1}{b}x\right)</m> or <m>f\left(\frac{x}{b}\right)</m>
+        </cell>
+      </row>
+      <row bottom="medium" left="medium">
+        <cell right="medium">
+          Multiply by<nbsp /><m>-1</m>
+        </cell>
+        <cell right="medium">
+          Vertical flip: <m>-f(x)</m>
+        </cell>
+        <cell right="medium">
+          Horizontal flip: <m>f(-x)</m>
+        </cell>
+      </row>
+    </tabular>
+  </table>
+
+  <example>
+    <p>Suppose <m>g(x)=2f(x+3)</m> and we want to identify what tranformations took <m>f(x)</m> to <m>g(x)</m>. We see that there are two numbers we need to look at: the <m>2</m> and the <m>3</m>:
+      <ul>
+        <li>In the formula <m>g(x)={\color{blue}{2}}f(x+3)</m>, the <m>2</m> is on the outside of the function, so it's a vertical transformation. Since it's being multiplied, we know that it is a scale. Since vertical transformations behave the way we expect, this a <em>vertical stretch</em>.</li>
+        <li>In the formula <m>g(x)=2f(x+{\color{blue}{3}})</m>, the <m>3</m> is on the inside of the function, so it's a horizontal transformation. Since it's being added, we know that it is a shift. Since horizontal transformations behave backwards from what we expect, this a <em>horizontal shift to the left</em>.</li>
+      </ul>
+      Therefore, the answer is that there is a vertical stretch by 2 and a horizontal shift left by 3.
+    </p>
+  </example>
+
+  <exercise>
+    <statement>
+      <p>Suppose <m>g(x)=-f(x-7)</m>. What transformations took <m>f(x)</m> to <m>g(x)</m>?</p>
+    </statement>
+    <solution>
+      <p>We see that there are two numbers we need to look at: the <m>-1</m> and the <m>7</m>:
+      <ul>
+        <li>In the formula <m>g(x)={\color{blue}{-}}f(x-7)</m>, the <m>-1</m> is on the outside of the function, so it's a vertical transformation. Since it's multiplying by <m>-1</m>, we know that it is <em>vertical reflection</em>.</li>
+        <li>In the formula <m>g(x)=-f(x-{\color{blue}{7}})</m>, the <m>7</m> is on the inside of the function, so it's a horizontal transformation. Since it's being subtracted, we know that it is a shift. Remember that horizontal transformations work backwards from what we expect, so this a <em>horizontal shift to the right</em>.</li>
+      </ul>
+      Therefore, the answer is that there is a vertical reflection and a horizontal shift right by 7.
+      </p>
+    </solution>
+    <answer><p>There is a vertical reflection and a horizontal shift right by 7.</p></answer>
+  </exercise>
+
+  <p>Sometimes, we aren't looking directly at the function notation. Instead, we are given the actual formula for the original function and the transformed function. In this case, the key is to look for what changed and where. Then, consult the table above to see what transformation that corresponds to.</p>
+
+  <example>
+    <p> Suppose <m>f(x)=2x^2-7x+4</m> and <m>g(x)=10(x-4)^2-35(x-4)+20</m>. What transformations took <m>f(x)</m> to <m>g(x)</m>?</p>
+
+    <p>Comparing the original function (<m>f(x)</m>) to the transformed function (<m>g(x)</m>), we see two key differences:
+      <ul>
+        <li><p>Everywhere we originally had <m>x</m> in the formula for <m>f(x)</m>, we now have <m>(x-4)</m>.</p>
+          <ul>
+            <li>Since the change is to the inputs (<m>x</m>), this is a horizontal transformation.</li>
+            <li>Since the change is adding/subtracting, this is a shift.</li>
+            <li>Since horizontal transformations are backwards from what we expect, this subtraction moves the graph in the positive <m>x</m>-direction (to the right).</li>
+            <li>This is a <em>shift right by <m>4</m></em>.</li>
+          </ul>
+        </li>
+        <li><p>All of the coefficients were multiplied by <m>5</m>.</p>
+          <ul>
+            <li>Since the change happened to the entire formula, it is changing the outputs, so it is a vertical change.</li>
+            <li>Since the change is multiplying/dividing by a positive number, it is a scale.</li>
+            <li>Since vertical transformations are exactly what we expect, this multiplication is a stretch.</li>
+            <li>This is a <em>vertical stretch by <m>5</m></em>.</li>
+          </ul>
+        </li>
+      </ul>
+    </p>
+  </example>
+
+  <exercise>
+    <statement>
+      <p> Suppose <m>f(x)=x^2+3x-2</m> and <m>g(x)=\dfrac{-(3x)^2-3(3x)+2}{5}</m>. What transformations took <m>f(x)</m> to <m>g(x)</m>?</p> 
+    </statement>
+    <solution>
+      <p>Comparing the original function (<m>f(x)</m>) to the transformed function (<m>g(x)</m>), we see three key differences:
+        <ul>
+          <li><p>Everywhere we originally had <m>x</m> in the formula for <m>f(x)</m>, we now have <m>(3x)</m>.</p>
+            <ul>
+              <li>Since the change is to the inputs (<m>x</m>), this is a horizontal transformation.</li>
+              <li>Since the change is multiplying/dividing, this is a scale.</li>
+              <li>Since horizontal transformations are backwards from what we expect, this multiplication squishes the graph.</li>
+              <li>This is a <em>horizontal comprssion by <m>3</m></em>.</li>
+            </ul>
+          </li>
+          <li><p>The whole formula was divided by <m>5</m>.</p>
+            <ul>
+              <li>Since the change happened to the entire formula, it is changing the outputs, so it is a vertical change.</li>
+              <li>Since the change is multiplying/dividing by a positive number, it is a scale.</li>
+              <li>Since vertical transformations are exactly what we expect, this division squishes the graph.</li>
+              <li>This is a <em>vertical compression by <m>5</m></em>.</li>
+            </ul>
+          </li>
+          <li><p>All of the coefficients were multiplied by <m>-1</m>. You can see this because all of them flipped their sign (positive became negative and negative became positive).</p>
+            <ul>
+              <li>Since the change happened to the entire formula, it is changing the outputs, so it is a vertical change.</li>
+              <li>Since the change is multiplying by <m>-1</m>, it is a reflection.</li>
+              <li>This is a <em>vertical reflection</em>.</li>
+            </ul>
+          </li>
+        </ul>
+      </p>
+    </solution>
+    <answer>
+      <p>There were three tranformations: a horizontal compression/squish by 3, a vertical compression/stretch by 5, and a vertical reflection over the <m>x</m>-axis.</p>
+    </answer>
+  </exercise>
+
+</section>
+
+<section xml:id="sec-applyingtransforms">
+  <title>Applying Transformations</title>
+
+  <p>In <xref ref="sec-identifytransforms"/>, we learned how to determine what transformations were applied to a function. In this section, we will go backwards: we tell you what tranformations need to be applied, and you have to apply them to the function. It's important to note that <xref ref="table-transforms"/> will still be very helpful in organizing the information! Specifically, you need to still think about three key things:
+    <ul>
+      <li><em>Where does the transformation go/what direction is it going in?</em> Vertical transformations are applied to the outputs, and horizontal transformations are applied to the inputs.</li>
+      <li><em>What kind of transformation/operation is being applied?</em> Shifts involve adding or subtracting, scales involve multiplying or dividing by a positive number, and reflections involve multiplying by <m>-1</m>.</li>
+      <li><em>Horizontal transformations act backwards from what we expect.</em></li>
+    </ul>
+  </p>
+
+  <example>
+    <p>Suppose the graph of <m>g(x)</m> is the same as <m>f(x)</m>, but shifted up by 2 and stretched horizontally by 7. Write the formula for <m>g(x)</m> in terms of <m>f(x)</m>.</p>
+
+    <p>When the question asks for the equation "in terms of" <m>f(x)</m>, that means that you are just applying it to the function notation. There should still be the letter <m>f</m> in your answer, and there is no explicit formula for <m>f(x)</m> that you need to worry about.</p>
+
+    <p>So, the key to this problem is to figure out how each transformation changes the function notation:
+      <ul>
+        <li><p>Shifting up by 2:
+          <ul>
+            <li>Up is vertical, so this is applied to the outside.</li>
+            <li>Shifts are adding/subtracting.</li>
+            <li>We will add 2 to the outside of the function.</li>
+          </ul></p>
+        </li>
+        <li><p>Stretching horizontally by 7:
+          <ul>
+            <li>Horizontally is applied to the inside.</li>
+            <li>Stretch is a scale, so we are multiplying or dividing.</li>
+            <li>Remember: horizontal transformations are backwards! So, we will divide the inputs by 7.</li>
+          </ul></p>
+        </li>
+      </ul>
+    </p>
+
+    <p>We put this all together to get the final answer: <m>g(x)=f\left(\frac{x}{7}\right)+2</m>, which can also be written as <m>g(x)=f\left(\frac{1}{7}x\right)+2</m>.</p>
+  </example>
+
+  <exercise>
+    <statement><p>Suppose the graph of <m>g(x)</m> is the same as <m>f(x)</m>, but shifted left by 5 and flipped vertically over the <m>x</m>-axis. Write the formula for <m>g(x)</m> in terms of <m>f(x)</m>.</p></statement>
+
+    <solution>
+      <p>The key to this problem is to figure out how each transformation changes the function notation:
+        <ul>
+          <li><p>Shifting left by 5:
+            <ul>
+              <li>Left is horizontal, so this is applied to the inside.</li>
+              <li>Shifts are adding/subtracting.</li>
+              <li>Remember: horizontal transformations are backwards! So, we will add 5 to the inputs, since left is in the negative <m>x</m>-direction.</li>
+            </ul></p>
+          </li>
+          <li><p>Vertical flip:
+            <ul>
+              <li>Vertical is applied to the outside.</li>
+              <li>Flipping involves multiplying by <m>-1</m>.</li>
+              <li>So, we will multiply the outside by <m>-1</m>.</li>
+            </ul></p>
+          </li>
+        </ul>
+      </p>
+
+      <p>We put this all together to get the final answer: <m>g(x)=-f(x+5)</m>.</p>
+    </solution>
+
+    <answer><p><m>g(x)=-f(x+5)</m></p></answer>
+  </exercise>
+
+  <p>Just as we saw with identifying transformations, we could either have questions where we are just working with function notation, or where we have explicit formulas for the functions. Let's see an example of applying transformations to a function when you are given explicit formulas.</p>
+
+  <example>
+    <p>Suppose <m>f(x)=4x^3-7x^2+5x-3</m>, and the graph of <m>g(x)</m> is the same as <m>f(x)</m>, but shifted to the left by 2 and up by 9. Write the formula for <m>g(x)</m>, but do not simplify your answer.</p>
+
+    <p>Just like before, we need to figure out how each transformation changes the formula:
+      <ul>
+        <li><p>Shifting left by 2:
+          <ul>
+            <li>Left is horizontal, so this is applied to the inside.</li>
+            <li>Shifts are adding/subtracting.</li>
+            <li>Remember: horizontal transformations are backwards! So, we will add 2 to the inputs, since left is in the negative <m>x</m>-direction.</li>
+          </ul></p>
+        </li>
+        <li><p>Shifting up by 9:
+          <ul>
+            <li>Vertical is applied to the outside.</li>
+            <li>Shifts are adding/subtracting.</li>
+            <li>So, we will add <m>9</m> to the outside.</li>
+          </ul></p>
+        </li>
+      </ul>
+    </p>
+
+    <p>At this point, we should write the function notation like we did when we didn't have an explicit formula. This makes it a lot easier to know how to change the formula later. In this case, our function notation is</p>
+
+    <me>g(x)=f(x+2)+9</me>
+
+    <p>Now that we know how the transformations affect the formula, we are ready to apply it to the formula we were given for <m>f(x)</m>. Often, the hardest part of this question is keeping all of the parentheses in the right place for the inputs. So, we are going to use the trick from <xref ref="sec-evaluateformula"/>, where we replace the original inputs with empty parentheses before we plug in the new inputs:</p>
+
+    <md>
+      <mrow>g(x)\amp =f(x+2)+9</mrow>
+      <mrow>\amp=\left(4({\color{red}{\underline{\hspace{0.5in}}}})^3-7({\color{red}{\underline{\hspace{0.5in}}}})^2+5({\color{red}{\underline{\hspace{0.5in}}}})-3\right)+9</mrow>
+      <mrow>\amp= \left(4({\color{red}{x+2}})^3-7({\color{red}{x+2}})^2+5({\color{red}{x+2}})-3\right)+9</mrow>
+    </md>
+
+    <p>At this point, we are done with the question. Since we were told not to simplify our answer, we are not going to distribute any of the parentheses. We <em>could</em> combine the <m>-3</m> and <m>9</m>, because that is a very small step. However, it is still possible to make an arithmetic error when doing that. So, unless we are told to simplify, we should not do any simplification and just leave our answer exactly as it is.</p>
+  </example>
+
+  <exercise>
+    <statement><p>Suppose <m>f(x)=2x^4-5x^2+8</m>, and the graph of <m>g(x)</m> is the same as <m>f(x)</m> but vertically stretched by 2, horizontally stretched by 6, and vertically flipped over the <m>x</m>-axis. Write the formula for <m>g(x)</m>, but do not simplify your answer.</p></statement>
+    <solution>
+      <p>We need to figure out how each transformation changes the formula:
+        <ul>
+          <li><p>Vertical stretch by 2:
+            <ul>
+              <li>Vertical is applied to the outside.</li>
+              <li>Stretch is a scale, so we are multiplying/dividing.</li>
+              <li>We will multiply by 2 on the outside.</li>
+            </ul></p>
+          </li>
+          <li><p>Horizontal stretch by 6:
+            <ul>
+              <li>Horizontal is applied to the inside.</li>
+              <li>Stretch is a scale, so we are multiplying/dividing.</li>
+              <li>Remember: horizontal transformations are backwards! So, to make the graph bigger horizontally, we will divide by 6 on the inside.</li>
+            </ul></p>
+          </li>
+          <li><p>Vertical flip:
+            <ul>
+              <li>Vertical is applied to the outside.</li>
+              <li>Flipping involves multiplying by <m>-1</m>.</li>
+              <li>So, we will multiply the outside by <m>-1</m>.</li>
+            </ul></p>
+          </li>
+        </ul>
+      </p>
+
+      <p>At this point, we should write the function notation like we did when we didn't have an explicit formula. This makes it a lot easier to know how to change the formula later. In this case, our function notation is</p>
+
+      <me>g(x)=-2f\left(\frac{x}{6}\right)</me>
+
+      <p>Now that we know how the transformations affect the formula, we are ready to apply it to the formula we were given for <m>f(x)</m>, using empty parentheses to help us with our substitution:</p>
+
+      <md>
+        <mrow>g(x)\amp =-2f\left(\frac{x}{6}\right)</mrow>
+        <mrow>\amp=-2\left(2({\color{red}{\underline{\hspace{0.5in}}}})^4-5({\color{red}{\underline{\hspace{0.5in}}}})^2+8\right)</mrow>
+        <mrow>\amp= -2\left(2\left({\color{red}{\frac{x}{6}}}\right)^4-5\left({\color{red}{\frac{x}{6}}}\right)^2-3\right)</mrow>
+      </md>
+    </solution>
+    <answer>
+    <p><m>g(x)=-2\left(2\left(\frac{x}{6}\right)^4-5\left(\frac{x}{6}\right)^2+8\right)</m></p>
+    </answer>
+  </exercise>
+
+</section>
+
+<section xml:id="sec-drtransforms">
+  <title>Domain and Range of Transformations</title>
+
+  <introduction>In this section, we are going to combine what we just learned about transformations with what you already learned in <ref id="ch-domainrange"/>.</introduction>
+  
+  <fact>
+    <title>Domain and Range and Transformations</title>
+    <table>
+      <title>Domain and Range and Transformations</title>
+      <tabular top="medium">
+        <col width="20%"/>
+        <col width="30%"/>
+        <col width="30%"/>
+        <col width="20%"/>
+        <row bottom="medium" left="medium" header = "yes">
+          <cell right="medium">
+            Direction
+          </cell>
+          <cell right="medium">
+            Transformation
+          </cell>
+          <cell right="medium">
+            Domain/Range
+          </cell>
+          <cell right="medium">
+            Conclusion
+          </cell>
+        </row>
+        <row bottom="medium" left="medium" >
+          <cell right="medium">
+            Vertical
+          </cell>
+          <cell right="medium">
+            <p>Vertical transformations involve outputs (changes outside of the function)</p>
+          </cell>
+          <cell right="medium">
+            <p>Range is about the outputs<nbsp />(y-values) that are covered</p>
+          </cell>
+          <cell right="medium">
+            <p>Vertical transformations affect<nbsp />the range of a function</p>
+          </cell>
+        </row>
+        <row bottom="medium" left="medium" >
+          <cell right="medium">
+            Horizontal
+          </cell>
+          <cell right="medium">
+            <p>Horizontal transformations involve inputs (changes inside the function)</p>
+          </cell>
+          <cell right="medium">
+            <p>Domain is about the inputs<nbsp />(x-values) that are covered</p>
+          </cell>
+          <cell right="medium">
+            <p>Horizontal transformations affect<nbsp />the domain of a function</p>
+          </cell>
+        </row>
+      </tabular>
+    </table>
+  </fact>
+
+  <example>
+    <p>Suppose we know that the domain of a function <m>f(x)</m> is <m>\left(-2,5\right]</m> and the range is <m>\left[0,4\right)</m>. We want to know the domain and range of the function <m>g(x)=f(2x)+3</m>.</p>
+    <p>The first thing we need to do is figure out what tranformations took <m>f</m> to <m>g</m>. Using what you learned in the previous sections, we can see that we have:</p>
+      <ul>
+        <li>a vertical shift up by 3</li>
+        <li>a horizontal compression by 2</li>
+      </ul>
+    <p>The vertical shift will move the whole graph up by 3, which means all of the y-values will increase by 3. So, the endpoints of the range will both increase by 3. Therefore, the range of <m>g(x)</m> is <m>\left[3,7\right)</m>.</p>
+    <p>The horizontal compression will squish all of the graph towards the y-axis by a factor of 2, which means all of the x-values will be cut in half. So, the endpoints of the domain will both be cut in half. Therefore, the domain of <m>g(x)</m> is <m>\left(-1,\frac{5}{2}\right]</m>.</p>
+    <p>You may find it helpful to draw a box to visualize the transformations. We don't know exactly what the graph looks like, but because we know the domain and range, it is somewhere in the box below:</p>
+      <image source="Transformations/DR_example_before.png"/>
+    <p>After shifting it up by 3 and squishing towards the y-axis by 2, we end up with the following box, which gives us our new domain and range:</p>
+      <image source="Transformations/DR_example_after.png"/>
+  </example>
+
+  <exercise>
+    <statement><p>Suppose the domain of a function <m>f(x)</m> is <m>\left[3,7\right)</m> and its range is <m>\left[-1,3\right]</m>. What is the domain and range of the function <m>g(x)=-f(x+2)</m>?</p></statement>
+    <answer><p>The domain of <m>g(x)</m> is <m>\left[1,5\right)</m> and its range is <m>\left[-3,1\right]</m>.</p></answer>
+    <solution>
+      <p>The first thing we need to do is figure out what tranformations took <m>f</m> to <m>g</m>. Using what you learned in the previous sections, we can see that we have:</p>
+        <ul>
+          <li>a vertical flip over the x-axis</li>
+          <li>a horizontal shift left by 2</li>
+        </ul>
+      <p>The vertical flip will flip the entire graph over the x-axis, which means all of the y-values will change sign (negative becomes positive and positive becomes negative). So, the endpoints of the range will both change sign as well. Therefore, the range of <m>g(x)</m> is <m>\left[-3,1\right]</m>. Note that we still always write the lowest value first when writing interval notation.</p>
+      <p>The horizontal shift will move the entire graph to the left by 2, which means all of the x-values will go down by 2. So, the endpoints of the domain will also decrease by 2. Therefore, the domain of <m>g(x)</m> is <m>\left[1,5\right)</m>.</p>
+    </solution>
+  </exercise>
+
+</section>
+
+<exercises><title>Practice Problems</title> <!--Indicates start of the exercises for the chapter and its title-->
+    <exercise>
+      <statement><p> Below is the graph of <m>f(x)</m>.
+      <image source="Transformations/Prac1VShift1_1.png"/>
+      What does the graph of <m>g(x)</m> look like if <m>g(x)=f(x)+2</m>?
+      </p></statement>
+      <answer>
+          <p>
+      <image source="Transformations/Prac1VShift1_2.png"/>
+          </p>
+          </answer><!--Statement of the answer (don't worry about location in the rendered version)-->
+    </exercise><!--End of that exercise-->
+
+    <exercise>
+      <statement><p> Below is the graph of <m>f(x)</m>.
+      <image source="Transformations/Prac1VShift2_1.png"/>
+      What does the graph of <m>g(x)</m> look like if <m>g(x)=f(x)-3</m>?
+      </p></statement>
+      <answer>
+          <p>
+      <image source="Transformations/Prac1VShift2_2.png"/>
+          </p>
+          </answer><!--Statement of the answer (don't worry about location in the rendered version)-->
+    </exercise><!--End of that exercise-->
+
+    <exercise>
+      <statement><p> Below is the graph of <m>f(x)</m>.
+      <image source="Transformations/Prac1VShift3_1.png"/>
+      What does the graph of <m>g(x)</m> look like if <m>g(x)=f(x)+5</m>?
+      </p></statement>
+      <answer>
+          <p>
+      <image source="Transformations/Prac1VShift3_2.png"/>
+          </p>
+          </answer><!--Statement of the answer (don't worry about location in the rendered version)-->
+    </exercise><!--End of that exercise-->
+
+    <exercise>
+      <statement>
+        <p>Suppose the solid blue graph below is the graph of <m>f(x)</m> and the red graph is the graph of <m>g(x)</m>:</p>
+      <image source="Transformations/Prac2VShift1.png"/>
+      <p>Write a formula for <m>g(x)</m> in terms of <m>f(x)</m>.</p>
+      </statement>
+      <answer>
+        <p><m>g(x)=f(x)-4</m></p>
+      </answer>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>Suppose the solid blue graph below is the graph of <m>f(x)</m> and the red graph is the graph of <m>g(x)</m>:</p>
+      <image source="Transformations/Prac2VShift2.png"/>
+      <p>Write a formula for <m>g(x)</m> in terms of <m>f(x)</m>.</p>
+      </statement>
+      <answer>
+        <p><m>g(x)=f(x)+3</m></p>
+      </answer>
+    </exercise>
+
+    <exercise>
+      <statement><p>Suppose <m>f(x)=x^3-2x+1</m> and <m>g(x)</m> is the same as <m>f(x)</m> but shifted down by <m>3</m>. Write a formula for <m>g(x)</m>.</p></statement>
+      <answer><p><m>g(x)=x^3-2x-2</m></p></answer>
+    </exercise>
+
+    <exercise>
+      <statement><p>Suppose <m>f(x)=3x^2</m> and <m>g(x)=3x^2-4</m>. What transformations took <m>f(x)</m> to <m>g(x)</m>?</p></statement>
+      <answer><p>Shift down by <m>4</m>.</p></answer>
+    </exercise>
+
+    <exercise>
+      <statement><p>Suppose <m>f(x)=x^2-3</m> and <m>g(x)</m> is the same as <m>f(x)</m> but shifted up by <m>1</m>. Write a formula for <m>g(x)</m>.</p></statement>
+      <answer><p><m>g(x)=x^2-2</m></p></answer>
+    </exercise>
+
+    <exercise>
+      <statement><p>Suppose <m>f(x)=3x+4</m> and <m>g(x)=3x+8</m>. What transformations took <m>f(x)</m> to <m>g(x)</m>?</p></statement>
+      <answer><p>Shift up by <m>4</m>.</p></answer>
+    </exercise>
+
+    <exercise>
+        <statement><p>Suppose the domain of a function <m>f(x)</m> is <m>\left[1,5\right)</m> and its range is <m>\left[-1,4\right]</m>. What is the domain and range of the function <m>g(x)=f(x+2)-3</m>?</p></statement>
+        <answer><p>The domain of <m>g(x)</m> is <m>\left[-1,3\right)</m> and its range is <m>\left[-4,1\right]</m>.</p></answer>
+    </exercise>
+
+    <exercise>
+      <statement><p>Suppose the domain of a function <m>f(x)</m> is <m>\left[0,10\right)</m> and its range is <m>\left[-10,2\right]</m>. What is the domain and range of the function <m>g(x)=-2f(x)</m>?</p></statement>
+      <answer><p>The domain of <m>g(x)</m> is <m>\left[0,10\right)</m> and its range is <m>\left[-4,20\right]</m>.</p></answer>
+    </exercise>
+
+    <exercise>
+      <statement><p>Suppose the domain of a function <m>f(x)</m> is <m>\left[-2,7\right)</m> and its range is <m>\left[0,8\right]</m>. What is the domain and range of the function <m>g(x)=f(-x)+1</m>?</p></statement>
+      <answer><p>The domain of <m>g(x)</m> is <m>\left(-7,2\right]</m> and its range is <m>\left[1,9\right]</m>.</p></answer>
+    </exercise>
+
+    <exercise>
+      <statement><p>Suppose the domain of a function <m>f(x)</m> is <m>\left[-7,8\right)</m> and its range is <m>\left[3,12\right]</m>. What is the domain and range of the function <m>g(x)=f(2x)-1</m>?</p></statement>
+      <answer><p>The domain of <m>g(x)</m> is <m>\left[-\frac{7}{2},4\right)</m> and its range is <m>\left[2,11\right]</m>.</p></answer>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>Suppose <m>g(x)=2f(x-3)</m>. What transformations took <m>f(x)</m> to <m>g(x)</m>?</p>
+      </statement>
+      <answer><p>There is a vertical stretch by 2 and a horizontal shift right by 3.</p></answer>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>Suppose <m>g(x)=f(-x)+2</m>. What transformations took <m>f(x)</m> to <m>g(x)</m>?</p>
+      </statement>
+      <answer><p>There is a horizontal flip and a vertical shift up by 2.</p></answer>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>Suppose <m>g(x)=-f(x+1)</m>. What transformations took <m>f(x)</m> to <m>g(x)</m>?</p>
+      </statement>
+      <answer><p>There is a vertical flip and a horizontal shift left by 1.</p></answer>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>Suppose <m>g(x)=f(\frac{1}{2}x)-4</m>. What transformations took <m>f(x)</m> to <m>g(x)</m>?</p>
+      </statement>
+      <answer><p>There is a horizontal stretch by 2 and a vertical shift down by 4.</p></answer>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>Suppose <m>g(x)=f(x-8)+6</m>. What transformations took <m>f(x)</m> to <m>g(x)</m>?</p>
+      </statement>
+      <answer><p>There is a vertical shift up by 6 and a horizontal shift right by 8.</p></answer>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>Suppose the blue graph below is the graph of <m>f(x)</m> and the red graph is the graph of <m>g(x)</m>:</p>
+      <image source="Transformations/Prac1Combo1.png"/>
+      <p>Write a formula for <m>g(x)</m> in terms of <m>f(x)</m>.</p>
+      </statement>
+      <answer>
+        <p><m>g(x)=f\left(-x\right)+1</m></p>
+      </answer>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>Suppose the blue graph below is the graph of <m>f(x)</m> and the red graph is the graph of <m>g(x)</m>:</p>
+      <image source="Transformations/Prac1Combo2.png"/>
+      <p>Write a formula for <m>g(x)</m> in terms of <m>f(x)</m>.</p>
+      </statement>
+      <answer>
+        <p><m>g(x)=-f\left(x+4\right)</m></p>
+      </answer>
+    </exercise>
+
+      <exercise>
+      <statement>
+        <p>Suppose the blue graph below is the graph of <m>f(x)</m> and the red graph is the graph of <m>g(x)</m>:</p>
+      <image source="Transformations/Prac1Combo3.png"/>
+      <p>Write a formula for <m>g(x)</m> in terms of <m>f(x)</m>.</p>
+      </statement>
+      <answer>
+        <p><m>g(x)=-f\left(\frac{1}{2}x\right)</m></p>
+      </answer>
+    </exercise>
+
+      <exercise>
+      <statement>
+        <p>Suppose the blue graph below is the graph of <m>f(x)</m> and the red graph is the graph of <m>g(x)</m>:</p>
+      <image source="Transformations/Prac1Combo4.png"/>
+      <p>Write a formula for <m>g(x)</m> in terms of <m>f(x)</m>.</p>
+      </statement>
+      <answer>
+        <p><m>g(x)=f\left(-x\right)+2</m></p>
+      </answer>
+    </exercise>
+
+</exercises>
+</chapter>

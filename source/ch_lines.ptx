@@ -1,0 +1,1040 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Chapters are enclosed with <chapter> tags. Use xml:id to -->
+<!-- uniquely identify the chapter.  The @xmlns:xi attribute  -->
+<!-- is needed if you use xi:include in this file             -->
+<chapter xml:id="ch-lines" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+<!-- Change title when you have one: -->
+  <title>Linear Functions</title>
+  <!-- If the chapter has sections, there may be an introduction -->
+  <!-- before those sections. Note the <p> tags around content.  -->
+  <introduction>
+    <p>This is the introduction to the chapter</p>
+  </introduction>
+
+<section xml:id="sec-slope">
+  <title>Slope of a Line</title>
+
+  <introduction>The slope of a line tells us about which way it slants and by how much. In this section, we'll learn how the slope affects the graph of a line, and how to compute it explicitly.</introduction>
+
+  <definition>
+    <p>The <term>slope</term> of a line measures how slanted it is. If we know two points <m>(x_1, y_1)</m> and <m>(x_2, y_2)</m>, we can compute the slope as</p>
+    <me>\dfrac{y_2-y_1}{x_2-x_1}</me>
+  </definition>
+
+  <p>Notice that this is the same as <m>\dfrac{y_1-y_2}{x_1-x_2}</m>, but it is not the same as <m>\dfrac{y_2-y_1}{x_1-x_2}</m>. In other words, you can subtract in either order you want, as long as you either start with both 1's or both 2's.</p>
+
+  <example>
+    <p>Suppose we want to compute the slope of a line between the points <m>(2,7)</m> and <m>(-3,1)</m>. Then, we can compute</p>
+    <me>\dfrac{1-7}{-3-2} = \dfrac{-6}{-5} = \dfrac{6}{5}</me>
+    <p>Let's check that if we subtract the other way around, we indeed get the same answer:</p>
+    <me>\dfrac{7-1}{2-(-3)} = \dfrac{6}{5} </me>
+  </example>
+
+  <exercise>
+    <statement><p>Compute the slope of the line between the points <m>(-5,5)</m> and <m>(3,-1)</m>.</p></statement>
+    <solution>
+      <p>We can compute</p>
+      <me>\dfrac{-1-5}{3-(-5)} = \dfrac{-6}{8} = -\dfrac{3}{4}</me>
+      <p>Let's check that if we subtract the other way around, we indeed get the same answer:</p>
+      <me>\dfrac{5-(-1)}{-5-3} = \dfrac{6}{-8} = -\dfrac{3}{4} </me>
+    </solution>
+    <answer><p><m>-\dfrac{3}{4}</m></p></answer>
+  </exercise>
+
+  <p>So far, we have only talked about slope numerically. Here is what positive and negative sloped lines look like:</p>
+  <sidebyside widths = "40% 40%" valign="middle">
+    <figure>
+      <image source="Lines/PosLine.png"/>
+      <title>A Positive Line</title>
+      <caption>This line has a positive slope, because it goes up as you move from left-to-right</caption>
+    </figure>
+
+    <figure>
+      <image source="Lines/NegLine.png"/>
+      <title>A Negative Line</title>
+      <caption>This line has a negative slope, because it goes down as you move from left-to-right</caption>
+    </figure>
+  </sidebyside>
+
+  <p>If we want to compute the slope of a line when we are given a graph, we can either pick two points on the line (any two points!) and compute slope using the formula we did before, or you can use another way of thinking about the slope formula:</p>
+  <me>\dfrac{\text{rise}}{\text{run}}</me>
+
+  <p>where "rise" means how much we move up, and "run" means how much we move to the right.</p>
+
+  <example>
+    <p>Let's compute the slope of the line below</p>
+    <image source="Lines/SlopePractice1.png"/>
+    <p>Let's pick the point <m>(0,-1)</m> as our starting place, and then <m>(2,-4)</m> as our ending point. Then, we rise <m>-3</m> (since we have to go down <m>3</m>) and run <m>2</m> (since we have to go to the right <m>2</m>). So, we can compute the slope as</p>
+    <me>\dfrac{\text{rise}}{\text{run}}=\dfrac{-3}{2}</me>
+    <image source="Lines/SlopePractice1Sltn.png"/>
+  </example>
+
+  <exercise>
+    <statement>
+      <p>Compute the slope of the line below:</p>
+      <image source="Lines/SlopePractice2.png"/>
+    </statement>
+    <solution>
+      <p>Let's pick the point <m>(-1,-3)</m> as our starting place, and then <m>(0,1)</m> as our ending point. Then, we rise <m>4</m> (since we have to go up <m>4</m>) and run <m>1</m> (since we have to go to the right <m>1</m>). So, we can compute the slope as</p>
+      <me>\dfrac{\text{rise}}{\text{run}}=\dfrac{4}{1}=4</me>
+      <image source="Lines/SlopePractice2Sltn.png"/>
+    </solution>
+    <answer><p><m>4</m></p></answer>
+  </exercise>
+
+</section>
+
+<section xml:id="sec-eqtnline">
+  <title>Equation of a Line</title>
+
+  <introduction>In this section, we will talk about the entire equation for a linear function.</introduction>
+
+  <p>In this class, we will only write our linear functions like this:
+    <men xml:id="eqtn-linearfn">f(x)=mx+b</men>
+  where <m>m</m> represents the slope and <m>b</m> represents the <m>y</m>-value of the <m>y</m>-intercept. You might also see it written as <m>y=mx+b</m>. If you have seen other ways of writing equations of lines (like <m>(y-y_1)=m(x-x_1)</m>), you are welcome to use them in the middle of a problem if you find it helpful. However, we won't talk about these other forms, and our final answers will always be written as in equation <xref ref="eqtn-linearfn"/>.</p>
+
+  <example>
+    <p>Suppose we have the function
+      <me>f(x)=-7x+2</me>
+      Then we know that the slope of this line is <m>-7</m> and the <m>y</m>-intercept is <m>(0,2)</m>.
+    </p>
+  </example>
+
+  <p>Note that if you forget that <m>b</m> is the <m>y</m>-value of the <m>y</m>-intercept, you can still find the <m>y</m>-intercept using the same strategy you learned in <xref ref="sec-coordplane"/>. Using that strategy, the above example would look like this:</p>
+
+  <p>To find the <m>y</m>-intercept, we are looking for where the graph would cross the <m>y</m>-axis, which is where <m>x=0</m>. So we solve:
+    <md>
+      <mrow>y\amp=-7(0)+2</mrow>
+      <mrow>y\amp=2</mrow>
+    </md>
+  Don't forget to write the intercept as an ordered pair: <m>(0,2)</m>.</p>
+
+  <exercise>
+    <statement><p>Find the slope and <m>y</m>-intercept of <m>f(x)=3-2x</m>.</p></statement>
+    <solution><p>Remembering that the slope is the number that is multiplied by <m>x</m>, we have that the slope is <m>-2</m>. We know that the number that is not attached to <m>x</m> is the <m>y</m>-value of the <m>y</m>-intercept. Writing the answer as an orderd pair, we have that the <m>y</m>-intercept is <m>(0,3)</m>.</p></solution>
+    <answer><p><ul>
+      <li>The slope is <m>-2</m></li>
+      <li>The <m>y</m>-intercept is <m>(0,3)</m>.</li>
+    </ul></p></answer>
+  </exercise>
+
+  <subsection>
+    <title>Writing the Equation when Given Slope</title>
+
+    <p>When we are given the slope and the <m>y</m>-intercept of a line, we can just plug them into our format from equation <xref ref="eqtn-linearfn"/>. </p>
+
+    <example><p>Suppose we know that the slope of a line is 4 and the <m>y</m>-intercept is at <m>(0,-5)</m>. Then we use the format <m>f(x)=mx+b</m> and plug in our slope for <m>m</m> and the intercept into <m>b</m>:</p>
+      <me>f(x)=4x-5</me>
+    </example>
+
+    <exercise>
+      <statement><p>Write the equation of the linear function with slope -10 and <m>y</m>-intercept <m>(0,6)</m>.</p></statement>
+      <solution><p>Since we know the slope and the <m>y</m>-intercept, we use the format <m>f(x)=mx+b</m> and plug in our slope for <m>m</m> and the intercept into <m>b</m>:</p>
+        <me>f(x)=-10x+6</me>
+      </solution>
+      <answer><p><m>f(x)=-10x+6</m></p></answer>
+    </exercise>
+
+    <p>Sometimes, we are given the slope but not the <m>y</m>-intercept. In that case, we'll be given some other point on the graph. This situation will come up often: we have most of the equation we need, but we're missing one number and we have a point on the graph. Whenever this happens, we just plug in the values for <m>x</m> and <m>y</m> and solve for what we're missing.</p>
+
+    <example xml:id="ex-linearpoint">
+      <p>Suppose we're trying to find the equation of the line with slope <m>2</m> and goes through the point <m>(3,2)</m>. Since we know the slope, we can plug that into our formula: <m>f(x)=2x+b</m>. However, we don't have the <m>y</m>-intercept. We do have a point on the graph, so we can plug in those values to solve for <m>b</m>:</p>
+      <md>
+        <mrow>2 \amp= 2(3)+b</mrow>
+        <mrow>2 \amp= 6 + b</mrow>
+        <mrow>-4 \amp= b</mrow>
+      </md>
+      <p>Therefore, our final answer is <m>f(x)=2x-4</m>.</p>
+    </example>
+
+    <exercise>
+      <statement><p>Write the equation of the linear function with slope <m>-3</m> and goes through the point <m>(1,7)</m>.</p></statement>
+      <solution>
+        <p>Since we know the slope, we can plug that into our formula: <m>f(x)=-3x+b</m>. However, we don't have the <m>y</m>-intercept. We do have a point on the graph, so we can plug in those values to solve for <m>b</m>:</p>
+        <md>
+          <mrow>7 \amp= -3(1)+b</mrow>
+          <mrow>7 \amp= -3 + b</mrow>
+          <mrow>10 \amp b</mrow>
+        </md>
+        <p>Therefore, our final answer is <m>f(x)=-3x+10</m>.</p>
+      </solution>
+      <answer><p><m>f(x)=-3x+10</m></p></answer>
+    </exercise>
+  </subsection>
+
+  <subsection>
+    <title>Writing the Equation when Not Given Slope</title>
+
+    <p>We do always need to know the slope in order to write the equation of a line, but we aren't always given the slope. Luckily, we know from <xref ref="sec-slope"/> how to find the slope!</p>
+
+    <example>
+      <p>Suppose we want to find the equation of the line that goes through the points <m>(-1,-5)</m> and <m>(2, 7)</m>. We don't know the slope, but we can use what we learned in <xref ref="sec-slope"/> to compute the slope:</p>
+      <me>\dfrac{7-(-5)}{2-(-1)}=\dfrac{7+5}{2+1} = \dfrac{12}{3}=4</me>
+      <p>So we can plug the slope into our formula: <m>f(x)=4x+b</m>. We can use what we learned from the examples above to find <m>b</m>. In this case, we have two points we could plug in. You can pick either one, they'll both give you the same answer.</p>
+      <md>
+        <mrow>-5 \amp= 4(-1)+b</mrow>
+        <mrow>-5 \amp= -4 + b</mrow>
+        <mrow> -1 \amp=b</mrow>
+      </md>
+      <p>So we have our final answer: <m>f(x)=4x-1</m>.</p>
+    </example>
+
+    <p>Since you could plug in either point and it will give you the same value for <m>b</m>, that's a great way to check your work during an exam: plug in both points. If they give you the same number, your answer is probably the right one. If they give you different numbers, you know you made a mistake somewhere, and you can go check your work.</p>
+
+    <exercise>
+      <statement><p>Write the equation of the line that goes through the points <m>(-3,2)</m> and <m>(1, -18)</m>. </p></statement>
+      <solution>
+        <p>We don't know the slope, but we can use what we learned in <xref ref="sec-slope"/> to compute the slope:</p>
+        <me>\dfrac{-18-(2)}{1-(-3)}=\dfrac{-20}{4} = -5</me>
+        <p>So we can plug the slope into our formula: <m>f(x)=-5x+b</m>.  In this case, we have two points we could plug in to find <m>b</m>. We can pick either one, they'll both give us the same answer. Let's try using <m>(-3,2)</m>.</p>
+        <md>
+          <mrow>2 \amp= -5(-3)+b</mrow>
+          <mrow>2 \amp= 15 + b</mrow>
+          <mrow> -13 \amp=b</mrow>
+        </md>
+        <p>Let's check our answer by plugging in the other point:</p>
+        <md>
+          <mrow>-18 \amp= -5(1)+b</mrow>
+          <mrow>-18 \amp= -5 + b</mrow>
+          <mrow> -13 \amp=b</mrow>
+        </md>
+        <p>We got the answer for <m>b</m>, which is what should happen! So we have our final answer: <m>f(x)=-5x-13</m>.</p>
+      </solution>
+      <answer><p><m>f(x)=-5x-13</m></p></answer>
+    </exercise>
+  </subsection>
+
+  <subsection>
+    <title>Special Cases: Vertical and Horizontal Lines</title>
+
+    There are two special cases we have to be careful of. 
+
+    <fact>
+      <title>Horizontal Lines</title>
+
+      <sidebyside widths = "35% 50%" margins="auto">
+      <image source="Lines/HorizLine.png"/>
+      <p>Horizontal lines go side-to-side. Notice that at any point on the line, the <m>y-</m>value is the same, no matter what the <m>x</m>-value is. So, the equation of a horizontal line is <m>y=(number)</m>.</p>
+      </sidebyside>
+    </fact>
+
+    <example>
+      <p>Suppose we want to write the equation of the horizontal line through the point <m>(-3,8)</m>. We know that the equation of a horizonal line is always <m>y=</m> something. Since we want it to go through the point <m>(-3,8)</m>, we need the <m>y</m>-value to be <m>8</m>. Therefore, the equation is <m>y=8</m>.</p>
+    </example>
+
+    <fact>
+      <title>Vertical Lines</title>
+
+      <sidebyside widths = "35% 50%" margins="auto">
+      <image source="Lines/VertLine.png"/>
+      <p>Vertical lines go up-and-down. Notice that at any point on the line, the <m>x-</m>value is the same, no matter what the <m>y</m>-value is. So, the equation of a vertical line is <m>x=(number)</m>.</p>
+      </sidebyside>
+    </fact>
+
+    <example>
+      <p>Suppose we want to write the equation of the vertical line through the point <m>(-3,8)</m>. We know that the equation of a vertical line is always <m>x=</m> something. Since we want it to go through the point <m>(-3,8)</m>, we need the <m>x</m>-value to be <m>-3</m>. Therefore, the equation is <m>x=-3</m>.</p>
+    </example>
+
+    <exercise>
+      <statement><ol>
+        <li><p>Write the equation of the horizontal line through the point <m>(5,-2)</m>.</p></li>
+        <li><p>Write the equation of the vertical line through the point <m>(9,0)</m>.</p></li>
+      </ol></statement>
+      <solution><ol>
+        <li><p>We know that the equation of a horizonal line is always <m>y=</m> something. Since we want it to go through the point <m>(5,-2)</m>, we need the <m>y</m>-value to be <m>-2</m>. Therefore, the equation is <m>y=-2</m>.</p></li>
+        <li><p>We know that the equation of a vertical line is always <m>x=</m> something. Since we want it to go through the point <m>(9,0)</m>, we need the <m>x</m>-value to be <m>9</m>. Therefore, the equation is <m>x=9</m>.</p></li>
+      </ol></solution>
+      <answer><ol>
+        <li><m>y=-2</m></li>
+        <li><m>x=9</m></li>
+      </ol></answer>
+    </exercise>
+  </subsection>
+
+</section>
+
+<section xml:id="sec-linmodels">
+  <title>Linear Models</title>
+
+  <p>The world we live in runs on data. While the powerful statistical methods used to analyze this data is beyond the scope of this class, we do have the tools in this chapter to interpret the results those tools might give us.</p>
+
+  <fact>
+    <title>Interpreting Linear Functions</title>
+    <p>Recall the following facts about linear functions that you learned in the earlier sections.</p>
+    <p><ul>
+      <li>The slope of the line determines how slanted the line is, and whether it slants up (postive slope) or down (negative slope). This determines what happens to the y-values as we increase the x-values.</li>
+      <li>The y-intercept of the line determines the output (y-value) when the input (x-value) is 0.</li>
+    </ul></p>
+  </fact>
+
+  <example>
+    <p>Market researchers are trying to understand the demand for fidget spinners among college students. Their analysis of the data they collected estimates that at a price of <m>x</m> dollars, the number of fidget spinners that will be bought is given by the function <m>d(x)=-13x+572</m>. We want to answer the following questions:</p>
+    <ol>
+      <li>As the price increases, what happens to demand (the number of fidget spinners purchased)?</li>
+      <li>If they give away the spinners for free, how many should they expect students will take?</li>
+    </ol>
+    <p>We can answer these questions by understanding what the numbers in the formula represent. Let's do them one at a time.</p>
+    <ol>
+      <li><em>As the price increases, what happens to demand (the number of fidget spinners purchased)?</em> Since this is about how the outputs (number of fidget spinners sold, the y-values) change as we change the inputs (the price, the x-values), we need to look at slope. The slope of this linear function is negative, which means it is decreasing. As we increase the price of the fidget spinners, the number sold will decrease.</li>
+      <li><em>If they give away the spinners for free, how many should they expect students will take?</em> Since this is about what the output is (the number of fidget spinners, the y-value) when the input is 0 (the price, the x-value), we need to look at the y-intercept. In this function, the y-intercept is 572. So, if they are given away for free, students will take 572 of them, according to this model.</li>
+    </ol>
+  </example>
+
+  <exercise>
+    <statement><p>Scientists are studying how quickly a particular kind of tree grows. Based on their measurement, the height of the tree <m>t</m> years after producing its first fruit <m>h(t)=7.3t+81</m> inches.</p>
+      <ol>
+        <li>How much does this tree grow each year, based on this model?</li>
+        <li>How tall is the tree when it produces its first fruit?</li>
+        <li>Based on this model, how tall do you expect the tree to be 50 years after it produces its first fruit?</li>
+      </ol>
+    </statement>
+    <solution>
+      <li><em>How much does this tree grow each year, based on this model?</em> Since this is about how the output (the height) changes based on the input (time), this is a question about slope. Slope is how much the output changes when you increase the input by 1. In our context, that would be how much the height changes during one year, which is exactly what the question is asking. So, the answer to this question is just 7.3 inches.</li>
+      <li><em>How tall is the tree when it produces its first fruit?</em> In the information we are given, we are told that <m>t</m> is the number of years after producing its first fruit. So, it produces the first fruit when <m>t=0</m>. Therefore, the answer to this question is the output (the height) when <m>t=0</m>. Since <m>h(0)=7.3(0)+81=81</m>, the tree is 81 inches tall when it produces its first fruit.</li>
+      <li><em>Based on this model, how tall do you expect the tree to be 50 years after it produces its first fruit?</em> Since the inputs to this function are years after producing the first fruit, and the outputs are height, this question is asking what the output is when the input is 50. In otherword, this question is looking for <m>h(50)</m>, which we know how to find by pluggin in: <m>h(50)=7.3(50)+81 = 446</m>.</li>
+    </solution>
+    <answer>
+      <ol>
+        <li>7.3 inches</li>
+        <li>81 inches</li>
+        <li>446 inches</li>
+      </ol>
+    </answer>
+  </exercise>
+
+
+<example>
+    <p>Economists are looking at how the price of different goods and services have changed since 2010. The functions they found from their data models are given in the table below.</p>
+
+    <table>
+      <tabular top="medium">
+        <row left="medium" bottom="medium">
+          <cell right="medium">
+            Product
+          </cell>
+          <cell right="medium">
+            Price
+          </cell>
+        </row>
+        <row left="medium" bottom="medium">
+          <cell right="medium">
+            Toothpaste
+          </cell>
+          <cell right="medium">
+            <m>0.15x+3.47</m>
+          </cell>
+        </row>
+        <row left="medium" bottom="medium">
+          <cell right="medium">
+            Frozen Pizza
+          </cell>
+          <cell right="medium">
+            <m>0.37x+6.82</m>
+          </cell>
+        </row>
+        <row left="medium" bottom="medium">
+          <cell right="medium">
+            Watermelon
+          </cell>
+          <cell right="medium">
+            <m>-0.03x+2.05</m>
+          </cell>
+        </row>
+        <row left="medium" bottom="medium">
+          <cell right="medium">
+            Plastic Silverware
+          </cell>
+          <cell right="medium">
+            <m>-0.12x+4.33</m>
+          </cell>
+        </row>
+        <row left="medium" bottom="medium">
+          <cell right="medium">
+            Movie Ticket
+          </cell>
+          <cell right="medium">
+            <m>1.37x+9.52</m>
+          </cell>
+        </row>
+      </tabular>
+    </table>
+
+    <p>We want to answer the following questions:</p>
+    <ol>
+      <li>Which products have gotten more expensive over time, and which have gotten cheaper?</li>
+      <li>Which product has increased in price most quickly?</li>
+      <li>Which product was the most expensive in 2010?</li>
+    </ol>
+    <p>For each of these, we will need to look at the slope and the y-intercept, so let's isolate those and add them to our table:</p>
+
+    <table>
+      <tabular top="medium">
+        <row left="medium" bottom="medium">
+          <cell right="medium">
+            Product
+          </cell>
+          <cell right="medium">
+            Price
+          </cell>
+          <cell right="medium">
+            Slope
+          </cell>
+          <cell right="medium">
+            y-intercept
+          </cell>
+        </row>
+        <row left="medium" bottom="medium">
+          <cell right="medium">
+            Toothpaste
+          </cell>
+          <cell right="medium">
+            <m>0.15x+3.47</m>
+          </cell>
+          <cell right="medium">
+            <m>0.15</m>
+          </cell>
+          <cell right="medium">
+            <m>3.47</m>
+          </cell>
+        </row>
+        <row left="medium" bottom="medium">
+          <cell right="medium">
+            Frozen Pizza
+          </cell>
+          <cell right="medium">
+            <m>0.37x+6.82</m>
+          </cell>
+          <cell right="medium">
+            <m>0.37</m>
+          </cell>
+          <cell right="medium">
+            <m>6.82</m>
+          </cell>
+        </row>
+        <row left="medium" bottom="medium">
+          <cell right="medium">
+            Watermelon
+          </cell>
+          <cell right="medium">
+            <m>-0.03x+2.05</m>
+          </cell>
+          <cell right="medium">
+            <m>-0.03</m>
+          </cell>
+          <cell right="medium">
+            <m>2.05</m>
+          </cell>
+        </row>
+        <row left="medium" bottom="medium">
+          <cell right="medium">
+            Plastic Silverware
+          </cell>
+          <cell right="medium">
+            <m>-0.12x+4.33</m>
+          </cell>
+          <cell right="medium">
+            <m>-0.12</m>
+          </cell>
+          <cell right="medium">
+            <m>4.33</m>
+          </cell>
+        </row>
+        <row left="medium" bottom="medium">
+          <cell right="medium">
+            Movie Ticket
+          </cell>
+          <cell right="medium">
+            <m>1.37x+9.52</m>
+          </cell>
+          <cell right="medium">
+            <m>1.37</m>
+          </cell>
+          <cell right="medium">
+            <m>9.52</m>
+          </cell>
+        </row>
+      </tabular>
+    </table>
+
+    <p>Now we are ready to answer each question one at a time.</p>
+    <ol>
+      <li><em>Which products have gotten more expensive over time, and which have gotten cheaper?</em> This is a question about how the output (price) changes based on the input (time), which is slope. Getting more expensive would mean that the price is increasing over time, so the slope is positive. Getting cheaper means that the price is decreasing over time, so the slope is negative. Therefore, the toothpaste, pizza, and movie tickets have gotten more expensive and the watermelon and plastic silverware have gotten cheaper.</li>
+      <li><em>Which product has increased in price most quickly?</em> We already figured out that the slope is how we determine whether the price is increasing or decreasing. Since we want to know which is increasing quickest, we want to look for the highest slope. So, the movie tickets are increasing most quickly.</li>
+      <li><em>Which product was the most expensive in 2010?</em> In the question, we were told that the models start in 2010, which means that the year 2010 is when <m>x=0</m>. So, we want to know the highest output (price) when <m>x=0</m>, which is exactly the y-intercept. Looking at that column of the table, we see that the movie tickets were the most expensive in 2010.</li>
+    </ol>
+  </example>
+
+ <exercise>
+    <statement><p>Scientists are studying how five town's populations have changed since 2015. Based on their data, they have created the following equations to model the populations:</p>
+      <table>
+        <tabular top="medium">
+          <row left="medium" bottom="medium">
+            <cell right="medium">
+              Town
+            </cell>
+            <cell right="medium">
+              Population
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell right="medium">
+              Town A
+            </cell>
+            <cell right="medium">
+              <m>13x+472</m>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell right="medium">
+              Town B
+            </cell>
+            <cell right="medium">
+              <m>98x+123</m>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell right="medium">
+              Town C
+            </cell>
+            <cell right="medium">
+              <m>-27x+866</m>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell right="medium">
+              Town D
+            </cell>
+            <cell right="medium">
+              <m>53x+657</m>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell right="medium">
+              Town E
+            </cell>
+            <cell right="medium">
+              <m>-3x+584</m>
+            </cell>
+          </row>
+        </tabular>
+      </table>
+
+      <p>Use the table above to answer the following questions:</p>
+      <ol>
+        <li>Which town had the largest population in 2015?</li>
+        <li>Which towns are shrinking?</li>
+        <li>Which town is shrinking the fastest?</li>
+      </ol>
+    </statement>
+    <solution>
+      <p>Answering these questions will be easier if we have the slope and y-intercept of each model, so let's add that to our table:</p>
+      <table>
+        <tabular top="medium">
+          <row left="medium" bottom="medium">
+            <cell right="medium">
+              Town
+            </cell>
+            <cell right="medium">
+              Population
+            </cell>
+            <cell right="medium">
+              Slope
+            </cell>
+            <cell right="medium">
+              y-intercept
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell right="medium">
+              Town A
+            </cell>
+            <cell right="medium">
+              <m>13x+472</m>
+            </cell>
+            <cell right="medium">
+              <m>13</m>
+            </cell>
+            <cell right="medium">
+              <m>472</m>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell right="medium">
+              Town B
+            </cell>
+            <cell right="medium">
+              <m>98+123</m>
+            </cell>
+            <cell right="medium">
+              <m>98</m>
+            </cell>
+            <cell right="medium">
+              <m>123</m>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell right="medium">
+              Town C
+            </cell>
+            <cell right="medium">
+              <m>-27+866</m>
+            </cell>
+            <cell right="medium">
+              <m>-27</m>
+            </cell>
+            <cell right="medium">
+              <m>866</m>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell right="medium">
+              Town D
+            </cell>
+            <cell right="medium">
+              <m>53+657</m>
+            </cell>
+            <cell right="medium">
+              <m>53</m>
+            </cell>
+            <cell right="medium">
+              <m>657</m>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell right="medium">
+              Town E
+            </cell>
+            <cell right="medium">
+              <m>-3+584</m>
+            </cell>
+            <cell right="medium">
+              <m>-3</m>
+            </cell>
+            <cell right="medium">
+              <m>584</m>
+            </cell>
+          </row>
+        </tabular>
+      </table>
+      <p>Now we are ready to tackle the questions:</p>
+      <ol>
+        <li><em>Which town had the largest population in 2015?</em> In the question, we were told that the models start in 2015, which means that the year 2015 is when <m>x=0</m>. So, we want to know the highest output (population) when <m>x=0</m>, which is exactly the y-intercept. Looking at that column of the table, we see that Town C had the largest population in 2015.</li>
+        <li><em>Which towns are shrinking?</em> This is a question about how the output (population) changes based on the input (time), which is slope. A shrinking town means that the population is decreasing over time, so the slope is negative. Therefore, towns C and E are shrinking over time.</li>
+        <li><em>Which town is shrinking the fastest?</em> We already figured out that the slope is how we determine whether the population is increasing or decreasing. Since we want to know which is decreasing quickest, we want to look for the most negative slope. So, Town C is shrinking most quickly.</li>
+      </ol>
+    </solution>
+    <answer>
+      <ol>
+        <li>Town C</li>
+        <li>Town C and E</li>
+        <li>Town C</li>
+      </ol>
+    </answer>
+  </exercise>
+
+</section>
+
+<exercises><title>Practice Problems</title> <!--Indicates start of the exercises for the chapter and its title-->
+  <exercise>
+   <statement>
+   <p>Compute the slope of the line between the points <m>(-5,4)</m> and <m>(6,-3)</m>.</p>
+   </statement>
+     <answer>
+        <p>
+        The slope is <m>\frac{-7}{11}</m>.
+        </p>
+        </answer><!--Statement of the answer (don't worry about location in the rendered version)-->
+  </exercise><!--End of that exercise-->
+
+    <exercise>
+   <statement>
+   <p>Compute the slope of the line between the points <m>(-2,-9)</m> and <m>(9,-3)</m>.</p>
+   </statement>
+     <answer>
+        <p>
+        The slope is <m>\frac{6}{11}</m>.
+        </p>
+        </answer><!--Statement of the answer (don't worry about location in the rendered version)-->
+  </exercise><!--End of that exercise-->
+
+    <exercise>
+   <statement>
+   <p>Compute the slope of the line between the points <m>(0,1)</m> and <m>(5,\frac{1}{2})</m>.</p>
+   </statement>
+     <answer>
+        <p>
+        The slope is <m>\frac{-1}{10}</m>.
+        </p>
+        </answer><!--Statement of the answer (don't worry about location in the rendered version)-->
+  </exercise><!--End of that exercise-->
+
+     <exercise>
+   <statement>
+   <p>Compute the slope of the line below.</p>
+   <image source="Lines/SlopeEnd1.png"/>
+   </statement>
+     <answer>
+        <p>
+        The slope is <m>\frac{2}{3}</m>.
+        </p>
+        </answer><!--Statement of the answer (don't worry about location in the rendered version)-->
+  </exercise><!--End of that exercise-->
+
+       <exercise>
+   <statement>
+   <p>Compute the slope of the line below.</p>
+   <image source="Lines/SlopeEnd2.png"/>
+   </statement>
+     <answer>
+        <p>
+        The slope is <m>\frac{-1}{2}</m>.
+        </p>
+        </answer><!--Statement of the answer (don't worry about location in the rendered version)-->
+  </exercise><!--End of that exercise-->
+
+       <exercise>
+   <statement>
+   <p>Compute the slope of the line below.</p>
+   <image source="Lines/SlopeEnd3.png"/>
+   </statement>
+     <answer>
+        <p>
+        The slope is <m>-3</m>.
+        </p>
+        </answer><!--Statement of the answer (don't worry about location in the rendered version)-->
+  </exercise><!--End of that exercise-->
+
+  <exercise>
+   <statement>
+   <p>Find the slope and <m>y</m>-intercept of <m>f(x)=5-3x</m>.</p>
+   </statement>
+     <answer>
+        <p>
+        The slope is <m>-3</m> and the <m>y</m>-intercept is <m>(0,5)</m>.
+        </p>
+        </answer><!--Statement of the answer (don't worry about location in the rendered version)-->
+  </exercise><!--End of that exercise-->
+
+  <exercise>
+   <statement>
+   <p>Find the slope and <m>y</m>-intercept of <m>f(x)=\frac{1}{4}x-7</m>.</p>
+   </statement>
+     <answer>
+        <p>
+        The slope is <m>\frac{1}{4}</m> and the <m>y</m>-intercept is <m>(0,-7)</m>.
+        </p>
+        </answer><!--Statement of the answer (don't worry about location in the rendered version)-->
+  </exercise><!--End of that exercise-->
+
+<exercise>
+   <statement>
+   <p>Write the equation of the linear function with slope <m>-2</m> and <m>y</m>-intercept <m>(0,8)</m>.</p>
+   </statement>
+     <answer>
+        <p>
+        <m>f(x)=-2x+8</m>
+        </p>
+        </answer><!--Statement of the answer (don't worry about location in the rendered version)-->
+  </exercise><!--End of that exercise-->
+
+<exercise>
+   <statement>
+   <p>Write the equation of the linear function with slope <m>5</m> and <m>y</m>-intercept <m>(0,-1)</m>.</p>
+   </statement>
+     <answer>
+        <p>
+        <m>f(x)=5x-1</m>
+        </p>
+        </answer><!--Statement of the answer (don't worry about location in the rendered version)-->
+  </exercise><!--End of that exercise-->
+
+  <exercise>
+   <statement>
+   <p>Write the equation of the linear function with slope <m>\frac{-1}{2}</m> and through the point <m>(1,-1)</m>.</p>
+   </statement>
+     <answer>
+        <p>
+        <m>f(x)=\frac{1}{2}x-\frac{3}{2}</m>
+        </p>
+        </answer><!--Statement of the answer (don't worry about location in the rendered version)-->
+  </exercise><!--End of that exercise-->
+
+    <exercise>
+   <statement>
+   <p>Write the equation of the linear function with slope <m>1</m> and through the point <m>(5,6)</m>.</p>
+   </statement>
+     <answer>
+        <p>
+        <m>f(x)=x+1</m>
+        </p>
+        </answer><!--Statement of the answer (don't worry about location in the rendered version)-->
+  </exercise><!--End of that exercise-->
+
+    <exercise>
+   <statement>
+   <p>Write the equation of the linear function that goes through the points <m>(1,-1)</m> and <m>(3,-5)</m>.</p>
+   </statement>
+     <answer>
+        <p>
+        <m>f(x)=-2x+1</m>
+        </p>
+        </answer><!--Statement of the answer (don't worry about location in the rendered version)-->
+  </exercise><!--End of that exercise-->
+
+  
+    <exercise>
+   <statement>
+   <p>Write the equation of the linear function that goes through the points <m>(0,0)</m> and <m>(6,2)</m>.</p>
+   </statement>
+     <answer>
+        <p>
+        <m>f(x)=-\frac{1}{3}x</m>
+        </p>
+        </answer><!--Statement of the answer (don't worry about location in the rendered version)-->
+  </exercise><!--End of that exercise-->
+
+  
+    <exercise>
+   <statement>
+   <p>Write the equation of the horizontal line that goes through the point <m>(1,-3)</m>.</p>
+   </statement>
+     <answer>
+        <p>
+        <m>y=-3</m>
+        </p>
+        </answer><!--Statement of the answer (don't worry about location in the rendered version)-->
+  </exercise><!--End of that exercise-->
+
+  <exercise>
+   <statement>
+   <p>Write the equation of the vertical line that goes through the point <m>(5,-2)</m>.</p>
+   </statement>
+     <answer>
+        <p>
+        <m>x=5</m>
+        </p>
+        </answer><!--Statement of the answer (don't worry about location in the rendered version)-->
+  </exercise><!--End of that exercise-->
+
+ <exercise>
+   <statement>
+   <p>Write the equation of the horizontal line that goes through the point <m>(2,4)</m>.</p>
+   </statement>
+     <answer>
+        <p>
+        <m>y=4</m>
+        </p>
+        </answer><!--Statement of the answer (don't worry about location in the rendered version)-->
+  </exercise><!--End of that exercise-->
+
+  <exercise>
+   <statement>
+   <p>Write the equation of the vertical line that goes through the point <m>(2,2)</m>.</p>
+   </statement>
+     <answer>
+        <p>
+        <m>x=2</m>
+        </p>
+        </answer><!--Statement of the answer (don't worry about location in the rendered version)-->
+  </exercise><!--End of that exercise-->
+
+  <exercise>
+    <statement><p>Scientists are studying how a snake grows. Based on their measurements, the length of the snake <m>t</m> years after its hatching is represented by <m>l(t)=2t+6</m> inches.</p>
+      <ol>
+        <li>How much does this snake grow each year, based on this model?</li>
+        <li>How long is the snake when it hatches?</li>
+        <li>Based on this model, how long do you expect the snake to be 5 years after it hatches?</li>
+      </ol>
+    </statement>
+    <answer>
+      <ol>
+        <li>2 inches</li>
+        <li>6 inches</li>
+        <li>16 inches</li>
+      </ol>
+    </answer>
+  </exercise>
+
+ <exercise>
+    <statement><p>Beauticians are studying how fast a test client's hair grows in order to decide how often they should schedule a trim. Based on their measurements, the length of the client's hair <m>t</m> weeks after their first appointment is represented by <m>l(t)=.5t+20</m> inches.</p>
+      <ol>
+        <li>How much does the client's hair grow each week, based on this model?</li>
+        <li>How long is the client's hair at their first appointment?</li>
+        <li>Based on this model, how long do you expect the client's hair to be 4 weeks after their first appointment?</li>
+        <li>Based on this model, if the client wants to trim their hair once it reaches 24 inches in length, how many weeks after their first appointment should they schedule their next appointment?</li>
+      </ol>
+    </statement>
+    <answer>
+      <ol>
+        <li>.5 inch</li>
+        <li>20 inches</li>
+        <li>22 inches</li>
+        <li>8 weeks</li>
+      </ol>
+    </answer>
+  </exercise>
+
+  <exercise>
+    <statement><p>Economists are studying the supply and demand of pencil sharpeners among UK freshmen. Their analysis of the data they collected estimates that at a price of <m>x</m> dollars, the number of pencil sharpeners that will be bought is given by the function <m>d(x)=-813x+5020</m>. We want to answer the following questions:</p>
+    <ol>
+      <li>As the price increases, what happens to demand (the number of pencil sharpeners purchased)?</li>
+      <li>If they give away the pencil sharpeners for free, how many should they expect students will take?</li>
+      <li>If they sell the pencil sharpeners for $5, how many should they expect students will buy?</li>
+    </ol>
+    </statement>
+    <answer>
+      <ol>
+        <li>As we increase the price of the pencil sharpeners, the number sold will decrease.</li>
+        <li>5020</li>
+        <li>955</li>
+      </ol>
+    </answer>
+  </exercise>
+
+
+<exercise>
+    <statement><p>Scientists are studying how five town's populations have changed since 2020. Based on their data, they have created the following equations to model the populations:</p>
+      <table>
+        <tabular top="medium">
+          <row left="medium" bottom="medium">
+            <cell right="medium">
+              Town
+            </cell>
+            <cell right="medium">
+              Population
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell right="medium">
+              Town A
+            </cell>
+            <cell right="medium">
+              <m>10x+491</m>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell right="medium">
+              Town B
+            </cell>
+            <cell right="medium">
+              <m>21x+134</m>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell right="medium">
+              Town C
+            </cell>
+            <cell right="medium">
+              <m>-25x+666</m>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell right="medium">
+              Town D
+            </cell>
+            <cell right="medium">
+              <m>55x+687</m>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell right="medium">
+              Town E
+            </cell>
+            <cell right="medium">
+              <m>-30x+597</m>
+            </cell>
+          </row>
+        </tabular>
+      </table>
+
+      <p>Use the table above to answer the following questions:</p>
+      <ol>
+        <li>Which town had the largest population in 2020?</li>
+        <li>Which towns are shrinking?</li>
+        <li>Which town is shrinking the fastest?</li>
+      </ol>
+    </statement>
+    <answer>
+      <ol>
+        <li>Town D</li>
+        <li>Town C and E</li>
+        <li>Town E</li>
+      </ol>
+    </answer>
+  </exercise>
+
+  <exercise>
+    <statement><p>Scientists are studying how five college's enrollment populations have changed since 2020. Based on their data, they have created the following equations to model the populations:</p>
+      <table>
+        <tabular top="medium">
+          <row left="medium" bottom="medium">
+            <cell right="medium">
+              College
+            </cell>
+            <cell right="medium">
+              Population
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell right="medium">
+              College A
+            </cell>
+            <cell right="medium">
+              <m>-100x+49126</m>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell right="medium">
+              College B
+            </cell>
+            <cell right="medium">
+              <m>2120x+61834</m>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell right="medium">
+              College C
+            </cell>
+            <cell right="medium">
+              <m>238x+6766</m>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell right="medium">
+              College D
+            </cell>
+            <cell right="medium">
+              <m>-2955x+81287</m>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell right="medium">
+              College E
+            </cell>
+            <cell right="medium">
+              <m>301x+54797</m>
+            </cell>
+          </row>
+        </tabular>
+      </table>
+
+      <p>Use the table above to answer the following questions:</p>
+      <ol>
+        <li>Which college had the smallest population in 2020?</li>
+        <li>Which colleges are growing?</li>
+        <li>Which college is growing the fastest?</li>
+      </ol>
+    </statement>
+    <answer>
+      <ol>
+        <li>College C</li>
+        <li>College B, C and E</li>
+        <li>College B</li>
+      </ol>
+    </answer>
+  </exercise>
+
+</exercises>
+
+</chapter>

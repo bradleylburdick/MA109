@@ -1,0 +1,218 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Chapters are enclosed with <chapter> tags. Use xml:id to -->
+<!-- uniquely identify the chapter.  The @xmlns:xi attribute  -->
+<!-- is needed if you use xi:include in this file             -->
+<chapter xml:id="ch-rationals" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+<!-- Change title when you have one: -->
+  <title>Rational Functions</title>
+  <!-- If the chapter has sections, there may be an introduction -->
+  <!-- before those sections. Note the <p> tags around content.  -->
+  <introduction>
+    <p>This is the introduction to the chapter</p>
+  </introduction>
+
+<section xml:id="sec-domainrational">
+    <title>Domain of Rational Functions</title>
+
+  <introduction>This section is mostly review, but with a focus on rational functions (functions in a fraction). We will look at one new vocabulary word for a thing we have seen before.</introduction>
+
+  <p>Remember what we talked about in <xref ref="sec-intercepts"/> about intercepts:</p>
+
+  <fact>
+    <p>
+      <ul>
+        <li>Since the <m>x</m>-intercepts are where the graph crosses the <m>x</m>-axis, and every point there has <m>y=0</m>, <em>to find <m>x</m>-intercepts algebraically, plug <m>y=0</m> into the equation and solve for <m>x</m></em>.</li>
+        <li>Since the <m>y</m>-intercepts are where the graph crosses the <m>y</m>-axis, and every point there has <m>x=0</m>, <em>to find <m>y</m>-intercepts algebraically, plug <m>x=0</m> into the equation and solve for <m>y</m></em>.</li>
+      </ul>
+    </p>
+  </fact>
+
+  <p>The same still applies for rational functions. Let's look at an example, just to make sure we remember.</p>
+
+  <example>
+    <p>Suppose <m>f(x)=\dfrac{3x-7}{x^2-9}</m>, and we want to find its x- and y-intercepts.</p>
+    <p>Let's start with the x-intercepts. Remember, that is where the graph crosses the <m>x</m>-axis, which is where <m>y=0</m>. So, our strategy is to set <m>y=0</m> and solve for <m>x</m>:</p>
+    <md>
+      <mrow>0 \amp= \dfrac{3x-7}{x^2-9}</mrow>
+      <mrow>{\color{red}{(x^2-9)}}0 \amp= \dfrac{3x-7}{x^2-9}{\color{red}{(x^2-9)}}</mrow>
+      <mrow>0 \amp= 3x-7</mrow>
+      <mrow>0 {\color{red}{+7}} \amp= 3x-7{\color{red}{+7}} </mrow>
+      <mrow>7\amp=3x</mrow>
+      <mrow>\dfrac{7}{\color{red}{3}}\amp=\dfrac{3x}{\color{red}{3}}</mrow>
+      <mrow>\dfrac{7}{3}\amp=x</mrow>
+    </md>
+    <p>Since we always write our intercepts as ordered pairs, we know that our x-intercept is <m>\left(\frac{7}{3},0\right)</m>.</p>
+    <p>Now, let's find our y-intercept. Remember, that is where the graph crosses the <m>y</m>-axis, which is where <m>x=0</m>. So, our strategy is to set <m>x=0</m> and solve for <m>y</m>:</p>
+    <me>y= \dfrac{3(0)-7}{(0)^2-9} = \dfrac{-7}{-9}=\dfrac{7}{9}</me>
+    <p>Since we always write our intercepts as ordered pairs, we know that our y-intercept is <m>\left(0,\frac{7}{9}\right)</m>.</p>
+  </example>
+
+  <exercise>
+    <statement>Find the x- and y-intercepts of <m>f(x)=\dfrac{6x+5}{x+3}</m>.</statement>
+    <solution> 
+      <p>Let's start with the x-intercepts. Remember, that is where the graph crosses the <m>x</m>-axis, which is where <m>y=0</m>. So, our strategy is to set <m>y=0</m> and solve for <m>x</m>:</p>
+      <md>
+        <mrow>0 \amp= \dfrac{6x+5}{x+3}</mrow>
+        <mrow>{\color{red}{(x+3)}}0 \amp= \dfrac{6x+5}{x+3}{\color{red}{(x+3)}}</mrow>
+        <mrow>0 \amp= 6x+5</mrow>
+        <mrow>0 {\color{red}{-5}} \amp= 6x+5{\color{red}{-5}} </mrow>
+        <mrow>-5\amp=6x</mrow>
+        <mrow>\dfrac{-5}{\color{red}{6}}\amp=\dfrac{6x}{\color{red}{6}}</mrow>
+        <mrow>\dfrac{-5}{6}\amp=x</mrow>
+      </md>
+      <p>Since we always write our intercepts as ordered pairs, we know that our x-intercept is <m>\left(\frac{-5}{6},0\right)</m>.</p>
+      <p>Now, let's find our y-intercept. Remember, that is where the graph crosses the <m>y</m>-axis, which is where <m>x=0</m>. So, our strategy is to set <m>x=0</m> and solve for <m>y</m>:</p>
+      <me>y= \dfrac{6(0)+5}{(0)+3} = \dfrac{5}{3}</me>
+      <p>Since we always write our intercepts as ordered pairs, we know that our y-intercept is <m>\left(0,\frac{5}{3}\right)</m>.</p>
+    </solution>
+    <answer><p>The x-intercept is <m>\left(\frac{-5}{6},0\right)</m>. The y-intercept is <m>\left(0,\frac{5}{3}\right)</m>.</p></answer>
+  </exercise>
+
+  <p>Now, let's review what we learned in <xref ref="sec-domainformula"/> about finding domain from a formula. In that case, we had two possible problems we had to contend with: variables in the denominator, and variables in a square root. In this section, we are only focused on functinos that are fractions, no square roots in sight. So, the only problem we need to deal with is when there is a variable in the denominator, so we need to make sure it is never 0.</p>
+
+  <fact>
+    <title>Domain of a Function with Variables in the Denominator</title>
+
+    <statement>The domain of a function that has variable in the denominator of a fraction is everything except the <m>x</m>-values that make the denominator 0.</statement>
+  </fact>
+
+  <example>
+    <p>Suppose <m>f(x)=\dfrac{4-x}{3x+2}</m>, and we want to find its domain. Well, the denominator is <m>3x+2</m>, and the domain is everywhere that that isn't 0. So, let's find where it's zero and then our answer will be everything else:</p>
+    <md>
+      <mrow>3x+2\amp=0</mrow>
+      <mrow>3x \amp=-2</mrow>
+      <mrow>x \amp= -\dfrac{2}{3}</mrow>
+    </md>
+    <p>So, our domain is everything except <m>x = -\dfrac{2}{3}</m>. Therefore, our domain is <m>\left(-\infty, -\frac{2}{3}\right)\cup\left(-\frac{2}{3},\infty\right)</m>.</p>
+  </example>
+
+  <definition>
+    <p>The <term>vertical asymptote</term> of a rational function is a vertical line where the denominator is 0.</p>
+  </definition>
+
+  <p>Given the example we just did above, we can see that the vertical asymptote is just a vertical line at the place where the domain is a problem. So, we solve it the same way we did the example before, but our answer will be the problem value, not "everything except the problem".</p>
+
+  <example>
+    <p>Suppose <m>f(x)=\dfrac{4x+1}{5-x}</m>, and we want to find its vertical asymptote. Remember that the vertical asymptote is where the denominator is 0. So, we will set the denominator equal to 0 and solve.</p>
+    <md>
+      <mrow>5-x \amp=0</mrow>
+      <mrow>5 \amp=x</mrow>
+    </md>
+    <p>So, we have our answer. Remember that the vertical asymptote is specifically a vertical line, so our answer is the entire equation <m>x=5</m>, not just the number <m>5</m>.</p>
+  </example>
+
+  <exercise>
+    <statement>
+      <p>Suppose <m>f(x)=\dfrac{3x-5}{x-8}</m>. What is the vertical asymptote of <m>f(x)</m>?.</p>
+    </statement>
+    <solution>
+      <p>Remember that the vertical asymptote is where the denominator is 0. So, we will set the denominator equal to 0 and solve.</p>
+      <md>
+        <mrow>x-8 \amp=0</mrow>
+        <mrow>x \amp=8</mrow>
+      </md>
+      <p>So, we have our answer. Remember that the vertical asymptote is specifically a vertical line, so our answer is the entire equation <m>x=8</m>, not just the number <m>8</m>.</p>
+    </solution>
+    <answer><p>The vertical asymptote is <m>x=8</m>. Remember that the vertical asymptote is specifically a vertical line, so our answer is the entire equation <m>x=8</m>, not just the number <m>8</m>.</p></answer>
+  </exercise>
+</section>
+
+<section xml:id="sec-ebrational">
+  <title>End Behavior of Rational Functions</title>
+
+  <introduction>Similar to what we did in <xref ref="sec-ebpoly"/>, this section will look at end behavior: what happens when we plug in huge positive or negative values in our function? However, unlike polynomials, rational functions have more possibilities for what can happen.</introduction>
+
+  <p>Remember that with polynomials, we only needed to look at the leading term to find the end behavior. The reason was that since we are pluggin in huge positive or negative values, only the highest power on <m>x</m> will make a difference. For rational functions, the same logic applies, but we will have a leading term in both the numerator and the denominator.</p>
+
+  <fact>
+    <title>Finding End Behavior of a Rational Function</title>
+    <p>To find the end behavior of a rational function:
+      <ol>
+        <li>Isolate the leading term in the numerator and denominator.</li>
+        <li>Simplify as much as possible</li>
+        <li>With what is left, ask the question: What happens when we plug in huge <m>x</m>-values to this?</li>
+      </ol>
+    </p>
+  </fact>
+
+  <p>There are three possibilities of what can happen in that third step:
+  <ul>
+    <li>All of the <m>x</m>'s cancel out and we are just left with a number.</li>
+    <li>There are extra <m>x</m>'s in the denominator.</li>
+    <li>There are extra <m>x</m>'s in the numerator.</li>
+  </ul>
+  Let's do an example of each to see what happens.</p>
+
+  <example>
+    <p>Suppose <m>f(x)=\dfrac{4x^3-2x^2-9x+3}{7x^3-5x^2-9x+1}</m> and we want to find its end behavior. Our first step is to isolate the leading term of top and bottom of the fraction and then simplify it:</p>
+    <me>\frac{4x^3}{7x^3} = \frac{4}{7}</me>
+    <p>In this case, our end behavior is just a number. We don't have to bother asking what happens when we plug in huge values for <m>x</m>, because there are no more <m>x</m>'s to plug huge numbers into.</p>
+  </example>
+
+  <definition>
+    <p>When the end behavior of a function is a number, it is a <term>horizontal asymptote</term>: a horizonal line at that number.</p>
+  </definition>
+
+  <example>The function in the example above has a horizontal asymptote of <m>y=\frac{4}{7}</m>.</example>
+    
+  <example>    
+    <p>Suppose <m>f(x)=\dfrac{4x^3-2x^2-9x+3}{7x^5-5x-9x+1}</m> and we want to find its end behavior. Our first step is to isolate the leading term of top and bottom of the fraction and then simplify it:</p>
+    <me>\frac{4x^3}{7x^5} = \frac{4}{7x^2}</me>
+    <p>Since there are leftover <m>x</m>'s in the denominator, we need to ask: "What happens when we plug in huge numbers for <m>x</m>?" In this case, we would be dividing by a huge number, so the whole thing gets very close to 0. Therefore, this function also has a horizontal asymptote, this time at <m>y=0</m>.</p>
+  </example>
+
+  <example>
+    <p>Suppose <m>f(x)=\dfrac{4x^7-2x^2-9x+3}{7x^3-5x^2-9x+1}</m> and we want to find its end behavior. Our first step is to isolate the leading term of top and bottom of the fraction and then simplify it:</p>
+    <me>\frac{4x^7}{7x^3} = \frac{4x^4}{7}</me>
+    <p>Since there are leftover <m>x</m>'s in the numerator, we need to ask: "What happens when we plug in huge numbers for <m>x</m>?" In this case, we are left with something we've seen before: a polynomial! The leading term is <m>\frac{4}{7}</m>, which is positive, and the degree is <m>4</m>, which is even. So, the end behavior is</p>
+      <ul>
+        <li>As <m>x\rightarrow \infty</m>, <m>y\rightarrow \infty</m>.</li>
+        <li>As <m>x\rightarrow -\infty</m>, <m>y\rightarrow \infty</m>.</li>
+      </ul>
+  </example>
+
+  <p>Now that we've seen all three examples, try some yourself.</p>
+
+  <exercise>
+    <statement>Find the end behavior of <m>f(x)=\dfrac{-8x^4+2x-1}{3x^2+7x+12}</m>.</statement>
+    <solution>
+      <p>Our first step is to isolate the leading term of top and bottom of the fraction and then simplify it:</p>
+      <me>\frac{-8x^4}{3x^2} = \frac{-8x^2}{3}</me>
+      <p>Since there are leftover <m>x</m>'s in the numerator, we need to ask: "What happens when we plug in huge numbers for <m>x</m>?" In this case, we are left with something we've seen before: a polynomial! The leading term is <m>\frac{-8}{3}</m>, which is negative, and the degree is <m>2</m>, which is even. So, the end behavior is</p>
+      <ul>
+        <li>As <m>x\rightarrow \infty</m>, <m>y\rightarrow -\infty</m>.</li>
+        <li>As <m>x\rightarrow -\infty</m>, <m>y\rightarrow -\infty</m>.</li>
+      </ul>
+    </solution>
+    <answer>
+      <ul>
+        <li>As <m>x\rightarrow \infty</m>, <m>y\rightarrow -\infty</m>.</li>
+        <li>As <m>x\rightarrow -\infty</m>, <m>y\rightarrow -\infty</m>.</li>
+      </ul>
+    </answer>
+  </exercise>
+
+  <exercise>
+    <statement>Find the end behavior of <m>f(x)=\dfrac{16x^7+5x^6-1}{4x^7+7}</m>.</statement>
+    <solution>
+      <p>Our first step is to isolate the leading term of top and bottom of the fraction and then simplify it:</p>
+    <me>\frac{4x^3}{7x^3} = \frac{4}{7}</me>
+    <p>In this case, our end behavior is just a number. We don't have to bother asking what happens when we plug in huge values for <m>x</m>, because there are no more <m>x</m>'s to plug huge numbers into. This function has a horizontal asymptote at <m>y=\frac{4}{7}</m>.</p>
+    </solution>
+    <answer>
+      <p>This function has a horizontal asymptote at <m>y=\frac{4}{7}</m>.</p>
+    </answer>
+  </exercise>
+
+  <exercise>
+    <statement>Find the end behavior of <m>f(x)=\dfrac{14x^5+4x-1}{3x^7+4x-1}</m>.</statement>
+    <solution>
+      <p>Our first step is to isolate the leading term of top and bottom of the fraction and then simplify it:</p>
+      <me>\frac{14x^5}{3x^7} = \frac{14}{3x^2}</me>
+      <p>Since there are leftover <m>x</m>'s in the denominator, we need to ask: "What happens when we plug in huge numbers for <m>x</m>?" In this case, we would be dividing by a huge number, so the whole thing gets very close to 0. Therefore, this function also has a horizontal asymptote, this time at <m>y=0</m>.</p>
+    </solution>
+    <answer><p>This function also has a horizontal asymptote, this time at <m>y=0</m>.</p></answer>
+  </exercise>
+</section>
+</chapter>

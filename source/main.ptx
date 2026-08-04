@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<pretext xml:lang="en-US" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+  <!-- we first include a file which contains the docinfo element: -->
+  <xi:include href="./docinfo.ptx" />
+
+  <!-- The <book> tags wrap all the content.  Change the @xml:id   -->
+  <!-- to some short (non-spaced) description of your book         -->
+  <book xml:id="ma109-textbook">
+    <!-- The book needs a title and can have a subtitle  -->
+    <title>College Algebra</title>
+    <!--<subtitle>NEEDS A SUBTITLE??</subtitle>-->
+
+    <!-- Now we include files containing each main devision.       -->
+
+    <!-- First a frontmatter for prefaces and such. Maybe comment  -->
+    <!-- out for now and write this when the book is more complete -->
+    <!--<xi:include href="./frontmatter.ptx" />-->
+
+    <xi:include href="./ch_preliminaries.ptx" />
+    
+
+    <!-- Standard 1: Functions and Notation -->
+    <part xml:id="part-fnnotation">
+      <title>Functions and Function Notation</title>
+
+      <!-- Chapters -->
+      <xi:include href="./ch_fnnotation.ptx"/>
+      <xi:include href="./ch_composition.ptx"/>
+      <xi:include href="./ch_inverses.ptx" />
+    </part>
+
+
+
+    <!-- Standard 2: Linear Functions -->
+    <part xml:id="part-linear">
+      <title>Linear Functions</title>
+
+      <!-- Chapters -->
+      <xi:include href="./ch_lines.ptx" />
+      <xi:include href="./ch_systems.ptx"/>
+      <xi:include href="./ch_rateofchange.ptx"/>
+    </part>
+
+    <!-- Standard 3: Properties of Functions -->
+    <part xml:id="part-fnprops">
+      <title>Properties of Functions</title>
+
+      <!-- Chapters -->
+      <xi:include href="./ch_domainrange.ptx" />
+      <xi:include href="./ch_transformations.ptx"/>
+
+    </part>
+
+    
+     <!-- Standard 4: Polynomial and Rational Functions -->
+    <part xml:id="part-polyrational">
+      <title>Polynomial and Rational Functions</title>
+
+      <!-- Chapters -->
+      <xi:include href="./ch_polynomials.ptx"/>
+      <xi:include href="./ch_rationals.ptx"/>
+    </part>
+
+
+    <!-- Standard 5: Exponential and Logarithmic Functions -->
+    <part xml:id="part-explog">
+      <title>Exponential and Logarithmic Functions</title>
+
+      <!-- Chapters -->
+      <xi:include href="./ch_exponentials.ptx" />
+      <xi:include href="./ch_logs.ptx"/>
+      
+    </part>
+   
+   <!-- Standard 6: Exponential and Logarithmic Equations -->
+   <part xml:id="part-explogequation">
+      <title>Exponential and Logarithmic Equations</title>
+
+      <!-- Chapters -->
+      <xi:include href="./ch_logprops.ptx" />
+      <xi:include href="./ch_expeqtns.ptx"/>
+
+    </part>
+
+    <!-- The final chapter contains a wide variety of elements to  -->
+    <!-- illustrate what pretext can do, plus links to more help.  -->
+    <!-- We recommend keeping this handy, and commenting it out    -->
+    <!-- when you show off your own work.                          -->
+    <!--<xi:include href="./ch_pretext-features.ptx" />-->
+
+    <!-- Finaly we place the backmatter in its own file and inlcude-->
+    <!--<xi:include href="./backmatter.ptx" />-->
+  </book>
+</pretext>

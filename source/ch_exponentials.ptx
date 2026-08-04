@@ -1,0 +1,642 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Chapters are enclosed with <chapter> tags. Use xml:id to -->
+<!-- uniquely identify the chapter.  The @xmlns:xi attribute  -->
+<!-- is needed if you use xi:include in this file             -->
+<chapter xml:id="ch-exponentials" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+<!-- Change title when you have one: -->
+  <title>Exponential Functions</title>
+  <!-- If the chapter has sections, there may be an introduction -->
+  <!-- before those sections. Note the <p> tags around content.  -->
+  <introduction>
+    <p>This is the introduction to the chapter</p>
+  </introduction>
+
+<section xml:id="sec-eqtnexpfn">
+  <title>Equations of Exponential Functions</title>
+
+  <introduction>In this section, we introduce a new kind of function: exponential functions, where the variable is in the exponent.</introduction>
+
+  <definition>
+    <p>An <term>exponential function</term> generally has the following form:</p>
+    <me>f(x)=a\cdot b^x = a(b)^x = a(b^x)</me>
+    <p>Where <m>a</m> is any number except <m>0</m>, and <m>b</m> is any positive number other than 1.</p>
+  </definition>
+
+  <p>Basically, an exponential function is a function with the variable in the exponent. Our usual, garden-variety exponential function looks like the one above, but don't forget that we could have some transformations involved.</p>
+
+  <definition>
+    <p>The <term>initial value</term> of an exponential function is the <m>y</m>-value of the <m>y</m>-intercept. When we have our exponential function written as just <m>f(x)=a\cdot b^x</m>, the initial value turns out to be just <m>a</m>.</p>
+  </definition>
+
+  <example>
+    <p>Suppose we want to find the initial value of <m>f(x)=3\cdot1.07^x</m>. Going by the official definition, we need to find the <m>y</m>-intercept, which you should remember is where <m>x=0</m>.</p>
+    <me>y=3\cdot1.07^0=3\cdot 1 = 3</me>
+    <p>Indeed, we do get that the initial vlaue is just <m>3</m>.</p>
+  </example>
+
+  <definition>
+    <p>The <term>growth/decay rate</term> of an exponential function determines how fast it is growing or decaying.  When we have our exponential function written as just <m>f(x)=a\cdot b^x</m>, we have <m>b=1+\text{rate(as a decimal)}</m>. We always write our rate as a percentage.</p>
+      <ul>
+        <li>It is a growth rate if it is positive (in other words, if <m>b\gt 1</m>)</li>
+        <li>It is a decay rate if it is negative (in other words, if <m>b\lt 1</m>)</li>
+      </ul>
+  </definition>
+
+  <example>
+    <p>Suppose we want to find the growth/decay rate of <m>f(x)=3\cdot1.07^x</m>. We see that <m>b=1.07</m>, which we know is 1 plus the rate (as a decimal). Subtracting 1, we get that the rate is <m>0.07</m>, except that we have to convert it to a percentage. We do that by multiplying by 100 (which is the same thing as moving the decimal to the right 2 places). Since it's positive, it's a growth rate. So, our final answer is that the growth rate is 7%.</p>
+  </example>
+
+  <exercise>
+    <statement>
+      <p>Find the initial value and the growth/decay rate of <m>f(x)=-7(1.4)^x</m>.</p>
+    </statement>
+    <solution>
+      <p>To find the initial value, we can either plug in <m>x=0</m> to get the <m>y</m>-intercept, or just remember the fact we learned above. Either way, the initial value is <m>-7</m>.</p>
+      <p>To find the growth/decay rate, we see that <m>b=1.4</m>, which we know is 1 plus the rate (as a decimal). Subtracting 1, we get that the rate is <m>0.4</m>, except that we have to convert it to a percentage. We do that by multiplying by 100 (which is the same thing as moving the decimal to the right 2 places). Since it's positive, it's a growth rate. So, our final answer is that the growth rate is 40%.</p>
+    </solution>
+    <answer><p>The initial value is <m>-7</m> and the growth rate is 40%.</p></answer>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>Find the initial value and the growth/decay rate of <m>f(x)=\frac{1}{5}(0.59)^x</m>.</p>
+    </statement>
+    <solution>
+      <p>To find the initial value, we can either plug in <m>x=0</m> to get the <m>y</m>-intercept, or just remember the fact we learned above. Either way, the initial value is <m>\frac{1}{2}</m>.</p>
+      <p>To find the growth/decay rate, we see that <m>b=0.59</m>, which we know is 1 plus the rate (as a decimal). Subtracting 1, we get that the rate is <m>-0.41</m>, except that we have to convert it to a percentage. We do that by multiplying by 100 (which is the same thing as moving the decimal to the right 2 places). Since it's positive, it's a growth rate. So, our final answer is that the growth rate is -41%.</p>
+    </solution>
+    <answer><p>The initial value is <m>\frac{1}{2}</m> and the growth rate is -41%.</p></answer>
+  </exercise>
+
+  <p>Sometimes, we want to use what we just learned about to compare different functions or situations.</p>
+
+  <example>
+    <p>Suppose the population of five towns are modeled by the equations below</p>
+    <table>
+      <tabular top="medium">
+        <row bottom="medium" left="medium" header="yes">
+          <cell right="medium">
+            Town
+          </cell>
+          <cell right="medium">
+            Population
+          </cell>
+        </row>
+        <row bottom="medium" left="medium" >
+          <cell right="medium">
+            Town A
+          </cell>
+          <cell right="medium">
+            <m>134(1.05)^t</m>
+          </cell>
+        </row>
+        <row bottom="medium" left="medium" >
+          <cell right="medium">
+            Town B
+          </cell>
+          <cell right="medium">
+            <m>657(0.93)^t</m>
+          </cell>
+        </row>
+        <row bottom="medium" left="medium" >
+          <cell right="medium">
+            Town C
+          </cell>
+          <cell right="medium">
+            <m>628(1.213)^t</m>
+          </cell>
+        </row>
+        <row bottom="medium" left="medium" >
+          <cell right="medium">
+            Town D
+          </cell>
+          <cell right="medium">
+            <m>721(0.54)^t</m>
+          </cell>
+        </row>
+        <row bottom="medium" left="medium" >
+          <cell right="medium">
+            Town E
+          </cell>
+          <cell right="medium">
+            <m>212(0.31)^t</m>
+          </cell>
+        </row>
+      </tabular>
+    </table>
+    <p>We want to answer the following questions about these five towns:</p>
+      <ol>
+        <li>Which town had the largest initial population?</li>
+        <li>Which towns are shrinking?</li>
+        <li>Which town is shrinking the fastest?</li>
+      </ol>
+    <p>Since the first question involves the initial value and the other two questions involve the growth/decay rate, let's figure out those values for all of the towns and add that information to the table:</p>
+    <table>
+      <tabular top="medium">
+        <row bottom="medium" left="medium" header="yes">
+          <cell right="medium">
+            Town
+          </cell>
+          <cell right="medium">
+            Population
+          </cell>
+          <cell right="medium">
+            Initial Value
+          </cell>
+          <cell right="medium">
+            Growth/Decay Rate
+          </cell>
+        </row>
+        <row bottom="medium" left="medium">
+          <cell right="medium">
+            Town A
+          </cell>
+          <cell right="medium">
+            <m>134(1.05)^t</m>
+          </cell>
+          <cell right="medium">
+            <m>134</m>
+          </cell>
+          <cell right="medium">
+            <m>(1.05-1)*100=(0.05)*100=5</m>
+          </cell>
+        </row>
+        <row bottom="medium" left="medium">
+          <cell right="medium">
+            Town B
+          </cell>
+          <cell right="medium">
+            <m>657(0.93)^t</m>
+          </cell>
+          <cell right="medium">
+            <m>657</m>
+          </cell>
+          <cell right="medium">
+            <m>(0.93-1)*100=(-0.07)*100=-7</m>
+          </cell>
+        </row>
+        <row bottom="medium" left="medium">
+          <cell right="medium">
+            Town C
+          </cell>
+          <cell right="medium">
+            <m>628(1.213)^t</m>
+          </cell>
+          <cell right="medium">
+            <m>628</m>
+          </cell>
+          <cell right="medium">
+            <m>(1.213-1)*100=(0.213)*100=21.3</m>
+          </cell>
+        </row>
+        <row bottom="medium" left="medium">
+          <cell right="medium">
+            Town D
+          </cell>
+          <cell right="medium">
+            <m>721(0.54)^t</m>
+          </cell>
+          <cell right="medium">
+            <m>721</m>
+          </cell>
+          <cell right="medium">
+            <m>(0.54-1)*100=(-0.46)*100=-46</m>
+          </cell>
+        </row>
+        <row bottom="medium" left="medium">
+          <cell right="medium">
+            Town E
+          </cell>
+          <cell right="medium">
+            <m>212(0.31)^t</m>
+          </cell>
+          <cell right="medium">
+            <m>212</m>
+          </cell>
+          <cell right="medium">
+            <m>(0.31-1)*100=(-0.69)*100=-69</m>
+          </cell>
+        </row>
+      </tabular>
+    </table>
+    <p>Now we have all of the information we need to answer the questions.</p>
+      <ol>
+        <li><em>Which town had the largest initial population?</em> This is asking for the largest initial value. Looking at the column of initial values we computed, we see that Town D has the largest initial population.</li>
+        <li><em>Which towns are shrinking?</em> This is asking about which towns are decaying, which means they have a negative rate. Looking at the column of rates we computed above, we see that Towns B, D, and E are all shrinking.</li>
+        <li><em>Which town is shrinking the fastest?</em> This is looking for the rate that is the most negative. Looking at the column of rates we computed above, we see that Town E is shrinking the fastest.</li>
+      </ol>
+  </example>
+
+  <exercise>
+    <statement>
+      <p>Suppose the amount of money in five bank accounts is modeled by the equations below</p>
+      <table>
+        <tabular top="medium">
+          <row bottom="medium" left="medium" header="yes">
+            <cell right="medium">
+              Account
+            </cell>
+            <cell right="medium">
+              Money
+            </cell>
+          </row>
+          <row bottom="medium" left="medium" >
+            <cell right="medium">
+              Account A
+            </cell>
+            <cell right="medium">
+              <m>5673(1.32)^t</m>
+            </cell>
+          </row>
+          <row bottom="medium" left="medium" >
+            <cell right="medium">
+              Account B
+            </cell>
+            <cell right="medium">
+              <m>4445(1.93)^t</m>
+            </cell>
+          </row>
+          <row bottom="medium" left="medium" >
+            <cell right="medium">
+              Account C
+            </cell>
+            <cell right="medium">
+              <m>7134(1.314)^t</m>
+            </cell>
+          </row>
+          <row bottom="medium" left="medium" >
+            <cell right="medium">
+              Account D
+            </cell>
+            <cell right="medium">
+              <m>3516(2.54)^t</m>
+            </cell>
+          </row>
+          <row bottom="medium" left="medium" >
+            <cell right="medium">
+              Account E
+            </cell>
+            <cell right="medium">
+              <m>2126(1.31)^t</m>
+            </cell>
+          </row>
+        </tabular>
+      </table>
+      <p>Answer the following questions about these five accounts:</p>
+        <ol>
+          <li>Which account started with the most money?</li>
+          <li>Which account has the best (highest) interest rate, and what is its rate?</li>
+        </ol>
+    </statement>
+    <solution>
+      <p>Since the first question involves the initial value and the other two questions involve the growth/decay rate, let's figure out those values for all of the accounts and add that information to the table:</p>
+      <table>
+        <tabular top="medium">
+          <row bottom="medium" left="medium" header="yes">
+            <cell right="medium">
+              Account
+            </cell>
+            <cell right="medium">
+              Money
+            </cell>
+            <cell right="medium">
+              Initial Value
+            </cell>
+            <cell right="medium">
+              Growth/Decay Rate
+            </cell>
+          </row>
+          <row bottom="medium" left="medium">
+            <cell right="medium">
+              Account A
+            </cell>
+            <cell right="medium">
+              <m>5673(1.32)^t</m>
+            </cell>
+            <cell right="medium">
+              <m>5673</m>
+            </cell>
+            <cell right="medium">
+              <m>(1.32-1)*100=(0.32)*100=32</m>
+            </cell>
+          </row>
+          <row bottom="medium" left="medium">
+            <cell right="medium">
+              Account B
+            </cell>
+            <cell right="medium">
+              <m>4445(1.93)^t</m>
+            </cell>
+            <cell right="medium">
+              <m>4445</m>
+            </cell>
+            <cell right="medium">
+              <m>(1.93-1)*100=(0.93)*100=93</m>
+            </cell>
+          </row>
+          <row bottom="medium" left="medium">
+            <cell right="medium">
+              Account C
+            </cell>
+            <cell right="medium">
+              <m>7134(1.314)^t</m>
+            </cell>
+            <cell right="medium">
+              <m>7134</m>
+            </cell>
+            <cell right="medium">
+              <m>(1.314-1)*100=(0.314)*100=31.4</m>
+            </cell>
+          </row>
+          <row bottom="medium" left="medium">
+            <cell right="medium">
+              Account D
+            </cell>
+            <cell right="medium">
+              <m>3516(2.54)^t</m>
+            </cell>
+            <cell right="medium">
+              <m>3516</m>
+            </cell>
+            <cell right="medium">
+              <m>(2.54-1)*100=(1.54)*100=154</m>
+            </cell>
+          </row>
+          <row bottom="medium" left="medium">
+            <cell right="medium">
+              Account E
+            </cell>
+            <cell right="medium">
+              <m>2126(1.31)^t</m>
+            </cell>
+            <cell right="medium">
+              <m>2126</m>
+            </cell>
+            <cell right="medium">
+              <m>(1.31-1)*100=(0.31)*100=31</m>
+            </cell>
+          </row>
+        </tabular>
+      </table>
+      <p>Now we have all of the information we need to answer the questions.</p>
+        <ol>
+          <li><em>Which account started with the most money?</em> This is asking for the largest initial value. Looking at the column of initial values we computed, we see that Account C has the largest initial value.</li>
+          <li><em>Which account has the best (highest) interest rate, and what is its rate?</em> This is asking about which account has the highest growth rate. Looking at the column of rates we computed above, we see that Account D has the highest interest rate with a rate of 154%.</li>
+        </ol>
+    </solution>
+    <answer><p>
+      <ol>
+          <li><em>Which account started with the most money?</em> Account C </li>
+          <li><em>Which account has the best (highest) interest rate, and what is its rate?</em> Account D has the highest interest rate with a rate of 154%.</li>
+        </ol>
+    </p></answer>
+  </exercise>
+
+  <p>Now that we know how to pull out the pieces of an exponential function when we give you the formula, let's go backwards: write the formula based on the pieces that we give you.</p>
+  <p>The key will be the template that we saw above: <m>f(x)=a\cdot b^x</m>. When we did linear functions, our template is <m>f(x)=mx+b</m>. For quadratic functions, it was <m>f(x)=A(x-r_1)(x-r_2)</m>. For polynomials, it was similar to quadratics but we could have more roots and we had to deal with some exponents. But when the question asks for an exponential function, our template is <m>f(x)=a\cdot b^x</m>, and then we need to fill in <m>a</m> and <m>b</m>.</p>
+
+  <example>
+    <p>Suppose we want to write the equation of the exponential function with initial value <m>19</m> and growth rate 108%. Since it's an exponential function, we know the template we are working with is</p>
+    <me>f(x)=a\cdot b^x</me>
+    <p>We already know that the initial value is <m>19</m>, so we can fill that in right away:</p>
+    <me>f(x)=19\cdot b^x</me>
+    <p>Now we just have to use the growth rate of 108% to find <m>b</m>. First, we need to convert our rate to a decimal by dividing by 100 (which is the same thing as moving the decimal place to the left 2). So, we get <m>1.08</m>. We still need to add 1 to get <m>b</m>, so we have <m>b=2.08</m>. So, our final answer is</p>
+    <me>f(x)=19(2.08)^x</me>
+  </example>
+
+  <exercise>
+    <statement><p>Find the equation of the exponential function with initital value <m>-2</m> and decay rate -32%.</p></statement>
+    <solution>
+      <p>Since it's an exponential function, we know the template we are working with is</p>
+      <me>f(x)=a\cdot b^x</me>
+      <p>We already know that the initial value is <m>-2</m>, so we can fill that in right away:</p>
+      <me>f(x)=-2\cdot b^x</me>
+      <p>Now we just have to use the decay rate of -32% to find <m>b</m>. First, we need to convert our rate to a decimal by dividing by 100 (which is the same thing as moving the decimal place to the left 2). So, we get <m>-0.32</m>. We still need to add 1 to get <m>b</m>, so we have <m>b=0.68</m>. So, our final answer is</p>
+      <me>f(x)=-2(0.68)^x</me>
+    </solution>
+  </exercise>
+
+  <example>
+    <p>Suppose we want to find the equation of the exponential function with initital value <m>2</m> and goes through the point <m>(3,10)</m>. We are still working with an exponential function, so we use the same template.</p>
+    <me>f(x)=a\cdot b^x</me>
+    <p>Since we know the initial value is <m>2</m>, we can fill that in right away.</p>
+    <me>f(x)=2\cdot b^x</me>
+    <p>Now, in the previous example, we were given a rate to be able to find <m>b</m>. In this case, we don't know the rate, but we do have a point on the graph. So, we will use a strategy we have seen lots of times before: plug in the values for <m>x</m> and <m>y</m> and solve for the thing we don't know.</p>
+    <md>
+      <mrow>10\amp=2\cdot b^3</mrow>
+      <mrow>5\amp= b^3</mrow>
+      <mrow>\sqrt[3]{5}\amp=b</mrow>
+    </md>
+    <p>So, we have <m>b=\sqrt[3]{5}</m>, which we can also write as <m>5^{1/3}</m>. Filling this in, we have our final answer.</p>
+    <me>f(x)=2\left(\sqrt[3]{5}\right)^x</me>
+  </example>
+
+  <exercise>
+    <statement><p>Find the equation of the exponential function with growth rate 50% and goes through the point <m>(2,18)</m>.</p></statement>
+    <solution><p>Since we are still working with an exponential function, we use the same template.</p>
+      <me>f(x)=a\cdot b^x</me>
+      <p>This time, we are given the growth rate, so we can compute <m>b=1+0.5=1.5</m>.</p>
+      <me>f(x)=a\cdot 1.5^x</me>
+      <p>Now, we will use the point to find <m>a</m> by plugging in <m>x=2</m> and <m>y=18</m>.</p>
+      <md>
+        <mrow>18\amp= a\cdot 1.5^2</mrow>
+        <mrow>18\amp= a\cdot 2.25</mrow>
+        <mrow>\frac{18}{2.25}\amp= a</mrow>
+        <mrow>8\amp=a</mrow>
+      </md>
+      <p>So, we have our final answer</p>
+      <me>f(x)=8\cdot 1.5^x</me>
+    </solution>
+    <answer><p><m>f(x)=8\cdot 1.5^x</m></p></answer>
+  </exercise>
+
+  <subsection>
+    <title>Connecting Equations and Graphs</title>
+
+    <p>Graphs are very helpful visuals for getting a sense of how a function behaves. Although we won't ask you to graph exponential functions by hand, you should be able to identify a couple of basic things about their shape.</p>
+
+    <fact>
+      <title>Growth versus Decay</title>
+      <p>For our usual exponential functions <m>f(x)=a\cdot b^x</m>, there are two possible shapes of the graph:</p>
+      <figure>
+        <caption>Two possible shapes for the graph of an exponential function.</caption>
+        <sidebyside>
+          <figure>
+              <caption>Exponential growth: positive rate (<m>b\gt 1</m>)</caption>
+              <image source="Exponentials/ExpGrowth.png"/>
+          </figure>
+          <figure>
+              <caption>Exponential decay: negative rate (<m>b\lt 1</m>)</caption>
+              <image source="Exponentials/ExpDecay.png"/>
+          </figure>
+        </sidebyside>
+      </figure>
+    </fact>
+
+    <fact>
+      <title><m>y</m>-intercepts of Exponential Functions</title>
+      <p>The initial value of an exponential function is also the <m>y</m>-value of the <m>y</m>-intercept, which is where the graph crosses the <m>y</m>-axis.</p>
+    </fact>
+
+    <example>
+      <p>Five exponential functions are given in the graph below. Determine which ones are growning and which one has the highest initial value.</p>
+      <image source="Exponentials/Graph_Example.png"/>
+      <p>To determine which ones are growing, we look at the shape: exponential growth functions are close to 0 on the left and get very big on the right. In this graph, there are three functions that do that: C, D, and E.</p>
+      <p>To determine which one has the highest initial value, we need to look for the highest <m>y</m>-intercept. Looking at the <m>y</m>-axis, we can see that graph C crosses it farthest up. So, graph C has the highest initial value.</p>
+    </example>
+
+    <exercise>
+      <statement><p>Five exponential functions are given in the graph below.
+        <ol>
+          <li>Which graphs are decaying?</li>
+          <li>Which graph has the lowest initial value?</li>
+        </ol>
+      </p>
+      <image source="Exponentials/Graph_Checkpoint.png"/>
+      </statement>
+      <solution>
+        <p>To determine which ones are decaying, we look at the shape: exponential decay functions are close to 0 on the right and get very big on the left. In this graph, there are two functions that do that: A and B.</p>
+        <p>To determine which one has the lowest initial value, we need to look for the lowest <m>y</m>-intercept. Looking at the <m>y</m>-axis, we can see that graph E crosses it farthest down. So, graph E has the lowest initial value.</p>
+      </solution>
+      <answer><p>
+        <ol>
+          <li>A and B</li>
+          <li>E</li>
+        </ol>
+      </p></answer>
+    </exercise>
+  </subsection>
+</section>
+
+<section xml:id="sec-e">
+  <title>The Number <m>e</m></title>
+
+  <introduction>What is <m>\pi</m>? It's a number that starts with 3.14, but it goes on forever and never repeats. So, mathematicians usually just write <m>\pi</m>, rather than rounding some number of decimal places. The number <m>e</m> is the same idea.</introduction>
+
+  <fact>
+    <p>The number <m>e</m> is approximately 2.7, but like <m>\pi</m>, its decimal expansion goes on forever and never repeats.</p>
+  </fact>
+
+  <p>Essentially, the whole point of this section is that <m>e</m> is a number, so we treat it like any other number. You don't need to know what the decimal is, but it will come in handy to know that it's a little bit less than 3.</p>
+
+  <example>
+    <p>What is the initial value and growth/decay rate of each of the following exponential functions?
+      <ol>
+        <li><p>For <m>f(x)=7e^x</m>:</p>
+          <ul>
+            <li>The initial value is just <m>7</m>, like we saw in <xref ref="sec-eqtnexpfn"/>.</li>
+            <li>The rate comes from the thing that's raised to the <m>x</m>, which in this case is <m>e</m>. That means that <m>e=1+\text{rate(decimal)}</m>. Solving for the rate, we get that the rate (as a decimal) is <m>e-1</m>. To convert to a percentage, we just need to mulitply by 100. So, the rate is <m>(e-1)100</m>%. Since <m>e</m> is approximately 3, <m>e-1\gt0</m>, so this is a growth rate.</li>
+          </ul>
+        </li>
+        <li><p>For <m>f(x)=0.2e^{-x}</m>:</p>
+          <ul>
+            <li>The initial value is just <m>0.2</m>, like we saw in <xref ref="sec-eqtnexpfn"/>.</li>
+            <li>The rate comes from the thing that's raised to the <m>x</m>. In this case, we need to separate the <m>x</m> from the negative that's in the exponent. Since <m>e^{-x}=(e^{-1})^x</m>, we have that the thing that's raised to the <m>x</m> is <m>e^{-1}</m>, which we can write as <m>\frac{1}{e}</m>. That means that <m>\frac{1}{e}=1+\text{rate(decimal)}</m>. Solving for the rate, we get that the rate (as a decimal) is <m>\frac{1}{e}-1</m>. To convert to a percentage, we just need to mulitply by 100. So, the rate is <m>\left(\frac{1}{e}-1\right)100</m>%. Since <m>e</m> is approximately 3,<m>\frac{1}{e}</m> is approximately <m>\frac{1}{3}</m>, so <m>\frac{1}{e}-1\lt0</m>, so this is a decay rate.</li>
+          </ul>
+        </li>
+      </ol>
+    </p>
+  </example>
+
+  <exercise>
+    <statement><p>Find the initial value and growth/decay rate of each of the following exponential functions
+      <ol>
+        <li><m>f(x)=9e^x</m></li>
+        <li><m>g(x)=-7e^{13x}</m></li>
+        <li><m>h(x)=99e^{-2x}</m></li>
+      </ol>
+    </p></statement>
+    <solution>
+      <p>
+      <ol>
+        <li><p>For <m>f(x)=9e^x</m></p>
+          <ul>
+            <li>The initial value is just <m>9</m>, like we saw in <xref ref="sec-eqtnexpfn"/>.</li>
+            <li>The rate comes from the thing that's raised to the <m>x</m>, which in this case is <m>e</m>. That means that <m>e=1+\text{rate(decimal)}</m>. Solving for the rate, we get that the rate (as a decimal) is <m>e-1</m>. To convert to a percentage, we just need to mulitply by 100. So, the rate is <m>(e-1)100</m>%. Since <m>e</m> is approximately 3, <m>e-1\gt0</m>, so this is a growth rate.</li>
+          </ul>
+        </li>
+        <li><p>For <m>g(x)=-7e^{13x}</m></p>
+          <ul>
+            <li>The initial value is just <m>-7</m>, like we saw in <xref ref="sec-eqtnexpfn"/>.</li>
+            <li>The rate comes from the thing that's raised to the <m>x</m>. In this case, we need to separate the <m>x</m> from the 13 that's in the exponent. Since <m>e^{13x}=(e^{13})^x</m>, we have that the thing that's raised to the <m>x</m> is <m>e^{13}</m>. That means that <m>e^{13}=1+\text{rate(decimal)}</m>. Solving for the rate, we get that the rate (as a decimal) is <m>e^{13}-1</m>. To convert to a percentage, we just need to mulitply by 100. So, the rate is <m>(e^{13}-1)100</m>%. Since <m>e</m> is approximately 3, <m>e^{13}-1\gt0</m>, so this is a growth rate.</li>
+          </ul>
+        </li>
+        <li><p>For <m>h(x)=99e^{-2x}</m></p>
+          <ul>
+            <li>The initial value is just <m>99</m>, like we saw in <xref ref="sec-eqtnexpfn"/>.</li>
+            <li>The rate comes from the thing that's raised to the <m>x</m>. In this case, we need to separate the <m>x</m> from the <m>-2</m> that's in the exponent. Since <m>e^{-2x}=(e^{-2})^x</m>, we have that the thing that's raised to the <m>x</m> is <m>e^{-2}</m>, which we can write as <m>\frac{1}{e^2}</m>. That means that <m>\frac{1}{e^2}=1+\text{rate(decimal)}</m>. Solving for the rate, we get that the rate (as a decimal) is <m>\frac{1}{e^2}-1</m>. To convert to a percentage, we just need to mulitply by 100. So, the rate is <m>\left(\frac{1}{e^2}-1\right)100</m>%. Since <m>e</m> is approximately 3,<m>\frac{1}{e^2}</m> is approximately <m>\frac{1}{9}</m>, so <m>\frac{1}{e^2}-1\lt0</m>, so this is a decay rate.</li>
+          </ul>
+        </li>
+      </ol>
+      </p>
+    </solution>
+    <answer>
+      <p>
+        <ol>
+          <li>The initital value is <m>9</m>, and the growth rate is <m>(e-1)100</m>%.</li>
+          <li>The initial value is <m>-7</m>, and the growth rate is <m>(e^{13}-1)100</m>%.</li>
+          <li>The initial value is <m>99</m>, and the decay rate is <m>\left(\frac{1}{e^2}-1\right)100</m>%.</li>
+        </ol>
+      </p>
+    </answer>
+  </exercise>
+
+  <example>
+    <p>Let's find the end behavior of the exponential function <m>f(x)=0.7e^{-x}</m>. Since <m>e^{-1}\lt 1</m>, this function represents exponential decay, so the graph looks like the picture below:</p>
+    <image source="Exponentials/ExpDecay.png"/>
+    <p>Therefore, we have the following end behavior:</p>
+    <ul>
+      <li><p>As <m>x\rightarrow \infty</m>, <m>y\rightarrow 0</m></p></li>
+      <li><p>As <m>x\rightarrow -\infty</m>, <m>y\rightarrow \infty</m></p></li>
+    </ul>
+  </example>
+
+  <exercise>
+    <statement>
+      <p>Find the end behavior of each exponential function below:</p>
+        <ol>
+          <li><p><m>f(x)=5e^x</m></p></li>
+          <li><p><m>g(x)=5e^{x+4}-8</m></p></li>
+        </ol>
+    </statement>
+    <solution>
+      <ol>
+        <li><p>For <m>f(x)=5e^x</m>, since <m>e \gt 1</m>, this function represents exponential growth, so the graph looks like the picture below:</p>
+          <image source="Exponentials/ExpGrowth.png"/>
+          <p>Therefore, we have the following end behavior:</p>
+          <ul>
+            <li><p>As <m>x\rightarrow \infty</m>, <m>y\rightarrow \infty</m></p></li>
+            <li><p>As <m>x\rightarrow -\infty</m>, <m>y\rightarrow 0</m></p></li>
+          </ul>
+        </li>
+        <li><p>For <m>g(x)=5e^{x+4}-8</m>, we have exponential growth, like the problem above, except that this function is shifted down by 8. So, we have the following end behavior:</p>
+          <ul>
+            <li><p>As <m>x\rightarrow \infty</m>, <m>y\rightarrow \infty</m></p></li>
+            <li><p>As <m>x\rightarrow -\infty</m>, <m>y\rightarrow -8</m></p></li>
+          </ul>
+        </li>
+      </ol>
+    </solution>
+    <answer>
+      <ol>
+        <li>
+          <ul>
+            <li><p>As <m>x\rightarrow \infty</m>, <m>y\rightarrow \infty</m></p></li>
+            <li><p>As <m>x\rightarrow -\infty</m>, <m>y\rightarrow 0</m></p></li>
+          </ul>
+        </li>
+        <li>
+          <ul>
+            <li><p>As <m>x\rightarrow \infty</m>, <m>y\rightarrow \infty</m></p></li>
+            <li><p>As <m>x\rightarrow -\infty</m>, <m>y\rightarrow -8</m></p></li>
+          </ul>
+        </li>
+      </ol>
+    </answer>
+  </exercise>
+
+</section>
+
+
+</chapter>

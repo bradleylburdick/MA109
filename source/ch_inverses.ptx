@@ -1,0 +1,644 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Chapters are enclosed with <chapter> tags. Use xml:id to -->
+<!-- uniquely identify the chapter.  The @xmlns:xi attribute  -->
+<!-- is needed if you use xi:include in this file             -->
+<chapter xml:id="ch-inverses" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+<!-- Change title when you have one: -->
+  <title>Inverse Functions</title>
+  <!-- If the chapter has sections, there may be an introduction -->
+  <!-- before those sections. Note the <p> tags around content.  -->
+  <introduction>
+    <p>This is the introduction to the chapter</p>
+  </introduction>
+
+<section xml:id="sec-evaluateinverse">
+  <title>Evaluating Inverse Functions</title>
+
+  <introduction>
+    Recall that in Section <xref ref="sec-solvefn"/>, we were given the output to a function and asked to determine what input lead to it. If we had lots of outputs we needed to look at, checking them one at a time would be tedious and time-consuming. It would be much easier if we had a formula that we could plug our outputs into to get our answers. That's what the inverse function does.
+  </introduction>
+
+  <definition>
+    For a function <m>f(x)</m>, its <term>inverse function</term> (written <m>f^{-1}(x)</m> and pronounced "f inverse of x") is the function that swaps the roles of inputs and outputs for <m>f(x)</m>. In other words, if <m>f(a)=b</m>, then <m>f^{-1}(b)=a</m> and vise versa.
+  </definition>
+
+  <p>While it is possible to find a general formula for the inverse function, we leave that for the next section. For now, we will only focus on evaluating the inverse function at a given number. Luckily, this is exactly the same thing you did in section <xref ref="sec-solvefn"/>. The only difference is that we are now using new vocabulary and notation to state the question.</p>
+
+  <example>
+    <p>Suppose <m>f(x)=\dfrac{x+1}{2x-3}</m>, and we want to find <m>f^{-1}(5)</m>. We can see that <m>5</m> is the input to the inverse function, but because the inverse swaps inputs and outputs, that means that <m>5</m> is the output to the original function. So, we are trying to solve <m>f(x)=5</m>:</p>
+    <md>
+      <mrow>f(x) \amp = 5</mrow>
+      <mrow>\dfrac{x+1}{2x-3} \amp = 5</mrow>
+      <mrow> x+1 \amp = 5(2x-3)</mrow>
+      <mrow> x+1 \amp 10x - 15</mrow>
+      <mrow> 1 \amp = 9x - 15 </mrow>
+      <mrow> 16 \amp = 9x </mrow>
+      <mrow> \frac{16}{9} = x </mrow>
+    </md>
+    <p>Therefore, our final answer is <m>f^{-1}(x)=\frac{16}{9}</m>.</p>
+  </example>
+
+  <exercise>
+    <statement><p>
+      <ol>
+        <li>Suppose <m>f(x)=3x-7</m>. Evaluate <m>f^{-1}(4)</m>.</li>
+        <li>Suppose <m>g(x)=\dfrac{x}{x+3}</m>. Evaluate <m>g^{-1}(-4)</m>.</li>
+        <li>Suppose <m>h(x)=x^3+1</m>. Evaluate <m>h^{-1}(9)</m>.</li>
+      </ol>
+    </p></statement>
+    <solution><p>
+      <ol>
+        <li>Since <m>f(x)=3x-7</m> and we want to evaluate <m>f^{-1}(4)</m>, we see that <m>4</m> is the input to the inverse function. Since the inverse swaps inputs and outputs, that means that <m>4</m> is the output to the original function. So, we want to solve <m>f(x)=4</m>:
+          <md>
+            <mrow>f(x) \amp = 4</mrow>
+            <mrow>3x-7 \amp = 4</mrow>
+            <mrow>3x \amp = 11 </mrow>
+            <mrow>x \amp = \frac{11}{3}</mrow>
+          </md>
+          Therefore, our final answer is <m>f^{-1}(4)=\frac{11}{3}</m>.
+        </li>
+        <li>Since <m>g(x)=\dfrac{x}{x+3}</m> and we want to evaluate <m>g^{-1}(-4)</m>, we see that <m>-4</m> is the input to the inverse function. Since the inverse swaps inputs and outputs, that means that <m>-4</m> is the output to the original function. So, we want to solve <m>g(x)=-4</m>:
+          <md>
+            <mrow>g(x) \amp = -4</mrow>
+            <mrow>\dfrac{x}{x+3} \amp = -4</mrow>
+            <mrow>x \amp = -4(x+3)</mrow>
+            <mrow>x \amp = -4x -12 </mrow>
+            <mrow> 5x \amp = -12</mrow>
+            <mrow> x \amp = \frac{-12}{5}</mrow>
+          </md>
+          Therefore, our final answer is <m>g^{-1}(-4)=\frac{-12}{5}</m>.
+        </li>
+        <li>Since <m>h(x)=x^3+1</m> and we want to evaluate <m>h^{-1}(9)</m>, we see that <m>9</m> is the input to the inverse function. Since the inverse swaps inputs and outputs, that means that <m>9</m> is the output to the original function. So, we want to solve <m>h(x)=9</m>:
+          <md>
+            <mrow>h(x) \amp = 9</mrow>
+            <mrow>x^3+1 \amp = 9</mrow>
+            <mrow>x^3 \amp = 8</mrow>
+            <mrow>x \amp = \sqrt[3]{8} </mrow>
+          </md>
+          Since <m>\sqrt[3]{8}=2</m>, our final answer is <m>h^{-1}(9)=2</m>.
+        </li>
+      </ol>
+    </p></solution>
+    <answer><p>
+      <ol>
+        <li><m>f^{-1}(4)=\frac{11}{3}</m></li>
+        <li><m>g^{-1}(-4)=\frac{-12}{5}</m></li>
+        <li><m>h^{-1}(9)=2</m></li>
+      </ol>
+    </p></answer>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>Suppose <m>p(x)</m> is given in the graph below:</p>
+      <image source="Inverses/InvPractice1.png"/>
+      <p>Evaluate <m>p^{-1}(1)</m>.</p>
+    </statement>
+    <solution>
+      <p>We want to find <m>p^{-1}(1)</m>. We can see that <m>1</m> is the input to the inverse function, which means its the output to the original function <m>p(x)</m>. That means we are looking for where <m>y=1</m>. Looking to the side, we see that the graph is at <m>(2,1)</m>, which gives us our answer: <m>p^{-1}(1)=2</m>.</p>
+    </solution>
+    <answer><p><m>p^{-1}(1)=2</m></p></answer>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>Suppose <m>t(x)</m> is given in the graph below:</p>
+      <table>
+        <tabular>
+          <row bottom="medium">
+            <cell right="medium">
+              <m>x</m>
+            </cell>
+            <cell>
+              <m>t(x)</m>
+            </cell>
+          </row>
+          <row>
+            <cell right="medium">
+              <m>-1</m>
+            </cell>
+            <cell>
+              <m>2</m>
+            </cell>
+          </row>
+          <row>
+            <cell right="medium">
+              <m>0</m>
+            </cell>
+            <cell>
+              <m>3</m>
+            </cell>
+          </row>
+          <row>
+            <cell right="medium">
+              <m>1.3</m>
+            </cell>
+            <cell>
+              <m>-4</m>
+            </cell>
+          </row>
+          <row>
+            <cell right="medium">
+              <m>7</m>
+            </cell>
+            <cell>
+              <m>0</m>
+            </cell>
+          </row>
+          <row>
+            <cell right="medium">
+              <m>14</m>
+            </cell>
+            <cell>
+              <m>1</m>
+            </cell>
+          </row>
+        </tabular>
+      </table>
+      <p>Find <m>t^{-1}(0)</m>.</p>
+    </statement>
+    <solution><p>We want to find <m>t^{-1}(0)</m>. We see that <m>0</m> is the input to the inverse, which means <m>0</m> is the output to the original function. So, we look for <m>0</m> in the second column of the table and find it in the fourth row of numbers. So, we look in the first column in the fourth row of numbers to get our answer: <m>t^{-1}(0)=7</m>.</p></solution>
+    <answer><p><m>t^{-1}(0)=7</m></p></answer>
+  </exercise>
+
+  
+
+</section>
+
+<section xml:id="sec-inverseformula">
+  <title>Finding a Formula for the Inverse</title>
+
+  <introduction>
+  In the last section, we learned what an inverse function is and how to evaluate it. Sometimes, however, we want to be able to evaluate the inverse function at a lot of different values. In that case, it would be helpful to have a formula for the inverse function. That is what we are going to learn how to build in this section.
+  </introduction>
+
+  <p>Remember: the key to inverse functions is that they swap inputs and outputs. So, our steps for finding the formula for the inverse function will require some swapping:</p>
+
+  <fact>
+    <title>Steps for Finding an Inverse Function</title>
+
+    <p>If we are given a formula for <m>f(x)</m>, here are the steps to find a formula for <m>f^{-1}(x)</m>:
+      <ol>
+        <li>Write <m>y= f(x)</m>.</li>
+        <li>Swap <m>x</m> and <m>y</m> to get <m>x = f(y)</m>.</li>
+        <li>Solve for <m>y</m>.</li>
+      </ol>
+      The result from the last step is your formula for <m>f^{-1}(x)</m>.
+    </p>
+  </fact>
+
+  <example>
+    <p>Suppose <m>f(x)=3-7x</m> and we want to find a formula for <m>f^{-1}(x)</m>. Let's follow the steps above:
+      <ol>
+        <li>We begin by writing <m>y=3-7x</m>.</li>
+        <li>Now we swap <m>x</m> and <m>y</m> to get <m>x = 3-7y</m>.</li>
+        <li>Finally, we solve for <m>y</m>:
+          <md>
+            <mrow>x \amp = 3-7y</mrow>
+            <mrow> x-3 \amp = -7y</mrow>
+            <mrow> \frac{x-3}{-7} \amp = y</mrow>
+          </md>
+        </li>
+      </ol>
+      Therefore, our answer is <m>f^{-1}(x)=\frac{x-3}{-7}</m>.
+    </p>
+  </example>
+
+  <exercise>
+    <statement><p>Suppose <m>g(x)=x^5+4</m>. Find a formula for <m>g^{-1}(x)</m>.</p></statement>
+    <solution><p>To find a formula for the inverse, we start by writing <m>y=x^5+4</m>, then swap <m>x</m> and <m>y</m> to get <m>x=y^5+4</m>. All that is left is to solve for <m>y</m>:
+      <md>
+        <mrow>x \amp = y^5+4</mrow>
+        <mrow>x-4 \amp = y^5</mrow>
+        <mrow>\sqrt[5]{x-4} \amp = y</mrow>
+      </md>
+      Therefore, our final answer is <m>g^{-1}(x)=\sqrt[5]{x-4}</m>.
+    </p></solution>
+    <answer><p><m>g^{-1}(x)=\sqrt[5]{x-4}</m></p></answer>
+  </exercise>
+
+  <exercise xml:id="exer-invrational">
+    <statement><p>Suppose <m>r(x)=\dfrac{3x-1}{2-x}</m>. Find a formula for <m>r^{-1}(x)</m>.</p></statement>
+    <solution><p>To find a formula for the inverse, we start by writing <m>y=\dfrac{3x-1}{2-x}</m>, then swap <m>x</m> and <m>y</m> to get <m>x=\dfrac{3y-1}{2-y}</m>. All that is left is to solve for <m>y</m>. There are a lot of moving parts to solving this equation, so I will highlight the variable <m>y</m> in red so that it is easier to keep track of:
+      <mdn>
+        <mrow xml:id="eqtna">x \amp = \dfrac{3{\color{red}{y}}-1}{2-{\color{red}{y}}}</mrow>
+        <mrow xml:id="eqtnb">x(2-{\color{red}{y}})\amp = 3{\color{red}{y}}-1</mrow>
+        <mrow xml:id="eqtnc">2x-x{\color{red}{y}} \amp = 3{\color{red}{y}}-1</mrow>
+        <mrow xml:id="eqtnd">2x \amp = 3{\color{red}{y}}+x{\color{red}{y}}-1</mrow>
+        <mrow xml:id="eqtne">2x+1 \amp = 3{\color{red}{y}}+x{\color{red}{y}}</mrow>
+        <mrow xml:id="eqtnf">2x+1 \amp = {\color{red}{y}}(3+x)</mrow>
+        <mrow xml:id="eqtng">\dfrac{2x+1}{3+x} \amp = {\color{red}{y}}</mrow>
+      </mdn>
+      Therefore, our final answer is <m>r^{-1}(x)=\dfrac{2x+1}{3+x}</m>.</p>
+      <p>The algebra on this one can be hard to follow, so we'll take a moment here to walk through the steps of what happened:
+      <ol>
+        <li>In equation <xref ref="eqtna"/>, we have two problems we need to deal with in order to solve for <m>y</m>: we have two <m>y</m>'s in our equation, and one of them is in the denominator of a fraction. We need to deal with the second problem first.</li>
+        <li>To get from equation <xref ref="eqtna"/> to <xref ref="eqtnb"/>, we multiplied both sides by <m>2-y</m>, which canceled the denominator on the right-hand side.</li>
+        <li>To get from equation <xref ref="eqtnb"/> to <xref ref="eqtnc"/>, we just distributed the <m>x</m>. The reason we wanted to do this is that we are trying to solve for <m>y</m>, but in equation <xref ref="eqtnb"/>, the <m>y</m> is buried inside of parentheses. Distributing the <m>x</m> on the outside gets the <m>y</m> that we need out of those parentheses.</li>
+        <li>At this point, we no longer have a <m>y</m> in the denominator of a fraction, nor is it buried inside of parentheses. So, we need to deal with the other problem: there are two <m>y</m>'s floating around, so we need to combine them into just one <m>y</m> that we can solve for. To do this, we need to get everything with a <m>y</m> on one side and everything without a <m>y</m> on the other side.</li>
+        <li>To get from equation <xref ref="eqtnc"/> to <xref ref="eqtnd"/>, we moved the <m>xy</m> to the right-hand side so that all of the <m>y</m>'s are on the same side of the equal sign.</li>
+        <li>To get from equation <xref ref="eqtnd"/> to <xref ref="eqtne"/>, we moved the <m>1</m> to the left-hand side so that everything without a <m>y</m> is on the same side of the equal sign.</li>
+        <li>This step is the one that trips students up the most: to get from equation <xref ref="eqtne"/> to <xref ref="eqtnf"/>, we factored a <m>y</m> out of the right-hand side. A helpful way to think about this is that it's just reverse-distribution. It's the same thing we did to get to equation <xref ref="eqtnc"/>, but backwards. Notice that if we went backwards and distributed out the <m>y(3+x)</m> in equation <xref ref="eqtnf"/>, we would get the <m>3y+xy</m> in equation <xref ref="eqtne"/>.</li>
+        <li>Now that we finally have only one <m>y</m> in our equation, we just need to get it by itself. So, to get from equation <xref ref="eqtnf"/> to <xref ref="eqtng"/>, we divide both sides by <m>3+x</m> to get <m>y</m> by itself and get our final answer.</li>
+      </ol>
+    </p></solution>
+    <answer><p><m>r^{-1}(x)=\dfrac{2x+1}{3+x}</m></p></answer>
+  </exercise>
+
+</section>
+
+<!-- old material we no longer cover
+<section xml:id="sec-domainrangeinverse">
+  <title>Domain and Range of an Inverse</title>
+
+  <introduction>
+    Remember that the domain of a function is all of the possible inputs and the range of a function is all of the possible outputs. Since the inverse swaps inputs and outputs, the inverse will also swap the domain and range.
+  </introduction>
+
+  <fact>
+    <p>The inverse function swaps domain and range. In other words:
+      <ul>
+        <li>The domain of <m>f^{-1}(x)</m> is the same as the range of <m>f(x)</m>.</li>
+        <li>The range of <m>f^{-1}(x)</m> is the same as the domain of <m>f(x)</m>.</li>
+      </ul>
+    </p>
+  </fact>
+
+  <example>
+    <p>Suppose we have a function <m>g(x)</m>, and we know that its domain is <m>[-4,7)</m> and its range is <m>[0,\infty)</m>. Then:
+      <ul>
+        <li>The domain of <m>g^{-1}(x)</m> is <m>[0,\infty)</m> (since that is the range of <m>g(x)</m>).</li>
+        <li>The range of <m>g^{-1}(x)</m> is <m>[-4,7)</m> (since that is the domain of <m>g(x)</m>).</li>
+      </ul>
+    </p>
+  </example>
+
+  <exercise>
+    <statement>
+      <p>Suppose the function <m>G(x)</m> is graphed below:</p>
+      <image source="Inverses/InvDomainRange1.png"/>
+      <p>Find each of the following:
+        <ol>
+          <li>The domain of <m>G(x)</m>.</li>
+          <li>The range of <m>G(x)</m>.</li>
+          <li>The domain of <m>G^{-1}(x)</m>.</li>
+          <li>The range of <m>G^{-1}(x)</m>.</li>
+        </ol>
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <ol>
+          <li>The domain of this graph is <m>(-4,-1]</m>. For a review of how to find the domain of a grpah, see Section <xref ref="sec-domaingraph"/>.</li>
+          <li>The range of this graph is <m>(-7,2]</m>. For a review of how to find the range of a grpah, see Section <xref ref="sec-rangegraph"/>.</li>
+          <li>To find the domain of <m>G^{-1}(x)</m>, we have to remember that it's the same as the range of <m>G(x)</m>. We already found the range of the original function, so we have our answer: the domain of <m>G^{-1}(x)</m> is <m>(-7,2]</m>.</li>
+          <li>To find the range of <m>G^{-1}(x)</m>, we have to remember that it's the same as the domain of <m>G(x)</m>. We already found the domain of the original function, so we have our answer: the range of <m>G^{-1}(x)</m> is <m>(-4,-1]</m>.</li>
+        </ol>
+      </p>
+    </solution>
+  </exercise>
+
+  <p>A natural question you might be asking yourself is: when would this be useful? We are going to discuss one example. Look back at Chapter <xref ref="ch-domainrange"/>. The chapter was about domain and range. We began by looking at graphs, first finding the domain of a graph and then finding the range of a graph. After that, we moved on to functions as formulas, but we only looked at finding the domain of a function. We never talked about how to find the range of a function. The reason is that it is much more complicated, and there is a lot more variation between functions. Unlike with domain, there aren't a few nice categories you can fit functions into when finding their range. You basically have to look at each function separately, and some are very hard to figure out without just graphing it. However, we just learned that the range of a function is the same as the domain of its inverse. So, if we can find the inverse and find its domain, that's a nice trick for finding the range.</p>
+
+  <example>
+    <title>Using Inverses to Find Range</title>
+
+    <p>Suppose we have the function <m>f(x)=\dfrac{x-1}{3x+2}</m> and we want to find its range. We don't have a nice way to find range from a formula, but we do know that the range will be the same as the domain of the inverse. So, our strategy will be to find a formula for <m>f^{-1}(x)</m> and then find its domain.</p>
+    <p>Remember from Section <xref ref="sec-inverseformula"/> that to find the formula for the inverse, we write <m>y=\dfrac{x-1}{3x+2}</m>, swap <m>x</m> and <m>y</m>: <m>x= \dfrac{y-1}{3y+2}</m>, and then solve for <m>y</m>:
+      <md>
+        <mrow>x \amp= \dfrac{y-1}{3y+2}</mrow>
+        <mrow>x(3y+2)\amp= y-2</mrow>
+        <mrow>3xy+2x \amp = y-2</mrow>
+        <mrow>3xy-y+2x \amp = -2</mrow>
+        <mrow>3xy-y \amp= -2x-2</mrow>
+        <mrow>y(3x-1) \amp = -2x-2</mrow>
+        <mrow>y \amp= \dfrac{-2x-2}{3x-1}</mrow>
+      </md>
+      For a detailed description of the algebra above, see exercise <xref ref="exer-invrational"/>.
+    </p>
+    <p>Now that we have our inverse function <m>f^{-1}(x)=\dfrac{-2x-2}{3x-1}</m>, we need to find its domain. Remember from Section <xref ref="sec-domainformula"/> that to find the domain, we look for the problems. In this case, the problem is that we have a variable in the denominator. Since we can never divide by <m>0</m>, we need to figure out where the denominator is <m>0</m>, and then our domain will be everything except that.
+      <md>
+        <mrow>3x-1 \amp = 0</mrow>
+        <mrow> 3x \amp = 1</mrow>
+        <mrow>x \amp = \frac{1}{3}</mrow>
+      </md>
+      So, our domain is everything except <m>\frac{1}{3}</m>. That means we want everything less than <m>\frac{1}{3}</m> and everything greater than <m>\frac{1}{3}</m>, which is <m>(-\infty, \frac{1}{3})\cup(\frac{1}{3},\infty)</m>.
+    </p>
+    <p>We are now ready to write our final answer. We figured out that <m>f^{-1}(x)=\dfrac{-2x-2}{3x-1}</m> and that the domain of the inverse is <m>(-\infty, \frac{1}{3})\cup(\frac{1}{3},\infty)</m>. Since the range of <m>f(x)</m> is the same as the domain of the inverse, that means the range of <m>f(x)</m> is <m>(-\infty, \frac{1}{3})\cup(\frac{1}{3},\infty)</m>.</p>
+  </example>
+</section>
+-->
+
+<exercises><title>Practice Problems</title> <!--Indicates start of the exercises for the chapter and its title-->
+  <exercise>
+   <statement>
+   <p>Suppose <m>f(x) = 2x+1</m>.</p>
+        <p>Evaluate each of the following:
+          <ol>
+            <li><m>f^{-1}(0)</m></li>
+            <li><m>f^{-1}(4)</m></li>
+            <li><m>f^{-1}(9)</m></li>
+            <li><m>f^{-1}(1)</m></li>
+            <li><m>f^{-1}(10)</m></li>
+          </ol>
+        </p>
+   </statement>
+     <answer>
+        <p>
+    <ol>
+            <li><m>f^{-1}(0)=\frac{-1}{2}</m></li>
+            <li><m>f^{-1}(4)=\frac{3}{2}</m></li>
+            <li><m>f^{-1}(9)=4</m></li>
+            <li><m>f^{-1}(1)=0</m></li>
+            <li><m>f^{-1}(10)=\frac{9}{2}</m></li>
+    </ol>
+        </p>
+        </answer><!--Statement of the answer (don't worry about location in the rendered version)-->
+  </exercise><!--End of that exercise-->
+
+  <exercise>
+   <statement>
+   <p>Suppose <m>f(x) = 3x-2</m>.</p>
+        <p>Evaluate each of the following:
+          <ol>
+            <li><m>f^{-1}(1)</m></li>
+            <li><m>f^{-1}(3)</m></li>
+            <li><m>f^{-1}(0)</m></li>
+            <li><m>f^{-1}(5)</m></li>
+            <li><m>f^{-1}(4)</m></li>
+          </ol>
+        </p>
+   </statement>
+     <answer>
+        <p>
+    <ol>
+            <li><m>f^{-1}(1)=1</m></li>
+            <li><m>f^{-1}(3)=\frac{5}{3}</m></li>
+            <li><m>f^{-1}(0)=\frac{2}{3}</m></li>
+            <li><m>f^{-1}(5)=\frac{7}{3}</m></li>
+            <li><m>f^{-1}(4)=2</m></li>
+    </ol>
+        </p>
+        </answer><!--Statement of the answer (don't worry about location in the rendered version)-->
+  </exercise><!--End of that exercise-->
+  
+  <exercise>
+   <statement>
+   <p>Suppose <m>f(x)</m> is given in the graph below.</p>
+        <image source="Inverses/InvPrac1.png"/>
+        <p>Evaluate each of the following:
+          <ol>
+            <li><m>f^{-1}(0)</m></li>
+            <li><m>f^{-1}(1)</m></li>
+            <li><m>f^{-1}(9)</m></li>
+            <li><m>f^{-1}(2)</m></li>
+            <li><m>f^{-1}(4)</m></li>
+          </ol>
+        </p>
+   </statement>
+     <answer>
+        <p>
+    <ol>
+            <li><m>f^{-1}(0)=1</m></li>
+            <li><m>f^{-1}(1)=2</m></li>
+            <li><m>f^{-1}(9)=5</m></li>
+            <li><m>f^{-1}(2)=3</m></li>
+            <li><m>f^{-1}(4)=4</m></li>
+    </ol>
+        </p>
+        </answer><!--Statement of the answer (don't worry about location in the rendered version)-->
+  </exercise><!--End of that exercise-->
+
+    <exercise>
+   <statement>
+   <p>Suppose <m>g(x)</m> is given in the table below.</p>
+        <table>
+        <tabular top="medium">
+          <row left="medium" bottom="medium">
+            <cell right="medium">
+              <m>x</m>
+            </cell>
+            <cell right="medium">
+              <m>-1</m>
+            </cell>
+            <cell right="medium">
+              <m>3</m>
+            </cell>
+            <cell right="medium">
+              <m>2</m>
+            </cell>
+            <cell right="medium">
+              <m>5</m>
+            </cell>
+            <cell right="medium">
+              <m>4</m>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell right="medium">
+              <m>g(x)</m>
+            </cell>
+            <cell right="medium">
+              <m>0</m>
+            </cell>
+            <cell right="medium">
+              <m>3</m>
+            </cell>
+            <cell right="medium">
+              <m>7</m>
+            </cell>
+            <cell right="medium">
+              <m>1</m>
+            </cell>
+            <cell right="medium">
+              <m>2</m>
+            </cell>
+          </row>
+        </tabular>
+      </table>
+        <p>Evaluate each of the following:
+          <ol>
+            <li><m>g^{-1}(0)</m></li>
+            <li><m>g^{-1}(1)</m></li>
+            <li><m>g^{-1}(3)</m></li>
+            <li><m>g^{-1}(7)</m></li>
+            <li><m>g^{-1}(2)</m></li>
+          </ol>
+        </p>
+   </statement>
+     <answer>
+        <p>
+    <ol>
+            <li><m>g^{-1}(0)=-1</m></li>
+            <li><m>g^{-1}(1)=5</m></li>
+            <li><m>g^{-1}(3)=3</m></li>
+            <li><m>g^{-1}(7)=2</m></li>
+            <li><m>g^{-1}(2)=4</m></li>
+    </ol>
+        </p>
+        </answer><!--Statement of the answer (don't worry about location in the rendered version)-->
+  </exercise><!--End of that exercise-->
+
+    <exercise>
+   <statement>
+   <p>Suppose <m>g(x)</m> is given in the table below.</p>
+        <table>
+        <tabular top="medium">
+          <row left="medium" bottom="medium">
+            <cell right="medium">
+              <m>x</m>
+            </cell>
+            <cell right="medium">
+              <m>0</m>
+            </cell>
+            <cell right="medium">
+              <m>2</m>
+            </cell>
+            <cell right="medium">
+              <m>3</m>
+            </cell>
+            <cell right="medium">
+              <m>5</m>
+            </cell>
+            <cell right="medium">
+              <m>4</m>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell right="medium">
+              <m>g(x)</m>
+            </cell>
+            <cell right="medium">
+              <m>0</m>
+            </cell>
+            <cell right="medium">
+              <m>1</m>
+            </cell>
+            <cell right="medium">
+              <m>7</m>
+            </cell>
+            <cell right="medium">
+              <m>5</m>
+            </cell>
+            <cell right="medium">
+              <m>2</m>
+            </cell>
+          </row>
+        </tabular>
+      </table>
+        <p>Evaluate each of the following:
+          <ol>
+            <li><m>g^{-1}(0)</m></li>
+            <li><m>g^{-1}(1)</m></li>
+            <li><m>g^{-1}(2)</m></li>
+            <li><m>g^{-1}(7)</m></li>
+            <li><m>g^{-1}(5)</m></li>
+          </ol>
+        </p>
+   </statement>
+     <answer>
+        <p>
+    <ol>
+            <li><m>g^{-1}(0)=0</m></li>
+            <li><m>g^{-1}(1)=2</m></li>
+            <li><m>g^{-1}(2)=4</m></li>
+            <li><m>g^{-1}(7)=3</m></li>
+            <li><m>g^{-1}(5)=5</m></li>
+    </ol>
+        </p>
+        </answer><!--Statement of the answer (don't worry about location in the rendered version)-->
+  </exercise><!--End of that exercise-->
+
+  <exercise>
+   <statement>
+   <p>Suppose <m>f(x) = 5x+7.</m></p>
+        <p>Find a formula for the inverse.
+        </p>
+   </statement>
+     <answer>
+        <p>
+        <m>f^{-1}(x)=\frac{x-7}{5}</m>
+        </p>
+        </answer><!--Statement of the answer (don't worry about location in the rendered version)-->
+  </exercise><!--End of that exercise-->
+
+  <exercise>
+   <statement>
+   <p>Suppose <m>g(x) = \frac{x+3}{2x-4}</m>.</p>
+        <p>Find a formula for the inverse.
+        </p>
+   </statement>
+     <answer>
+        <p>
+        <m>g^{-1}(x)=\frac{3+4x}{2x-1}</m>
+        </p>
+        </answer><!--Statement of the answer (don't worry about location in the rendered version)-->
+  </exercise><!--End of that exercise-->
+
+  <exercise>
+   <statement>
+   <p>Suppose <m>f(x) = x^3 -3</m>.</p>
+        <p>Find a formula for the inverse.
+        </p>
+   </statement>
+     <answer>
+        <p>
+        <m>f^{-1}(x)=\sqrt[3]{x+3}</m>
+        </p>
+        </answer><!--Statement of the answer (don't worry about location in the rendered version)-->
+  </exercise><!--End of that exercise-->
+
+    <exercise>
+   <statement>
+   <p>Suppose <m>g(x) = \frac{2x+3}{5x-4}</m>.</p>
+        <p>Find a formula for the inverse.
+        </p>
+   </statement>
+     <answer>
+        <p>
+       <m>g^{-1}(x)=\frac{3+4x}{5x-2}</m>
+        </p>
+        </answer><!--Statement of the answer (don't worry about location in the rendered version)-->
+  </exercise><!--End of that exercise-->
+
+    <exercise>
+   <statement>
+   <p>Suppose <m>g(x) = (x+1)^5</m>.</p>
+        <p>Find a formula for the inverse.
+        </p>
+   </statement>
+     <answer>
+        <p>
+       <m> g^{-1}(x)=\sqrt[5]{x}-1 </m>
+        </p>
+        </answer><!--Statement of the answer (don't worry about location in the rendered version)-->
+  </exercise><!--End of that exercise-->
+
+<exercise>
+   <statement>
+   <p>Suppose <m>g(x) = \frac{2}{7x-3}</m>.</p>
+        <p>Find a formula for the inverse.
+        </p>
+   </statement>
+     <answer>
+        <p>
+       <m>g^{-1}(x)=\frac{2+3x}{7x}</m>
+        </p>
+        </answer><!--Statement of the answer (don't worry about location in the rendered version)-->
+  </exercise><!--End of that exercise-->
+
+  <exercise>
+   <statement>
+   <p>Suppose <m>g(x) = \sqrt[7](x) + 8</m>.</p>
+        <p>Find a formula for the inverse.
+        </p>
+   </statement>
+     <answer>
+        <p>
+       <m>g^{-1}(x)= (x-8)^{7}</m>
+        </p>
+        </answer><!--Statement of the answer (don't worry about location in the rendered version)-->
+  </exercise><!--End of that exercise-->
+</exercises>
+</chapter>

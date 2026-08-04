@@ -1,0 +1,1205 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Chapters are enclosed with <chapter> tags. Use xml:id to -->
+<!-- uniquely identify the chapter.  The @xmlns:xi attribute  -->
+<!-- is needed if you use xi:include in this file             -->
+<chapter xml:id="ch-polynomials" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+<!-- Change title when you have one: -->
+  <title>Polynomial Functions</title>
+  <!-- If the chapter has sections, there may be an introduction -->
+  <!-- before those sections. Note the <p> tags around content.  -->
+  <introduction>
+    <p>This is the introduction to the chapter</p>
+  </introduction>
+
+<section xml:id="sec-rootspoly">
+  <title>Roots of Polynomials</title>
+
+  <definition>
+    The <term>roots</term> of a polynomial are the <m>x</m>-values of the <m>x</m>-intercepts. We also sometimes call these the <em>zeros</em> of the function.
+  </definition>
+
+  <example><p>Suppose <m>f(x)</m> is the polynomial graphed below. We want to find the roots of that function.</p>
+    <image source="Polys/PolyRootsGraph1.png"/>
+    <p>We look at the <m>x</m>-axis, which crosses the graph at <m>x=-5, -2, 0, 1</m> and <m>3</m>, so those are our roots. The answer to this question is <m>x=-5, -2, 0, 1, 3</m>.</p>
+  </example>
+
+  <exercise>
+    <statement><p>Suppose <m>f(x)</m> is the polynomial graphed below. What are the roots of that function?</p>
+      <image source="Polys/PolyRootsGraph2.png"/>
+    </statement>
+    <solution><p>To find the roots, we need to look at the <m>x</m>-axis. We see that it crosses the graph at <m>x=-7, -3, 0, 5</m>, and <m>8</m>. Therefore, the answer to this question is <m>x=-7, -3, 0, 5, 8</m>.</p></solution>
+    <answer><m>x=-7, -3, 0, 5, 8</m></answer>
+  </exercise>
+
+  <p>Most of the time, we will be given an equation for the function, and we will need to do algebra to figure out what the roots are, rather than looking at a graph. Since we are just looking for the <m>x</m>-intercepts, we know from <xref ref="sec-intercepts"/> just need to set <m>y=0</m> and solve for <m>x</m>. There are lots of ways to solve polynomial equations but they get extremely complicated very quickly! In this class, we will only use the most straghtforward strategy, which works every time:</p>
+
+  <example xml:id="ex-polyzpp">
+    <title>Zero Product Property</title>
+    <p>Suppose <m>f(x)=-3x^4(x+5)^3(x-2)^7(x+8)^2</m>, and we want to find its roots. As we always do with roots and <m>x</m>-intercept, we begin by setting <m>y=0</m>, so we need to solve the following equation:</p>
+    <me>0=-3x^4(x+5)^3(x-2)^7(x+8)^2</me>
+    <p>Take a close look at the equation: we have a bunch of things multiplied together and it all equals 0. The fact that it equals 0 is special. There is no way to mulitply things together to get 0, unless one of the numbers you multiplied was already 0.</p>
+    <p>Why does that matter? Because we know one of the things we multiplied had to be 0 to begin with, this lets us separate our first equation into five separate equations:</p>
+    <md>
+      <mrow>0\amp=-3</mrow>
+      <mrow>0\amp=x^4</mrow>
+      <mrow>0\amp=(x+5)^3</mrow>
+      <mrow>0\amp=(x-2)^7</mrow>
+      <mrow>0\amp=(x+8)^2</mrow>
+    </md>
+    <p>The first equation doesn't have any <m>x</m> in it, and is nonsense since 3 does not equal 0. So that one doesn't help us, we'll ignore it. For the other four, we take roots and then add or subtract to solve. Since any root of 0 is still 0, we have four roots: <m>x=0, -5, 2</m>, and <m>-8</m>.</p>
+  </example>
+
+  <exercise>
+    <statement>Suppose <m>f(x)=-\frac{1}{2}(x+7)^3(x-2)^2(x-5)^7(x+1)^3(x+9)^9</m>. What are the roots of <m>f(x)</m>?</statement>
+    <solution>
+      <p>As we always do with roots and <m>x</m>-intercept, we begin by setting <m>y=0</m>, so we need to solve the following equation:</p>
+      <me>0=-\frac{1}{2}(x+7)^3(x-2)^2(x-5)^7(x+1)^3(x+9)^9</me>
+      <p>Just as we had with the example, we have a bunch of things multiplied together to be 0. That means one of them had to be zero to begin with. Because we know one of the things we multiplied had to be 0 to begin with, this lets us separate our first equation into six separate equations:</p>
+      <md>
+        <mrow>0\amp=-\frac{1}{2}</mrow>
+        <mrow>0\amp=(x+7)^3</mrow>
+        <mrow>0\amp=(x-2)^2</mrow>
+        <mrow>0\amp=(x-5)^7</mrow>
+        <mrow>0\amp=(x+1)^3</mrow>
+        <mrow>0\amp=(x+9)^9</mrow>
+      </md>
+      <p>The first equation doesn't have any <m>x</m> in it, and is nonsense since <m>-\frac{1}{2}</m> does not equal 0. So that one doesn't help us, we'll ignore it. For the other five, we take roots and then add or subtract to solve. Since any root of 0 is still 0, we have five roots: <m>x=-7, 2, 5, -1</m>, and <m>-9</m>.</p>
+    </solution>
+    <answer><m>x=-7, 2, 5, -1, -9</m></answer>
+  </exercise>
+
+  <subsection>
+    <title>Multiplicity</title>
+
+    <definition>
+      <p>If <m>f(x)</m> is a polynomial with a root <m>x=r</m>, then it has a <term>factor</term> of <m>(x-r)</m>.</p>
+    </definition>
+
+    <definition>
+      <p>The <term>multiplicity</term> of a root of a polynomial is the number of times it is repeated. From the formula, we can tell the multiplicity by the power on the factor.</p>
+    </definition>
+
+    <example>
+      <p>Let's look at the function we had before: <m>f(x)=-3x^4(x+5)^3(x-2)^7(x+8)^2</m>. We already know that it has roots <m>x=0, -5, 2</m>, and <m>-8</m>. To find the multiplicities, we just have to take the exponents of the factors that go with them. We can summarize this information in a table, like the one below:</p>
+
+      <table>
+        <tabular top="medium">
+          <row left="medium" bottom="medium">
+            <cell right="medium">
+              Root
+            </cell>
+            <cell right="medium">
+              Multiplicity
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell left="medium" right="medium">
+              <m>0</m>
+            </cell>
+            <cell right="medium">
+              <m>4</m>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell left="medium" right="medium">
+              <m>-5</m>
+            </cell>
+            <cell right="medium">
+              <m>3</m>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell left="medium" right="medium">
+              <m>2</m>
+            </cell>
+            <cell right="medium">
+              <m>7</m>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell left="medium" right="medium">
+              <m>-8</m>
+            </cell>
+            <cell right="medium">
+              <m>2</m>
+            </cell>
+          </row>
+        </tabular>
+      </table>
+    </example>
+
+    <exercise>
+      <statement>Suppose <m>f(x)=-\frac{1}{2}(x+7)^3(x-2)^2(x-5)^7(x+1)^3(x+9)^9</m>. What are the roots of <m>f(x)</m> and their multiplicities?</statement>
+      <solution><p>We already know that it has roots <m>x=-7, 2, 5, -1</m>, and <m>-9</m>. To find the multiplicities, we just have to take the exponents of the factors that go with them. We can summarize this information in a table, like the one below:</p>
+        <table>
+          <tabular top="medium">
+            <row left="medium" bottom="medium">
+              <cell right="medium">
+                Root
+              </cell>
+              <cell right="medium">
+                Multiplicity
+              </cell>
+            </row>
+            <row left="medium" bottom="medium">
+              <cell left="medium" right="medium">
+                <m>-7</m>
+              </cell>
+              <cell right="medium">
+                <m>3</m>
+              </cell>
+            </row>
+            <row left="medium" bottom="medium">
+              <cell left="medium" right="medium">
+                <m>2</m>
+              </cell>
+              <cell right="medium">
+                <m>2</m>
+              </cell>
+            </row>
+            <row left="medium" bottom="medium">
+              <cell left="medium" right="medium">
+                <m>5</m>
+              </cell>
+              <cell right="medium">
+                <m>7</m>
+              </cell>
+            </row>
+            <row left="medium" bottom="medium">
+              <cell left="medium" right="medium">
+                <m>-1</m>
+              </cell>
+              <cell right="medium">
+                <m>3</m>
+              </cell>
+            </row>
+            <row left="medium" bottom="medium">
+              <cell left="medium" right="medium">
+                <m>-9</m>
+              </cell>
+              <cell right="medium">
+                <m>9</m>
+              </cell>
+            </row>
+          </tabular>
+        </table>
+      </solution>
+      <answer>
+        <table>
+          <tabular top="medium">
+            <row left="medium" bottom="medium">
+              <cell right="medium">
+                Root
+              </cell>
+              <cell right="medium">
+                Multiplicity
+              </cell>
+            </row>
+            <row left="medium" bottom="medium">
+              <cell left="medium" right="medium">
+                <m>-7</m>
+              </cell>
+              <cell right="medium">
+                <m>3</m>
+              </cell>
+            </row>
+            <row left="medium" bottom="medium">
+              <cell left="medium" right="medium">
+                <m>2</m>
+              </cell>
+              <cell right="medium">
+                <m>2</m>
+              </cell>
+            </row>
+            <row left="medium" bottom="medium">
+              <cell left="medium" right="medium">
+                <m>5</m>
+              </cell>
+              <cell right="medium">
+                <m>7</m>
+              </cell>
+            </row>
+            <row left="medium" bottom="medium">
+              <cell left="medium" right="medium">
+                <m>-1</m>
+              </cell>
+              <cell right="medium">
+                <m>3</m>
+              </cell>
+            </row>
+            <row left="medium" bottom="medium">
+              <cell left="medium" right="medium">
+                <m>-9</m>
+              </cell>
+              <cell right="medium">
+                <m>9</m>
+              </cell>
+            </row>
+          </tabular>
+        </table>
+      </answer>
+    </exercise>
+
+    <p>Now that we know how to find multiplicity from an equation, the logical question is: how do we find the multiplicity from a graph? The short answer is that you can't! Lots of different multiplicities look exactly the same on the graph, so <em>we cannot tell the exact number of the multiplicity from the graph alone</em>. However, we are not out of luck entirely. We can tell some information about the multiplicity from the graph.</p>
+
+    <fact>
+      <title>Multiplicity from a Graph</title>
+      <p>
+        <ul>
+          <li>A root with <em>even</em> multiplicity bounces off of the <m>x</m>-axis.</li>
+          <li>A root with <em>odd</em> multiplicity goes through the <m>x</m>-axis.</li>
+        </ul>
+        That is the only information about the multiplicity we can tell from a graph. That means that if you are given just a graph and asked for the multiplicities, <em>the answer is either the word "even" or "odd", the answer is not a number.</em> We cannot tell the difference on a graph between multiplicity 2, 4, or 100, but we can tell the difference between 2 and 3.
+      </p>
+    </fact>
+
+    <example>
+      <p>Suppose <m>f(x)</m> is the polynomial graphed below. We want to find the roots of that function and their multiplicities.</p>
+      <image source="Polys/PolyRootsGraph1.png"/>
+      <p>We look at the <m>x</m>-axis, which crosses the graph at <m>x=-5, -2, 0, 1</m> and <m>3</m>, so those are our roots. Now, to find the multiplicity, we have to look at whether it bounces off the <m>x</m>-axis or crosses it. We can put all that information into the following table:</p>
+      <table>
+        <tabular top="medium">
+          <row left="medium" bottom="medium">
+            <cell left="medium" right="medium">
+              Root
+            </cell>
+            <cell right="medium">
+              Multiplicity
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell right="medium">
+              <m>-5</m>
+            </cell>
+            <cell right="medium">
+              even
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell left="medium" right="medium">
+              <m>-2</m>
+            </cell>
+            <cell right="medium">
+              even
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell left="medium" right="medium">
+              <m>0</m>
+            </cell>
+            <cell right="medium">
+              even
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell left="medium" right="medium">
+              <m>1</m>
+            </cell>
+            <cell right="medium">
+              odd
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell left="medium" right="medium">
+              <m>3</m>
+            </cell>
+            <cell right="medium">
+              odd
+            </cell>
+          </row>
+        </tabular>
+      </table>
+    </example>
+
+    <exercise>
+      <statement><p>Suppose <m>f(x)</m> is the polynomial graphed below. What are the roots of that function and their multiplicities?</p>
+        <image source="Polys/PolyRootsGraph2.png"/>
+      </statement>
+      <solution>
+        <p>We look at the <m>x</m>-axis, which crosses the graph at <m>x=-7, -3, 0, 5</m> and <m>8</m>, so those are our roots. Now, to find the multiplicity, we have to look at whether it bounces off the <m>x</m>-axis or crosses it. We can put all that information into the following table:</p>
+        <table>
+          <tabular top="medium">
+            <row left="medium" bottom="medium">
+              <cell left="medium" right="medium">
+                Root
+              </cell>
+              <cell right="medium">
+                Multiplicity
+              </cell>
+            </row>
+            <row left="medium" bottom="medium">
+              <cell right="medium">
+                <m>-7</m>
+              </cell>
+              <cell right="medium">
+                even
+              </cell>
+            </row>
+            <row left="medium" bottom="medium">
+              <cell left="medium" right="medium">
+                <m>-3</m>
+              </cell>
+              <cell right="medium">
+                odd
+              </cell>
+            </row>
+            <row left="medium" bottom="medium">
+              <cell left="medium" right="medium">
+                <m>0</m>
+              </cell>
+              <cell right="medium">
+                odd
+              </cell>
+            </row>
+            <row left="medium" bottom="medium">
+              <cell left="medium" right="medium">
+                <m>5</m>
+              </cell>
+              <cell right="medium">
+                odd
+              </cell>
+            </row>
+            <row left="medium" bottom="medium">
+              <cell left="medium" right="medium">
+                <m>8</m>
+              </cell>
+              <cell right="medium">
+                even
+              </cell>
+            </row>
+          </tabular>
+        </table>
+      </solution>
+      <answer>
+        <table>
+          <tabular top="medium">
+            <row left="medium" bottom="medium">
+              <cell left="medium" right="medium">
+                Root
+              </cell>
+              <cell right="medium">
+                Multiplicity
+              </cell>
+            </row>
+            <row left="medium" bottom="medium">
+              <cell right="medium">
+                <m>-7</m>
+              </cell>
+              <cell right="medium">
+                even
+              </cell>
+            </row>
+            <row left="medium" bottom="medium">
+              <cell left="medium" right="medium">
+                <m>-3</m>
+              </cell>
+              <cell right="medium">
+                odd
+              </cell>
+            </row>
+            <row left="medium" bottom="medium">
+              <cell left="medium" right="medium">
+                <m>0</m>
+              </cell>
+              <cell right="medium">
+                odd
+              </cell>
+            </row>
+            <row left="medium" bottom="medium">
+              <cell left="medium" right="medium">
+                <m>5</m>
+              </cell>
+              <cell right="medium">
+                odd
+              </cell>
+            </row>
+            <row left="medium" bottom="medium">
+              <cell left="medium" right="medium">
+                <m>8</m>
+              </cell>
+              <cell right="medium">
+                even
+              </cell>
+            </row>
+          </tabular>
+        </table>
+      </answer>
+    </exercise>
+  </subsection>
+</section>
+
+<section xml:id="sec-eqtnpoly">
+  <title>Equation of Polynomials</title>
+
+  <fact>
+    <title>Strategy for Writing a Polynomial Equation</title>
+    <p>
+      <ol>
+        <li>Use the roots to write the factors</li>
+        <li>Use the multiplicities to put exponents on the factors</li>
+        <li>Use other given information (usually a point) to determine the number multiplied out front</li>
+      </ol>
+    </p>
+  </fact>
+
+  <example>
+    <p>Suppose we want to write the equation for a polynomial with roots of multiplicity <m>2</m> at <m>-1</m> and <m>3</m>, and a root of multiplicity <m>5</m> at <m>1</m>, and goes through the point <m>(2,-18)</m>. </p>
+    <p>Even though this isn't a word problem, it is a lot of information written as a sentence, so you might find it helpful to organize the information in a table, like the one below. One thing students often struggle with in the phrasing of the question is which number is the root and which number is the multiplicity. When we say "at", that tells you the location, which is the <m>x</m>-value. So, the phrase "root of multiplicity <m>5</m> at <m>1</m>" means that the <m>x</m>-value (the root) is <m>1</m>, and its multiplicity is <m>5</m>.</p>
+    <table>
+      <tabular top="medium">
+        <row left="medium" bottom="medium">
+          <cell right="medium">
+            Root
+          </cell>
+          <cell right="medium">
+            Factor
+          </cell>
+          <cell right="medium">
+            Multiplicity
+          </cell>
+          <cell right="medium">
+            Factor with Exponent
+          </cell>
+        </row>
+        <row left="medium" bottom="medium">
+          <cell left="medium" right="medium">
+            <m>-1</m>
+          </cell>
+          <cell right="medium">
+          </cell>
+          <cell right="medium">
+            <m>2</m>
+          </cell>
+          <cell right="medium">
+          </cell>
+        </row>
+        <row left="medium" bottom="medium">
+          <cell left="medium" right="medium">
+            <m>3</m>
+          </cell>
+          <cell right="medium">
+          </cell>
+          <cell right="medium">
+            <m>2</m>
+          </cell>
+          <cell right="medium">
+          </cell>
+        </row>
+        <row left="medium" bottom="medium">
+          <cell left="medium" right="medium">
+            <m>1</m>
+          </cell>
+          <cell right="medium">
+          </cell>
+          <cell right="medium">
+            <m>5</m>
+          </cell>
+          <cell right="medium">
+          </cell>
+        </row>
+      </tabular>
+    </table>
+    <p>Now, we can use what we know about factors and multiplicities to finish filling out the table:</p>
+    <table>
+      <tabular top="medium">
+        <row left="medium" bottom="medium">
+          <cell right="medium">
+            Root
+          </cell>
+          <cell right="medium">
+            Factor
+          </cell>
+          <cell right="medium">
+            Multiplicity
+          </cell>
+          <cell right="medium">
+            Factor with Exponent
+          </cell>
+        </row>
+        <row left="medium" bottom="medium">
+          <cell left="medium" right="medium">
+            <m>-1</m>
+          </cell>
+          <cell right="medium">
+            <m>(x+1)</m>
+          </cell>
+          <cell right="medium">
+            <m>2</m>
+          </cell>
+          <cell right="medium">
+            <m>(x+1)^2</m>
+          </cell>
+        </row>
+        <row left="medium" bottom="medium">
+          <cell left="medium" right="medium">
+            <m>3</m>
+          </cell>
+          <cell right="medium">
+            <m>(x-3)</m>
+          </cell>
+          <cell right="medium">
+            <m>2</m>
+          </cell>
+          <cell right="medium">
+            <m>(x-3)^2</m>
+          </cell>
+        </row>
+        <row left="medium" bottom="medium">
+          <cell left="medium" right="medium">
+            <m>1</m>
+          </cell>
+          <cell right="medium">
+            <m>(x-1)</m>
+          </cell>
+          <cell right="medium">
+            <m>5</m>
+          </cell>
+          <cell right="medium">
+            <m>(x-1)^5</m>
+          </cell>
+        </row>
+      </tabular>
+    </table>
+    <p>With that information, we can write most of our function:</p>
+    <me>f(x)=A(x+1)^2(x-3)^2(x-1)^5</me>
+    <p>Now, we have to use the point we are given, <m>(2,-18)</m>, to figure out what <m>A</m> is. We use the same strategy we've used for linear functions and for quadratic functions: plug in <m>x=2</m> and <m>y=-18</m> to solve for <m>A</m>.</p>
+    <md>
+      <mrow>f(x)\amp=A(x+1)^2(x-3)^2(x-1)^5</mrow>
+      <mrow>-18\amp=A(2+1)^2(2-3)^2(2-1)^5</mrow>
+      <mrow>-18\amp=A(3)^2(-1)^2(1)^5</mrow>
+      <mrow>-18\amp=A(9)(1)(1)</mrow>
+      <mrow>-18\amp=A(9)</mrow>
+      <mrow>-2\amp=A</mrow>
+    </md>
+    <p>Now we have all of the information we need to write our final answer:</p>
+    <me>f(x)=-2(x+1)^2(x-3)^2(x-1)^5</me>
+  </example>
+
+  <exercise>
+    <statement>
+      <p>Write the equation for the polynomial function with a root of multiplicity <m>4</m> at <m>-3</m> and roots of multiplicity <m>1</m> at <m>1</m> and <m>5</m>, and goes through the point <m>(-2,42)</m>.</p>
+    </statement>
+    <solution>
+      <p>Even though this isn't a word problem, it is a lot of information written as a sentence, so you might find it helpful to organize the information in a table, like the one below.</p>
+      <table>
+        <tabular top="medium">
+          <row left="medium" bottom="medium">
+            <cell right="medium">
+              Root
+            </cell>
+            <cell right="medium">
+              Factor
+            </cell>
+            <cell right="medium">
+              Multiplicity
+            </cell>
+            <cell right="medium">
+              Factor with Exponent
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell left="medium" right="medium">
+              <m>-3</m>
+            </cell>
+            <cell right="medium">
+            </cell>
+            <cell right="medium">
+              <m>4</m>
+            </cell>
+            <cell right="medium">
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell left="medium" right="medium">
+              <m>1</m>
+            </cell>
+            <cell right="medium">
+            </cell>
+            <cell right="medium">
+              <m>1</m>
+            </cell>
+            <cell right="medium">
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell left="medium" right="medium">
+              <m>5</m>
+            </cell>
+            <cell right="medium">
+            </cell>
+            <cell right="medium">
+              <m>1</m>
+            </cell>
+            <cell right="medium">
+            </cell>
+          </row>
+        </tabular>
+      </table>
+      <p>Now, we can use what we know about factors and multiplicities to finish filling out the table:</p>
+      <table>
+        <tabular top="medium">
+          <row left="medium" bottom="medium">
+            <cell right="medium">
+              Root
+            </cell>
+            <cell right="medium">
+              Factor
+            </cell>
+            <cell right="medium">
+              Multiplicity
+            </cell>
+            <cell right="medium">
+              Factor with Exponent
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell left="medium" right="medium">
+              <m>-3</m>
+            </cell>
+            <cell right="medium">
+              <m>(x+3)</m>
+            </cell>
+            <cell right="medium">
+              <m>4</m>
+            </cell>
+            <cell right="medium">
+              <m>(x+3)^4</m>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell left="medium" right="medium">
+              <m>1</m>
+            </cell>
+            <cell right="medium">
+              <m>(x-1)</m>
+            </cell>
+            <cell right="medium">
+              <m>1</m>
+            </cell>
+            <cell right="medium">
+              <m>(x-1)^1=(x-1)</m>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell left="medium" right="medium">
+              <m>5</m>
+            </cell>
+            <cell right="medium">
+              <m>(x-5)</m>
+            </cell>
+            <cell right="medium">
+              <m>1</m>
+            </cell>
+            <cell right="medium">
+              <m>(x-5)^1=(x-5)</m>
+            </cell>
+          </row>
+        </tabular>
+      </table>
+      <p>With that information, we can write most of our function:</p>
+      <me>f(x)=A(x+3)^4(x-1)(x-5)</me>
+      <p>Now, we have to use the point we are given, <m>(-2,42)</m>, to figure out what <m>A</m> is. We use the same strategy we've used for linear functions and for quadratic functions: plug in <m>x=-2</m> and <m>y=42</m> to solve for <m>A</m>.</p>
+      <md>
+        <mrow>f(x)\amp=A(x+3)^4(x-1)(x-5)</mrow>
+        <mrow>42\amp=A(-2+3)^4(-2-1)(-2-5)</mrow>
+        <mrow>42\amp=A(1)^4(-3)(-7)</mrow>
+        <mrow>42\amp=A(21)</mrow>
+        <mrow>\frac{1}{2}\amp=A</mrow>
+      </md>
+      <p>Now we have all of the information we need to write our final answer:</p>
+      <me>f(x)=\frac{1}{2}(x+3)^4(x-1)(x-5)</me>
+    </solution>
+    <answer><m>f(x)=\frac{1}{2}(x+3)^4(x-1)(x-5)</m></answer>
+  </exercise>
+</section>
+
+<section xml:id="sec-ebpoly">
+  <title>End Behavior of Polynomials</title>
+
+  <introduction>In <xref ref="sec-rootspoly"/>, we learned about how the graph a poloynomial looks in the middle: where the <m>x</m>-intercepts are. In this section, we will do the opposite: we don't care about how the graph moves up and down in the middle, we only care about what happends at the ends.</introduction>
+
+  <definition>The <term>end behavior</term> of a function asks what happens at the ends of the graph. Since there are two ends of the graph (the left end and the right end), end behavior is really asking two questions:
+    <ul>
+      <li>What happens on the right end of the graph? In this case, what happens when we plug in huge positive <m>x</m>-values? We would write it by asking what happens as <m>x \rightarrow \infty</m> ("x goes to infinity").</li>
+      <li>What happens on the left end of the graph? In this case, what happens when we plug in huge negative <m>x</m>-values? We would write it by asking what happens as <m>x \rightarrow -\infty</m> ("x goes to negative infinity").</li>
+    </ul>
+  </definition>
+
+  <p>Let's do some examples to explore before we give the punchline of this lesson.</p>
+
+  <example>
+    <title>Exploring Positive and Negative Inputs</title>
+    <p>Let's look at two functions: <m>f(x)=x^2+7x+3</m> and <m>g(x)=x^3+7x+3</m>. We're going to blug huge positive numbers and huge negative numbers into each and see what happens.</p>
+    <table>
+      <title>Positive and Negative Values for <m>f(x)</m></title>
+      <tabular>
+        <row left="medium" >
+          <cell right="medium" bottom="medium">
+            <m>x</m>
+          </cell>
+          <cell right="medium" bottom="medium">
+            <m>f(x)=x^2+7x+3</m>
+          </cell>
+          <cell right="medium">
+          </cell>
+          <cell right="medium" bottom="medium">
+            <m>x</m>
+          </cell>
+          <cell right="medium" bottom="medium">
+            <m>f(x)=x^2+7x+3</m>
+          </cell>
+        </row>
+        <row left="medium" >
+          <cell left="medium" right="medium" bottom="medium">
+            <m>1</m>
+          </cell>
+          <cell right="medium" bottom="medium">
+            <m>11</m>
+          </cell>
+          <cell right="medium">
+          </cell>
+          <cell right="medium" bottom="medium">
+            <m>-1</m>
+          </cell>
+          <cell right="medium" bottom="medium">
+            <m>-3</m>
+          </cell>
+        </row>
+        <row left="medium" >
+          <cell left="medium" right="medium" bottom="medium">
+            <m>10</m>
+          </cell>
+          <cell right="medium" bottom="medium">
+            <m>173</m>
+          </cell>
+          <cell right="medium">
+          </cell>
+          <cell right="medium" bottom="medium">
+            <m>-10</m>
+          </cell>
+          <cell right="medium" bottom="medium">
+            <m>33</m>
+          </cell>
+        </row>
+        <row left="medium" >
+          <cell left="medium" right="medium" bottom="medium">
+            <m>100</m>
+          </cell>
+          <cell right="medium" bottom="medium">
+            <m>10,703</m>
+          </cell>
+          <cell right="medium">
+          </cell>
+          <cell right="medium" bottom="medium">
+            <m>-100</m>
+          </cell>
+          <cell right="medium" bottom="medium">
+            <m>9,303</m>
+          </cell>
+        </row>
+        <row left="medium" >
+          <cell left="medium" right="medium" bottom="medium">
+            <m>1,000</m>
+          </cell>
+          <cell right="medium" bottom="medium">
+            <m>1,007,003</m>
+          </cell>
+          <cell right="medium">
+          </cell>
+          <cell right="medium" bottom="medium">
+            <m>-1,000</m>
+          </cell>
+          <cell right="medium" bottom="medium">
+            <m>993,003</m>
+          </cell>
+        </row>
+        <row left="medium" >
+          <cell left="medium" right="medium" bottom="medium">
+            <m>10,000</m>
+          </cell>
+          <cell right="medium" bottom="medium">
+            <m>100,070,003</m>
+          </cell>
+          <cell right="medium">
+          </cell>
+          <cell right="medium" bottom="medium">
+            <m>-10,000</m>
+          </cell>
+          <cell right="medium" bottom="medium">
+            <m>99,930,003</m>
+          </cell>
+        </row>
+        <row left="medium" >
+          <cell left="medium" right="medium" bottom="medium">
+            <m>100,000</m>
+          </cell>
+          <cell right="medium" bottom="medium">
+            <m>10,000,700,003</m>
+          </cell>
+          <cell right="medium">
+          </cell>
+          <cell right="medium" bottom="medium">
+            <m>-100,000</m>
+          </cell>
+          <cell right="medium" bottom="medium">
+            <m>9,999,300,003</m>
+          </cell>
+        </row>
+      </tabular>
+    </table>
+
+    <table>
+      <title>Positive and Negative Values for <m>g(x)</m></title>
+      <tabular>
+        <row left="medium" >
+          <cell right="medium" bottom="medium">
+            <m>x</m>
+          </cell>
+          <cell right="medium" bottom="medium">
+            <m>g(x)=x^3+7x+3</m>
+          </cell>
+          <cell right="medium">
+          </cell>
+          <cell right="medium" bottom="medium">
+            <m>x</m>
+          </cell>
+          <cell right="medium" bottom="medium">
+            <m>g(x)=x^3+7x+3</m>
+          </cell>
+        </row>
+        <row left="medium" >
+          <cell left="medium" right="medium" bottom="medium">
+            <m>1</m>
+          </cell>
+          <cell right="medium" bottom="medium">
+            <m>11</m>
+          </cell>
+          <cell right="medium">
+          </cell>
+          <cell right="medium" bottom="medium">
+            <m>-1</m>
+          </cell>
+          <cell right="medium" bottom="medium">
+            <m>-5</m>
+          </cell>
+        </row>
+        <row left="medium" >
+          <cell left="medium" right="medium" bottom="medium">
+            <m>10</m>
+          </cell>
+          <cell right="medium" bottom="medium">
+            <m>1,073</m>
+          </cell>
+          <cell right="medium">
+          </cell>
+          <cell right="medium" bottom="medium">
+            <m>-10</m>
+          </cell>
+          <cell right="medium" bottom="medium">
+            <m>-1,067</m>
+          </cell>
+        </row>
+        <row left="medium" >
+          <cell left="medium" right="medium" bottom="medium">
+            <m>100</m>
+          </cell>
+          <cell right="medium" bottom="medium">
+            <m>1,000,703</m>
+          </cell>
+          <cell right="medium">
+          </cell>
+          <cell right="medium" bottom="medium">
+            <m>-100</m>
+          </cell>
+          <cell right="medium" bottom="medium">
+            <m>-1,000,697</m>
+          </cell>
+        </row>
+        <row left="medium" >
+          <cell left="medium" right="medium" bottom="medium">
+            <m>1,000</m>
+          </cell>
+          <cell right="medium" bottom="medium">
+            <m>1,000,007,003</m>
+          </cell>
+          <cell right="medium">
+          </cell>
+          <cell right="medium" bottom="medium">
+            <m>-1,000</m>
+          </cell>
+          <cell right="medium" bottom="medium">
+            <m>-1,000,006,997</m>
+          </cell>
+        </row>
+        <row left="medium" >
+          <cell left="medium" right="medium" bottom="medium">
+            <m>10,000</m>
+          </cell>
+          <cell right="medium" bottom="medium">
+            <m>1,000,000,070,003</m>
+          </cell>
+          <cell right="medium">
+          </cell>
+          <cell right="medium" bottom="medium">
+            <m>-10,000</m>
+          </cell>
+          <cell right="medium" bottom="medium">
+            <m>-1,000,000,069,997</m>
+          </cell>
+        </row>
+        <row left="medium" >
+          <cell left="medium" right="medium" bottom="medium">
+            <m>100,000</m>
+          </cell>
+          <cell right="medium" bottom="medium">
+            <m>1,000,000,000,700,003</m>
+          </cell>
+          <cell right="medium">
+          </cell>
+          <cell right="medium" bottom="medium">
+            <m>-100,000</m>
+          </cell>
+          <cell right="medium" bottom="medium">
+            <m>-1,000,000,000,699,997</m>
+          </cell>
+        </row>
+      </tabular>
+    </table>
+
+    <p>Notice what happens in the two tables:
+      <ul>
+        <li>For <m>f(x)</m>, the outputs are huge positive numbers, no matter whether we plug in huge positive numbers or huge negative numbers.</li>
+        <li>For <m>g(x)</m>, the outputs are huge in both cases, but the sign of the output changes depending on the sign of the input.</li>
+      </ul>
+    This makes sense, given the difference between the functions. The formula for <m>f(x)</m> has an even power as the biggest power on <m>x</m>, and we know that even powers cancel out negative numbers. However, the formula for <m>g(x)</m> has an odd power as the biggest power on <m>x</m>, which will keep the same sign as the input.</p>
+  </example>
+
+  <example>
+    <title>Exploring Positives and Negatives in the Function</title>
+    <p>Now, let's look at another set of two functions: <m>f(x)=5x^2+x+1</m> and <m>g(x)=-5x^2+x+1</m>. This time, let's just see what happens when we plug huge positive numbers in.</p>
+
+    <table>
+      <title>Positive Inputs</title>
+      <tabular>
+        <row left="medium">
+          <cell right="medium" bottom="medium">
+            <m>x</m>
+          </cell>
+          <cell right="medium" bottom="medium">
+            <m>f(x)=5x^2+x+1</m>
+          </cell>
+          <cell right="medium">
+          </cell>
+          <cell right="medium" bottom="medium">
+            <m>x</m>
+          </cell>
+          <cell right="medium" bottom="medium">
+            <m>g(x)=-5x^2+x+1</m>
+          </cell>
+        </row>
+        <row left="medium">
+          <cell left="medium" right="medium" bottom="medium">
+            <m>1</m>
+          </cell>
+          <cell right="medium" bottom="medium">
+            <m>7</m>
+          </cell>
+          <cell right="medium">
+          </cell>
+          <cell right="medium" bottom="medium">
+            <m>1</m>
+          </cell>
+          <cell right="medium" bottom="medium">
+            <m>-3</m>
+          </cell>
+        </row>
+        <row left="medium">
+          <cell left="medium" right="medium" bottom="medium">
+            <m>10</m>
+          </cell>
+          <cell right="medium" bottom="medium">
+            <m>511</m>
+          </cell>
+          <cell right="medium">
+          </cell>
+          <cell right="medium" bottom="medium">
+            <m>10</m>
+          </cell>
+          <cell right="medium" bottom="medium">
+            -489
+          </cell>
+        </row>
+        <row left="medium">
+          <cell left="medium" right="medium" bottom="medium">
+            <m>100</m>
+          </cell>
+          <cell right="medium" bottom="medium">
+            <m>50,101</m>
+          </cell>
+          <cell right="medium">
+          </cell>
+          <cell right="medium" bottom="medium">
+            <m>100</m>
+          </cell>
+          <cell right="medium" bottom="medium">
+            <m>-49,899</m>
+          </cell>
+        </row>
+        <row left="medium">
+          <cell left="medium" right="medium" bottom="medium">
+            <m>1,000</m>
+          </cell>
+          <cell right="medium" bottom="medium">
+            <m>5,001,001</m>
+          </cell>
+          <cell right="medium">
+          </cell>
+          <cell right="medium" bottom="medium">
+            <m>1,000</m>
+          </cell>
+          <cell right="medium" bottom="medium">
+            <m>-4,998,999</m>
+          </cell>
+        </row>
+        <row left="medium">
+          <cell left="medium" right="medium" bottom="medium">
+            <m>10,000</m>
+          </cell>
+          <cell right="medium" bottom="medium">
+            <m>500,010,001</m>
+          </cell>
+          <cell right="medium">
+          </cell>
+          <cell right="medium" bottom="medium">
+            <m>10,000</m>
+          </cell>
+          <cell right="medium" bottom="medium">
+            <m>-499,989,999</m>
+          </cell>
+        </row>
+        <row left="medium">
+          <cell left="medium" right="medium" bottom="medium">
+            <m>100,000</m>
+          </cell>
+          <cell right="medium" bottom="medium">
+            <m>50,000,100,001</m>
+          </cell>
+          <cell right="medium">
+          </cell>
+          <cell right="medium" bottom="medium">
+            <m>100,000</m>
+          </cell>
+          <cell right="medium" bottom="medium">
+            <m>-49,999,899,999</m>
+          </cell>
+        </row>
+      </tabular>
+    </table>
+
+    <p>Notice what happens in this case. The only difference betweent the formulas is that the number multiplied in front of the <m>x^2</m> is positive for <m>f(x)</m> and negative for <m>g(x)</m>. But that one change was enough to make the outputs huge negative numbers instead of huge positive numbers.</p>
+  </example>
+
+  <p>Now that we've done some exploring and we've made these observations, let's learn some vocabulary to help us better describe what's happening. Then, we can summarize our findings so that we can apply it to examples.</p>
+
+  <definition>
+    <p>
+    <ul>
+      <li>The <term>leading term</term> of a polynomial is the entire part with the highest power on <m>x</m>.</li>
+      <li>The <term>degree</term> of a polynomial is the highest power on <m>x</m>.</li>
+      <li>The <term>leading coefficient</term> of a polynomial is the number multiplied in front of the <m>x</m> with the highest power.</li>
+    </ul>
+    Note that both of these require that the polynomial be written down as the parts added together, rather than multiplied together. See the example below for more details.
+    </p>
+  </definition>
+
+  <example>
+    <p>Suppose <m>f(x)=7x^2+6x^5-2x^3+42</m>. Then, since the highest power on <m>x</m> is <m>5</m>,
+      <ul>
+        <li>The leading term is <m>6x^5</m>.</li>
+        <li>The degree is <m>5</m>.</li>
+        <li>The leading coefficient is <m>6</m>.</li>
+      </ul>
+    </p>
+  </example>
+
+  <exercise>
+    <statement>Suppose <m>f(x)=9x^4-7x^3+10x^8+3x-1</m>. Determine its leading term, leading coefficient, and degree.</statement>
+    <solution><p>Since the highest power on <m>x</m> is <m>8</m>,
+      <ul>
+        <li>The leading term is <m>10x^8</m>.</li>
+        <li>The degree is <m>8</m>.</li>
+        <li>The leading coefficient is <m>10</m>.</li>
+      </ul>
+    </p></solution>
+    <answer>
+      <ul>
+        <li>The leading term is <m>10x^8</m>.</li>
+        <li>The degree is <m>8</m>.</li>
+        <li>The leading coefficient is <m>10</m>.</li>
+      </ul>
+    </answer>
+  </exercise>
+
+  <p>Now that we have that vocabulary, we are ready to write down how we can determine the end behavior of polynomials. First, you need to know that for polynomials, the ends of the graph always either go up or down. There are no other possibilities. So, for each side, the answer is either <m>y\rightarrow \infty</m> (it goes up) or <m>y\rightarrow-\infty</m> (it goes down).</p>
+
+  <fact>
+    <p>To determine the end behavior of a polynomial function:</p>
+    <ul>
+      <li><p>The <em>leading coefficient</em> determines whether the right side of the graph (the positive <m>x</m>-side) goes up or down.
+        <ul>
+          <li>Polynomials with positive leading coefficient have <m>y\rightarrow \infty</m> as <m>x\rightarrow \infty</m>. In other words, the right side of the graph goes up.</li>
+          <li>Polynomials with negative leading coefficient have <m>y\rightarrow -\infty</m> as <m>x\rightarrow \infty</m>. In other words, the right side of the graph goes down.</li>
+        </ul></p>
+      </li>
+      <li><p>The <em>degree</em> determines whether the two sides of the graph match or not.
+        <ul>
+          <li>Polynomials with even degree have the same behavior on both the left and right.</li>
+          <li>Polynomials with odd degree have the opposite behavior on the left and right sides.</li>
+        </ul></p>
+      </li>
+    </ul>
+  </fact>
+
+  <example>
+    <p>Suppose we want to find the end behavior of the function <m>f(x)=-7x^5+x^4-2x^3+9x+5</m>. The first thing we need to do is find the leading coefficient and the degree.</p>
+    <p>The leading coefficient is <m>-7</m>, but I don't actually care that the number is <m>-7</m>. I care that it is negative. That means that as <m>x\rightarrow \infty</m>, <m>y \rightarrow -\infty</m>.</p>
+    <p>The degree of the polynomial is <m>5</m>, but I don't actually care that the number is <m>5</m>. I care that it is odd. That means that the two sides of the graph point in opposite directions. Since we already figured out that the right side points up, this means that the left side points down: as <m>x\rightarrow -\infty</m>, <m>y\rightarrow \infty</m>.</p>
+    <p>Therefore, our answer is
+      <ul>
+        <li>As <m>x\rightarrow \infty</m>, <m>y \rightarrow -\infty</m></li>
+        <li>As <m>x\rightarrow -\infty</m>, <m>y \rightarrow \infty</m></li>
+      </ul>
+    </p>
+  </example>
+
+  <exercise>
+    <statement>Find the end behavior of the function <m>f(x)=-13x^2+5x-2</m>.</statement>
+    <solution>
+      <p>The first thing we need to do is find the leading coefficient and the degree.</p>
+      <p>The leading coefficient is <m>-13</m>, but I don't actually care that the number is <m>-13</m>. I care that it is negative. That means that as <m>x\rightarrow \infty</m>, <m>y \rightarrow -\infty</m>.</p>
+      <p>The degree of the polynomial is <m>2</m>, but I don't actually care that the number is <m>2</m>. I care that it is even. That means that the two sides of the graph point in the same direction. Since we already figured out that the right side points up, this means that the left side also points up: as <m>x\rightarrow -\infty</m>, <m>y\rightarrow -\infty</m>.</p>
+      <p>Therefore, our answer is
+        <ul>
+          <li>As <m>x\rightarrow \infty</m>, <m>y \rightarrow -\infty</m></li>
+          <li>As <m>x\rightarrow -\infty</m>, <m>y \rightarrow -\infty</m></li>
+        </ul>
+      </p>
+    </solution>
+  </exercise>
+
+  <p>In the definition above, we noted that they only work if the function is written with the parts added, not multiplied. Let's see an example of what to do when it's not written the way we need it to be.</p>
+
+  <example>
+    <p>Suppose we want to find the end behavior of <m>f(x)=3(4x+7)(x-2)^3(x+1)^4.</m>. In this case, we have all the parts multiplied together, rather than added. We need it to be added in order to quickly find the leading term. Theoretically, we could multiply it all out, but my goodness, that would be way too much work. Don't do that. If we needed to know the entire formula, then that would be our only choice. But we don't need to know the entire formula. We only need to know the part with the highest power on <m>x</m>.</p>
+    <p>In order to find the leading term, we just need to multiply the leading term of each piece:</p>
+    <me>3(4x)(x)^3(x)^4=12x^8</me>
+    <p>Therefore, our leading term is <m>12x^8</m>. Therefore, because our leading coefficient is positive and our degree is even, our end behavior is
+      <ul>
+        <li>As <m>x\rightarrow \infty</m>, <m>y \rightarrow \infty</m></li>
+        <li>As <m>x\rightarrow -\infty</m>, <m>y \rightarrow \infty</m></li>
+      </ul>
+    </p>
+  </example>
+</section>
+</chapter>

@@ -1,0 +1,191 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Chapters are enclosed with <chapter> tags. Use xml:id to -->
+<!-- uniquely identify the chapter.  The @xmlns:xi attribute  -->
+<!-- is needed if you use xi:include in this file             -->
+<chapter xml:id="ch-preliminaries" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+<!-- Change title when you have one: -->
+  <title>Preliminaries</title>
+  <!-- If the chapter has sections, there may be an introduction -->
+  <!-- before those sections. Note the <p> tags around content.  -->
+  <introduction>
+    <p>This is the introduction to the chapter</p>
+  </introduction>
+
+<section xml:id="sec-coordplane">
+  <title>Plotting Points and the Coordinate Plane</title>
+
+  <introduction>The coordinate plane is a powerful tool for visualizing mathematical concepts. In this section, we will discuss the connection between written points and their place on the plane. </introduction>
+
+  <definition>
+    <p>The coordinate plane is shown in the image below. It has two main lines that help you navigate it. The horizontal line that goes left-to-right across the plane is called the <term><m>x</m>-axis</term>, and the vertical line that goes up-and-down through the plane is called the <term><m>y</m>-axis</term>.</p>
+
+    <image source="Preliminaries/CoordinatePlaneBlank.jpg"/>
+  </definition>
+
+  <fact>
+    <title>Plotting Points</title>
+
+    <p>Points are written as two numbers, separated by a comma, with parentheses around them. To plot a point <m>(a,b)</m>, the first number is the <m>x</m>-coordinate, which tells you how to move left-to-right along the <m>x</m>-axis, and the second number is the <m>y</m>-coordinate, which tells you how to move up-and-down along the <m>y</m>-axis.</p>
+  </fact>
+
+  <p>Sometimes, we also called these ordered pairs, since it's a pair of numbers and the order we write them in matters.</p>
+
+  <example>
+    <p>Suppose we want to plot the point <m>(3,-5)</m>. We see that the <m>x</m>-coordinate is <m>3</m>, which means we want to move to <m>3</m> on the <m>x</m>-axis. From there, we see that the <m>y</m>-coordinate is <m>-5</m>, so we will go down 5 (since it's negative). Once we have done both of those moves, we land at our final destination, shown in the graph below.</p>
+    <image source="Preliminaries/PlotPointsPractice1.png"/>
+  </example>
+
+  <exercise>
+    <statement><p>Plot the point <m>(-2,0)</m>.</p></statement>
+    <solution>
+      <p>We see that the <m>x</m>-coordinate is <m>-2</m>, which means we want to move to <m>-2</m> on the <m>x</m>-axis (which is to the left, since it is negative). From there, we see that the <m>y</m>-coordinate is <m>0</m>, which means we actually don't need to move up or down at all. This point is on the <m>x</m>-axis. Once we have done both of those moves, we land at our final destination, shown in the graph below.</p>
+      <image source="Preliminaries/PlotPointsPractice2.png"/>
+    </solution>
+    <answer><image source="Preliminaries/PlotPointsPractice2.png"/></answer>
+  </exercise>
+
+  <example>
+    <p>Suppose we want to figure out the coordinates of the point plotted below:</p>
+    <image source="Preliminaries/PlotPointsPractice3.png"/>
+    <p>To figure out the <m>x</m>-coordiante, we trace up/down to the <m>x</m>-axis to see what number we land at. In this case, we trace down and see that we are at <m>-5</m>, so that is our <m>x</m>-coordinate. To figure out the <m>y</m>-coordiante, we trace left/right to the <m>y</m>-axis to see what number we land at. In this case, we trace to the right and see that we are at <m>1</m>, so that is our <m>y</m>-coordinate. Now that we have both coordinates, we can put it all together for our final answer: <m>(-5,1)</m>.</p>
+  </example>
+
+  <exercise>
+    <statement><p>Determine the coordinates of the point plotted below:</p>
+      <image source="Preliminaries/PlotPointsPractice4.png"/>
+    </statement>
+    <solution><p>To figure out the <m>x</m>-coordiante, we trace up/down to the <m>x</m>-axis to see what number we land at. In this case, we trace down and see that we are at <m>3</m>, so that is our <m>x</m>-coordinate. To figure out the <m>y</m>-coordiante, we trace left/right to the <m>y</m>-axis to see what number we land at. In this case, we trace to the right and see that we are at <m>7</m>, so that is our <m>y</m>-coordinate. Now that we have both coordinates, we can put it all together for our final answer: <m>(3,7)</m>.</p></solution>
+    <answer><p><m>(3,7)</m></p></answer>
+  </exercise>
+</section>
+
+<section xml:id="sec-intercepts">
+  <title>Intercepts</title>
+
+  <definition>
+    <p>The <m>x</m>-intercepts of a graph are the points where it touches the <m>x</m>-axis. The <m>y</m>-intercepts of a graph are the points where it touches the <m>y</m>-axis.In this class, <em>we will always write the intercepts as ordered pairs</em>.</p>
+  </definition>
+
+  <example>
+    <p>Suppose we want to find the <m>x</m>- and <m>y</m>-intercepts of the graph below:</p>
+    <image source="Preliminaries/Intercepts1.png"/>
+    <p>Looking along the <m>x</m>-axis, we see that the graph crosses it where <m>x=-3</m> and where <m>x=-1</m>. Since we need to write them as ordered pairs, and any point on the <m>x</m>-axis has <m>y=0</m>, that means we have two <m>x</m>-intercepts: <m>(-3,0)</m> and <m>(-1,0)</m>. </p>
+    <p>Looking along the <m>y</m>-axis, we see that the graph crosses it where <m>y=3</m>. Since we need to write them as ordered pairs, and any point on the <m>y</m>-axis has <m>x=0</m>, that means we have the <m>y</m>-intercept at <m>(0,3)</m>. </p>
+  </example>
+
+  <p>In the last example, we could see that the <m>y</m>-intercept is at <m>y=3</m> because that is about where it looks like the graph crosses, and in this class, numbers from graphs will be nice numbers. But in reality, the graph just isn't detailed enough for us to be able to tell if it's really at <m>y=3</m> or if it's really at <m>y=3.1</m> or at <m>y=2.97</m>. If we have a formula that defines the graph, we can use algebra to figure out <em>exactly</em> what the intercepts are.</p>
+
+  <fact>
+    <p>
+      <ul>
+        <li>Since the <m>x</m>-intercepts are where the graph crosses the <m>x</m>-axis, and every point there has <m>y=0</m>, <em>to find <m>x</m>-intercepts algebraically, plug <m>y=0</m> into the equation and solve for <m>x</m></em>.</li>
+        <li>Since the <m>y</m>-intercepts are where the graph crosses the <m>y</m>-axis, and every point there has <m>x=0</m>, <em>to find <m>y</m>-intercepts algebraically, plug <m>x=0</m> into the equation and solve for <m>y</m></em>.</li>
+      </ul>
+    </p>
+  </fact>
+
+  <example>
+    <p>Suppose we want to find the <m>x</m>- and <m>y</m>-intercepts of <m>y=x^2-5</m>.</p>
+    <p>Let's start with the <m>x</m>-intercepts. We need to plug in <m>y=0</m> and solve for <m>x</m>.</p>
+      <md>
+        <mrow>0\amp=x^2-5</mrow>
+        <mrow>5\amp=x^2</mrow>
+        <mrow>\pm \sqrt{5}\amp=x</mrow>
+      </md>
+    <p>Therefore, our <m>x</m>-intercepts are <m>(\sqrt{5},0)</m> and <m>(-\sqrt{5},0)</m>. <!--Note that if you had trouble with the algebra above, you might find the notes in <xref ref="sec-solveGEMDAS"/> helpful.--></p>
+    <p>Now, let's find the <m>y</m>-intercepts. We need to plug in <m>x=0</m> and solve for <m>y</m>.</p>
+      <me>y=(0)^2-5=-5</me>
+    <p>Therefore, our <m>y</m>-intercept is <m>(0,-5)</m>.</p>
+  </example>
+
+  <p>Throughout this class, we will look at many different functions, and some will have shortcuts for finding one kind of intercept or the other. However, the strategy shown here will <em>always</em> work. It's a very powerful tool that you'll want to remember, because we'll use it all semester long.</p>
+
+  <exercise>
+    <statement><p>Find the <m>x</m>- and <m>y</m>-intercepts of <m>y=4-7x</m>.</p></statement>
+    <solution>
+      <p>Let's start with the <m>x</m>-intercepts. We need to plug in <m>y=0</m> and solve for <m>x</m>.</p>
+        <md>
+          <mrow>0\amp=4-7x</mrow>
+          <mrow>7x\amp=4</mrow>
+          <mrow>x\amp=\frac{4}{7}</mrow>
+        </md>
+      <p>Therefore, our <m>x</m>-intercept is <m>\left(\frac{4}{7},0\right)</m>.</p>
+      <p>Now, let's find the <m>y</m>-intercepts. We need to plug in <m>x=0</m> and solve for <m>y</m>.</p>
+        <me>y=4-7(0)=4</me>
+      <p>Therefore, our <m>y</m>-intercept is <m>(0,4)</m>.</p>
+    </solution>
+    <answer><p>
+      <ul>
+        <li><m>x</m>-intercept: <m>\left(\frac{4}{7},0\right)</m></li>
+        <li><m>u</m>-intercept: <m>(0,4)</m></li>
+      </ul>
+    </p></answer>
+  </exercise>
+</section>
+
+<section xml:id="sec-GEMDAS">
+  <title>Order of Operations and Simplifying</title>
+
+  <p>Whenever we have a mathematical expression with multiple things you need to do, we all have to agree on the default order in which to do them. Think of it as part of the language of mathematics. We write down these expressions to communicate something, but that communication is only successful if we view the symbols the same way. The agreed order is often called the <em>Order of Operations</em>.</p>
+
+  <fact>
+    <title>Order of Operations</title>
+    <p>Whenever you have multiple things to do in a mathematical expression, you must do them in the following order:
+      <ol>
+        <li>Anything inside of a Group (e.g. inside parentheses, top or bottom of a fraction, inside a root or radical, etc.)</li>
+        <li>Exponents</li>
+        <li>Multiply/Divide</li>
+        <li>Add/Subtract</li>
+      </ol>
+    </p>
+    <p>Sometimes, we use the following abbreviation to help us remember this order: <em>GEMDAS</em>.</p>
+  </fact>
+
+  <example>
+    <p>Suppose we want to simplify the following expression:</p>
+      <me>\frac{8+\sqrt{5(2)+6}}{3^2-5}</me>
+    <p>The first thing we need to do is anything inside of a Group. Since we have a fraction, we will deal with the top and bottom of the fraction separately, then divide them. Since the top of a fraction has a root <em>inside</em> of it, we will start with that. Within each group, we follow the order of operations, then move our way out to the next group, following the order of operations again.</p>
+
+    <md>
+      <mrow>\frac{8+\sqrt{{\color{red}{5(2)}}+6}}{3^2-5}\amp= \frac{8+\sqrt{{\color{red}{10}}+6}}{3^2-5}</mrow>
+      <mrow>\frac{8+\sqrt{\color{red}{10+6}}}{3^2-5}\amp= \frac{8+\sqrt{\color{red}{16}}}{3^2-5}</mrow>
+      <mrow>\frac{8+{\color{red}{\sqrt{16}}}}{3^2-5}\amp= \frac{8+{\color{red}{4}}}{3^2-5}</mrow>
+      <mrow>\frac{\color{red}{8+4}}{3^2-5}\amp= \frac{\color{red}{12}}{3^2-5}</mrow>
+      <mrow>\frac{12}{{\color{red}{3^2}}-5}\amp= \frac{12}{{\color{red}{9}}-5}</mrow>
+      <mrow>\frac{12}{\color{red}{9-5}}\amp=\frac{12}{\color{red}{4}}</mrow>
+      <mrow>\frac{12}{4}\amp=3</mrow>
+    </md>
+
+  </example>
+</section>
+
+<section xml:id="sec-solveGEMDAS">
+  <title>Solving Equations</title>
+
+  <fact>
+    <title>Order of Operations When Solving</title>
+    <p>When we are trying to solve an equation, we are working backwards to uncover what the variable must have been. Since we are working backwards, we use the order of operations backwards.</p>
+  </fact>
+
+  <example>
+    <p>Suppose we want to solve the following equation for <m>x</m>:</p>
+    <me>3(x+7)^3-2=22</me>
+    <p>We will apply the same thing to both sides, each time deciding what to cancel based on the order of operations. For example, our normal GEMDAS would have Add/Subtract last, which means it's the first thing we need to deal with. We have a <m>-2</m> at the end of this equation, so since adding cancels subtraction, we will add 2 to both sides. We continue each step just like this:</p>
+    <md>
+      <mrow>3(x+7)^3-2\amp=22</mrow>
+      <mrow>3(x+7)^3-2{\color{red}{+2}}\amp=22{\color{red}{+2}}</mrow>
+      <mrow>3(x+7)^3\amp=24</mrow>
+      <mrow>\frac{3(x+7)^3}{\color{red}{3}}\amp=\frac{24}{\color{red}{3}}</mrow>
+      <mrow>(x+7)^3\amp=8</mrow>
+      <mrow>\sqrt[3]{(x+7)^3}\amp=\sqrt[3]{8}</mrow>
+      <mrow>x+7\amp=2</mrow>
+      <mrow>x+7{\color{red}{-7}}\amp=2{\color{red}{-7}}</mrow>
+      <mrow>x\amp=-5</mrow>
+    </md>
+  </example>
+</section>
+
+
+
+</chapter>

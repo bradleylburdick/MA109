@@ -1,0 +1,542 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Chapters are enclosed with <chapter> tags. Use xml:id to -->
+<!-- uniquely identify the chapter.  The @xmlns:xi attribute  -->
+<!-- is needed if you use xi:include in this file             -->
+<chapter xml:id="ch-composition" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+<!-- Change title when you have one: -->
+  <title>Composition</title>
+  <!-- If the chapter has sections, there may be an introduction -->
+  <!-- before those sections. Note the <p> tags around content.  -->
+  <introduction>
+    <p>This is the introduction to the chapter</p>
+  </introduction>
+
+<section xml:id="sec-evaluatecomposition">
+  <title>Evaluating a Composition of Functions</title>
+
+  <introduction> In section <xref ref="sec-algwithfn"/>, you learned about different ways to combine functions together. In this section, we'll learn a new way: putting functions inside of each other.</introduction>
+
+  <definition>A <term>composition of functions</term> is when we put one function inside of another. To compose <m>f(x)</m> and <m>g(x)</m>, we could write either <m>(f\circ g)(x)</m> or <m>f(g(x))</m>.</definition>
+
+  <p>When we want to evaluate a composition of functions, we always work from the inside to the outside. This means that the order we write them in matters.</p>
+
+  <example>
+    <p>Suppose <m>f(x)=2x+1</m> and <m>g(x)=x^2</m> and we want to find <m>f(g(-2))</m>. Since we work from the inside out, that means we start by finding <m>g(-2)</m>. We use the formula for <m>g(x)</m> to get <m>g(-2)=(-2)^2 = 4</m>. Now, we can plug that into <m>f(x)</m>: <m>f(g(-2))=f(4)=2(4)+1=9</m>. Therefore, our answer is <m>f(g(-2))=4</m>.</p>
+    <p>Now, let's find <m>g(f(-2))</m> instead. This time, we start with <m>f(x)</m>, since it's on the inside: <m>f(-2)=2(-2)+1=-3</m>. Now, we can plug that into <m>g(x)</m>: <m>g(f(-2))=g(-3)=(-3)^2=9</m>. Therefore, our answer is <m>g(f(-2))=9</m>.</p>
+  </example>
+
+  <exercise>
+    <statement><p>Suppose <m>f(x)=x^2+2x-3</m> and <m>g(x)=-x</m>. Evaluate each of the following:
+      <ol>
+        <li><m>f(g(0))</m></li>
+        <li><m>g(f(-1))</m></li>
+        <li><m>f(f(2))</m></li>
+      </ol>
+    </p></statement>
+    <solution><p>Suppose <m>f(x)=x^2+2x-3</m> and <m>g(x)=-x</m>. Evaluate each of the following:
+      <ol>
+        <li>To find <m>f(g(0))</m>, we start on the inside with <m>g(x)</m>: <m>g(0)=-(0)=0</m>. Then, we plug that into <m>f(x)</m>: <m>f(g(0))=f(0)=(0)^2+2(0)-3 = -3</m>.</li>
+        <li>To find <m>g(f(-1))</m>, we start on the inside with <m>f(x)</m>: <m>f(-1)=(-1)^2+2(-1)-3 = 1-2-3=-4</m>. Then, we plug that into <m>g(x)</m>: <m>g(f(-1))=g(-1)=-(-4)=4</m>.</li>
+        <li>To find <m>f(f(2))</m>, we're going to plug into <m>f(x)</m> twice! First, we find <m>f(2)=(2)^2+2(2)-3 = 4+4-3=5</m>. Now, we plug that back into <m>f(x)</m> again: <m>f(f(2))=f(5) = (5)^2+2(5)-3 = 25+10-3 = 32</m>.</li>
+      </ol>
+    </p></solution>
+    <answer><p>Suppose <m>f(x)=x^2+2x-3</m> and <m>g(x)=-x</m>. Evaluate each of the following:
+      <ol>
+        <li><m>f(g(0))=-3</m></li>
+        <li><m>g(f(-1))=4</m></li>
+        <li><m>f(f(2))=32</m></li>
+      </ol>
+    </p></answer>
+  </exercise>
+  
+  <p>You might even have more than two functions that are composed together. We still always work from the inside to the outside.</p>
+
+  <example>
+    <p>Suppose <m>f(x)=x^2-3</m>, and <m>g(x)</m> and <m>h(x)</m> are given in the table below.</p>
+
+    <table>
+      <tabular top="medium">
+        <row left="medium" bottom="medium">
+          <cell right="medium">
+            <m>x</m>
+          </cell>
+          <cell right="medium">
+            <m>g(x)</m>
+          </cell>
+          <cell right="medium">
+            <m>h(x)</m>
+          </cell>
+        </row>
+        <row left="medium" bottom="medium">
+          <cell right="medium">
+            <m>1</m>
+          </cell>
+          <cell right="medium">
+            <m>2</m>
+          </cell>
+          <cell right="medium">
+            <m>-1</m>
+          </cell>
+        </row>
+        <row left="medium" bottom="medium">
+          <cell right="medium">
+            <m>2</m>
+          </cell>
+          <cell right="medium">
+            <m>-3</m>
+          </cell>
+          <cell right="medium">
+            <m>4</m>
+          </cell>
+        </row>
+        <row left="medium" bottom="medium">
+          <cell right="medium">
+            <m>3</m>
+          </cell>
+          <cell right="medium">
+            <m>4</m>
+          </cell>
+          <cell right="medium">
+            <m>0</m>
+          </cell>
+        </row>
+      </tabular>
+    </table>
+
+    <p>Let's find <m>f(h(g(1)))</m>. We start from the inside, so we begin with <m>g(x)</m>. From the table, we can see that <m>g(1)=2</m>. Now, we can plug that into the next function, <m>h(x)</m>: <m>h(g(1))=h(2)=4</m>. Finally, we plug that into the most outside function, <m>f(x)</m>: <m>f(h(g(1)))=f(h(2))=f(4)=(4)^2-3 = 13</m>.</p>
+  </example>
+
+
+
+
+</section>
+
+<section xml:id="sec-compositionformula">
+  <title>Simplifying a Composition of Functions</title>
+
+  <introduction>Sometimes, we don't want to evaluate a composition of functions at just one value. We might want to create an entirely new function from a composition. Then, we can evaluate it at all of the numbers we want!</introduction>
+
+  <p>If the composition of functions doesn't specify an input value, then we actually want to write an entire new function. We still work from the inside to the outside, but instead of evaluating the inside function, we put its entire formula in.</p>
+
+  <example>
+    <p>Suppose <m>f(x)=2x-9</m> and <m>g(x)=x^2+1</m>, and we want to find <m>f(g(x))</m>. Since we don't have a number to plug into <m>g(x)</m>, we're going to take its entire formula and plug it into <m>f(x)</m>:</p>
+    <md>
+      <mrow>f(g(x)) \amp = f(x^2+1)</mrow>
+      <mrow> \amp = 2(x^2+1)-9</mrow>
+      <mrow> \amp = 2x^2-7</mrow>
+    </md>
+  </example>
+
+  <p>You'll notice that this is very similar to what we did in Section <xref ref="sec-evaluateformula"/>. If you're having trouble keeping track of what goes where, the same tricks might be helpful. For example, you might find it helpful to color-code the inside formula. In that case, the example above would look like this:</p>
+  <md>
+    <mrow>f({\color{red}{g(x)}} ) \amp = f({\color{red}{x^2+1}})</mrow>
+    <mrow> \amp = 2({\color{red}{x^2+1}})-9</mrow>
+    <mrow> \amp = 2x^2-7</mrow>
+  </md>
+
+  <p>You might also find it useful to put an extra step in the middle: write a blank where the <m>x</m>'s are in the formula for <m>f(x)</m>, and then fill in the blank with the formula for <m>g(x)</m>, like this:</p>
+  <md>
+    <mrow>f(g(x)) \amp = f(x^2+1)</mrow>
+    <mrow> \amp = 2(\hspace{0.5in})-9</mrow>
+    <mrow> \amp = 2(x^2+1)-9</mrow>
+    <mrow> \amp = 2x^2-7</mrow>
+  </md>  
+
+  <exercise>
+    <statement><p>Suppose <m>f(x)=5x+1</m> and <m>g(x)=x^2+x-3</m>. Find each of the following:
+      <ol>
+        <li><m>f(g(x))</m></li>
+        <li><m>g(f(x))</m></li>
+        <li><m>f(f(x))</m></li>
+      </ol>
+    </p></statement>
+    <solution><p>
+      <ol>
+        <li><p>To find <m>f(g(x))</m>, we take the whole formula for <m>g(x)</m> and plug it into the formula for <m>f(x)</m>:</p>
+          <md>
+            <mrow>f(g(x)) \amp = f(x^2+x-3)</mrow>
+            <mrow> \amp =5(x^2+x-3)+1</mrow>
+            <mrow>\amp= 5x^2+5x-14</mrow>
+          </md>
+        </li>
+        <li><p>To find <m>g(f(x))</m>, we take the whole formula for <m>f(x)</m> and plug it into the formula for <m>g(x)</m>:</p>
+          <md>
+            <mrow>g(f(x)) \amp = g(5x+1)</mrow>
+            <mrow>\amp = (5x+1)^2+(5x+1)-3</mrow>
+            <mrow> \amp = (25x^2+10x + 1) + (5x+1)-3</mrow>
+            <mrow> \amp = 25x^2 + 15x -1</mrow>
+          </md>
+        </li>
+        <li><p>To find <m>f(f(x))</m>, we take the whole formula for <m>f(x)</m> and plug it back into the formula for <m>f(x)</m>:</p>
+          <md>
+            <mrow>f(f(x)) \amp = f(5x+1)</mrow>
+            <mrow>\amp = 5(5x+1)+1</mrow>
+            <mrow>\amp = 25x+6</mrow>
+          </md>
+        </li>
+      </ol>
+    </p>
+    </solution>
+    <answer><p>
+      <ol>
+        <li><m>f(g(x))= 5x^2+5x-14</m></li>
+        <li><m>g(f(x))= 25x^2 + 15x -1</m></li>
+        <li><m>f(f(x)) = 25x+6</m></li>
+      </ol>
+    </p></answer>
+  </exercise>
+
+</section>
+
+<exercises><title>Practice Problems</title> <!--Indicates start of the exercises for the chapter and its title-->
+  <exercise>
+   <statement>
+   <p>Suppose <m>f(x) = (x+2)^2 </m> and <m>g(x)</m> is given in the graph below:</p>
+        <image source="Functions/PracExercise1.png"/>
+        <p>Evaluate each of the following:
+          <ol>
+            <li><m>f(g(-2))</m></li>
+            <li><m>f(g(4))</m></li>
+            <li><m>g(g(6))</m></li>
+            <li><m>g(f(0))</m></li>
+            <li><m>f(g(0))</m></li>
+          </ol>
+        </p>
+   </statement>
+     <answer>
+        <p>
+    <ol>
+            <li><m>f(g(-2))=1</m></li>
+            <li><m>f(g(4))=49</m></li>
+            <li><m>g(g(6))=8</m></li>
+            <li><m>g(f(0))=5</m></li>
+            <li><m>f(g(0))=9</m></li>
+    </ol>
+        </p>
+        </answer><!--Statement of the answer (don't worry about location in the rendered version)-->
+  </exercise><!--End of that exercise-->
+
+  <exercise>
+   <statement>
+   <p>Suppose <m>f(x) = \frac{1}{2}x </m> and <m>g(x)</m> is given in the table below:</p>
+   <table>
+        <tabular top="medium">
+          <row left="medium" bottom="medium">
+            <cell right="medium">
+              <m>x</m>
+            </cell>
+            <cell right="medium">
+              <m>-1</m>
+            </cell>
+            <cell right="medium">
+              <m>1</m>
+            </cell>
+            <cell right="medium">
+              <m>2</m>
+            </cell>
+            <cell right="medium">
+              <m>5</m>
+            </cell>
+            <cell right="medium">
+              <m>4</m>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell right="medium">
+              <m>g(x)</m>
+            </cell>
+            <cell right="medium">
+              <m>0</m>
+            </cell>
+            <cell right="medium">
+              <m>2</m>
+            </cell>
+            <cell right="medium">
+              <m>4</m>
+            </cell>
+            <cell right="medium">
+              <m>1</m>
+            </cell>
+            <cell right="medium">
+              <m>0</m>
+            </cell>
+          </row>
+        </tabular>
+      </table>
+        <p>Evaluate each of the following:
+          <ol>
+            <li><m>f(g(-1))</m></li>
+            <li><m>f(g(5))</m></li>
+            <li><m>g(g(2))</m></li>
+            <li><m>g(f(-2))</m></li>
+            <li><m>f(g(1))</m></li>
+          </ol>
+        </p>
+   </statement>
+     <answer>
+        <p>
+    <ol>
+            <li><m>f(g(-1))=0</m></li>
+            <li><m>f(g(5))=\frac{1}{2}</m></li>
+            <li><m>g(g(2))=0</m></li>
+            <li><m>g(f(-2))=0</m></li>
+            <li><m>f(g(1))=1</m></li>
+    </ol>
+        </p>
+        </answer><!--Statement of the answer (don't worry about location in the rendered version)-->
+  </exercise><!--End of that exercise-->
+
+  <exercise>
+   <statement>
+   <p>Suppose <m>f(x)</m> is given in the graph below and <m>g(x)</m> is given in the table below:</p>
+   <image source="Functions/PracExercise2.png"/>
+   <table>
+        <tabular top="medium">
+          <row left="medium" bottom="medium">
+            <cell right="medium">
+              <m>x</m>
+            </cell>
+            <cell right="medium">
+              <m>1</m>
+            </cell>
+            <cell right="medium">
+              <m>2</m>
+            </cell>
+            <cell right="medium">
+              <m>3</m>
+            </cell>
+            <cell right="medium">
+              <m>4</m>
+            </cell>
+            <cell right="medium">
+              <m>5</m>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell right="medium">
+              <m>g(x)</m>
+            </cell>
+            <cell right="medium">
+              <m>0</m>
+            </cell>
+            <cell right="medium">
+              <m>2</m>
+            </cell>
+            <cell right="medium">
+              <m>4</m>
+            </cell>
+            <cell right="medium">
+              <m>1</m>
+            </cell>
+            <cell right="medium">
+              <m>5</m>
+            </cell>
+          </row>
+        </tabular>
+      </table>
+        <p>Evaluate each of the following or, if there is insufficient information given to answer the question, state that.
+          <ol>
+            <li><m>f(g(1))</m></li>
+            <li><m>f(g(5))</m></li>
+            <li><m>g(g(2))</m></li>
+            <li><m>g(f(-2))</m></li>
+            <li><m>f(g(1))</m></li>
+          </ol>
+        </p>
+   </statement>
+     <answer>
+        <p>
+    <ol>
+            <li><m>f(g(1))=5</m></li>
+            <li><m>f(g(5))=0</m></li>
+            <li><m>g(g(2))=2</m></li>
+            <li>There is insuffient information given to compute.</li>
+            <li><m>f(g(3))=1</m></li>
+    </ol>
+        </p>
+        </answer><!--Statement of the answer (don't worry about location in the rendered version)-->
+  </exercise><!--End of that exercise-->
+
+    <exercise>
+   <statement>
+   <p>Suppose <m>g(x)</m> is given in the graph below and <m>h(x)</m> is given in the table below:</p>
+   <image source="Functions/PracExercise3.png"/>
+   <table>
+        <tabular top="medium">
+          <row left="medium" bottom="medium">
+            <cell right="medium">
+              <m>x</m>
+            </cell>
+            <cell right="medium">
+              <m>0</m>
+            </cell>
+            <cell right="medium">
+              <m>2</m>
+            </cell>
+            <cell right="medium">
+              <m>4</m>
+            </cell>
+            <cell right="medium">
+              <m>6</m>
+            </cell>
+            <cell right="medium">
+              <m>8</m>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell right="medium">
+              <m>h(x)</m>
+            </cell>
+            <cell right="medium">
+              <m>0</m>
+            </cell>
+            <cell right="medium">
+              <m>8</m>
+            </cell>
+            <cell right="medium">
+              <m>4</m>
+            </cell>
+            <cell right="medium">
+              <m>6</m>
+            </cell>
+            <cell right="medium">
+              <m>2</m>
+            </cell>
+          </row>
+        </tabular>
+      </table>
+        <p>Evaluate each of the following or, if there is insufficient information given to answer the question, state that.
+          <ol>
+            <li><m>h(g(1))</m></li>
+            <li><m>h(g(4))</m></li>
+            <li><m>h(g(2))</m></li>
+            <li><m>g(h(2))</m></li>
+            <li><m>h(h(2))</m></li>
+          </ol>
+        </p>
+   </statement>
+     <answer>
+        <p>
+    <ol>
+            <li>There is insuffient information given to compute.</li>
+            <li><m>h(g(4))=8</m></li>
+            <li><m>h(g(2))=0</m></li>
+            <li><m>g(h(2))=0</m></li>
+            <li><m>h(h(2))=2</m></li>
+    </ol>
+        </p>
+        </answer><!--Statement of the answer (don't worry about location in the rendered version)-->
+  </exercise><!--End of that exercise-->
+
+    <exercise>
+   <statement>
+   <p>Suppose <m>g(x)=x^2</m> and <m>h(x)=|x+1|</m> is given in the table below:</p>
+        <p>Evaluate each of the following or, if there is insufficient information given to answer the question, state that.
+          <ol>
+            <li><m>h(g(1))</m></li>
+            <li><m>h(g(2))</m></li>
+            <li><m>h(g(-1))</m></li>
+            <li><m>g(h(-1))</m></li>
+            <li><m>h(h(-1))</m></li>
+          </ol>
+        </p>
+   </statement>
+     <answer>
+        <p>
+    <ol>
+            <li><m>h(g(1))=2</m></li>
+            <li><m>h(g(2))=5</m></li>
+            <li><m>h(g(-1))=2</m></li>
+            <li><m>g(h(-1))=0</m></li>
+            <li><m>h(h(-1))=1</m></li>
+    </ol>
+        </p>
+        </answer><!--Statement of the answer (don't worry about location in the rendered version)-->
+  </exercise><!--End of that exercise-->
+
+  <exercise>
+   <statement><p>Suppose <m>f(x)=2x+3</m> and <m>g(x)=x^2+x-1</m>. Find each of the following. You do NOT need to simplify.
+      <ol>
+        <li><m>f(g(x))</m></li>
+        <li><m>g(f(x))</m></li>
+        <li><m>f(f(x))</m></li>
+        <li><m>g(g(x))</m></li>
+      </ol>
+    </p></statement>
+     <answer>
+        <p>
+    <ol>
+        <li><m>f(g(x))=2(x^2+x-1)+3</m></li>
+        <li><m>g(f(x))=(2x+3)^2+(2x+3)-1</m></li>
+        <li><m>f(f(x))=2(2x+3)+3</m></li>
+        <li><m>g(g(x))=(x^2+x-1)^2+(x^2+x-1)-1</m></li>
+    </ol>
+        </p>
+        </answer><!--Statement of the answer (don't worry about location in the rendered version)-->
+  </exercise><!--End of that exercise-->
+
+    <exercise>
+   <statement><p>Suppose <m>f(x)=|x+3|</m> and <m>g(x)=3x-1</m>. Find each of the following. You do NOT need to simplify.
+      <ol>
+        <li><m>f(g(x))</m></li>
+        <li><m>g(f(x))</m></li>
+        <li><m>f(f(x))</m></li>
+        <li><m>g(g(x))</m></li>
+      </ol>
+    </p></statement>
+     <answer>
+        <p>
+    <ol>
+        <li><m>f(g(x))=|(3x-1)+3|</m></li>
+        <li><m>g(f(x))=3|x+3|-1</m></li>
+        <li><m>f(f(x))=||x+3|+3|</m></li>
+        <li><m>g(g(x))=3(3x-1)-1</m></li>
+    </ol>
+        </p>
+        </answer><!--Statement of the answer (don't worry about location in the rendered version)-->
+  </exercise><!--End of that exercise-->
+
+    <exercise>
+   <statement><p>Suppose <m>f(x)=\frac{1}{2}x+1</m> and <m>g(x)=\frac{x+1}{2}</m>. Find each of the following. You do NOT need to simplify.
+      <ol>
+        <li><m>f(g(x))</m></li>
+        <li><m>g(f(x))</m></li>
+        <li><m>f(f(x))</m></li>
+        <li><m>g(g(x))</m></li>
+      </ol>
+    </p></statement>
+     <answer>
+        <p>
+    <ol>
+        <li><m>f(g(x))=\frac{1}{2}\left(\frac{x+1}{2}\right)+1</m></li>
+        <li><m>g(f(x))=\frac{\left(\frac{1}{2}x+1\right)+1}{2}</m></li>
+        <li><m>f(f(x))=\frac{1}{2}\left(\frac{1}{2}x+1\right)+1</m></li>
+        <li><m>g(g(x))=\frac{\left(\frac{x+1}{2}\right)+1}{2}</m></li>
+    </ol>
+        </p>
+        </answer><!--Statement of the answer (don't worry about location in the rendered version)-->
+  </exercise><!--End of that exercise-->
+
+      <exercise>
+   <statement><p>Suppose <m>f(x)=\sqrt{x}</m> and <m>g(x)=4x+5</m>. Find each of the following. You do NOT need to simplify.
+      <ol>
+        <li><m>f(g(x))</m></li>
+        <li><m>g(f(x))</m></li>
+        <li><m>f(f(x))</m></li>
+        <li><m>g(g(x))</m></li>
+      </ol>
+    </p></statement>
+     <answer>
+        <p>
+    <ol>
+        <li><m>f(g(x))=\sqrt{4x+5}</m></li>
+        <li><m>g(f(x))=4\sqrt{x}+5</m></li>
+        <li><m>f(f(x))=\sqrt{\sqrt{x}}</m></li>
+        <li><m>g(g(x))=4(4x+5)+5</m></li>
+    </ol>
+        </p>
+        </answer><!--Statement of the answer (don't worry about location in the rendered version)-->
+  </exercise><!--End of that exercise-->
+</exercises>
+</chapter>
