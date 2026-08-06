@@ -20,7 +20,7 @@
   <subsection>
     <title>Endpoints</title>
 
-    <definition> When we talk about an interval, we are talking about everything in between two numbers. Those two numbers are called the <term>endpoints</term> of the interval.</definition>
+    <definition><p> When we talk about an interval, we are talking about everything in between two numbers. Those two numbers are called the <term>endpoints</term> of the interval.</p></definition>
 
     <p>Writing an interval in interval notation looks a lot like writing an ordered pair for a point on a graph. It will be two numbers, separated by a comma, with some sort of parentheses surrounding it. In an interval, we always write the smaller endpoint first, and we use either round parentheses () or square brackets [] to indicate whether the endpoint is included or not.</p>
 

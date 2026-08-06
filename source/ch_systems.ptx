@@ -17,7 +17,7 @@
 
   <introduction> This chapter involves some new vocabulary, so this first seciton is all about getting comfortable with those new terms.</introduction>
 
-  <definition>A <term>solution</term> to an equation is a point <m>(x,y)</m> that gives us a true statement when we plug in those values to the equation.</definition>
+  <definition><p>A <term>solution</term> to an equation is a point <m>(x,y)</m> that gives us a true statement when we plug in those values to the equation.</p></definition>
 
   <example><p>Let's see if <m>(3,5)</m> is a solution to the equation <m>y=2x-1</m>. In order to check, we will plug in <m>x=3</m> and <m>y=5</m> and see if we get something that's true:</p>
     <md>
@@ -66,11 +66,11 @@
     </p></answer>
   </exercise>
 
-  <definition>A <term>system of equations</term> is a set of more than one equation that we want to look at all at the same time.</definition>
+  <definition><p>A <term>system of equations</term> is a set of more than one equation that we want to look at all at the same time.</p></definition>
 
   <p>In this class, we will only look at systems of equations that have two equations and two variables. However, in later classes, you might look at more complicated systems that have more than two equations or more than two variables. In that case, you'll learn more advanced techniques that can handle the more complicated situations.</p>
 
-  <definition>A <term>solution to a system of equations</term> is a point that is a solution to all of the equations in the system at the same time.</definition>
+  <definition><p>A <term>solution to a system of equations</term> is a point that is a solution to all of the equations in the system at the same time.</p></definition>
 
   <example><p>Let's determine if <m>(4,1)</m> is a solution to the following system of equations:</p>
     <me>\begin{cases}y \amp = x-3 \\ x - 4y \amp= 6\end{cases}</me>

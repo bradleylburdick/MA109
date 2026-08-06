@@ -16,8 +16,8 @@
   <title>Roots of Polynomials</title>
 
   <definition>
-    The <term>roots</term> of a polynomial are the <m>x</m>-values of the <m>x</m>-intercepts. We also sometimes call these the <em>zeros</em> of the function.
-  </definition>
+   <p> The <term>roots</term> of a polynomial are the <m>x</m>-values of the <m>x</m>-intercepts. We also sometimes call these the <em>zeros</em> of the function.
+  </p></definition>
 
   <example><p>Suppose <m>f(x)</m> is the polynomial graphed below. We want to find the roots of that function.</p>
     <image source="Polys/PolyRootsGraph1.png"/>
@@ -719,7 +719,7 @@
 
   <introduction>In <xref ref="sec-rootspoly"/>, we learned about how the graph a poloynomial looks in the middle: where the <m>x</m>-intercepts are. In this section, we will do the opposite: we don't care about how the graph moves up and down in the middle, we only care about what happends at the ends.</introduction>
 
-  <definition>The <term>end behavior</term> of a function asks what happens at the ends of the graph. Since there are two ends of the graph (the left end and the right end), end behavior is really asking two questions:
+  <definition><p>The <term>end behavior</term> of a function asks what happens at the ends of the graph. Since there are two ends of the graph (the left end and the right end), end behavior is really asking two questions:</p>
     <ul>
       <li>What happens on the right end of the graph? In this case, what happens when we plug in huge positive <m>x</m>-values? We would write it by asking what happens as <m>x \rightarrow \infty</m> ("x goes to infinity").</li>
       <li>What happens on the left end of the graph? In this case, what happens when we plug in huge negative <m>x</m>-values? We would write it by asking what happens as <m>x \rightarrow -\infty</m> ("x goes to negative infinity").</li>

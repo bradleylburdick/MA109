@@ -19,9 +19,10 @@
     Recall that in Section <xref ref="sec-solvefn"/>, we were given the output to a function and asked to determine what input lead to it. If we had lots of outputs we needed to look at, checking them one at a time would be tedious and time-consuming. It would be much easier if we had a formula that we could plug our outputs into to get our answers. That's what the inverse function does.
   </introduction>
 
+
   <definition>
-    For a function <m>f(x)</m>, its <term>inverse function</term> (written <m>f^{-1}(x)</m> and pronounced "f inverse of x") is the function that swaps the roles of inputs and outputs for <m>f(x)</m>. In other words, if <m>f(a)=b</m>, then <m>f^{-1}(b)=a</m> and vise versa.
-  </definition>
+   <p> For a function <m>f(x)</m>, its <term>inverse function</term> (written <m>f^{-1}(x)</m> and pronounced "f inverse of x") is the function that swaps the roles of inputs and outputs for <m>f(x)</m>. In other words, if <m>f(a)=b</m>, then <m>f^{-1}(b)=a</m> and vise versa.
+  </p></definition>
 
   <p>While it is possible to find a general formula for the inverse function, we leave that for the next section. For now, we will only focus on evaluating the inverse function at a given number. Luckily, this is exactly the same thing you did in section <xref ref="sec-solvefn"/>. The only difference is that we are now using new vocabulary and notation to state the question.</p>
 

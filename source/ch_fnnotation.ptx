@@ -194,7 +194,7 @@
 
   <introduction>Sometimes, we want to use different formulas for our function, depending on what the input is. In this section, we will look at how those kinds of functions are written and practice working with them.</introduction>
 
-  <definition> A <term>piecewise function</term> is a function that uses different formulas for different inputs. It is a function made of pieces of other functions.</definition>
+  <definition><p> A <term>piecewise function</term> is a function that uses different formulas for different inputs. It is a function made of pieces of other functions.</p></definition>
 
   <p>Since our function has multiple formulas and requirements for when we use which formula, the notation is a bit longer. Here is an example of a piecewise function:
     <me>f(x) = \begin{cases}2x+3 \amp x \gt 4 \\ x^2+7 \amp -1 \lt x \le 4 \\ \sqrt{3-x} \amp x \le -1 \end{cases} </me>

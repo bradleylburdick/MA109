@@ -17,7 +17,7 @@
 
   <introduction> In section <xref ref="sec-algwithfn"/>, you learned about different ways to combine functions together. In this section, we'll learn a new way: putting functions inside of each other.</introduction>
 
-  <definition>A <term>composition of functions</term> is when we put one function inside of another. To compose <m>f(x)</m> and <m>g(x)</m>, we could write either <m>(f\circ g)(x)</m> or <m>f(g(x))</m>.</definition>
+  <definition><p>A <term>composition of functions</term> is when we put one function inside of another. To compose <m>f(x)</m> and <m>g(x)</m>, we could write either <m>(f\circ g)(x)</m> or <m>f(g(x))</m>.</p></definition>
 
   <p>When we want to evaluate a composition of functions, we always work from the inside to the outside. This means that the order we write them in matters.</p>
 
