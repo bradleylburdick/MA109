@@ -565,7 +565,7 @@
 <section xml:id="sec-e">
   <title>The Number <m>e</m></title>
 
-  <introduction>What is <m>\pi</m>? It's a number that starts with 3.14, but it goes on forever and never repeats. So, mathematicians usually just write <m>\pi</m>, rather than rounding some number of decimal places. The number <m>e</m> is the same idea.</introduction>
+  <introduction><p>What is <m>\pi</m>? It's a number that starts with 3.14, but it goes on forever and never repeats. So, mathematicians usually just write <m>\pi</m>, rather than rounding some number of decimal places. The number <m>e</m> is the same idea.</p></introduction>
 
   <fact>
     <p>The number <m>e</m> is approximately 2.7, but like <m>\pi</m>, its decimal expansion goes on forever and never repeats.</p>
