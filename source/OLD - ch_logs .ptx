@@ -1,0 +1,276 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Chapters are enclosed with <chapter> tags. Use xml:id to -->
+<!-- uniquely identify the chapter.  The @xmlns:xi attribute  -->
+<!-- is needed if you use xi:include in this file             -->
+<chapter xml:id="ch-logs" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+<!-- Change title when you have one: -->
+  <title>Logarithmic Functions</title>
+  <!-- If the chapter has sections, there may be an introduction -->
+  <!-- before those sections. Note the <p> tags around content.  -->
+  <introduction>
+    <p>This is the introduction to the chapter</p>
+  </introduction>
+
+<section xml:id="sec-evallogfn">
+  <title>Evaluating Logarithmic Functions</title>
+
+  <example>
+    <title>Exploring and Motivation</title>
+
+    <p>Suppose <m>f(x)=x+3</m>. What is <m>f^{-1}(x)</m>? Well, we know from <xref ref="sec-inverseformula"/> how to do this:</p>
+      <md>
+        <mrow>y \amp= x+3</mrow>
+        <mrow>x \amp= y+3</mrow>
+        <mrow>x-3 \amp= y</mrow>
+      </md>
+    <p>So, we have <m>f^{-1}(x)=x-3</m>. This makes sense, since subtraction is the opposite of addition, it should be the inverse.</p>
+    <p>Let's do another. What is the inverse of <m>g(x)=3x</m>? Again, we know how to do this:</p>
+      <md>
+        <mrow>y \amp= 3x</mrow>
+        <mrow>x \amp= 3y</mrow>
+        <mrow>\frac{x}{3} \amp= y</mrow>
+      </md>
+    <p>So, we have <m>g^{-1}(x)=\frac{x}{3}</m>. This makes sense, since division is the opposite of multiplication, it should be the inverse.</p>
+    <p>One more: what is the inverse of <m>h(x)=x^3</m>? You know the drill by now:</p>
+      <md>
+        <mrow>y \amp= x^3</mrow>
+        <mrow>x \amp= y^3</mrow>
+        <mrow>\sqrt[3]{x} \amp= y</mrow>
+      </md>
+    <p>So, we have <m>h^{-1}(x)=\sqrt[3]{x}</m>. This makes sense, since the cube root is the opposite of a cube, it should be the inverse.</p>
+    <p> So what do we do with something like <m>3^x</m>? This is an exponential function, so we need something that is the opposite of an exponential. This is where logarithms come in.</p>.
+  </example>
+
+  <definition>
+    <p>If <m>f(x)=b^x</m> is an exponential function with base <m>b</m>, then its invserse is <m>f^{-1}(x)=\log_b(x)</m>, the <term>logarithm base <m>b</m></term>.</p>
+  </definition>
+
+  <p>Note: inverses work in both directions. That means that if <m>g(x)=\log_b(x)</m>, then <m>g^{-1}(x)=b^x</m>.</p>
+
+  <example>
+    <p>Suppose <m>f(x)=5^x</m> and we want to find its inverse. Since this is an exponential function, its inverse will be a logarithm. The bases need to match, so <m>f^{-1}(x)=\log_5(x)</m>.</p>
+    <p>Suppose <m>f(x)=\log_7(x)</m> and we want to find its inverse. Since this is an logarithm function, its inverse will be an exponential. The bases need to match, so <m>f^{-1}(x)=7^x</m>.</p>
+  </example>
+
+  <exercise>
+    <statement><p>Find the inverse of each function below.
+      <ol>
+        <li><m>f(x)=9^x</m></li>
+        <li><m>f(x)=1.08^x</m></li>
+        <li><m>f(x)=\log_2(x)</m></li>
+        <li><m>f(x)=\log_{0.87}(x)</m></li>
+      </ol>
+    </p></statement>
+    <solution>
+      <p>
+        <ol>
+          <li>Since <m>f(x)=9^x</m> is an exponential function, its inverse will be a logarithm. The bases need to match, so <m>f^{-1}(x)=\log_9(x)</m>.</li>
+          <li>Since <m>f(x)=1.08^x</m> is an exponential function, its inverse will be a logarithm. The bases need to match, so <m>f^{-1}(x)=\log_{1.08}(x)</m>.</li>
+          <li>Since  <m>f(x)=\log_2(x)</m> is a logarithm, its inverse will be an exponential function. The bases need to match, so <m>f^{-1}(x)=2^x</m>.</li>
+          <li>Since <m>f(x)=\log_{0.87}(x)</m> is a logarithm, its inverse will be an exponential function. The bases need to match, so <m>f^{-1}(x)=0.87^x</m>.</li>
+        </ol>
+      </p>
+    </solution>
+    <answer>
+      <p>
+        <ol>
+          <li><m>f^{-1}(x)=\log_9(x)</m></li>
+          <li><m>f^{-1}(x)=\log_{1.08}(x)</m></li>
+          <li><m>f^{-1}(x)=2^x</m></li>
+          <li><m>f^{-1}(x)=0.87^x</m></li>
+        </ol>
+      </p>
+    </answer>
+  </exercise>
+
+  <p>So know that we know where logarithms come from, how do we actually evaluate them? The key is that inverses cancel. So, the logarithm will cancel with an exponential, as long as the bases match.</p>
+
+  <example>
+    <p>Let's evaluate each of the following expressions.</p>
+    <ol>
+      <li><p>Suppose we want to evaluate <m>\log_7\left(7^{13}\right)</m>. Since the log is base 7, and so is the exponential, so they cancel and we get that </p>
+        <me>\log_7\left(7^{13}\right) = 13</me>
+      </li>
+      <li><p>Suppose we want to evaluate <m>\log_4\left(4^{1.072}\right)</m>. Since the log is base 4, and so is the exponential, so they cancel and we get that </p>
+        <me>\log_4\left(4^{1.072}\right)=1.072</me>
+      </li>
+      <li><p>Suppose we want to evaluate <m>6^{\log_6(17)}</m>. Since the log is base 6, and so is the exponential, so they cancel and we get that </p>
+        <me>6^{\log_6(17)}=17</me>
+      </li>
+      <li><p>Suppose we want to evaluate <m>\log_3\left(9\right)</m>. At first glance, the inside is not an exponential with the right base (3). But, all hope is not lost, since 9 is actually a power of 3. Since <m>9=3^2</m>,</p>
+        <me>\log_3(9)=\log_3\left(3^2\right) = 2</me>
+      </li>
+    </ol>
+  </example>
+
+  <p>Sometimes, logarithms can't be simplified any more than they already are. Just like <m>\sqrt{25}=5</m>, but <m>\sqrt{24}</m> is just <m>\sqrt{24}</m> since <m>24</m> isn't a perfect square, we have that <m>\log_4(16)=2</m>, but <m>\log_4(15)</m> is just <m>\log_4(15)</m>, since <m>15</m> isn't a power of 4.</p>
+
+  <exercise>
+    <statement>
+      <p>Simplify each of the following, if possible
+        <ol>
+          <li><m>\log_8\left(8^3\right)</m></li>
+          <li><m>3^{\log_3(5)}</m></li>
+          <li><m>\log_2\left(8\right)</m></li>
+          <li><m>\log_7\left(9\right)</m></li>
+        </ol>
+      </p>
+    </statement>
+    <solution>
+      <p>Simplify each of the following, if possible
+        <ol>
+          <li><p><m>\log_8\left(8^3\right)</m>: Since the log is base 8, and so is the exponential, so they cancel and we get that </p>
+            <me>\log_8\left(8^3\right) = 3</me>
+          </li>
+          <li><p><m>3^{\log_3(5)}</m>:  Since the log is base 3, and so is the exponential, so they cancel and we get that </p>
+            <me>3^{\log_3(5)}=5</me>
+          </li>
+          <li><p><m>\log_2\left(8\right)</m>: At first glance, the inside is not an exponential with the right base (2). But, all hope is not lost, since 8 is actually a power of 2. Since <m>8-2^3</m>,</p>
+            <me>\log_2(8)=\log_2\left(2^3\right) = 3</me>
+          </li>
+          <li><m>\log_7\left(9\right)</m>. Since 9 is not a power of 7, this one cannot be simplified any further.</li>
+        </ol>
+      </p>
+    </solution>
+  </exercise>
+</section>
+
+<section xml:id="sec-graphlogfn">
+  <title>Graphs of Logarithmic Functions</title>
+
+  <introduction>Remember that exponential functions had a horizontal asymptote. Since logs and exponentials are inverses of each other, and inverses are all about swapping, logs are going to have a vertical asymptote.</introduction>
+
+  <fact>
+    <p>The <em>domain of a logarithm</em> is where the inside of the log is greater than 0. The <em>vertical asymptote</em> is where the inside of the log is equal to 0.</p>
+  </fact>
+
+  <p>We already learned about how to find the domain of a function in <xref ref="sec-domainformula"/>. In this section, we are just adding another "problem" to the list of things to deal with: logarithms. Other than that, we do the same thing we did before.</p>
+
+  <example>
+    <p>Suppose we want to find the domain and asymptote of <m>f(x)=3\log_6(8-5x)+7</m>.</p>
+    <p>Remember that the domain only cares about where there is a potential problem. So, it only cares about what is inside the log. Since the inside of the log has to be greater than 0, we set <m>8-5x\gt 0</m> and solve.</p>
+    <md>
+      <mrow>8-5x \amp\gt 0</mrow>
+      <mrow>-5x \amp\gt -8</mrow>
+      <mrow>x \amp \lt \frac{8}{5}</mrow>
+    </md>
+    <p>Notice that in the last step, we had to switch the direction of the inequality because we divided by a negative number. Now, we just have to turn that into interval notation to get our domain: <m>\left(-\infty,\frac{8}{5}\right)</m>.</p>
+    <p>To find the equation of the asymptote, we have to set the inside equal to 0 and solve for <m>x</m>.</p>
+    <md>
+      <mrow>8-5x \amp= 0</mrow>
+      <mrow>-5x \amp= -8</mrow>
+      <mrow>x \amp = \frac{8}{5}</mrow>
+    </md>
+    <p>Note that logs always have a vertical asymptote, but they never have a horizontal asymptote. Therefore, our answer is the <em>entire equation</em> <m>x=\frac{8}{5}</m>, not just the number <m>\frac{8}{5}</m>.</p>
+  </example>
+
+  <exercise>
+    <statement><p>Find the domain and the equation of the asymptote for <m>f(x)=-2\log_3(2x-7)+5</m>.</p></statement>
+    <solution>
+      <p>Remember that the domain only cares about where there is a potential problem. So, it only cares about what is inside the log. Since the inside of the log has to be greater than 0, we set <m>2x-7\gt 0</m> and solve.</p>
+      <md>
+        <mrow>2x-7 \amp\gt 0</mrow>
+        <mrow>2x \amp\gt 7</mrow>
+        <mrow>x \amp \gt \frac{7}{2}</mrow>
+      </md>
+      <p>Now, we just have to turn that into interval notation to get our domain: <m>\left(\frac{7}{2},\infty\right)</m>.</p>
+      <p>To find the equation of the asymptote, we have to set the inside equal to 0 and solve for <m>x</m>.</p>
+      <md>
+        <mrow>2x-7 \amp= 0</mrow>
+        <mrow>2xx \amp= 7</mrow>
+        <mrow>x \amp = \frac{7}{2}</mrow>
+      </md>
+      <p>Note that logs always have a vertical asymptote, but they never have a horizontal asymptote. Therefore, our answer is the <em>entire equation</em> <m>x=\frac{7}{2}</m>, not just the number <m>\frac{7}{2}</m>.</p>
+    </solution>
+    <answer>
+      <p>The domain is <m>\left(\frac{7}{2},\infty\right)</m>, and the equation for the vertical asymptote is <m>x=\frac{7}{2}</m>. (You must inclue the entire equation, not just the number <m>\frac{7}{2}</m>.)</p>
+    </answer>
+  </exercise>
+</section>
+
+<section xml:id="sec-ln">
+  <title>The Natural Log</title>
+
+  <introduction>Remember that in <xref ref="sec-e"/>, we learned about the number <m>e</m>. In this section, we will learn all about the log that has base <m>e</m>.</introduction>
+
+  <definition>
+    <p>The <term>Natural Logarithm</term> is the log that has base <m>e</m>. It is written <m>\ln(x)</m>, where the first letter is a lower-case L.</p>
+  </definition>
+
+  <example>
+    <p>Suppose <m>f(x)=e^x</m> and we want to find its inverse. This is an exponential function, so its inverse is the log with the same base. Since the base of this exponential is <m>e</m>, the inverse will the the log base <m>e</m>, which we just learned is the natural log. So, <m>f^{-1}(x)=\ln(x)</m>.</p>
+  </example>
+
+  <exercise>
+    <statement>Suppose <m>g(x)=\ln(x)</m>. Find <m>f^{-1}(x)</m>.</statement>
+    <solution><p>Remember that <m>\ln(x)</m> is just the log function with base <m>e</m>. In fact, you may find it helpful to rewrite it as <m>\log_e(x)</m> while working on these problems. Since the inverse of a log is the exponential with the same base, we have that <m>g^{-1}(x)=e^x</m>.</p></solution>
+    <answer><m>g^{-1}(x)=e^x</m></answer>
+  </exercise>
+
+  <example>
+    <p>Suppose we want to simplify each of the following.</p>
+    <ol>
+      <li><p>Let's simplify <m>\ln\left(e^7\right)</m>. Remember that <m>\ln</m> is just log base <m>e</m>, so you may find it helpful to actually rewrite it as <m>\log_e\left(e^7\right)</m>. Now, this looks just like the questions we did in <xref ref="sec-evallogfn"/>. The log and exponential have the same base, so they match and we have <m>\ln\left(e^7\right)=7</m>.</p></li>
+      <li><p>Let's simplify <m>e^{\ln(2)}</m>. Remember that <m>\ln</m> is just log base <m>e</m>, so you may find it helpful to actually rewrite it as <m>e^{\log_e(2)}</m>. Now, this looks just like the questions we did in <xref ref="sec-evallogfn"/>. The log and exponential have the same base, so they match and we have <m>e^{\ln(2)}=2</m>.</p></li>
+      <li><p>Let's simplify <m>\ln\left(\frac{1}{e^9}\right)</m>. Remember that <m>\ln</m> is just log base <m>e</m>, so you may find it helpful to actually rewrite it as <m>\log_e\left(\frac{1}{e^9}\right)</m>. Now, this almost looks like the questions we did in <xref ref="sec-evallogfn"/>, except that the <m>e</m> is still in the denominator. So, we need to use our exponent rules to make the inside just an exponential. Remember that to move something out of the denominator, we have to make the exponent negative. So, we get </p>
+      <me>\ln\left(\frac{1}{e^9}\right)=\log_e\left(\frac{1}{e^9}\right)=\log_e\left(e^{-9}\right)</me>
+      <p>Now, the log and exponential have the same base, so they match and we have <m>\ln\left(\frac{1}{e^9}\right)=-9</m>.</p></li>
+    </ol>
+  </example>
+
+  <exercise>
+    <statement><p>Simplify each of the following expressions.
+      <ol>
+        <li><m>\ln\left(e^3\right)</m></li>
+        <li><m>\ln\left(\sqrt[7]{e}\right)</m></li>
+        <li><m>e^{\ln(5)}</m></li>
+        <li><m>\ln\left(\frac{1}{e^4}\right)</m></li>
+      </ol>
+    </p></statement>
+    <solution>
+      <ol>
+        <li><p>Remember that <m>\ln</m> is just log base <m>e</m>, so you may find it helpful to actually rewrite it as <m>\log_e\left(e^3\right)</m>. Now, this looks just like the questions we did in <xref ref="sec-evallogfn"/>. The log and exponential have the same base, so they match and we have <m>\ln\left(e^3\right)=3</m>.</p></li>
+        <li><p>Remember that <m>\ln</m> is just log base <m>e</m>, so you may find it helpful to actually rewrite it as <m>\log_e\left(\sqrt[7]{e}\right)</m>. Now, this almost looks like the questions we did in <xref ref="sec-evallogfn"/>, except that the <m>e</m> still has a root over it, instead of an exponent. So, we need to use our exponent rules to make the inside just an exponential. Remember that a root is just a fractional power. So, we get </p>
+          <me>\ln\left(\sqrt[7]{e}\right)=\log_e\left(\sqrt[7]{e}\right)=\log_e\left(e^{1/7}\right)</me>
+        <p>Now, the log and exponential have the same base, so they match and we have <m>\ln\left(\sqrt[7]{e}\right)=\frac{1}{7}</m>.</p></li>
+        <li><p>Remember that <m>\ln</m> is just log base <m>e</m>, so you may find it helpful to actually rewrite it as <m>e^{\log_e(5)}</m>. Now, this looks just like the questions we did in <xref ref="sec-evallogfn"/>. The log and exponential have the same base, so they match and we have <m>e^{\ln(5)}=5</m>.</p></li>
+        <li><p>Remember that <m>\ln</m> is just log base <m>e</m>, so you may find it helpful to actually rewrite it as <m>\log_e\left(\frac{1}{e^4}\right)</m>. Now, this almost looks like the questions we did in <xref ref="sec-evallogfn"/>, except that the <m>e</m> is still in the denominator. So, we need to use our exponent rules to make the inside just an exponential. Remember that to move something out of the denominator, we have to make the exponent negative. So, we get </p>
+          <me>\ln\left(\frac{1}{e^4}\right)=\log_e\left(\frac{1}{e^4}\right)=\log_e\left(e^{-4}\right)</me>
+        <p>Now, the log and exponential have the same base, so they match and we have <m>\ln\left(\frac{1}{e^4}\right)=-4</m>.</p></li>
+      </ol>
+    </solution>
+    <answer><p>
+      <ol>
+        <li><p><m>\ln\left(e^3\right)=3</m></p></li>
+        <li><p><m>\ln\left(\sqrt[7]{e}\right)=\frac{1}{7}</m></p></li>
+        <li><p><m>e^{\ln(5)}=5</m></p></li>
+        <li><p><m>\ln\left(\frac{1}{e^4}\right)=-4</m></p></li>
+      </ol>
+    </p></answer>
+  </exercise>
+
+  <exercise>
+    <statement><p>Find the domain and the equation of the asymptote for <m>f(x)=-2\ln(2x-7)+5</m>.</p></statement>
+    <solution>
+      <p>Remember that the domain only cares about where there is a potential problem. So, it only cares about what is inside the log. Since the inside of the log has to be greater than 0, we set <m>2x-7\gt 0</m> and solve.</p>
+      <md>
+        <mrow>2x-7 \amp\gt 0</mrow>
+        <mrow>2x \amp\gt 7</mrow>
+        <mrow>x \amp \gt \frac{7}{2}</mrow>
+      </md>
+      <p>Now, we just have to turn that into interval notation to get our domain: <m>\left(\frac{7}{2},\infty\right)</m>.</p>
+      <p>To find the equation of the asymptote, we have to set the inside equal to 0 and solve for <m>x</m>.</p>
+      <md>
+        <mrow>2x-7 \amp= 0</mrow>
+        <mrow>2xx \amp= 7</mrow>
+        <mrow>x \amp = \frac{7}{2}</mrow>
+      </md>
+      <p>Note that logs always have a vertical asymptote, but they never have a horizontal asymptote. Therefore, our answer is the <em>entire equation</em> <m>x=\frac{7}{2}</m>, not just the number <m>\frac{7}{2}</m>.</p>
+    </solution>
+    <answer>
+      <p>The domain is <m>\left(\frac{7}{2},\infty\right)</m>, and the equation for the vertical asymptote is <m>x=\frac{7}{2}</m>. (You must inclue the entire equation, not just the number <m>\frac{7}{2}</m>.)</p>
+    </answer>
+  </exercise>
+</section>
+</chapter>
