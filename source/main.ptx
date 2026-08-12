@@ -69,8 +69,8 @@
       <title>Exponential and Logarithmic Functions</title>
 
       <!-- Chapters -->
-      <xi:include href="./OLD - ch_exponentials.ptx" />
-      <xi:include href="./OLD - ch_logs.ptx"/>
+      <xi:include href="./ch_exponentials2.ptx" />
+      <xi:include href="./ch_logs2 .ptx"/>
       
     </part>
    
