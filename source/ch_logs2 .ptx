@@ -192,7 +192,7 @@
 <section xml:id="sec-ln">
   <title>The Natural Log</title>
 
-  <introduction>Remember that in <xref ref="sec-e"/>, we learned about the number <m>e</m>. In this section, we will learn all about the log that has base <m>e</m>.</introduction>
+  <introduction><p>Remember that in <xref ref="sec-e"/>, we learned about the number <m>e</m>. In this section, we will learn all about the log that has base <m>e</m>.</p></introduction>
 
   <definition>
     <p>The <term>Natural Logarithm</term> is the log that has base <m>e</m>. It is written <m>\ln(x)</m>, where the first letter is a lower-case L.</p>
