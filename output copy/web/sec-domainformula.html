@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Domain from a Formula</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<script type="module">import { startMathJax } from './_static/pretext/js/dist/mathjax_startup.js';
+startMathJax({
+hasWebworkReps: false,
+hasSage: false,
+isReact: false,
+htmlPresentation: false,
+lang: "en-US",
+});
+</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta name="twitter:title" content="College Algebra">
+<meta property="og:title" content="College Algebra">
+<meta property="book:title" content="College Algebra">
+<meta name="twitter:card" content="summary">
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.47"></script><script src="_static/pretext/js/dist/pretext-read-aloud.js?v=2.47"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '8.2.4';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.40bd1420d3277749.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.b388362b5f43738a.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.8086b62682b271d1.css">
+<script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead" role="banner"><div class="ptx-banner"><div class="title-container">
+<div class="heading ptx-banner-heading"><a href="ma109-textbook.html"><span class="title">College Algebra</span></a></div>
+<p class="byline"></p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button id="ptx-toc-toggle" type="button" aria-controls="ptx-sidebar" class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="ptx-search-box">
+<div class="ptx-search-widget"><button id="ptx-search-button" type="button" class="ptx-search-button button" title="Search Book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<dialog id="ptx-search-dialog" class="ptx-dialog ptx-search-dialog"><div class="ptx-search-dialog-controls">
+<input aria-label="Search term" id="ptx-search-terms" class="ptx-search-terms" type="text" name="terms" placeholder="Search terms"><button aria-label="Close" id="ptx-search-close" class="ptx-search-close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div id="ptx-search-status" class="ptx-search-status" aria-live="polite" aria-atomic="true"></div>
+<h2 class="heading ptx-search-results-heading">Search Results: </h2>
+<div id="ptx-search-empty" class="ptx-search-empty"><span>No results.</span></div>
+<ol id="ptx-search-results" class="ptx-search-results"></ol></dialog>
+</div>
+<span class="nav-other-controls"><button id="ptx-read-aloud-button" class="ptx-read-aloud-button button" title="Read aloud" aria-expanded="false"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf1bc;</span><span class="name">Read aloud</span></button><div id="ptx-read-aloud-player" class="ptx-read-aloud-player" hidden="hidden" role="group" aria-label="Read aloud">
+<button id="ptx-read-aloud-prev" class="button" title="Previous sentence"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe045;</span></button><button id="ptx-read-aloud-toggle" class="ptx-read-aloud-toggle button" title="Play"><span class="ptx-read-aloud-icon-play"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></span><span class="ptx-read-aloud-icon-pause"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe034;</span></span></button><button id="ptx-read-aloud-next" class="button" title="Next sentence"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe044;</span></button><a id="ptx-read-aloud-continue" class="ptx-read-aloud-continue button" hidden="hidden">Continue<span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></a><button id="ptx-read-aloud-settings-button" class="ptx-read-aloud-settings-button button" title="Reading settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe429;</span></button>
+</div>
+<dialog class="ptx-dialog ptx-read-aloud-settings-popup" id="ptx-read-aloud-settings-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">Read aloud settings</h2>
+<button class="ptx-read-aloud-settings-close-button button" id="ptx-read-aloud-settings-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-readability-options-group">
+<label for="ptx-read-aloud-voice"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe91f;</span><span>Voice</span></label><select id="ptx-read-aloud-voice"></select><label class="ptx-readability-slider-label" for="ptx-read-aloud-rate"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe9e4;</span><span>Reading speed</span><output id="ptx-read-aloud-rate-value" for="ptx-read-aloud-rate">1×</output></label><input type="range" id="ptx-read-aloud-rate" min="0.5" max="2" step="0.1" value="1"><label for="ptx-read-aloud-asides"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d7;</span><span>Collapsed content</span></label><select id="ptx-read-aloud-asides"><option value="skip">Announce, do not read</option>
+<option value="read">Read automatically</option></select><label for="ptx-read-aloud-autoscroll"><input type="checkbox" id="ptx-read-aloud-autoscroll" checked><span>Follow along (auto-scroll)</span></label><label for="ptx-read-aloud-autocontinue"><input type="checkbox" id="ptx-read-aloud-autocontinue"><span>Continue to the next page automatically</span></label>
+</div></dialog><button id="ptx-readability-options-button" class="ptx-readability-options-button button" title="Readability settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf6f1;</span><span class="name">Readability settings</span></button><dialog class="ptx-dialog ptx-readability-options-popup" id="ptx-readability-options-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">Readability settings</h2>
+<button class="ptx-readability-options-close-button button" id="ptx-readability-options-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-readability-options-group">
+<label class="ptx-readability-slider-label" for="ptx-readability-line-height"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe240;</span><span>Line height</span><output id="ptx-readability-line-height-value" for="ptx-readability-line-height">1.35</output></label><input type="range" id="ptx-readability-line-height" min="1.10" max="3" step="0.05" value="1.35">
+</div>
+<div class="ptx-readability-options-group">
+<label class="ptx-readability-slider-label" for="ptx-readability-font-size"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe245;</span><span>Content font size</span><output id="ptx-readability-font-size-value" for="ptx-readability-font-size">100%</output></label><input type="range" id="ptx-readability-font-size" min="0.8" max="1.5" step="0.05" value="1">
+</div>
+<fieldset class="ptx-readability-options-group ptx-readability-options-group-theme">
+<legend>Theme</legend>
+<label for="ptx-readability-theme-system"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-system" value="system"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe1ab;</span><span>System</span></label><label for="ptx-readability-theme-light"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-light" value="light"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe518;</span><span>Light</span></label><label for="ptx-readability-theme-dark"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-dark" value="dark"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span>Dark</span></label>
+</fieldset>
+<fieldset class="ptx-readability-options-group">
+<legend>Assistive technologies</legend>
+<label for="ptx-readability-accessible-permalinks"><input type="checkbox" id="ptx-readability-accessible-permalinks"><span>🔗</span><span>Expose permalinks</span></label>
+</fieldset>
+<div class="ptx-readability-options-group"><button type="button" class="ptx-readability-reset-button button" id="ptx-readability-reset-button"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf053;</span><span class="name">Reset All</span></button></div></dialog></span><span class="treebuttons"><a class="previous-button button" href="sec-rangegraph.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-domainrange.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="ch-domainrange-7.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" role="complementary" class="ptx-sidebar"><nav id="ptx-toc" tabindex="-1" aria-label="Contents" class="ptx-toc depth3 parts focused" data-preexpanded-levels="0" data-max-levels="3"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-preliminaries.html" class="internal"><span class="codenumber">1</span> <span class="title">Preliminaries</span></a></div>
+<ul id="ptx-toc-group-ch-preliminaries" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch-preliminaries-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-coordplane.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Plotting Points and the Coordinate Plane</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-intercepts.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Intercepts</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-GEMDAS.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Order of Operations and Simplifying</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-solveGEMDAS.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Solving Equations</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-part">
+<div class="toc-title-box"><a href="part-fnnotation.html" class="internal"><span class="codenumber">I</span> <span class="title">Functions and Function Notation</span></a></div>
+<ul id="ptx-toc-group-part-fnnotation" class="structural toc-item-list">
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-fnnotation.html" class="internal"><span class="codenumber">2</span> <span class="title">Function Notation</span></a></div>
+<ul id="ptx-toc-group-ch-fnnotation" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch-fnnotation-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-evaluateformula.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Evaluating Functions from a Formula</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-piecewisefn.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Piecewise Functions</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-fngraphstables.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Functions as Graphs and Tables</span></a></div>
+<ul id="ptx-toc-group-sec-fngraphstables" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-fngraphstables.html#sec-fngraphstables-3" class="internal"><span class="codenumber">2.3.1</span> <span class="title">Functions as Graphs</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-fngraphstables.html#sec-fngraphstables-4" class="internal"><span class="codenumber">2.3.2</span> <span class="title">Functions as Tables</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-algwithfn.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Algebra with Functions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-solvefn.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Solving with Functions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch-fnnotation-8.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Practice Problems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-composition.html" class="internal"><span class="codenumber">3</span> <span class="title">Composition</span></a></div>
+<ul id="ptx-toc-group-ch-composition" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch-composition-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-evaluatecomposition.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Evaluating a Composition of Functions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-compositionformula.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Simplifying a Composition of Functions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch-composition-5.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Practice Problems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-inverses.html" class="internal"><span class="codenumber">4</span> <span class="title">Inverse Functions</span></a></div>
+<ul id="ptx-toc-group-ch-inverses" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch-inverses-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-evaluateinverse.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Evaluating Inverse Functions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-inverseformula.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Finding a Formula for the Inverse</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch-inverses-5.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Practice Problems</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-part">
+<div class="toc-title-box"><a href="part-linear.html" class="internal"><span class="codenumber">II</span> <span class="title">Linear Functions</span></a></div>
+<ul id="ptx-toc-group-part-linear" class="structural toc-item-list">
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-lines.html" class="internal"><span class="codenumber">5</span> <span class="title">Linear Functions</span></a></div>
+<ul id="ptx-toc-group-ch-lines" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch-lines-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-slope.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Slope of a Line</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-eqtnline.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Equation of a Line</span></a></div>
+<ul id="ptx-toc-group-sec-eqtnline" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-eqtnline.html#sec-eqtnline-8" class="internal"><span class="codenumber">5.2.1</span> <span class="title">Writing the Equation when Given Slope</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-eqtnline.html#sec-eqtnline-9" class="internal"><span class="codenumber">5.2.2</span> <span class="title">Writing the Equation when Not Given Slope</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-eqtnline.html#sec-eqtnline-10" class="internal"><span class="codenumber">5.2.3</span> <span class="title">Special Cases: Vertical and Horizontal Lines</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-linmodels.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Linear Models</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch-lines-6.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Practice Problems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-systems.html" class="internal"><span class="codenumber">6</span> <span class="title">Systems of Linear Equations</span></a></div>
+<ul id="ptx-toc-group-ch-systems" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch-systems-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-solutionssystems.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Solutions to a System of Equations</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-solvesystemsub.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Solving a System of Equations: Substitution</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-solvesystemelim.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Solving a System of Equations: Elimination</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-systemspecial.html" class="internal"><span class="codenumber">6.4</span> <span class="title">Special Cases of Systems of Equations</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch-systems-7.html" class="internal"><span class="codenumber">6.5</span> <span class="title">Practice Problems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-rateofchange.html" class="internal"><span class="codenumber">7</span> <span class="title">Rate of Change</span></a></div>
+<ul id="ptx-toc-group-ch-rateofchange" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch-rateofchange-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-computerateofchange.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Computing Average Rate of Change</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-diffq.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Difference Quotient</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch-rateofchange-5.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Practice Problems</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-part contains-active">
+<div class="toc-title-box"><a href="part-fnprops.html" class="internal"><span class="codenumber">III</span> <span class="title">Properties of Functions</span></a></div>
+<ul class="structural toc-item-list contains-active" id="ptx-toc-group-part-fnprops">
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="ch-domainrange.html" class="internal"><span class="codenumber">8</span> <span class="title">Domain and Range</span></a></div>
+<ul class="structural toc-item-list contains-active" id="ptx-toc-group-ch-domainrange">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch-domainrange-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-intervalnotation.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Interval Notation</span></a></div>
+<ul id="ptx-toc-group-sec-intervalnotation" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-intervalnotation.html#sec-intervalnotation-3" class="internal"><span class="codenumber">8.1.1</span> <span class="title">Endpoints</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-intervalnotation.html#sec-intervalnotation-4" class="internal"><span class="codenumber">8.1.2</span> <span class="title">Unbounded Intervals</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-intervalnotation.html#sec-intervalnotation-5" class="internal"><span class="codenumber">8.1.3</span> <span class="title">Combining Intervals</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-domaingraph.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Domain from a Graph</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-rangegraph.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Range from a Graph</span></a></div></li>
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="sec-domainformula.html" class="internal"><span class="codenumber">8.4</span> <span class="title">Domain from a Formula</span></a></div>
+<ul class="structural toc-item-list active" id="ptx-toc-group-sec-domainformula">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-domainformula.html#subsec-domainsqrt" class="internal"><span class="codenumber">8.4.1</span> <span class="title">Square Roots of Variables</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-domainformula.html#subsec-domainreciprocal" class="internal"><span class="codenumber">8.4.2</span> <span class="title">Variables in the Denominator</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-domainformula.html#subsec-domainbothneither" class="internal"><span class="codenumber">8.4.3</span> <span class="title">Both or Neither</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-domainformula.html#subsec-domainformulasummary" class="internal"><span class="codenumber">8.4.4</span> <span class="title"></span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch-domainrange-7.html" class="internal"><span class="codenumber">8.5</span> <span class="title">Practice Problems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-transformations.html" class="internal"><span class="codenumber">9</span> <span class="title">Transformations</span></a></div>
+<ul id="ptx-toc-group-ch-transformations" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch-transformations-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-identifytransforms.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Identifying Transformations</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-applyingtransforms.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Applying Transformations</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-drtransforms.html" class="internal"><span class="codenumber">9.3</span> <span class="title">Domain and Range of Transformations</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch-transformations-6.html" class="internal"><span class="codenumber">9.4</span> <span class="title">Practice Problems</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-part">
+<div class="toc-title-box"><a href="part-polyrational.html" class="internal"><span class="codenumber">IV</span> <span class="title">Polynomial and Rational Functions</span></a></div>
+<ul id="ptx-toc-group-part-polyrational" class="structural toc-item-list">
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-polynomials.html" class="internal"><span class="codenumber">10</span> <span class="title">Polynomial Functions</span></a></div>
+<ul id="ptx-toc-group-ch-polynomials" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch-polynomials-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-rootspoly.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Roots of Polynomials</span></a></div>
+<ul id="ptx-toc-group-sec-rootspoly" class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-rootspoly.html#sec-rootspoly-8" class="internal"><span class="codenumber">10.1.1</span> <span class="title">Multiplicity</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-eqtnpoly.html" class="internal"><span class="codenumber">10.2</span> <span class="title">Equation of Polynomials</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-ebpoly.html" class="internal"><span class="codenumber">10.3</span> <span class="title">End Behavior of Polynomials</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-rationals.html" class="internal"><span class="codenumber">11</span> <span class="title">Rational Functions</span></a></div>
+<ul id="ptx-toc-group-ch-rationals" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch-rationals-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-domainrational.html" class="internal"><span class="codenumber">11.1</span> <span class="title">Domain of Rational Functions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-ebrational.html" class="internal"><span class="codenumber">11.2</span> <span class="title">End Behavior of Rational Functions</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-part">
+<div class="toc-title-box"><a href="part-explog.html" class="internal"><span class="codenumber">V</span> <span class="title">Exponential and Logarithmic Functions</span></a></div>
+<ul id="ptx-toc-group-part-explog" class="structural toc-item-list">
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-exponentials.html" class="internal"><span class="codenumber">12</span> <span class="title">Exponential Functions</span></a></div>
+<ul id="ptx-toc-group-ch-exponentials" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch-exponentials-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-eqtnexpfn.html" class="internal"><span class="codenumber">12.1</span> <span class="title">Equations of Exponential Functions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-graphEBexpfn.html" class="internal"><span class="codenumber">12.2</span> <span class="title">Graphs and End Behavior of Exponential Functions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-e.html" class="internal"><span class="codenumber">12.3</span> <span class="title">The Number <span class="process-math">\(e\)</span></span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-logs.html" class="internal"><span class="codenumber">13</span> <span class="title">Logarithmic Functions</span></a></div>
+<ul id="ptx-toc-group-ch-logs" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch-logs-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-evallogfn.html" class="internal"><span class="codenumber">13.1</span> <span class="title">Evaluating Logarithmic Functions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-graphlogfn.html" class="internal"><span class="codenumber">13.2</span> <span class="title">Graphs of Logarithmic Functions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-ln.html" class="internal"><span class="codenumber">13.3</span> <span class="title">The Natural Log</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-part">
+<div class="toc-title-box"><a href="part-explogequation.html" class="internal"><span class="codenumber">VI</span> <span class="title">Exponential and Logarithmic Equations</span></a></div>
+<ul id="ptx-toc-group-part-explogequation" class="structural toc-item-list">
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-logprops.html" class="internal"><span class="codenumber">14</span> <span class="title">Logarithm Properties</span></a></div>
+<ul id="ptx-toc-group-ch-logprops" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch-logprops-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-combinelogs.html" class="internal"><span class="codenumber">14.1</span> <span class="title">Combining Logarithms</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-expandlogs.html" class="internal"><span class="codenumber">14.2</span> <span class="title">Expanding Logarithms</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-expeqtns.html" class="internal"><span class="codenumber">15</span> <span class="title">Exponential and Logarithmic Equations</span></a></div>
+<ul id="ptx-toc-group-ch-expeqtns" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch-expeqtns-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-simplelogexpeqtns.html" class="internal"><span class="codenumber">15.1</span> <span class="title">Solving Log and Exponential Equations</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-logexpinverses.html" class="internal"><span class="codenumber">15.2</span> <span class="title">Inverses of Logs and Exponentials</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="sec-domainformula">
+<h1 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Domain from a Formula</span>
+</h1>
+<section class="introduction" id="sec-domainformula-2"></section>
+<div class="para" id="sec-domainformula-3">The theme that you’ll see repeated in this section is that <em class="emphasis">the domain of a function is everything except where there are problems</em>. We’re going to look at two different potential problems in this section: square roots of variables and variables in the denominator of a fraction.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-domainformula-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<section class="subsection" id="subsec-domainsqrt">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.4.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Square Roots of Variables</span>
+</h2>
+<div class="para logical" id="subsec-domainsqrt-2">
+<div class="para">Let’s do a warm-up problem. Suppose <span class="process-math">\(f(x)=2\sqrt{x+3}+1\text{.}\)</span> We want to find the following values:</div>
+<ol class="decimal" id="subsec-domainsqrt-2-2">
+<li id="subsec-domainsqrt-2-2-1">
+<div class="para" id="p-derived-subsec-domainsqrt-2-2-1"><span class="process-math">\(\displaystyle f(0)\)</span></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 1"><a tabindex="-1" href="#subsec-domainsqrt-2-2-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="subsec-domainsqrt-2-2-2">
+<div class="para" id="p-derived-subsec-domainsqrt-2-2-2"><span class="process-math">\(\displaystyle f(-1)\)</span></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 2"><a tabindex="-1" href="#subsec-domainsqrt-2-2-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="subsec-domainsqrt-2-2-3">
+<div class="para" id="p-derived-subsec-domainsqrt-2-2-3"><span class="process-math">\(\displaystyle f(-3)\)</span></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3"><a tabindex="-1" href="#subsec-domainsqrt-2-2-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+<li id="subsec-domainsqrt-2-2-4">
+<div class="para" id="p-derived-subsec-domainsqrt-2-2-4"><span class="process-math">\(\displaystyle f(-5)\)</span></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 4"><a tabindex="-1" href="#subsec-domainsqrt-2-2-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+</li>
+</ol>
+<div class="para">Remember that for each one, the number given is the input, so we replace the <span class="process-math">\(x\)</span> in the formula with that number. Let’s do each of them one by one:</div>
+<ol class="decimal" id="subsec-domainsqrt-2-4">
+<li id="subsec-domainsqrt-2-4-1">
+<div class="para" id="p-derived-subsec-domainsqrt-2-4-1"><span class="process-math">\(\displaystyle f(0) = 2\sqrt{0+3}+1=2\sqrt{3}+1\)</span></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 1"><a tabindex="-1" href="#subsec-domainsqrt-2-4-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="subsec-domainsqrt-2-4-2">
+<div class="para" id="p-derived-subsec-domainsqrt-2-4-2"><span class="process-math">\(\displaystyle f(-1) = 2\sqrt{-1+3}+1=2\sqrt{2}+1\)</span></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 2"><a tabindex="-1" href="#subsec-domainsqrt-2-4-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="subsec-domainsqrt-2-4-3">
+<div class="para" id="p-derived-subsec-domainsqrt-2-4-3"><span class="process-math">\(\displaystyle f(-3) = 2\sqrt{-3+3}+1=2\sqrt{0}+1=1\)</span></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3"><a tabindex="-1" href="#subsec-domainsqrt-2-4-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+<li id="subsec-domainsqrt-2-4-4">
+<div class="para" id="p-derived-subsec-domainsqrt-2-4-4">
+<span class="process-math">\(f(-5) = 2\sqrt{-5+3}+1 = 2\sqrt{-2}+1\text{,}\)</span> which is undefined in our class.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 4"><a tabindex="-1" href="#subsec-domainsqrt-2-4-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+</li>
+</ol>
+<div class="para">Notice that in the last question, we discovered that <span class="process-math">\(f(-5)\)</span> is undefined because it results in trying to take the square root of a negative number. Remember from <a href="sec-domaingraph.html" class="internal" title="Section 8.2: Domain from a Graph">Section 8.2</a> that the domain is all of the possible inputs. Since <span class="process-math">\(-5\)</span> is not a possible input to this function, that means that <span class="process-math">\(-5\)</span> is not in the domain of <span class="process-math">\(f(x)\text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-domainsqrt-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="fact theorem-like" id="subsec-domainsqrt-3"><h3 class="heading">
+<span class="type">Fact</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.4.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Domain of a Square Root.</span>
+</h3>The domain of a square root function is all of the <span class="process-math">\(x\)</span>-values that make the inside of the square root non-negative (in other words, greater than or equal to 0).<div class="autopermalink" aria-hidden="true" data-description="Fact 8.4.1: Domain of a Square Root"><a tabindex="-1" href="#subsec-domainsqrt-3" title="Copy heading and permalink for Fact 8.4.1: Domain of a Square Root" aria-label="Copy heading and permalink for Fact 8.4.1: Domain of a Square Root">🔗</a></div>
+</article>
+<details id="subsec-domainsqrt-4" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.4.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary>
+<article class="example example-like knowl__content">
+<div class="para" id="subsec-domainsqrt-4-1">Let’s look at the example from the warm-up. Since the only part that can cause problems is the part under the square root, we can ignore the 1 and the 2. We just need to figure out where <span class="process-math">\(x+3\)</span> is non-negative. In other words, we set<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-domainsqrt-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="subsec-domainsqrt-4-2">
+\begin{equation*}
+x+3 \ge 0
+\end{equation*}
+</div>
+<div class="para" id="subsec-domainsqrt-4-3">Subtracting 3 from both sides, we end up with<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-domainsqrt-4-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="subsec-domainsqrt-4-4">
+\begin{equation*}
+x \ge -3 
+\end{equation*}
+</div>
+<div class="para" id="subsec-domainsqrt-4-5">Now, all that we have to do is turn it into interval notation. You might find it helpful to draw a number line. Our final answer is <span class="process-math">\([-3,\infty)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-domainsqrt-4-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 8.4.2"><a tabindex="-1" href="#subsec-domainsqrt-4" title="Copy heading and permalink for Example 8.4.2" aria-label="Copy heading and permalink for Example 8.4.2">🔗</a></div>
+</article></details>
+<details id="subsec-domainsqrt-5" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.4.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary>
+<article class="exercise exercise-like knowl__content">Find the domain of <span class="process-math">\(f(x)=4\sqrt{5-2x}+7\text{.}\)</span><div class="solutions">
+<details id="subsec-domainsqrt-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<span class="process-math">\(\left(-\infty,\frac{2}{5}\right]\)</span><div class="autopermalink" aria-hidden="true" data-description="Answer 8.4.3.1"><a tabindex="-1" href="#subsec-domainsqrt-5-2" title="Copy heading and permalink for Answer 8.4.3.1" aria-label="Copy heading and permalink for Answer 8.4.3.1">🔗</a></div>
+</div></details>
+<details id="subsec-domainsqrt-5-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para" id="subsec-domainsqrt-5-3-1">Since the only part that causes a problem is the part inside the square root, we can ignore the 4 and the 7. All we need to do is set <span class="process-math">\(5-2x\ge0\)</span> and solve for x. There are two ways you could solve it, depending on what your first step is. We’ll show you both.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-domainsqrt-5-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-domainsqrt-5-3-2">If you start by subrtracting 5 from both sides, you’ll need to remember that when you eventually divide by <span class="process-math">\(-2\text{,}\)</span> you’ll need to flip the direction of the inequality. Here is what that version looks like:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-domainsqrt-5-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="subsec-domainsqrt-5-3-3">
+\begin{align*}
+5-2x \amp \ge 0\\
+-2x \amp \ge -5 \\
+x \amp \le \frac{-5}{-2}\\
+x \amp \le \frac{5}{2}
+\end{align*}
+</div>
+<div class="para" id="subsec-domainsqrt-5-3-4">If you start by adding <span class="process-math">\(2x\)</span> to both sides, you won’t end up dividing by a negative number, but your variable will be on the other side of the equal sign. Here is what that version looks like:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-domainsqrt-5-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="subsec-domainsqrt-5-3-5">
+\begin{align*}
+5-2x \amp \ge 0\\
+5 \amp \ge 2x \\
+\frac{5}{2}  \amp \ge x
+\end{align*}
+</div>
+<div class="para" id="subsec-domainsqrt-5-3-6">In either case, our answer is all of the numbers that are less than or equal to <span class="process-math">\(\frac{5}{2}\text{.}\)</span> In interval notation, our final answer is <span class="process-math">\(\left(-\infty,\frac{5}{2}\right]\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-domainsqrt-5-3-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 8.4.3.1"><a tabindex="-1" href="#subsec-domainsqrt-5-3" title="Copy heading and permalink for Solution 8.4.3.1" aria-label="Copy heading and permalink for Solution 8.4.3.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Checkpoint 8.4.3"><a tabindex="-1" href="#subsec-domainsqrt-5" title="Copy heading and permalink for Checkpoint 8.4.3" aria-label="Copy heading and permalink for Checkpoint 8.4.3">🔗</a></div>
+</article></details><div class="autopermalink" aria-hidden="true" data-description="Subsection 8.4.1: Square Roots of Variables"><a tabindex="-1" href="#subsec-domainsqrt" title="Copy heading and permalink for Subsection 8.4.1: Square Roots of Variables" aria-label="Copy heading and permalink for Subsection 8.4.1: Square Roots of Variables">🔗</a></div>
+</section>
+<section class="subsection" id="subsec-domainreciprocal">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.4.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Variables in the Denominator</span>
+</h2>
+<div class="para logical" id="subsec-domainreciprocal-2">
+<div class="para">Let’s do a warm-up problem. Suppose <span class="process-math">\(f(x)=\dfrac{x+3}{x-1}\text{.}\)</span> We want to find the following values:</div>
+<ol class="decimal" id="subsec-domainreciprocal-2-2">
+<li id="subsec-domainreciprocal-2-2-1">
+<div class="para" id="p-derived-subsec-domainreciprocal-2-2-1"><span class="process-math">\(\displaystyle f(0)\)</span></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 1"><a tabindex="-1" href="#subsec-domainreciprocal-2-2-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="subsec-domainreciprocal-2-2-2">
+<div class="para" id="p-derived-subsec-domainreciprocal-2-2-2"><span class="process-math">\(\displaystyle f(-1)\)</span></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 2"><a tabindex="-1" href="#subsec-domainreciprocal-2-2-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="subsec-domainreciprocal-2-2-3">
+<div class="para" id="p-derived-subsec-domainreciprocal-2-2-3"><span class="process-math">\(\displaystyle f(1)\)</span></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3"><a tabindex="-1" href="#subsec-domainreciprocal-2-2-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+<li id="subsec-domainreciprocal-2-2-4">
+<div class="para" id="p-derived-subsec-domainreciprocal-2-2-4"><span class="process-math">\(\displaystyle f(2)\)</span></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 4"><a tabindex="-1" href="#subsec-domainreciprocal-2-2-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+</li>
+</ol>
+<div class="para">Remember that for each one, the number given is the input, so we replace the <span class="process-math">\(x\)</span> in the formula with that number. Let’s do each of them one by one:</div>
+<ol class="decimal" id="subsec-domainreciprocal-2-4">
+<li id="subsec-domainreciprocal-2-4-1">
+<div class="para" id="p-derived-subsec-domainreciprocal-2-4-1"><span class="process-math">\(\displaystyle f(0)=\dfrac{0+3}{0-1} = \dfrac{3}{-1} = -3\)</span></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 1"><a tabindex="-1" href="#subsec-domainreciprocal-2-4-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="subsec-domainreciprocal-2-4-2">
+<div class="para" id="p-derived-subsec-domainreciprocal-2-4-2"><span class="process-math">\(\displaystyle f(-1)=\dfrac{-1+3}{-1-1} = \dfrac{2}{-2} = -1\)</span></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 2"><a tabindex="-1" href="#subsec-domainreciprocal-2-4-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="subsec-domainreciprocal-2-4-3">
+<div class="para" id="p-derived-subsec-domainreciprocal-2-4-3">
+<span class="process-math">\(f(1)=\dfrac{1+3}{1-1} = \dfrac{4}{0}\text{,}\)</span> which is always undefined.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3"><a tabindex="-1" href="#subsec-domainreciprocal-2-4-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+<li id="subsec-domainreciprocal-2-4-4">
+<div class="para" id="p-derived-subsec-domainreciprocal-2-4-4"><span class="process-math">\(\displaystyle f(2)=\dfrac{2+3}{2-1} = \dfrac{5}{1} = 5\)</span></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 4"><a tabindex="-1" href="#subsec-domainreciprocal-2-4-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+</li>
+</ol>
+<div class="para">Notice that in the third question, we discovered that <span class="process-math">\(f(1)\)</span> is undefined because it results in trying to divide by 0. Remember from <a href="sec-domaingraph.html" class="internal" title="Section 8.2: Domain from a Graph">Section 8.2</a> that the domain is all of the possible inputs. Since <span class="process-math">\(1\)</span> is not a possible input to this function, that means that <span class="process-math">\(1\)</span> is not in the domain of <span class="process-math">\(f(x)\text{.}\)</span> However, the numbers we tried that are bigger than 1 and less than 1 were all fine. It was only 1 that caused a problem, because that <span class="process-math">\(x\)</span>-value made the denominator equal to 0.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-domainreciprocal-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="fact theorem-like" id="subsec-domainreciprocal-3"><h3 class="heading">
+<span class="type">Fact</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.4.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Domain of a Function with Variables in the Denominator.</span>
+</h3>The domain of a function that has variable in the denominator of a fraction is everything except the <span class="process-math">\(x\)</span>-values that make the denominator 0.<div class="autopermalink" aria-hidden="true" data-description="Fact 8.4.4: Domain of a Function with Variables in the Denominator"><a tabindex="-1" href="#subsec-domainreciprocal-3" title="Copy heading and permalink for Fact 8.4.4: Domain of a Function with Variables in the Denominator" aria-label="Copy heading and permalink for Fact 8.4.4: Domain of a Function with Variables in the Denominator">🔗</a></div>
+</article>
+<details id="subsec-domainreciprocal-4" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.4.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary>
+<article class="example example-like knowl__content">
+<div class="para" id="subsec-domainreciprocal-4-1">Let’s look at the example from the warm-up. Since the only part that can cause problems is the denominator, we can ignore the <span class="process-math">\(x+3\)</span> in the numerator. We just need to figure out where <span class="process-math">\(x-1\)</span> is 0, and then our domain will be everything except that number. In other words, we set<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-domainreciprocal-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="subsec-domainreciprocal-4-2">
+\begin{equation*}
+x-1 = 0
+\end{equation*}
+</div>
+<div class="para" id="subsec-domainreciprocal-4-3">Adding 1 to both sides, we end up with<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-domainreciprocal-4-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="subsec-domainreciprocal-4-4">
+\begin{equation*}
+x = 1 
+\end{equation*}
+</div>
+<div class="para" id="subsec-domainreciprocal-4-5">Now, remember that we figured out where the denominator is equal to 0, which is where the problem is. However, the domain is everything that isn’t a problem, so our domain will be everything except 1. That means we need to include all the numbers that are bigger than 1 and all the numbers that are less than 1, but just not 1 itself. You might find it helpful to draw a number line. Our final answer in interval notation will be <span class="process-math">\((-\infty, 1)\cup(1,\infty)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-domainreciprocal-4-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 8.4.5"><a tabindex="-1" href="#subsec-domainreciprocal-4" title="Copy heading and permalink for Example 8.4.5" aria-label="Copy heading and permalink for Example 8.4.5">🔗</a></div>
+</article></details>
+<details id="subsec-domainreciprocal-5" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.4.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary>
+<article class="exercise exercise-like knowl__content">Find the domain of <span class="process-math">\(f(x)=\dfrac{3x+1}{2x-7}\text{.}\)</span><div class="solutions">
+<details id="subsec-domainreciprocal-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<span class="process-math">\(\left(-\infty,\frac{7}{2}\right)\cup\left(\frac{7}{2},\infty\right)\)</span><div class="autopermalink" aria-hidden="true" data-description="Answer 8.4.6.1"><a tabindex="-1" href="#subsec-domainreciprocal-5-2" title="Copy heading and permalink for Answer 8.4.6.1" aria-label="Copy heading and permalink for Answer 8.4.6.1">🔗</a></div>
+</div></details>
+<details id="subsec-domainreciprocal-5-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para" id="subsec-domainreciprocal-5-3-1">Since the only part that can cause problems is the denominator, we can ignore the <span class="process-math">\(3x+1\)</span> in the numerator. We just need to figure out where <span class="process-math">\(2x-7\)</span> is 0, and then our domain will be everything except that number. In other words, we set <span class="process-math">\(2x-7=0\)</span> and solve:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-domainreciprocal-5-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="subsec-domainreciprocal-5-3-2">
+\begin{align*}
+2x-7 \amp =  0\\
+2x \amp = 7\\
+x\amp = \frac{7}{2}
+\end{align*}
+</div>
+<div class="para" id="subsec-domainreciprocal-5-3-3">Now, remember that we figured out where the denominator is equal to 0, which is where the problem is. However, the domain is everything that isn’t a problem, so our domain will be everything except <span class="process-math">\(\frac{7}{2}\text{.}\)</span> That means we need to include all the numbers that are bigger than <span class="process-math">\(\frac{7}{2}\)</span> and all the numbers that are less than <span class="process-math">\(\frac{7}{2}\text{,}\)</span> but just not <span class="process-math">\(\frac{7}{2}\)</span> itself. You might find it helpful to draw a number line. Our final answer in interval notation will be <span class="process-math">\((-\infty, \frac{7}{2})\cup(\frac{7}{2},\infty)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-domainreciprocal-5-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 8.4.6.1"><a tabindex="-1" href="#subsec-domainreciprocal-5-3" title="Copy heading and permalink for Solution 8.4.6.1" aria-label="Copy heading and permalink for Solution 8.4.6.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Checkpoint 8.4.6"><a tabindex="-1" href="#subsec-domainreciprocal-5" title="Copy heading and permalink for Checkpoint 8.4.6" aria-label="Copy heading and permalink for Checkpoint 8.4.6">🔗</a></div>
+</article></details><div class="autopermalink" aria-hidden="true" data-description="Subsection 8.4.2: Variables in the Denominator"><a tabindex="-1" href="#subsec-domainreciprocal" title="Copy heading and permalink for Subsection 8.4.2: Variables in the Denominator" aria-label="Copy heading and permalink for Subsection 8.4.2: Variables in the Denominator">🔗</a></div>
+</section>
+<section class="subsection" id="subsec-domainbothneither">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.4.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Both or Neither</span>
+</h2>
+<div class="para" id="subsec-domainbothneither-2">So far, we have learned how to find the domain of a function with a square root of a variable and a function with variables in the denominator. Now, we want to know how to combine them to find the domain of a function that doesn’t have either problem, or a function that has both problems!<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-domainbothneither-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="fact theorem-like" id="subsec-domainbothneither-3"><h3 class="heading">
+<span class="type">Fact</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.4.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Domain of Square Root in the Denominator.</span>
+</h3>The domain of a function with a square root of a variable in the denominator of a fraction is where the inside of the square root is strictly greater than 0.<div class="autopermalink" aria-hidden="true" data-description="Fact 8.4.7: Domain of Square Root in the Denominator"><a tabindex="-1" href="#subsec-domainbothneither-3" title="Copy heading and permalink for Fact 8.4.7: Domain of Square Root in the Denominator" aria-label="Copy heading and permalink for Fact 8.4.7: Domain of Square Root in the Denominator">🔗</a></div>
+</article>
+<div class="para" id="subsec-domainbothneither-4">The fact above makes sense because it’s a combination of how we dealt with the two problems before. When we just had a square root, we needed the inside to be greater than or equal to 0, because <span class="process-math">\(\sqrt{0}=0\text{,}\)</span> which isn’t a problem by itself. However, if that square root were in the denominator of a fraction, we would now be trying to divide by 0, which is a problem. That’s why we have to set the inside strictly bigger than 0 in this case.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-domainbothneither-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="subsec-domainbothneither-5" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.4.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary>
+<article class="example example-like knowl__content">
+<div class="para" id="subsec-domainbothneither-5-1">Let’s say we want to find the domain of <span class="process-math">\(f(x)=\dfrac{x+7}{\sqrt{3-x}}\text{.}\)</span> Well, the things that cause a problem here are the square root and the fact that it’s in the denominator. Since the <span class="process-math">\(x+7\)</span> is not inside the square root and it’s not in the denominator, we can ignore that part. We need to set <span class="process-math">\(3-x \gt 0\)</span> and solve. There are two ways you could solve it: either by adding <span class="process-math">\(x\)</span> to both sides, or by subtracting 3 from both sides and then dividing by <span class="process-math">\(-1\)</span> and flipping the inequality. In either case, we get that our domain is all numbers less than 3. In iterval notation, that means our final answer is <span class="process-math">\((-\infty,3)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-domainbothneither-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 8.4.8"><a tabindex="-1" href="#subsec-domainbothneither-5" title="Copy heading and permalink for Example 8.4.8" aria-label="Copy heading and permalink for Example 8.4.8">🔗</a></div>
+</article></details>
+<details id="subsec-domainbothneither-6" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.4.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary>
+<article class="exercise exercise-like knowl__content">Find the domain of <span class="process-math">\(f(x)=\dfrac{2-x}{\sqrt{2+3x}}\)</span><div class="solutions">
+<details id="subsec-domainbothneither-6-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<span class="process-math">\(\left(-\frac{2}{3},\infty\right)\)</span><div class="autopermalink" aria-hidden="true" data-description="Answer 8.4.9.1"><a tabindex="-1" href="#subsec-domainbothneither-6-2" title="Copy heading and permalink for Answer 8.4.9.1" aria-label="Copy heading and permalink for Answer 8.4.9.1">🔗</a></div>
+</div></details>
+<details id="subsec-domainbothneither-6-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para" id="subsec-domainbothneither-6-3-1">The things that cause a problem here are the square root and the fact that it’s in the denominator. Since the <span class="process-math">\(2-x\)</span> is not inside the square root and it’s not in the denominator, we can ignore that part. We need to set <span class="process-math">\(2+3x \gt 0\)</span> and solve:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-domainbothneither-6-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="subsec-domainbothneither-6-3-2">
+\begin{align*}
+2+3x \amp\gt 0\\
+3x \amp\gt -2\\
+x \amp\gt -\frac{2}{3}
+\end{align*}
+</div>
+<div class="para" id="subsec-domainbothneither-6-3-3">When we turn our answer into interval notation, we get <span class="process-math">\(\left(-\frac{2}{3},\infty\right)\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-domainbothneither-6-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 8.4.9.1"><a tabindex="-1" href="#subsec-domainbothneither-6-3" title="Copy heading and permalink for Solution 8.4.9.1" aria-label="Copy heading and permalink for Solution 8.4.9.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Checkpoint 8.4.9"><a tabindex="-1" href="#subsec-domainbothneither-6" title="Copy heading and permalink for Checkpoint 8.4.9" aria-label="Copy heading and permalink for Checkpoint 8.4.9">🔗</a></div>
+</article></details>
+<div class="para" id="subsec-domainbothneither-7">Now that you’ve seen how to handle functions that have both problems, let’s talk about how to handle functions that don’t have either problem.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-domainbothneither-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="fact theorem-like" id="subsec-domainbothneither-8"><h3 class="heading">
+<span class="type">Fact</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.4.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Domain without Problems.</span>
+</h3>The domain of a function that doesn’t have a square root of a variable or a variable in the denominator is everything: <span class="process-math">\((-\infty, \infty)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Fact 8.4.10: Domain without Problems"><a tabindex="-1" href="#subsec-domainbothneither-8" title="Copy heading and permalink for Fact 8.4.10: Domain without Problems" aria-label="Copy heading and permalink for Fact 8.4.10: Domain without Problems">🔗</a></div>
+</article>
+<div class="para" id="subsec-domainbothneither-9">Remember: the domain is everything that doesn’t cause a problem. Right now, the only problems we are concerned about are square roots of variables and variables in the denominator of a fraction. If neither of those are there, there is nothing to cause problems, so the domain is just everything!<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-domainbothneither-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="subsec-domainbothneither-10" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.4.11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary>
+<article class="example example-like knowl__content">
+<div class="para" id="subsec-domainbothneither-10-1">Suppose we want to find the domain of <span class="process-math">\(f(x)=\frac{5}{3}x-\sqrt{7}\text{.}\)</span> Even though we do have a fraction and a square root, they don’t cause problems in this case, because they don’t have any variables. The denominator of the fraction is 3, which is just always 3 and is never 0, so that’s not a problem. Similarly, the inside of our square root is 7, which is always just 7 and is never negative. So, that’s not a problem either. Since this function doesn’t have any problems, the domain is everything: <span class="process-math">\((-\infty, \infty)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-domainbothneither-10-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 8.4.11"><a tabindex="-1" href="#subsec-domainbothneither-10" title="Copy heading and permalink for Example 8.4.11" aria-label="Copy heading and permalink for Example 8.4.11">🔗</a></div>
+</article></details>
+<details id="subsec-domainbothneither-11" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.4.12</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary>
+<article class="exercise exercise-like knowl__content">Find the domain of <span class="process-math">\(f(x)=3x-\frac{7x}{2}+\sqrt{8}\text{.}\)</span><div class="solutions">
+<details id="subsec-domainbothneither-11-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<span class="process-math">\((-\infty, \infty)\)</span><div class="autopermalink" aria-hidden="true" data-description="Answer 8.4.12.1"><a tabindex="-1" href="#subsec-domainbothneither-11-2" title="Copy heading and permalink for Answer 8.4.12.1" aria-label="Copy heading and permalink for Answer 8.4.12.1">🔗</a></div>
+</div></details>
+<details id="subsec-domainbothneither-11-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para" id="subsec-domainbothneither-11-3-1">Even though we do have a fraction and a square root, they don’t cause problems in this case, because they don’t have any variables. The denominator of the fraction is 2, which is just always 2 and is never 0, so that’s not a problem. Similarly, the inside of our square root is 8, which is always just 8 and is never negative. So, that’s not a problem either. Since this function doesn’t have any problems, the domain is everything: <span class="process-math">\((-\infty, \infty)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-domainbothneither-11-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 8.4.12.1"><a tabindex="-1" href="#subsec-domainbothneither-11-3" title="Copy heading and permalink for Solution 8.4.12.1" aria-label="Copy heading and permalink for Solution 8.4.12.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Checkpoint 8.4.12"><a tabindex="-1" href="#subsec-domainbothneither-11" title="Copy heading and permalink for Checkpoint 8.4.12" aria-label="Copy heading and permalink for Checkpoint 8.4.12">🔗</a></div>
+</article></details>
+<article class="remark remark-like" id="subsec-domainbothneither-12"><h3 class="heading">
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.4.13</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para" id="subsec-domainbothneither-12-1">It is worth noting that you could build more complicated functions that have other problems with the domain. We just aren’t worried about most of them in this class. The only other problem we’re going to deal with is logarithms, but we won’t worry about that until later in the semester.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-domainbothneither-12-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Remark 8.4.13"><a tabindex="-1" href="#subsec-domainbothneither-12" title="Copy heading and permalink for Remark 8.4.13" aria-label="Copy heading and permalink for Remark 8.4.13">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Subsection 8.4.3: Both or Neither"><a tabindex="-1" href="#subsec-domainbothneither" title="Copy heading and permalink for Subsection 8.4.3: Both or Neither" aria-label="Copy heading and permalink for Subsection 8.4.3: Both or Neither">🔗</a></div>
+</section>
+<section class="subsection" id="subsec-domainformulasummary">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.4.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title"></span>
+</h2>
+<div class="para logical" id="subsec-domainformulasummary-1">
+<div class="para">There are four cases we talked about in this section:</div>
+<ul class="disc" id="subsec-domainformulasummary-1-1">
+<li id="subsec-domainformulasummary-1-1-1">
+<div class="para" id="p-derived-subsec-domainformulasummary-1-1-1">Square root of a variable: Set the inside of the square root greater than or equal to 0 and solve.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#subsec-domainformulasummary-1-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="subsec-domainformulasummary-1-1-2">
+<div class="para" id="p-derived-subsec-domainformulasummary-1-1-2">Variable in the denominator of a fraction: Set the denominator equal to 0 and solve. The domain is everything except that number.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#subsec-domainformulasummary-1-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="subsec-domainformulasummary-1-1-3">
+<div class="para" id="p-derived-subsec-domainformulasummary-1-1-3">Square root of a variable in the denominator of a fraction: Set the inside of the square root strictly greater than 0 and solve.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#subsec-domainformulasummary-1-1-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="subsec-domainformulasummary-1-1-4">
+<div class="para" id="p-derived-subsec-domainformulasummary-1-1-4">No square roots of variables or variables in the denominator of a fraction: No problems, so the domain is everything.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#subsec-domainformulasummary-1-1-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-domainformulasummary-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-domainformulasummary-2">You might find it helpful or organize the information here as a Venn diagram, like the one below:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-domainformulasummary-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/DomainRange/DomainVenn.png" class="contained"></div>
+<div class="autopermalink" aria-hidden="true" data-description="Subsection 8.4.4"><a tabindex="-1" href="#subsec-domainformulasummary" title="Copy heading and permalink for Subsection 8.4.4" aria-label="Copy heading and permalink for Subsection 8.4.4">🔗</a></div>
+</section><div class="autopermalink" aria-hidden="true" data-description="Section 8.4: Domain from a Formula"><a tabindex="-1" href="#sec-domainformula" title="Copy heading and permalink for Section 8.4: Domain from a Formula" aria-label="Copy heading and permalink for Section 8.4: Domain from a Formula">🔗</a></div>
+</section>
+</div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="sec-rangegraph.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="ch-domainrange-7.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>
